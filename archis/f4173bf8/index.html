@@ -1,0 +1,3478 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Read-Sitadel-Source | Bigbroke 的成长之路 | Bigbroke | 网络安全 | 安全技术 | CTF|WEB 安全 | 数据科学安全</title>
+  <meta name="keywords" content=" ctf ">
+  <meta name="description" content="Read-Sitadel-Source | Bigbroke 的成长之路 | Bigbroke | 网络安全 | 安全技术 | CTF|WEB 安全 | 数据科学安全">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="L2Dwidget.init({&quot;pluginRootPath&quot;:&quot;live2dw/&quot;,&quot;pluginJsPath&quot;:&quot;lib/&quot;,&quot;pluginModelPath&quot;:&quot;assets/&quot;,&quot;tagMode&quot;:false,&quot;debug&quot;:false,&quot;model&quot;:{&quot;jsonPath&quot;:&quot;/live2dw/assets/assets/koharu.mode">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Bigbroke 的成长之路 | Bigbroke | 网络安全 | 安全技术 | CTF|WEB 安全 | 数据科学安全">
+<meta property="og:url" content="http://Bigbroke.com/404.html">
+<meta property="og:site_name" content="Bigbroke 的成长之路 | Bigbroke | 网络安全 | 安全技术 | CTF|WEB 安全 | 数据科学安全">
+<meta property="og:description" content="L2Dwidget.init({&quot;pluginRootPath&quot;:&quot;live2dw/&quot;,&quot;pluginJsPath&quot;:&quot;lib/&quot;,&quot;pluginModelPath&quot;:&quot;assets/&quot;,&quot;tagMode&quot;:false,&quot;debug&quot;:false,&quot;model&quot;:{&quot;jsonPath&quot;:&quot;/live2dw/assets/assets/koharu.mode">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-10-07T10:21:52.994Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Bigbroke 的成长之路 | Bigbroke | 网络安全 | 安全技术 | CTF|WEB 安全 | 数据科学安全">
+<meta name="twitter:description" content="L2Dwidget.init({&quot;pluginRootPath&quot;:&quot;live2dw/&quot;,&quot;pluginJsPath&quot;:&quot;lib/&quot;,&quot;pluginModelPath&quot;:&quot;assets/&quot;,&quot;tagMode&quot;:false,&quot;debug&quot;:false,&quot;model&quot;:{&quot;jsonPath&quot;:&quot;/live2dw/assets/assets/koharu.mode">
+
+
+<link rel="icon" href="/img/head.jpg">
+
+<link rel="stylesheet" href="/css/style.css">
+
+<link rel="stylesheet" href="/css/hl_theme/sublime.css">
+
+<link href="//cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
+<link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+<link href="//cdn.bootcss.com/photoswipe/4.1.2/photoswipe.min.css" rel="stylesheet">
+<link href="//cdn.bootcss.com/photoswipe/4.1.2/default-skin/default-skin.min.css" rel="stylesheet">
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="/js/jquery.autocomplete.min.js"></script>
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.min.js" ></script>
+
+</head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="true">
+</div>
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/" class="avatar_target">
+    <img class="avatar" src="/img/head.jpg" />
+</a>
+<div class="author">
+    <span>Bigbroke</span>
+</div>
+
+<div class="icon">
+    
+    <a class="rss" title="rss" href="/atom.xml" target="_blank"></a>
+    
+    
+    <a class="github" title="github" href="https://github.com/bigbroke" target="_blank"></a>
+    
+    
+    
+    
+    
+    <a class="instagram" title="instagram" href="https://www.instagram.com/1_be_winner/" target="_blank"></a>
+    
+    
+    
+    <a class="weibo" title="weibo" href="http://weibo.com/u/xxx/" target="_blank"></a>
+    
+    
+    <a class="email" title="email" href="mailto:72382781@qq.com"></a>
+    
+</div>
+
+
+
+<ul>
+    <li class="all active">全部文章</li>
+    
+    <li data-rel="思考"> 思考 </li>
+    
+    <li data-rel="Language"> Language </li>
+    
+    <li data-rel="CTF"> CTF </li>
+    
+    <li data-rel="AiSecurity"> AiSecurity </li>
+    
+    <li data-rel="代码审计"> 代码审计 </li>
+    
+    <li data-rel="Kali"> Kali </li>
+    
+    <li data-rel="工具"> 工具 </li>
+    
+    <li data-rel="WebSecurity"> WebSecurity </li>
+    
+    <li data-rel="读书摘要"> 读书摘要 </li>
+    
+    <li data-rel="渗透测试"> 渗透测试 </li>
+    
+    <li data-rel="内网"> 内网 </li>
+    
+    <li data-rel="源码阅读"> 源码阅读 </li>
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+    
+    
+    
+    
+    </div>
+    <div><a style="border-right: 1px solid #fff; width: 49%"  class="about site_url"  href="/about">关于</a><a style="width: 50%"  class="friends">友链</a></div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="56">
+<input type="hidden" id="yelog_site_word_count" value="115.2k">
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        友情链接
+        <i class="back-title-list"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="/https/www.baidu.com">faBaidu</a></li>
+            
+            <li><a target="_blank" href="/https/www.google.com">fbGoogle</a></li>
+            
+            <li><a target="_blank" href="http://www.cnblogs.com/iamstudy/">I3m0n</a></li>
+            
+            <li><a target="_blank" href="http://ph0rse.me/">Ph0rse</a></li>
+            
+            <li><a target="_blank" href="http://03i0.com/">Sn00py</a></li>
+            
+            <li><a target="_blank" href="http://jlkl.github.io/">Str3am</a></li>
+            
+            <li><a target="_blank" href="http://marblue.me/">Marbule</a></li>
+            
+            <li><a target="_blank" href="http://twosmi1e.com/">2Smile</a></li>
+            
+            <li><a target="_blank" href="http://zo1ro.tk/">ZO1RO</a></li>
+            
+            <li><a target="_blank" href="https://blog.ruozhi.xyz/">ru0zhI</a></li>
+            
+            <li><a target="_blank" href="http://wulidecade.cn/">Decade</a></li>
+            
+            <li><a target="_blank" href="https://www.cnblogs.com/sn1per/">Sn1per</a></li>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <form onkeydown="if(event.keyCode==13){return false;}">
+        <input class="search" type="text" placeholder="以 in: 开头进行全文搜索" autocomplete="off"id="local-search-input" >
+        <i class="cross"></i>
+        <span>
+        <label for="tagswitch">Tags:</label>
+        <input id="tagswitch" type="checkbox">
+    </span>
+    </form>
+    <div class="tags-list">
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">思考</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">life</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">正则</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">WP</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">first-blog</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">ctf</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">代码审计</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">sqlilabs</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">sqlmap</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">cve</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">VIM</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">Nmap</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">密码学</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">hexo</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">Nikto</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">TCPDUMP</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">QWASP_ZAP</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">NETCAT</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">docker</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">Skipfish</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">Vega</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">复现</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">文件包含</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">读书摘要</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">信息收集</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">Web漏洞</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">内网</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">CTF</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">文件上传</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">渗透</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">web</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">黑客攻防web安全实战详解</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">入侵</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">Dvwa</a>
+    </li>
+    
+    <div class="clearfix"></div>
+</div>
+
+    
+    <div id="local-search-result">
+
+    </div>
+    
+    <nav id="title-list-nav">
+        
+        <a  class="读书摘要 "
+           href="/archis/a7cdea15/"
+           data-tag="读书摘要"
+           data-author="" >
+            <span class="post-title" title="《互联网企业安全高级指南》读书笔记">《互联网企业安全高级指南》读书笔记</span>
+            <span class="post-date" title="2020-03-04 18:17:30">2020/03/04</span>
+        </a>
+        
+        <a  class="源码阅读 "
+           href="/archis/f4173bf8/"
+           data-tag="ctf"
+           data-author="" >
+            <span class="post-title" title="Read-Sitadel-Source">Read-Sitadel-Source</span>
+            <span class="post-date" title="2019-03-15 00:00:08">2019/03/15</span>
+        </a>
+        
+        <a  class="AiSecurity "
+           href="/archis/eed6fa1/"
+           data-tag="ctf"
+           data-author="" >
+            <span class="post-title" title="AI-Security-Learning">AI-Security-Learning</span>
+            <span class="post-date" title="2019-02-17 21:15:30">2019/02/17</span>
+        </a>
+        
+        <a  class="思考 "
+           href="/archis/f7c9beed/"
+           data-tag="life"
+           data-author="" >
+            <span class="post-title" title="2018反思总结">2018反思总结</span>
+            <span class="post-date" title="2018-12-31 01:14:45">2018/12/31</span>
+        </a>
+        
+        <a  class="CTF "
+           href="/archis/49b464e6/"
+           data-tag="ctf"
+           data-author="" >
+            <span class="post-title" title="初探线下CTF-AWD模式">初探线下CTF-AWD模式</span>
+            <span class="post-date" title="2018-12-02 17:13:50">2018/12/02</span>
+        </a>
+        
+        <a  class="内网 "
+           href="/archis/7db24e65/"
+           data-tag="内网"
+           data-author="" >
+            <span class="post-title" title="内网渗透基础知识">内网渗透基础知识</span>
+            <span class="post-date" title="2018-12-02 17:07:15">2018/12/02</span>
+        </a>
+        
+        <a  class="CTF "
+           href="/archis/6bd5dfde/"
+           data-tag="ctf"
+           data-author="" >
+            <span class="post-title" title="第一届安洵杯writeup">第一届安洵杯writeup</span>
+            <span class="post-date" title="2018-11-26 21:23:57">2018/11/26</span>
+        </a>
+        
+        <a  class="CTF "
+           href="/archis/4341f801/"
+           data-tag="ctf"
+           data-author="" >
+            <span class="post-title" title="HCTF2018-web writeup">HCTF2018-web writeup</span>
+            <span class="post-date" title="2018-11-13 13:26:20">2018/11/13</span>
+        </a>
+        
+        <a  class="工具 "
+           href="/archis/47a94ec3/"
+           data-tag="docker"
+           data-author="" >
+            <span class="post-title" title="docker复现ctf&amp;dockerfile编写ctf环境">docker复现ctf&amp;dockerfile编写ctf环境</span>
+            <span class="post-date" title="2018-10-29 21:57:39">2018/10/29</span>
+        </a>
+        
+        <a  class="代码审计 "
+           href="/archis/441c37c9/"
+           data-tag="代码审计"
+           data-author="" >
+            <span class="post-title" title="墨者学院审计类通关指南">墨者学院审计类通关指南</span>
+            <span class="post-date" title="2018-10-28 22:02:08">2018/10/28</span>
+        </a>
+        
+        <a  class="WebSecurity "
+           href="/archis/767136e1/"
+           data-tag="复现"
+           data-author="" >
+            <span class="post-title" title="phpMyAdmin 4.8.x 本地文件包含">phpMyAdmin 4.8.x 本地文件包含</span>
+            <span class="post-date" title="2018-10-27 12:19:37">2018/10/27</span>
+        </a>
+        
+        <a  class="读书摘要 "
+           href="/archis/924987ad/"
+           data-tag="读书摘要"
+           data-author="" >
+            <span class="post-title" title="《Web安全攻防-渗透测试实战指南》读书笔记">《Web安全攻防-渗透测试实战指南》读书笔记</span>
+            <span class="post-date" title="2018-10-26 22:05:27">2018/10/26</span>
+        </a>
+        
+        <a  class="WebSecurity "
+           href="/archis/b46a6d47/"
+           data-tag="web"
+           data-author="" >
+            <span class="post-title" title="验证码相关安全问题">验证码相关安全问题</span>
+            <span class="post-date" title="2018-10-23 23:05:15">2018/10/23</span>
+        </a>
+        
+        <a  class="代码审计 "
+           href="/archis/a5c61176/"
+           data-tag="cve"
+           data-author="" >
+            <span class="post-title" title="Xss in MetInfo V6.1.2">Xss in MetInfo V6.1.2</span>
+            <span class="post-date" title="2018-10-16 02:16:08">2018/10/16</span>
+        </a>
+        
+        <a  class="CTF "
+           href="/archis/173905c2/"
+           data-tag="ctf"
+           data-author="" >
+            <span class="post-title" title="护网杯wp">护网杯wp</span>
+            <span class="post-date" title="2018-10-13 23:53:02">2018/10/13</span>
+        </a>
+        
+        <a  class="WebSecurity "
+           href="/archis/95d370e7/"
+           data-tag="Web漏洞"
+           data-author="" >
+            <span class="post-title" title="web漏洞挖掘之点击劫持漏洞">web漏洞挖掘之点击劫持漏洞</span>
+            <span class="post-date" title="2018-10-11 14:13:02">2018/10/11</span>
+        </a>
+        
+        <a  class="Language "
+           href="/archis/7fe4b50e/"
+           data-tag="正则"
+           data-author="" >
+            <span class="post-title" title="20个常用的正则表达式">20个常用的正则表达式</span>
+            <span class="post-date" title="2018-10-09 16:29:34">2018/10/09</span>
+        </a>
+        
+        <a  class="AiSecurity "
+           href="/archis/d4eed376/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="机器学习概念">机器学习概念</span>
+            <span class="post-date" title="2018-10-09 16:29:01">2018/10/09</span>
+        </a>
+        
+        <a  class="内网 "
+           href="/archis/17ef10d7/"
+           data-tag="内网"
+           data-author="" >
+            <span class="post-title" title="浅谈内网渗透流程">浅谈内网渗透流程</span>
+            <span class="post-date" title="2018-10-09 10:50:44">2018/10/09</span>
+        </a>
+        
+        <a  class="CTF "
+           href="/archis/18042369/"
+           data-tag="CTF"
+           data-author="" >
+            <span class="post-title" title="安恒5月">安恒5月</span>
+            <span class="post-date" title="2018-08-25 20:40:51">2018/08/25</span>
+        </a>
+        
+        <a  class="CTF "
+           href="/archis/b20debe2/"
+           data-tag="CTF"
+           data-author="" >
+            <span class="post-title" title="安恒7月">安恒7月</span>
+            <span class="post-date" title="2018-08-25 20:39:36">2018/08/25</span>
+        </a>
+        
+        <a  class="代码审计 "
+           href="/archis/8395d5c7/"
+           data-tag="代码审计"
+           data-author="" >
+            <span class="post-title" title="墨者学院php代码审计1">墨者学院php代码审计1</span>
+            <span class="post-date" title="2018-08-25 20:32:48">2018/08/25</span>
+        </a>
+        
+        <a  class="代码审计 "
+           href="/archis/d8be4236/"
+           data-tag="代码审计"
+           data-author="" >
+            <span class="post-title" title="PHP字符串&#39;和“区别">PHP字符串&#39;和“区别</span>
+            <span class="post-date" title="2018-08-25 20:22:01">2018/08/25</span>
+        </a>
+        
+        <a  class="渗透测试 "
+           href="/archis/35d3b1d4/"
+           data-tag="渗透"
+           data-author="" >
+            <span class="post-title" title="渗透测试基础">渗透测试基础</span>
+            <span class="post-date" title="2018-08-01 23:43:32">2018/08/01</span>
+        </a>
+        
+        <a  class="思考 "
+           href="/archis/80e1beed/"
+           data-tag="思考"
+           data-author="" >
+            <span class="post-title" title="八月展望">八月展望</span>
+            <span class="post-date" title="2018-08-01 23:41:26">2018/08/01</span>
+        </a>
+        
+        <a  class="CTF "
+           href="/archis/f4e3f3ec/"
+           data-tag="WP"
+           data-author="" >
+            <span class="post-title" title="2018SCTF-wp">2018SCTF-wp</span>
+            <span class="post-date" title="2018-06-20 22:40:40">2018/06/20</span>
+        </a>
+        
+        <a  class="WebSecurity "
+           href="/archis/2947d8f2/"
+           data-tag="密码学"
+           data-author="" >
+            <span class="post-title" title="cbc字节翻转攻击">cbc字节翻转攻击</span>
+            <span class="post-date" title="2018-06-01 00:47:50">2018/06/01</span>
+        </a>
+        
+        <a  class="CTF "
+           href="/archis/4e1d9865/"
+           data-tag="WP"
+           data-author="" >
+            <span class="post-title" title="ISCC2018-writeup">ISCC2018-writeup</span>
+            <span class="post-date" title="2018-05-28 00:54:05">2018/05/28</span>
+        </a>
+        
+        <a  class="CTF "
+           href="/archis/ceb4048b/"
+           data-tag="WP"
+           data-author="" >
+            <span class="post-title" title="全国网络空间安全技术大赛2018三道wp">全国网络空间安全技术大赛2018三道wp</span>
+            <span class="post-date" title="2018-05-15 19:04:17">2018/05/15</span>
+        </a>
+        
+        <a  class="CTF "
+           href="/archis/e36e397d/"
+           data-tag="WP"
+           data-author="" >
+            <span class="post-title" title="bugku-misc">bugku-misc</span>
+            <span class="post-date" title="2018-05-01 19:02:14">2018/05/01</span>
+        </a>
+        
+        <a  class="Kali "
+           href="/archis/40a439a4/"
+           data-tag="Nmap"
+           data-author="" >
+            <span class="post-title" title="Nmap 使用技巧汇总">Nmap 使用技巧汇总</span>
+            <span class="post-date" title="2018-04-23 22:07:46">2018/04/23</span>
+        </a>
+        
+        <a  class="WebSecurity "
+           href="/archis/844a29d4/"
+           data-tag="文件包含"
+           data-author="" >
+            <span class="post-title" title="php文件包含漏洞">php文件包含漏洞</span>
+            <span class="post-date" title="2018-04-23 21:39:49">2018/04/23</span>
+        </a>
+        
+        <a  class="WebSecurity "
+           href="/archis/ea42f6a6/"
+           data-tag="文件上传"
+           data-author="" >
+            <span class="post-title" title="文件上传总结">文件上传总结</span>
+            <span class="post-date" title="2018-04-23 21:39:03">2018/04/23</span>
+        </a>
+        
+        <a  class="CTF "
+           href="/archis/a7a61e20/"
+           data-tag="WP"
+           data-author="" >
+            <span class="post-title" title="DDCTF三道小结">DDCTF三道小结</span>
+            <span class="post-date" title="2018-04-23 21:35:39">2018/04/23</span>
+        </a>
+        
+        <a  class="渗透测试 "
+           href="/archis/1f382107/"
+           data-tag="入侵"
+           data-author="" >
+            <span class="post-title" title="高级入侵">高级入侵</span>
+            <span class="post-date" title="2018-04-23 21:33:14">2018/04/23</span>
+        </a>
+        
+        <a  class="渗透测试 "
+           href="/archis/312e3d12/"
+           data-tag="信息收集"
+           data-author="" >
+            <span class="post-title" title="信息收集">信息收集</span>
+            <span class="post-date" title="2018-04-02 16:15:51">2018/04/02</span>
+        </a>
+        
+        <a  class="CTF "
+           href="/archis/ced895c1/"
+           data-tag="sqlilabs"
+           data-author="" >
+            <span class="post-title" title="sqli-labs less11-15">sqli-labs less11-15</span>
+            <span class="post-date" title="2018-04-02 16:15:38">2018/04/02</span>
+        </a>
+        
+        <a  class="CTF "
+           href="/archis/9a0d7777/"
+           data-tag="sqlilabs"
+           data-author="" >
+            <span class="post-title" title="sqli-labs  less7-10">sqli-labs  less7-10</span>
+            <span class="post-date" title="2018-04-02 16:15:23">2018/04/02</span>
+        </a>
+        
+        <a  class="CTF "
+           href="/archis/4303333d/"
+           data-tag="sqlilabs"
+           data-author="" >
+            <span class="post-title" title="sqli-labs5-6(盲注)">sqli-labs5-6(盲注)</span>
+            <span class="post-date" title="2018-04-02 16:14:58">2018/04/02</span>
+        </a>
+        
+        <a  class="CTF "
+           href="/archis/239c6225/"
+           data-tag="sqlilabs"
+           data-author="" >
+            <span class="post-title" title="Sqli-labs  1-4">Sqli-labs  1-4</span>
+            <span class="post-date" title="2018-04-02 16:13:07">2018/04/02</span>
+        </a>
+        
+        <a  class="CTF "
+           href="/archis/79216fa/"
+           data-tag="WP"
+           data-author="" >
+            <span class="post-title" title="实验吧web—writeup">实验吧web—writeup</span>
+            <span class="post-date" title="2018-04-02 16:10:18">2018/04/02</span>
+        </a>
+        
+        <a  class="CTF "
+           href="/archis/2ccf6cb2/"
+           data-tag="WP"
+           data-author="" >
+            <span class="post-title" title="第二届强网杯-部分wp">第二届强网杯-部分wp</span>
+            <span class="post-date" title="2018-04-02 16:08:51">2018/04/02</span>
+        </a>
+        
+        <a  class="读书摘要 "
+           href="/archis/2ab3b8ea/"
+           data-tag="黑客攻防web安全实战详解"
+           data-author="" >
+            <span class="post-title" title="黑客攻防web安全实战详解">黑客攻防web安全实战详解</span>
+            <span class="post-date" title="2018-02-27 19:57:12">2018/02/27</span>
+        </a>
+        
+        <a  class="Kali "
+           href="/archis/b248361f/"
+           data-tag="QWASP_ZAP"
+           data-author="" >
+            <span class="post-title" title="kali渗透测试之Web渗透-扫描工具-QWASP_ZAP">kali渗透测试之Web渗透-扫描工具-QWASP_ZAP</span>
+            <span class="post-date" title="2018-02-27 19:54:20">2018/02/27</span>
+        </a>
+        
+        <a  class="Kali "
+           href="/archis/136af25a/"
+           data-tag="Vega"
+           data-author="" >
+            <span class="post-title" title="kali渗透测试之Web渗透-扫描工具-Vega">kali渗透测试之Web渗透-扫描工具-Vega</span>
+            <span class="post-date" title="2018-02-27 19:51:36">2018/02/27</span>
+        </a>
+        
+        <a  class="Kali "
+           href="/archis/497d64c3/"
+           data-tag="Skipfish"
+           data-author="" >
+            <span class="post-title" title="kali渗透测试之Web渗透-扫描工具-Skipfish">kali渗透测试之Web渗透-扫描工具-Skipfish</span>
+            <span class="post-date" title="2018-02-27 19:49:37">2018/02/27</span>
+        </a>
+        
+        <a  class="Kali "
+           href="/archis/a04b3dd7/"
+           data-tag="Nikto"
+           data-author="" >
+            <span class="post-title" title="kali渗透测试之Web渗透-扫描工具-Nikto">kali渗透测试之Web渗透-扫描工具-Nikto</span>
+            <span class="post-date" title="2018-02-27 19:47:03">2018/02/27</span>
+        </a>
+        
+        <a  class="Kali "
+           href="/archis/2b646ba1/"
+           data-tag="TCPDUMP"
+           data-author="" >
+            <span class="post-title" title="kali渗透测试之Web渗透-工具-TCPDUMP">kali渗透测试之Web渗透-工具-TCPDUMP</span>
+            <span class="post-date" title="2018-02-27 19:42:43">2018/02/27</span>
+        </a>
+        
+        <a  class="Kali "
+           href="/archis/32be69d6/"
+           data-tag="NETCAT"
+           data-author="" >
+            <span class="post-title" title="kali渗透测试之Web渗透-工具-NETCAT">kali渗透测试之Web渗透-工具-NETCAT</span>
+            <span class="post-date" title="2018-02-27 19:38:09">2018/02/27</span>
+        </a>
+        
+        <a  class="工具 "
+           href="/archis/2e6b5387/"
+           data-tag="VIM"
+           data-author="" >
+            <span class="post-title" title="Vim简单入门笔记">Vim简单入门笔记</span>
+            <span class="post-date" title="2017-12-15 19:07:45">2017/12/15</span>
+        </a>
+        
+        <a  class="思考 "
+           href="/archis/fb4597d6/"
+           data-tag="思考"
+           data-author="" >
+            <span class="post-title" title="17-11反思与进取">17-11反思与进取</span>
+            <span class="post-date" title="2017-11-22 17:10:55">2017/11/22</span>
+        </a>
+        
+        <a  class="CTF "
+           href="/archis/18acffef/"
+           data-tag="Dvwa"
+           data-author="" >
+            <span class="post-title" title="DVWA笔记">DVWA笔记</span>
+            <span class="post-date" title="2017-11-22 17:06:26">2017/11/22</span>
+        </a>
+        
+        <a  class="思考 "
+           href="/archis/undefined/"
+           data-tag="hexo"
+           data-author="" >
+            <span class="post-title" title="hexo博客搭建">hexo博客搭建</span>
+            <span class="post-date" title="2017-11-22 16:57:45">2017/11/22</span>
+        </a>
+        
+        <a  class="Kali "
+           href="/archis/18bbc00d/"
+           data-tag="sqlmap"
+           data-author="" >
+            <span class="post-title" title="SQLMAP注入教程-11种常见SQLMAP使用方法详解">SQLMAP注入教程-11种常见SQLMAP使用方法详解</span>
+            <span class="post-date" title="2017-11-21 04:27:10">2017/11/21</span>
+        </a>
+        
+        <a  class="CTF "
+           href="/archis/83955867/"
+           data-tag="WP"
+           data-author="" >
+            <span class="post-title" title="第八届Geek部分web">第八届Geek部分web</span>
+            <span class="post-date" title="2017-10-20 16:07:05">2017/10/20</span>
+        </a>
+        
+        <a  class="思考 "
+           href="/archis/e53fb0b9/"
+           data-tag="first-blog"
+           data-author="" >
+            <span class="post-title" title="my-first-blog">my-first-blog</span>
+            <span class="post-date" title="2017-09-27 16:56:58">2017/09/27</span>
+        </a>
+        
+    </nav>
+</div>
+    </div>
+    <div class="hide-list">
+        <div class="semicircle">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div class="post">
+    <div class="pjax">
+        <article id="post-Read-Sitadel-Source" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">Read-Sitadel-Source</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            
+            <a href="javascript:" data-rel="源码阅读">源码阅读</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="javascript:" class="color4">ctf</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+        创建时间:<time class="date" title='更新时间: 2019-03-15 00:02:58'>2019-03-15 00:00</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        <span>字数:12,538</span>
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读:<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+        <span class="top-comment" title="跳转至评论区">
+            <a href="#comments">
+                评论:<span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </a>
+        </span>
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Sitadel源码阅读"><span class="toc-text">Sitadel源码阅读</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#0x00-功能介绍"><span class="toc-text">0x00 功能介绍</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-指纹识别"><span class="toc-text">1. 指纹识别</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-攻击"><span class="toc-text">2. 攻击</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#0x01-整体结构"><span class="toc-text">0x01 整体结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#0x02-入口文件"><span class="toc-text">0x02 入口文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#0x03-lib-request-文件夹"><span class="toc-text">0x03 lib/request 文件夹</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#User-Agent：-lib-request-ragent-py"><span class="toc-text">User Agent： lib/request/ragent.py</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#类：lib-request-requestfactory-py"><span class="toc-text">类：lib/request/requestfactory.py</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#请求：lib-requests-request-py"><span class="toc-text">请求：lib/requests/request.py</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#0x04-lib-utils-文件夹"><span class="toc-text">0x04 lib/utils 文件夹</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#工具显示的baner：lib-utils-banner-py"><span class="toc-text">工具显示的baner：lib/utils/banner.py</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#container-py"><span class="toc-text">container.py</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#datastore-py"><span class="toc-text">datastore.py</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#manage-py"><span class="toc-text">manage.py</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#output-py"><span class="toc-text">output.py</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#validator-py"><span class="toc-text">validator.py</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#0x05-lib-config"><span class="toc-text">0x05 lib/config</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#settings-py"><span class="toc-text">settings.py</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#0x06-lib-modules"><span class="toc-text">0x06 lib/modules/</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#init-py"><span class="toc-text">__init__.py</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#crawler"><span class="toc-text">crawler</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#爬虫：lib-crawler-crawler-py"><span class="toc-text">爬虫：lib/crawler/crawler.py</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#0x07-lib-modules-fingerprints"><span class="toc-text">0x07 lib/modules/fingerprints</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#init-py-1"><span class="toc-text">_init_.py</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#server"><span class="toc-text">server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#header"><span class="toc-text">header</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#cookie-py"><span class="toc-text">cookie.py</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#headers-py"><span class="toc-text">headers.py</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#cdn指纹识别"><span class="toc-text">cdn指纹识别</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#cdn基础"><span class="toc-text">cdn基础</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#akamai"><span class="toc-text">akamai</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#azure-py"><span class="toc-text">azure.py</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#cloudflare-py"><span class="toc-text">cloudflare.py</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#cloudfront-py"><span class="toc-text">cloudfront.py</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#fastly-py"><span class="toc-text">fastly.py</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#cms指纹识别"><span class="toc-text">cms指纹识别</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Drupal"><span class="toc-text">Drupal</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#joomla"><span class="toc-text">joomla</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#magento"><span class="toc-text">magento</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#wordpress"><span class="toc-text">wordpress</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#framework指纹识别"><span class="toc-text">framework指纹识别</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#cakephp"><span class="toc-text">cakephp</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#cherrypy"><span class="toc-text">cherrypy</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#dancer"><span class="toc-text">dancer</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#django"><span class="toc-text">django</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#flask"><span class="toc-text">flask</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#fuelphp"><span class="toc-text">fuelphp</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#grails"><span class="toc-text">grails</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#laravel"><span class="toc-text">laravel</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#mvc"><span class="toc-text">mvc</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#nette"><span class="toc-text">nette</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#phalcon"><span class="toc-text">phalcon</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#rails"><span class="toc-text">rails</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#symfony"><span class="toc-text">symfony</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#yii"><span class="toc-text">yii</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#zend"><span class="toc-text">zend</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#fronted指纹识别"><span class="toc-text">fronted指纹识别</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#angularjs"><span class="toc-text">angularjs</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#emberjs"><span class="toc-text">emberjs</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#jquery"><span class="toc-text">jquery</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#knockout"><span class="toc-text">knockout</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#meteorjs"><span class="toc-text">meteorjs</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#mootools"><span class="toc-text">mootools</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#prototype"><span class="toc-text">prototype</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#reactjs"><span class="toc-text">reactjs</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#vuejs"><span class="toc-text">vuejs</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#lang指纹识别"><span class="toc-text">lang指纹识别</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#asp"><span class="toc-text">asp</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#java"><span class="toc-text">java</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#perl"><span class="toc-text">perl</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#php"><span class="toc-text">php</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#python"><span class="toc-text">python</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#ruby"><span class="toc-text">ruby</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#system指纹识别"><span class="toc-text">system指纹识别</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#bsd"><span class="toc-text">bsd</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#linux"><span class="toc-text">linux</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#mac"><span class="toc-text">mac</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#solaris"><span class="toc-text">solaris</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#unix"><span class="toc-text">unix</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#windows"><span class="toc-text">windows</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#waf指纹识别"><span class="toc-text">waf指纹识别</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#airlock"><span class="toc-text">airlock</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#anquanboa"><span class="toc-text">anquanboa</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#aws"><span class="toc-text">aws</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#baidu"><span class="toc-text">baidu</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#barracuda"><span class="toc-text">barracuda</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#bigip"><span class="toc-text">bigip</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#binarysec"><span class="toc-text">binarysec</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#blockdos"><span class="toc-text">blockdos</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#chinacache"><span class="toc-text">chinacache</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#ciscoacexml"><span class="toc-text">ciscoacexml</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#cloudflare"><span class="toc-text">cloudflare</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#cloudfront"><span class="toc-text">cloudfront</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#dotdefender"><span class="toc-text">dotdefender</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#edgecast"><span class="toc-text">edgecast</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#fortiweb"><span class="toc-text">fortiweb</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#hyperguard"><span class="toc-text">hyperguard</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#incapsula"><span class="toc-text">incapsula</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#isaserver"><span class="toc-text">isaserver</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#kona"><span class="toc-text">kona</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#modsecurity"><span class="toc-text">modsecurity</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#netcontinuum"><span class="toc-text">netcontinuum</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#paloalt"><span class="toc-text">paloalt</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#profense"><span class="toc-text">profense</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#radware"><span class="toc-text">radware</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#requestvalidationmode"><span class="toc-text">requestvalidationmode</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#safedog"><span class="toc-text">safedog</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#secureiis"><span class="toc-text">secureiis</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#sengnix"><span class="toc-text">sengnix</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#sitelock"><span class="toc-text">sitelock</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#sonicwall"><span class="toc-text">sonicwall</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#sucuri"><span class="toc-text">sucuri</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#trafficshield"><span class="toc-text">trafficshield</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#varnish"><span class="toc-text">varnish</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#wallarm"><span class="toc-text">wallarm</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#webknight"><span class="toc-text">webknight</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#0x08-lib-modules-attacks"><span class="toc-text">0x08  lib/modules/attacks</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#bruteforce"><span class="toc-text">bruteforce</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#admin-py"><span class="toc-text">admin.py</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#backdoor-py"><span class="toc-text">backdoor.py</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#bdir-py"><span class="toc-text">bdir.py</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#bfile-py"><span class="toc-text">bfile.py</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#dir-py"><span class="toc-text">dir.py</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#file-py"><span class="toc-text">file.py</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#init-py-2"><span class="toc-text">init.py</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#log-py"><span class="toc-text">log.py</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#init-py-3"><span class="toc-text">init.py</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#injection"><span class="toc-text">injection</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#html-py"><span class="toc-text">html.py</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#init-py-4"><span class="toc-text">init.py</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#ldap-py"><span class="toc-text">ldap.py</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#php-py"><span class="toc-text">php.py</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#rfi-py"><span class="toc-text">rfi.py</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#sql-py"><span class="toc-text">sql.py</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#xpath-py"><span class="toc-text">xpath.py</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#xss-py"><span class="toc-text">xss.py</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#other"><span class="toc-text">other</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#allow-method-py"><span class="toc-text">allow_method.py</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#dav-py"><span class="toc-text">dav.py</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#htmlobject-py"><span class="toc-text">htmlobject.py</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#init-py-5"><span class="toc-text">init.py</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#listing-py"><span class="toc-text">listing.py</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#multipleindex-py"><span class="toc-text">multipleindex.py</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#phpinfo-py"><span class="toc-text">phpinfo.py</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#robots-py"><span class="toc-text">robots.py</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#xst-py"><span class="toc-text">xst.py</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#vulns"><span class="toc-text">vulns</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#anonymous-py"><span class="toc-text">anonymous.py</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#crime-py"><span class="toc-text">crime.py</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#init-py-6"><span class="toc-text">init.py</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#shellshock-py"><span class="toc-text">shellshock.py</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#strutsshock-py"><span class="toc-text">strutsshock.py</span></a></li></ol></li></ol></li></ol></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Sitadel源码阅读"><a href="#Sitadel源码阅读" class="headerlink" title="Sitadel源码阅读"></a>Sitadel源码阅读</h1><p>项目地址：<a href="https://github.com/shenril/Sitadel" target="_blank" rel="external">https://github.com/shenril/Sitadel</a></p>
+<p>Web应用程序安全扫描程序</p>
+<p>[TOC]</p>
+<h2 id="0x00-功能介绍"><a href="#0x00-功能介绍" class="headerlink" title="0x00 功能介绍"></a>0x00 功能介绍</h2><p><img src="https://blog-1254419664.cos.ap-chengdu.myqcloud.com/backup/20190222153610.png" alt=""></p>
+<h3 id="1-指纹识别"><a href="#1-指纹识别" class="headerlink" title="1. 指纹识别"></a>1. 指纹识别</h3><p>a)     服务器</p>
+<p>b)     Web框架（CakePHP、CheeryPy……）</p>
+<p>c)     前端框架（AngularJS、MeteorJS、VueJS……）</p>
+<p>d)     Web应用程序防火墙（Waf）</p>
+<p>e)     内容管理系统（CMS）</p>
+<p>f)      操作系统（Linux、Unix……）</p>
+<p>g)     编程语言（PHP、Ruby……）</p>
+<p>h)     Cookie安全</p>
+<p>i)      内容分发网络（CDN）</p>
+<h3 id="2-攻击"><a href="#2-攻击" class="headerlink" title="2. 攻击"></a>2. 攻击</h3><p><strong>（1）暴力破解</strong></p>
+<ul>
+<li>管理接口</li>
+<li>常用后门</li>
+<li>常用备份目录</li>
+<li>常用备份文件</li>
+<li>常用目录</li>
+<li>常用文件</li>
+<li>日志文件</li>
+</ul>
+<p><strong>（2）注入攻击</strong></p>
+<ul>
+<li>HTML注入</li>
+<li>SQL注入</li>
+<li>LDAP注入</li>
+<li>XPath注入</li>
+<li>跨站脚本（XSS）</li>
+<li>远程文件披露（RFI）</li>
+<li>PHP代码注入</li>
+</ul>
+<p><strong>（3）其他攻击</strong></p>
+<ul>
+<li>HTTPAllow方法</li>
+<li>HTML对象</li>
+<li>多重引用</li>
+<li>Robots路径</li>
+<li>WebDav</li>
+<li>跨站追踪（XST）</li>
+<li>PHPINFO</li>
+<li>Listing</li>
+</ul>
+<p><strong>（4）漏洞利用</strong></p>
+<ul>
+<li>ShellShock</li>
+<li>匿名密码（CVE-2007-1858）</li>
+<li>SPDY（CVE-2012-4929）</li>
+<li>Struts-Shock</li>
+</ul>
+<h2 id="0x01-整体结构"><a href="#0x01-整体结构" class="headerlink" title="0x01 整体结构"></a>0x01 整体结构</h2><table>
+<thead>
+<tr>
+<th>类型</th>
+<th>名</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>dir</td>
+<td>config</td>
+<td>配置</td>
+</tr>
+<tr>
+<td>dir</td>
+<td>lib</td>
+<td>主要攻击文件，扩展，攻击用到的一些字典等等</td>
+</tr>
+<tr>
+<td>dir</td>
+<td>tests</td>
+<td>测试文件</td>
+</tr>
+<tr>
+<td>file</td>
+<td>CHANGELOG</td>
+<td>更新日志</td>
+</tr>
+<tr>
+<td>file</td>
+<td>Dockerfile</td>
+<td>docker文件</td>
+</tr>
+<tr>
+<td>file</td>
+<td>LICENSE</td>
+<td>许可证</td>
+</tr>
+<tr>
+<td>file</td>
+<td>Makefile</td>
+<td>使用tests文件夹做测试</td>
+</tr>
+<tr>
+<td>file</td>
+<td>README.md</td>
+<td>介绍</td>
+</tr>
+<tr>
+<td>file</td>
+<td>setup.py</td>
+<td>安装文件</td>
+</tr>
+<tr>
+<td>file</td>
+<td>sitadel.py</td>
+<td>主入口文件</td>
+</tr>
+</tbody>
+</table>
+<p><img src="https://blog-1254419664.cos.ap-chengdu.myqcloud.com/backup/Sitadel扫描器.png" alt=""></p>
+<p>所有文件</p>
+<pre><code>├── CHANGELOG
+├── config
+│   └── config.yml
+├── Dockerfile
+├── lib
+│   ├── config
+│   │   ├── __init__.py
+│   │   └── settings.py
+│   ├── data
+│   │   ├── admin.txt
+│   │   ├── allowmethod.txt
+│   │   ├── backdoor.txt
+│   │   ├── bdir.txt
+│   │   ├── bfile.txt
+│   │   ├── cdir.txt
+│   │   ├── cfile.txt
+│   │   ├── index.txt
+│   │   ├── ldap.txt
+│   │   ├── log.txt
+│   │   ├── phpinfo.txt
+│   │   ├── rfi.txt
+│   │   ├── sql.txt
+│   │   ├── xpath.txt
+│   │   └── xss.txt
+│   ├── __init__.py
+│   ├── modules
+│   │   ├── attacks
+│   │   │   ├── bruteforce
+│   │   │   │   ├── admin.py
+│   │   │   │   ├── backdoor.py
+│   │   │   │   ├── bdir.py
+│   │   │   │   ├── bfile.py
+│   │   │   │   ├── dir.py
+│   │   │   │   ├── file.py
+│   │   │   │   ├── __init__.py
+│   │   │   │   └── log.py
+│   │   │   ├── __init__.py
+│   │   │   ├── injection
+│   │   │   │   ├── html.py
+│   │   │   │   ├── __init__.py
+│   │   │   │   ├── ldap.py
+│   │   │   │   ├── php.py
+│   │   │   │   ├── rfi.py
+│   │   │   │   ├── sql.py
+│   │   │   │   ├── xpath.py
+│   │   │   │   └── xss.py
+│   │   │   ├── other
+│   │   │   │   ├── allow_method.py
+│   │   │   │   ├── dav.py
+│   │   │   │   ├── htmlobject.py
+│   │   │   │   ├── __init__.py
+│   │   │   │   ├── listing.py
+│   │   │   │   ├── multipleindex.py
+│   │   │   │   ├── phpinfo.py
+│   │   │   │   ├── robots.py
+│   │   │   │   └── xst.py
+│   │   │   └── vulns
+│   │   │       ├── anonymous.py
+│   │   │       ├── crime.py
+│   │   │       ├── __init__.py
+│   │   │       ├── shellshock.py
+│   │   │       └── strutsshock.py
+│   │   ├── crawler
+│   │   │   ├── crawler.py
+│   │   │   └── __init__.py
+│   │   ├── fingerprints
+│   │   │   ├── cdn
+│   │   │   │   ├── akamai.py
+│   │   │   │   ├── azure.py
+│   │   │   │   ├── cloudflare.py
+│   │   │   │   ├── cloudfront.py
+│   │   │   │   ├── fastly.py
+│   │   │   │   └── __init__.py
+│   │   │   ├── cms
+│   │   │   │   ├── drupal.py
+│   │   │   │   ├── __init__.py
+│   │   │   │   ├── joomla.py
+│   │   │   │   ├── magento.py
+│   │   │   │   └── wordpress.py
+│   │   │   ├── framework
+│   │   │   │   ├── cakephp.py
+│   │   │   │   ├── cherrypy.py
+│   │   │   │   ├── dancer.py
+│   │   │   │   ├── django.py
+│   │   │   │   ├── flask.py
+│   │   │   │   ├── fuelphp.py
+│   │   │   │   ├── grails.py
+│   │   │   │   ├── __init__.py
+│   │   │   │   ├── laravel.py
+│   │   │   │   ├── mvc.py
+│   │   │   │   ├── nette.py
+│   │   │   │   ├── phalcon.py
+│   │   │   │   ├── rails.py
+│   │   │   │   ├── symfony.py
+│   │   │   │   ├── yii.py
+│   │   │   │   └── zend.py
+│   │   │   ├── frontend
+│   │   │   │   ├── angularjs.py
+│   │   │   │   ├── emberjs.py
+│   │   │   │   ├── __init__.py
+│   │   │   │   ├── jquery.py
+│   │   │   │   ├── knockout.py
+│   │   │   │   ├── meteorjs.py
+│   │   │   │   ├── mootools.py
+│   │   │   │   ├── prototype.py
+│   │   │   │   ├── reactjs.py
+│   │   │   │   └── vuejs.py
+│   │   │   ├── header
+│   │   │   │   ├── cookie.py
+│   │   │   │   ├── headers.py
+│   │   │   │   └── __init__.py
+│   │   │   ├── __init__.py
+│   │   │   ├── lang
+│   │   │   │   ├── asp.py
+│   │   │   │   ├── __init__.py
+│   │   │   │   ├── java.py
+│   │   │   │   ├── perl.py
+│   │   │   │   ├── php.py
+│   │   │   │   ├── python.py
+│   │   │   │   └── ruby.py
+│   │   │   ├── server
+│   │   │   │   ├── __init__.py
+│   │   │   │   └── server.py
+│   │   │   ├── system
+│   │   │   │   ├── bsd.py
+│   │   │   │   ├── __init__.py
+│   │   │   │   ├── linux.py
+│   │   │   │   ├── mac.py
+│   │   │   │   ├── solaris.py
+│   │   │   │   ├── unix.py
+│   │   │   │   └── windows.py
+│   │   │   └── waf
+│   │   │       ├── airlock.py
+│   │   │       ├── anquanboa.py
+│   │   │       ├── aws.py
+│   │   │       ├── baidu.py
+│   │   │       ├── barracuda.py
+│   │   │       ├── bigip.py
+│   │   │       ├── binarysec.py
+│   │   │       ├── blockdos.py
+│   │   │       ├── chinacache.py
+│   │   │       ├── ciscoacexml.py
+│   │   │       ├── cloudflare.py
+│   │   │       ├── cloudfront.py
+│   │   │       ├── dotdefender.py
+│   │   │       ├── edgecast.py
+│   │   │       ├── fortiweb.py
+│   │   │       ├── hyperguard.py
+│   │   │       ├── incapsula.py
+│   │   │       ├── __init__.py
+│   │   │       ├── isaserver.py
+│   │   │       ├── kona.py
+│   │   │       ├── modsecurity.py
+│   │   │       ├── netcontinuum.py
+│   │   │       ├── paloalto.py
+│   │   │       ├── profense.py
+│   │   │       ├── radware.py
+│   │   │       ├── requestvalidationmode.py
+│   │   │       ├── safedog.py
+│   │   │       ├── secureiis.py
+│   │   │       ├── sengnix.py
+│   │   │       ├── sitelock.py
+│   │   │       ├── sonicwall.py
+│   │   │       ├── sucuri.py
+│   │   │       ├── trafficshield.py
+│   │   │       ├── varnish.py
+│   │   │       ├── wallarm.py
+│   │   │       └── webknight.py
+│   │   └── __init__.py
+│   ├── request
+│   │   ├── __init__.py
+│   │   ├── ragent.py
+│   │   ├── requestfactory.py
+│   │   └── request.py
+│   └── utils
+│       ├── banner.py
+│       ├── container.py
+│       ├── datastore.py
+│       ├── __init__.py
+│       ├── manager.py
+│       ├── output.py
+│       └── validator.py
+├── LICENSE
+├── Makefile
+├── README.md
+├── setup.py
+├── sitadel.py
+└── tests
+    └── lib
+        ├── config
+        │   ├── good-config.yml
+        │   ├── __init__.py
+        │   ├── test_attack_config.yml
+        │   ├── test_config.py
+        │   └── test_fingerprint_config.yml
+        ├── modules
+        │   ├── attacks
+        │   │   ├── __init__.py
+        │   │   └── test_attack.py
+        │   ├── fingerprints
+        │   │   ├── __init__.py
+        │   │   └── test_fingerprint.py
+        │   └── __init__.py
+        ├── request
+        │   ├── __init__.py
+        │   ├── test_ragent.py
+        │   └── test_request.py
+        └── utils
+            ├── __init__.py
+            ├── test_container.py
+            └── test_manager.py
+
+31 directories, 180 files
+</code></pre><h2 id="0x02-入口文件"><a href="#0x02-入口文件" class="headerlink" title="0x02 入口文件"></a>0x02 入口文件</h2><p>sitadel.py：</p>
+<p>主入口文件。会先初始化一些<code>Usage</code>，接受命令行参数并进行相关的前期处理。然后根据参数开始进行扫描。</p>
+<pre><code class="python">if __name__ == &quot;__main__&quot;:
+    try:
+        Sitadel().main()
+    except KeyboardInterrupt:
+        sys.exit(output.Output().error(&#39;Interruption by the user, Quitting...&#39;))
+</code></pre>
+<p>定义一个Sitadel类，通过parser.add_argument接受命令行参数</p>
+<pre><code class="python">class Sitadel(object):
+    bn = banner.Banner()
+    ma = manager
+    url = None
+
+    def main(self):
+        parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter,
+                                         usage=self.bn.banner())
+        # 准备风险等级的可能值
+        risk_values = [r.value for r in Risk]
+        # 添加命令行参数：
+            #设定url选项字符串的名字url， help：参数的帮助信息
+        parser.add_argument(&quot;url&quot;, help=&quot;URL of the website to scan&quot;)
+            #设定危险等级选项字符串的名字-r或者-risk，参数可允许的值为risk_values
+        parser.add_argument(&quot;-r&quot;, &quot;--risk&quot;, type=int, help=&quot;Level of risk allowed for the scan&quot;,
+                            choices=risk_values)
+            #设定user-agent选项字符串的名字-ua，默认为&quot;Sitadel &quot; + 版本
+        parser.add_argument(&quot;-ua&quot;, &quot;--user-agent&quot;, default=&quot;Sitadel &quot; + __version__,
+                            help=&quot;User-agent to set for the scan requests&quot;)
+            #设定遵循重定向选项字符串的名字redirect  解析后的参数名称为redirect，命令行遇到参数时的动作为store_true
+        parser.add_argument(&quot;--redirect&quot;, dest=&#39;redirect&#39;,
+                            help=&quot;Whether or not the scan should follow redirection&quot;,
+                            action=&quot;store_true&quot;)
+            #设定不遵循重定向选项字符串的名字--no-redirect  解析后的参数名称为redirect
+        parser.add_argument(&quot;--no-redirect&quot;, dest=&#39;redirect&#39;,
+                            help=&quot;Whether or not the scan should follow redirection&quot;,
+                            action=&quot;store_false&quot;)
+            #设定默认遵循重定向
+        parser.set_defaults(redirect=True)
+            #设定timeout选项字符串的名字-t,类型为整形
+        parser.add_argument(&quot;-t&quot;, &quot;--timeout&quot;, type=int, help=&quot;Timeout to set for the scan HTTP requests&quot;)
+            #设定cookie选项字符串的名字-c
+        parser.add_argument(&quot;-c&quot;, &quot;--cookie&quot;, help=&quot;Cookie to set for the scan HTTP requests&quot;)
+            #设定代理选项字符串的名字-p
+        parser.add_argument(&quot;-p&quot;, &quot;--proxy&quot;, help=&quot;Proxy to set for the scan HTTP requests&quot;)
+            #设定指纹识别选项字符串的名字-f，nargs读取的指纹识别参数个数为1或多个
+        parser.add_argument(&quot;-f&quot;, &quot;--fingerprint&quot;, nargs=&#39;+&#39;, help=&quot;Fingerprint modules to activate&quot;)
+            #设定攻击选项字符串的名字-a，nargs读取的攻击方式参数个数为1或多个
+        parser.add_argument(&quot;-a&quot;, &quot;--attack&quot;, nargs=&#39;+&#39;, help=&quot;Attack modules to activate&quot;)
+            #设定配置选项字符串的名字-config，默认为config/config.yml
+        parser.add_argument(&quot;--config&quot;, help=&quot;Path to the config file&quot;, default=&quot;config/config.yml&quot;)
+             #设定verbosity选项字符串的名字--v，命令行遇到参数时的动作为存储遇到的次数，默认为0
+        parser.add_argument(&quot;-v&quot;, &quot;--verbosity&quot;, action=&quot;count&quot;, default=0, help=&quot;Increase output verbosity&quot;)
+            # 输出版本信息
+        parser.add_argument(&#39;--version&#39;, action=&#39;version&#39;, version=self.bn.version())
+        args = parser.parse_args()
+</code></pre>
+<p>运行扫描必要配置</p>
+<pre><code class="python">class Sitadel(object):
+    bn = banner.Banner()
+    ma = manager
+    url = None
+
+    def main(self):
+       ...省略...
+        # 验证目标URL
+        self.url = validator.validate_target(args.url)
+
+        # 阅读配置
+        settings.from_yaml(args.config)
+        if args.risk is not None:
+            settings.risk = Risk(args.risk)
+
+        # 注册服务数据、日志、输出、请求
+        Services.register(&quot;datastore&quot;, Datastore(settings.datastore))
+        Services.register(&quot;logger&quot;, logging.getLogger(&quot;sitadelLog&quot;))
+        Services.register(&quot;output&quot;, Output())
+        Services.register(&quot;request_factory&quot;,
+                          SingleRequest(url=self.url, agent=args.user_agent, proxy=args.proxy, redirect=args.redirect,
+                                  timeout=args.timeout))
+
+        # 显示目标和扫描开始时间
+        self.bn.preamble(self.url)
+
+        # 运行指纹识别模块
+        self.ma.fingerprints(args.fingerprint,
+                             args.user_agent,
+                             args.proxy,
+                             args.redirect,
+                             args.timeout,
+                             self.url,
+                             args.cookie)
+
+        # 运行爬虫程序发现URL
+        discovered_urls = self.ma.crawler(self.url, args.user_agent)
+
+        # 在发现的URL上运行攻击模块
+        self.ma.attacks(args.attack, self.url, discovered_urls)
+</code></pre>
+<h2 id="0x03-lib-request-文件夹"><a href="#0x03-lib-request-文件夹" class="headerlink" title="0x03 lib/request 文件夹"></a>0x03 lib/request 文件夹</h2><pre><code>│   ├── request
+│   │   ├── __init__.py
+│   │   ├── ragent.py
+│   │   ├── requestfactory.py
+│   │   └── request.py
+</code></pre><p>主要是定义一些跟请求相关的方法/类/功能</p>
+<h3 id="User-Agent：-lib-request-ragent-py"><a href="#User-Agent：-lib-request-ragent-py" class="headerlink" title="User Agent： lib/request/ragent.py"></a>User Agent： lib/request/ragent.py</h3><p>生成随机的 User-Agent。命令行选项<code>wascan.py --ragent</code>开启。</p>
+<pre><code class="python">import random
+
+#定义随机User-Agent
+def RandomUserAgent():
+    agents = (
+        &#39;Mozilla/5.0 (Windows NT 6.1; WOW64; rv:40.0) Gecko/20100101 Firefox/40.1&#39;,
+        &#39;Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1)&#39;,
+        &#39;Opera/9.80 (X11; Linux i686; Ubuntu/14.10) Presto/2.12.388 Version/12.16&#39;,
+        &#39;Mozilla/5.0 (Windows; U; MSIE 9.0; Windows NT 9.0; en-US&#39;,
+        &#39;Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; FSL 7.0.6.01001)&#39;,
+        &#39;Mozilla/5.0 (Windows NT 6.1; WOW64; rv:12.0) Gecko/20100101 Firefox/12.0&#39;,
+        &#39;Mozilla/5.0 (Windows NT 5.1; rv:13.0) Gecko/20100101 Firefox/13.0.1&#39;,
+        &#39;Mozilla/5.0 (Windows NT 6.1; WOW64; rv:11.0) Gecko/20100101 Firefox/11.0&#39;,
+        &#39;Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0; .NET CLR 1.0.3705)&#39;,
+        &#39;Mozilla/5.0 (Windows NT 5.1; rv:13.0) Gecko/20100101 Firefox/13.0.1&#39;,
+        &#39;Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0)&#39;,
+        &#39;Opera/9.80 (Windows NT 5.1; U; en) Presto/2.10.289 Version/12.01&#39;,
+        &#39;Mozilla/5.0 (Windows NT 5.1; rv:5.0.1) Gecko/20100101 Firefox/5.0.1&#39;,
+        &#39;Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko&#39;,
+        &#39;Mozilla/5.0 (Windows NT 6.3; WOW64; rv:41.0) Gecko/20100101 Firefox/41.0&#39;,
+        &#39;Mozilla/5.0 (Windows NT 6.3; WOW64; rv:34.0) Gecko/20100101 Firefox/34.0)&#39;
+    )
+    #返回agents中的随机一个
+    return str(agents[random.randint(0, len(agents) - 1)])
+</code></pre>
+<h3 id="类：lib-request-requestfactory-py"><a href="#类：lib-request-requestfactory-py" class="headerlink" title="类：lib/request/requestfactory.py"></a>类：lib/request/requestfactory.py</h3><p>定义了几种可能出现的不同协议的request：</p>
+<pre><code class="python">class MultipleHTTPRequests:
+
+    def __init__(self, url):
+        self.url = url
+
+
+class SingleHTTPRequest:
+    pass
+
+
+class DNSRequest:
+    pass
+
+
+class RequestFactory:
+    def __init__(self):
+        pass
+    #**kwargs表示关键字参数，它是一个 dict
+    def make_multiple_requests(self, **kwargs):
+        return MultipleHTTPRequests(**kwargs)
+
+    def make_single_request(self, **kwargs):
+        return SingleHTTPRequest(**kwargs)
+
+    def make_dns_request(self, **kwargs):
+        return DNSRequest(**kwargs)
+</code></pre>
+<h3 id="请求：lib-requests-request-py"><a href="#请求：lib-requests-request-py" class="headerlink" title="请求：lib/requests/request.py"></a>请求：lib/requests/request.py</h3><p>基本请求。包括请求/代理认证，请求，重定向，响应的处理。</p>
+<pre><code class="python">class SingleRequest:
+    # 接受参数
+    def __init__(self, **kwargs):
+        # 获取各项值，保存到kwargs的dict中，后期进一步处理
+        self.url = None if &quot;url&quot; not in kwargs else kwargs[&quot;url&quot;]
+        self.agent = &quot;Sitadel&quot; if &quot;agent&quot; not in kwargs else kwargs[&quot;agent&quot;]
+        self.proxy = None if &quot;proxy&quot; not in kwargs else kwargs[&quot;proxy&quot;]
+        self.redirect = True if &quot;redirect&quot; not in kwargs else kwargs[&quot;redirect&quot;]
+        self.timeout = None if &quot;timeout&quot; not in kwargs else kwargs[&quot;timeout&quot;]
+        self.ruagent = ragent.RandomUserAgent()
+    # 发送请求
+    def send(self, url, method=&quot;GET&quot;, payload=None, headers=None, cookies=None):
+        #请求会话
+        output = Services.get(&#39;output&#39;)
+        request = Session()
+        prepped=self.prepare_request(url,method,payload,headers,cookies)
+        urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+        try:
+            resp=request.send(
+                prepped,
+                timeout=self.timeout,
+                proxies={
+                    &#39;http&#39;: self.proxy,
+                    &#39;https&#39;: self.proxy,
+                    &#39;ftp&#39;: self.proxy,
+                },
+                allow_redirects=self.redirect,
+                verify=False)
+            return resp
+        except RequestException as err:
+            output.error(&quot;Error while trying to contact the website: \n {0}\n&quot;.format(err))
+            raise(err)
+    # 准备的请求 获取各项参数
+    def prepare_request(self, url, method, payload, headers, cookies):
+        if payload is None:
+            payload = {}
+        if headers is None:
+            headers = {}
+        if cookies is not None:
+            cookies = {cookies: &#39;&#39;}
+        if &quot;--random-agent&quot; in sys.argv:
+            headers[&#39;User-Agent&#39;] = self.ruagent
+        else:
+            headers[&#39;User-Agent&#39;] = self.agent
+        # get请求方式处理
+        if method.upper() == &quot;GET&quot;: # upper() 小写字母转为大写字母
+            req = Request(
+                method=method.upper(),
+                url=url,
+                headers=headers,
+                cookies=cookies,
+            ).prepare() #发送请求之前的额外处理
+        # post请求方式处理
+        elif method.upper() == &quot;POST&quot;:
+            req = Request(
+                method=method.upper(),
+                url=url,
+                data=payload,
+                headers=headers,
+                cookies=cookies,
+            ).prepare()
+        # 其他请求方式
+        else:
+            req = Request(
+                method=method.upper(),
+                url=url,
+                data=payload,
+                headers=headers,
+                cookies=cookies,
+            ).prepare()
+        #返回所有的req属性字典
+        return req
+</code></pre>
+<h2 id="0x04-lib-utils-文件夹"><a href="#0x04-lib-utils-文件夹" class="headerlink" title="0x04 lib/utils 文件夹"></a>0x04 lib/utils 文件夹</h2><p>主要是定义一些小功能、小工具</p>
+<pre><code>│   └── utils
+│       ├── banner.py
+│       ├── container.py
+│       ├── datastore.py
+│       ├── __init__.py
+│       ├── manager.py
+│       ├── output.py
+│       └── validator.py
+</code></pre><h3 id="工具显示的baner：lib-utils-banner-py"><a href="#工具显示的baner：lib-utils-banner-py" class="headerlink" title="工具显示的baner：lib/utils/banner.py"></a>工具显示的baner：lib/utils/banner.py</h3><pre><code class="python">#定义Banner类
+class Banner:
+    r = Fore.RED
+    y = Fore.YELLOW
+    ny = Fore.YELLOW
+    nw = Fore.WHITE
+    g = Fore.GREEN
+    e = Style.RESET_ALL
+    #定义banner形状和字体颜色
+    def banner(self):
+        print(self.ny + &quot;   _   _   _        ______ _                 _       _  &quot; + self.e)
+        print(self.ny + &quot;  | |_| |_| |      / _____|_)  _            | |     | | &quot; + self.e)
+        print(self.ny + &quot;  |         |     ( (____  _ _| |_ _____  __| |_____| | &quot; + self.e)
+        print(self.ny + &quot;  |    _    |      \____ \| (_   _|____ |/ _  | ___ | | &quot; + self.e)
+        print(self.ny + &quot;  |   |_|   |      _____) ) | | |_/ ___ ( (_| | ____| | &quot; + self.e)
+        print(self.ny + &quot;  |         |     (______/|_|  \__)_____|\____|_____)\_)&quot; + self.r + &quot; &quot; + version + &quot;\n&quot; + self.e)
+        print(self.g + &quot;~/#&quot; + self.e + &quot; Sitadel - Web Application Security Scanner&quot; + self.g + &quot; #\\~&quot; + self.e)
+        print(self.g + &quot;~/#&quot; + self.e + &quot; Shenril (@shenril)&quot; + self.g + &quot; #\\~&quot; + self.e)
+        print(self.g + &quot;~/#&quot; + self.e + &quot; https://github.com/shenril/Sitadel&quot; + self.g + &quot; #\\~&quot; + self.e)
+        print(&quot;\n\n&quot;)
+    #前言
+    def preamble(self, url):
+        print(&#39;URL: %s&#39; % url)
+        print(&#39;Started: %s&#39; % (time.strftime(&#39;%d/%m/%Y %H:%M:%S&#39;)))#返回以可读字符串表示的当地时间
+
+    def version(self):
+        return self.g + &quot;~/#&quot; + self.e + &quot; Sitadel (&quot; + version + &quot;)\n&quot;
+</code></pre>
+<h3 id="container-py"><a href="#container-py" class="headerlink" title="container.py"></a>container.py</h3><p>定义Services类，获取cls、key参数</p>
+<pre><code class="python">class Services(object):
+    services = {}
+
+    @classmethod
+
+    def get(cls, key):
+        #异常处理，如果服务是空报错
+        try:
+            if cls.services[key] is None:
+                raise NameError(&quot;No service registered with this name&quot;)
+            else:
+                return cls.services[key]
+        except KeyError:
+            raise NameError(&quot;No service registered with this name&quot;)
+
+    @classmethod
+    def register(cls, name, instance) -&gt; None:
+        cls.services[name] = instance
+</code></pre>
+<h3 id="datastore-py"><a href="#datastore-py" class="headerlink" title="datastore.py"></a>datastore.py</h3><p>用于访问插件数据的公共文件夹的实用程序</p>
+<pre><code class="python">import os
+
+class Datastore:
+
+    def __init__(self, rootpath):
+        self.rootpath = rootpath
+    #python跨路径调用/lib/data/字典文件
+    def open(self, filename, mode):
+        return open(os.path.join(self.rootpath, filename), mode,encoding=&quot;utf-8&quot;)
+</code></pre>
+<h3 id="manage-py"><a href="#manage-py" class="headerlink" title="manage.py"></a>manage.py</h3><pre><code class="python">#指纹识别传递参数
+def fingerprints(modules, agent, proxy, redirect, timeout, url, cookie):
+    plugins = settings.fingerprint_plugins
+    if modules is not None:
+        plugins = modules
+    Fingerprints(
+        agent=agent,
+        proxy=proxy,
+        redirect=redirect,
+        timeout=timeout,
+        url=url,
+        cookie=cookie
+    ).run(plugins)
+
+#获取爬虫url
+def crawler(start_url, agent):
+    return crawl(start_url, agent)
+
+#调用plugins攻击执行
+def attacks(modules, url, crawled_urls):
+    plugins = settings.attack_plugins
+    if modules is not None:
+        plugins = modules
+    Attacks(url, crawled_urls).run(plugins)
+</code></pre>
+<h3 id="output-py"><a href="#output-py" class="headerlink" title="output.py"></a>output.py</h3><p>定义了各种打印输出方法，基本的格式化字符串、颜色。略过</p>
+<h3 id="validator-py"><a href="#validator-py" class="headerlink" title="validator.py"></a>validator.py</h3><pre><code class="python">import sys
+from urllib.parse import urlparse
+
+#验证url是否有效
+def validate_target(url):
+    try:
+        u = urlparse(url)
+        #判断协议与域名
+        if u.scheme and u.netloc:
+            return u.geturl()#geturl方法获取真实的url
+        else:
+            raise ValueError(&#39;Url not valid, please try with a valid target url!&#39;)
+    except ValueError as e:
+        print(e)
+        sys.exit(2)
+</code></pre>
+<h2 id="0x05-lib-config"><a href="#0x05-lib-config" class="headerlink" title="0x05 lib/config"></a>0x05 lib/config</h2><h3 id="settings-py"><a href="#settings-py" class="headerlink" title="settings.py"></a>settings.py</h3><p>基本设置</p>
+<pre><code class="python">import os.path
+from enum import IntEnum
+
+import yaml
+
+
+class Risk(IntEnum):
+    &quot;&quot;&quot;
+    枚举插件的风险
+    0 NO_DANGER几乎没有检测到的风险
+    1 NOISY生成可能检测到的大量请求和模式
+    2危险进行开发阶段，可能对目标有潜在危害
+
+    &quot;&quot;&quot;
+    NO_DANGER = 0
+    NOISY = 1
+    DANGEROUS = 2
+
+#定义settings类
+class Settings(object):
+    cfg = {}
+
+    _setters = [&#39;risk&#39;, &#39;dns_resolver&#39;, &#39;datastore&#39;]
+
+    def __getattr__(self, item):
+        return Settings.cfg[item]
+
+    def __setattr__(self, key, value):
+        if key in Settings._setters:
+            Settings.cfg[key] = value
+        else:
+            raise NameError(&quot;You cannot redefine the value of %s dynamically\nPlease use the config file&quot; % key)
+
+    @classmethod
+    def from_yaml(cls, filepath):
+        &quot;&quot;&quot;
+        从yaml文件生成配置字典
+        ：param filepath：配置文件路径
+        ：return：无
+        &quot;&quot;&quot;
+        # 检查提供的文件路径是否存在
+        if not os.path.isfile(filepath):
+            raise FileNotFoundError(&quot;Invalid path for the configuration file&quot;)
+
+        # 解析配置并将其合并到dict中
+        with open(filepath, &#39;r&#39;) as yamlfile:
+            try:
+                # 从文件中获取配置
+                config = yaml.load(yamlfile)
+                # 合并字典并获得结果
+                cls.cfg = {**cls.cfg, **config}
+            except yaml.YAMLError as e:
+                print(e)
+</code></pre>
+<h2 id="0x06-lib-modules"><a href="#0x06-lib-modules" class="headerlink" title="0x06 lib/modules/"></a>0x06 lib/modules/</h2><h3 id="init-py"><a href="#init-py" class="headerlink" title="__init__.py"></a><code>__init__.py</code></h3><pre><code class="python">class IPlugin(type):
+    def __init__(cls, name, bases, dct):
+        #判断cls是否不包含plugins属性
+        if not hasattr(cls, &#39;plugins&#39;):
+            # 一个基类，创建一个空注册表
+            cls.plugins = []
+        else:
+            # 这是派生类，将cls添加到注册表
+            if hasattr(cls, &#39;level&#39;) and getattr(cls, &#39;level&#39;) &lt;= settings.risk:
+                cls.plugins.append(cls)
+        #调用父类方法
+        super(IPlugin, cls).__init__(name, bases, dct)
+</code></pre>
+<h3 id="crawler"><a href="#crawler" class="headerlink" title="crawler"></a>crawler</h3><p>爬虫，爬取页面上的所有连接。</p>
+<pre><code>│   │   ├── crawler
+│   │   │   ├── crawler.py
+│   │   │   └── __init__.py
+</code></pre><h4 id="爬虫：lib-crawler-crawler-py"><a href="#爬虫：lib-crawler-crawler-py" class="headerlink" title="爬虫：lib/crawler/crawler.py"></a>爬虫：lib/crawler/crawler.py</h4><pre><code class="python">urls = []
+
+#爬虫类SitadelSpider，它继承自CrawlSpider类
+class SitadelSpider(CrawlSpider):
+    name = &quot;sitadel&quot;
+    #定义规则
+    rules = [
+        Rule(
+            LinkExtractor(
+                canonicalize=True,
+                unique=True
+            ),
+            follow=True,
+            callback=&quot;parse_items&quot;
+        )
+    ]
+
+    # 解析项目的方法
+    def parse_items(self, response):
+        links = LinkExtractor(canonicalize=True, unique=True).extract_links(response)
+        # 对于links中的所有链接
+        for link in links:
+            #对于允许的域名allowed_domains中所有的域名
+            for allowed_domain in self.allowed_domains:
+                #判断拆分url的netloc是否等于所允许的域名
+                if urlparse(link.url).netloc == allowed_domain:
+                    urls.append(link.url)
+                    #yield 是一个类似 return的关键字，迭代一次遇到yield时就返回yield后面爬虫下来的url
+                    yield scrapy.Request(link.url, callback=self.parse)
+
+#定义crawl函数，传入url和user-agent
+def crawl(url, user_agent):
+    output = Services.get(&#39;output&#39;)
+
+    # 爬虫工具的设置
+    settings = get_project_settings()
+    settings.set(&quot;USER_AGENT&quot;, user_agent)
+    settings.set(&quot;LOG_LEVEL&quot;, &quot;CRITICAL&quot;)
+
+    # 创建将执行爬虫的进程
+    output.info(&#39;Start crawling the target website&#39;)
+    process = CrawlerProcess(settings)
+    domain = urlparse(url).hostname
+    process.crawl(SitadelSpider, start_urls=[str(url)], allowed_domains=[str(domain)])
+    process.start()
+
+    # 清理结果
+    clean_urls = []
+    for u in urls:
+        try:
+            new_url = urlparse(u).geturl()
+            if new_url not in clean_urls:
+                clean_urls.append(new_url)
+        except ValueError:
+            continue
+
+    return clean_urls
+</code></pre>
+<h2 id="0x07-lib-modules-fingerprints"><a href="#0x07-lib-modules-fingerprints" class="headerlink" title="0x07 lib/modules/fingerprints"></a>0x07 lib/modules/fingerprints</h2><p>指纹识别模式</p>
+<p>目前针对Web应用指纹识别的研究工作主要通过对大量HTML数据的分析来识别Web应用, 包括HTML源码关键字和特殊文件及路径, 由于需要处理较多HTML数据和文件, 降低了其执行速度; 而主流工具主要利用HTML源码关键字实现Web应用的快速识别, 但是由于关键字易被删除而导致识别率低.</p>
+<p>为解决Web应用指纹识别的研究工作与实际应用中存在的上述问题, 并提高Web应用的识别率, 本文以主流的开源Web应用[<a href="http://html.rhhz.net/ZGKXYDXXB/20160516.htm#b15" target="_blank" rel="external">15</a>]为研究对象, 以源码审计为研究方法, 通过对Web应用的静态文件、源码以及结构设计的详细分析, 并从以下4个方面选取Web应用指纹.</p>
+<p>1)结构特征. Web应用的类型可由其特殊的结构设计准确识别, 该指纹只需从HTML数据的头部获取. 例如, 如果Web应用的文件路径包含/wp-includes/, 则该Web应用是Wordpress.</p>
+<p>2)静态文件. Web应用的类型及版本可由其未被修改而被直接使用的静态文件准确识别. 例如, 用于Web应用前端布局的文件style.css, 通过与目标style.css比较可准确识别Web应用的类型及版本.</p>
+<p>3)Cookie设计. Web应用的类型可由开发者为其设计特殊的Cookie名准确识别. 例如, 如果Cookie名为django, 则该Web应用是Django-CMS.</p>
+<p>4)关键字. HTML源码关键字是主流工具选取的Web应用指纹, 存在与功能无关且易被删除的缺点, 但可作为Web应用的补充指纹. 通过对关键字在HTML源码中的分析, 选取以下4个关键字指纹:</p>
+<pre><code>·&lt;meta name=&quot;generator&quot; content=&quot;*application*&quot; /&gt;
+
+·Powered by *application*
+
+·&lt;meta name=&quot;author&quot; content=&quot;*author*&quot; /&gt;
+
+·&lt;meta name=&quot;copyright&quot; content=&quot;*copyright*&quot; /&gt;
+</code></pre><p>其中, 结构特征、静态文件和Cookie设计这3类指纹都与Web应用功能相关, 有不易被修改或删除的特点, 我们设计并构建了包含这4类Web应用指纹的Web指纹库, 只需按照Web指纹库定义的格式向其中增加新类型Web指纹, 即可实现对新增Web应用的识别, 对Web应用的识别具有良好的可扩展性.</p>
+<h3 id="init-py-1"><a href="#init-py-1" class="headerlink" title="_init_.py"></a><code>_init_.py</code></h3><p><code>_init_.py</code>代码中<code>Fingerprint</code>类如下：</p>
+<pre><code class="python">class FingerprintPlugin(metaclass=IPlugin):
+    #指纹模块的默认风险等级为NO DANGER，因为它仅分析一个请求响应
+    level = Risk.NO_DANGER
+
+    def process(self, headers, content):
+        raise NotImplementedError(str(self) + &quot;: Process method not found&quot;)
+
+    def __repr__(self):
+        parent_module = self.__class__.__module__.split(&#39;.&#39;)[-2]
+        return parent_module.title()
+
+
+class Fingerprints:
+    def __init__(self, agent, proxy, redirect, timeout, url, cookie):
+        # 相关参数 初始化
+        self.url = url
+        self.cookie = cookie
+        self.output = Services.get(&#39;output&#39;)
+        self.request = Services.get(&#39;request_factory&#39;)
+
+    def run(self, plugins_activated):
+        self.output.info(&#39;Launching fingerprints modules...&#39;)
+        # 从配置中注册插件
+        for p in plugins_activated:
+            #
+            currentdir = os.path.dirname(os.path.realpath(__file__))
+            pkgpath = os.path.dirname(currentdir + &quot;/%s/&quot; % p)
+            modules = [name for _, name, _ in pkgutil.iter_modules([pkgpath])]
+            for module in modules:
+                importlib.import_module(&quot;.{pkg}.{mod}&quot;.format(pkg=p, mod=module), __package__)
+        try:
+            # 发送侦听请求
+            # 首先发送HTTP GET请求
+            resp = self.request.send(
+                url=self.url,
+                method=&quot;GET&quot;,
+                payload=None,
+                headers=None,
+                cookies=self.cookie
+            )
+
+            # 循环遍历将结果传递到指纹模块上进行处理
+            fingerprints = (
+                [(p(), p().process(resp.headers, resp.text)) for p in FingerprintPlugin.plugins])
+
+            # 显示每个模块类别的结果
+            for category, result in fingerprints:
+                if result is not None:
+                    self.output.finding(&#39;{category} detected: {result}&#39;.format(category=category, result=result))
+
+        except Exception as e:
+            self.output.error(&quot;Error occured\nAborting fingerprint...\n&quot;)
+            return
+</code></pre>
+<h3 id="server"><a href="#server" class="headerlink" title="server"></a>server</h3><p>指纹识别模式服务开启 ，代码重点server类如下</p>
+<pre><code class="python">#定义Server类 传入指纹识别插件
+class Server(FingerprintPlugin):
+    def process(self, headers, content):
+        server = None
+        try:
+            for item in headers.items():
+                if re.search(r&#39;server&#39;, item[0], re.I):
+                    server = item[1]
+            # FIXME修复对请求URL的访问
+            # if server is None:
+            #     resp = Request().send(Request().url, headers={&#39;Expect&#39;: &#39;Linguini&#39;})
+            #     for item in resp.headers.items():
+            #         if re.search(r&#39;server&#39;, item[0], re.I): server = item[1]
+            return server
+        except Exception as e:
+            print(e)
+</code></pre>
+<h3 id="header"><a href="#header" class="headerlink" title="header"></a>header</h3><h4 id="cookie-py"><a href="#cookie-py" class="headerlink" title="cookie.py"></a>cookie.py</h4><pre><code class="python">class Cookie(FingerprintPlugin):
+    def process(self, headers, content):
+        #如果被测url的header存在set-cookie，那么取过来放在cookie变量中
+        if &#39;set-cookie&#39; in headers:
+            cookie = headers[&#39;set-cookie&#39;]
+        else:
+            cookie = None
+        #如果cookie不为空
+        if cookie is not None:
+            #如果cookie中存在domain=*，输出cookie中匹配到的domain=(.+?)[\;]
+            if re.search(r&#39;domain=\S*&#39;, cookie, re.I):
+                Output().finding(
+                    &#39;Cookies are only accessible to this domain: %s&#39; % re.findall(r&#39;domain=(.+?)[\;]&#39;, cookie, re.I)[0])
+            #如果在cookie中未找到httponly则提示cookie创建时没有使用hhtponly技术
+            if not re.search(&#39;httponly&#39;, cookie, re.I):
+                Output().finding(&#39;Cookies created without HTTPOnly Flag.&#39;)
+            if not re.search(&#39;secure&#39;, cookie, re.I):
+                Output().finding(&#39;Cookies created without Secure Flag.&#39;)
+</code></pre>
+<h4 id="headers-py"><a href="#headers-py" class="headerlink" title="headers.py"></a>headers.py</h4><pre><code class="python">#定义header类，传入指纹识别插件的参数
+class Headers(FingerprintPlugin):
+      #定义process函数
+    def process(self, headers, content):
+      #将各个请求header头字典作为list存入fields参数
+        fields = (&#39;Accept&#39;,
+                  &#39;Accept-Charset&#39;,
+                  &#39;Accept-Encoding&#39;,
+                  略。。。。。。
+                  &#39;X-UA-Compatible&#39;
+                  )
+        #如何在headers的key中找到X-Frame-Options则输出提示
+        if not re.search(r&#39;X-Frame-Options&#39;, str(headers.keys()), re.I):
+            Output().finding(&#39;X-Frame-Options header is not present.&#39;)
+
+        if not re.search(r&#39;Strict-Transport-Security&#39;, str(headers.keys()), re.I):
+            Output().finding(&#39;Strict-Transport-Security header is not present.&#39;)
+
+        if not re.search(r&#39;x-xss-protection&#39;, str(headers.keys()), re.I):
+            Output().finding(&#39;X-XSS-Protection header is not present.&#39;)
+        try:
+            #循环遍历key 如果实际情况key都不在扫描器存储的字典key中，则输出提示不在文件中
+            for key in headers.keys():
+                if key not in fields:
+                    Output().finding(&#39;Uncommon header &quot;%s&quot; found, with contents: %s&#39; % (key, headers[key]))
+        except Exception as e:
+            print(e)
+</code></pre>
+<h3 id="cdn指纹识别"><a href="#cdn指纹识别" class="headerlink" title="cdn指纹识别"></a>cdn指纹识别</h3><h4 id="cdn基础"><a href="#cdn基础" class="headerlink" title="cdn基础"></a>cdn基础</h4><p><img src="https://blog-1254419664.cos.ap-chengdu.myqcloud.com/backup/20190223145924.png" alt=""></p>
+<p><img src="https://blog-1254419664.cos.ap-chengdu.myqcloud.com/backup/20190223150037.png" alt=""></p>
+<p>接下来我们通过图解来看一下当访问<a href="http://www.apple.com/" target="_blank" rel="external">http://www.apple.com</a>  时，apple主页通过CDN获取html页面的全过程</p>
+<p><img src="http://static.oschina.net/uploads/space/2014/0408/223609_7o3z_1452390.png" alt="img"></p>
+<p>(1) 用户向电信运营商的本地DNS递归查询服务器（以下简称local telcom DNS）询问 <a href="http://www.apple.com/" target="_blank" rel="external">www.apple.com</a>  的ip地址。</p>
+<p>(2,3) local telcom DNS向根域名服务器和.com顶级域名服务器进行递归查询apple.com的权威域名服务器地址。</p>
+<p>(4,5) local telcom DNS向apple.com权威域名服务器查询<a href="http://www.apple.xn--comip%2Cakamaicname:e3191-3y32bu50azz7espbb62cuf3kna9319n.dscc.akamaiedge.net/" target="_blank" rel="external">www.apple.com</a> 的ip，得到指向Akamai域名的CNAME记录：<a href="http://www.isg-apple.com.akadns.net/" target="_blank" rel="external">www.isg-apple.com.akadns.net</a>，该域名由Akamai拥有。接着local telcom DNS向<a href="http://www.isg-apple.com.akadns.net/" target="_blank" rel="external">www.isg-apple.com.akadns.net</a>发起DNS查询请求，得到另一个CNAME记录 <a href="http://www.apple.com.edgekey.net/" target="_blank" rel="external">www.apple.com.edgekey.net</a> ，该域名同样由Akamai拥有。和上一步一样，接着local telcom DNS向<a href="http://www.apple.com.edgekey.net/" target="_blank" rel="external">www.apple.com.edgekey.net</a> 发起域名查询请求，得到另一个CNAME记录 <a href="http://www.dscc.akamaiedge.net/" target="_blank" rel="external">e3191.dscc.akamaiedge.net</a> ,该域名还是由Akamai拥有（akadns.net, edgekey, akamaiedge.net 都是Akamai控制的域名）。（由上面的dig截图我们知道，<a href="http://www.dscc.akamaiedge.net/" target="_blank" rel="external">e3191.dscc.akamaiedge.net</a> 是最后一次CNAME记录的域名，也是akamai的智能DNS服务器，它能根据用户所处的地理位置和当前网络负载情况给出最合适的服务器ip地址。）</p>
+<p>(6,7) local telcom DNS向根域名服务器和.net顶级域名服务器进行递归查询akamaiedge.net的权威域名服务器地址。</p>
+<p>(8,9) lcoal telcom DNS向akamaiedge.net的权威域名服务器查询<a href="http://www.dscc.akamaiedge.net/" target="_blank" rel="external">e3191.dscc.akamaiedge.net</a> 的ip,  得到的返回结果为Akamai CDN edge server的ip，一般是离用户地理位置最近的那个edge server服务器。</p>
+<p>(10) local telcom DNS将Akamai CDN edge server的ip返回给用户的计算机。</p>
+<p>(11) 用户向Akamai CDN edge server发送请求。</p>
+<p>(12) Akamai CDN edge server会进行判断：如果是静态资源请求且缓存已经过期，或者是动态资源请求，会向apple源服务器发送请求，否则直接转到（13）。</p>
+<p>(13) Akamai CDN edge server将缓存的静态资源或者作为代理转发的动态资源返回给用户。</p>
+<p>我们平时看到的对CDN的使用基本就是按照上图的流程来进行的。</p>
+<h4 id="akamai"><a href="#akamai" class="headerlink" title="akamai"></a>akamai</h4><p> 域名拼接上edgekey.net(akamai独有)，如果A记录存在，A记录解析成功，说明这个域名存在有CDN，若不存在则无cdn。</p>
+<pre><code class="python">from urllib.parse import urlparse
+
+from dns.resolver import NXDOMAIN, NoAnswer, Resolver, Timeout
+
+from lib.config import settings
+from lib.config.settings import Risk
+from lib.modules.fingerprints import FingerprintPlugin
+from lib.utils.container import Services
+
+#定义Akamai类
+class Akamai(FingerprintPlugin):
+    level = Risk.NO_DANGER
+
+
+    def process(self, headers, content):
+        request = Services.get(&#39;request_factory&#39;)
+        hostname = urlparse(request.url).hostname
+        try:
+            resolver = Resolver(configure=False)
+            resolver.nameservers = [settings.dns_resolver]
+            resolver.timeout = 2
+            resolver.lifetime = 2
+
+            #dns询问指定查询类型为A记录 
+            dns_query = resolver.query(hostname + &quot;.edgekey.net&quot;, &#39;A&#39;)
+
+            #域名解析正确且至少要返回一个IP，则判断是Akamai CDN
+            if len(dns_query) &gt; 0:
+                return &quot;Akamai CDN&quot;
+
+        except NXDOMAIN:
+            pass
+        except NoAnswer:
+            pass
+        except Timeout:
+            pass
+</code></pre>
+<h4 id="azure-py"><a href="#azure-py" class="headerlink" title="azure.py"></a>azure.py</h4><p>DNS解析CNAME 记录的查询是否存在<code>azureedge.net</code></p>
+<pre><code class="python">class Azure(FingerprintPlugin):
+    level = Risk.NO_DANGER
+
+    def process(self, headers, content):
+        request = Services.get(&#39;request_factory&#39;)
+        hostname = urlparse(request.url).hostname
+        _ = False
+
+        try:
+            resolver = Resolver(configure=False)
+            resolver.nameservers = [settings.dns_resolver]
+            resolver.timeout = 2
+            resolver.lifetime = 2
+
+            dns_query = resolver.query(hostname, &#39;CNAME&#39;)
+            if len(dns_query) &gt; 0:
+                for answer in dns_query:
+                    #扫描answer字符串中azureedge.net，r代表了原字符串不用加转义字符，re.I 忽略大小写 
+                    #search是在整体搜索，而match是从开始搜索
+                    _ |= re.search(r&#39;azureedge\.net&#39;, str(answer), re.I) is not None
+            #如果成功判断是Azure  cdn
+            if _:
+                return &quot;Azure CDN&quot;
+        except NoAnswer:
+            pass
+        except NXDOMAIN:
+            pass
+        except Timeout:
+            pass
+</code></pre>
+<h4 id="cloudflare-py"><a href="#cloudflare-py" class="headerlink" title="cloudflare.py"></a>cloudflare.py</h4><p> 域名拼接上.cdn.cloudflare.net(cloudflare独有)，如果A记录存在，A记录解析成功，说明这个域名存在有cloudflare CDN</p>
+<pre><code class="python">class Cloudflare(FingerprintPlugin):
+    level = Risk.NO_DANGER
+
+    def process(self, headers, content):
+        request = Services.get(&#39;request_factory&#39;)
+        hostname = urlparse(request.url).hostname
+        try:
+            resolver = Resolver(configure=False)
+            resolver.nameservers = [settings.dns_resolver]
+            resolver.timeout = 2
+            resolver.lifetime = 2
+            # 域名拼接上.cdn.cloudflare.net，查询A记录
+            dns_query = resolver.query(hostname + &quot;.cdn.cloudflare.net&quot;, &#39;A&#39;)
+            #域名解析正确且至少要返回一个IP，则判断是Akamai CDN
+            if len(dns_query) &gt; 0:
+                return &quot;Cloudflare CDN&quot;
+</code></pre>
+<h4 id="cloudfront-py"><a href="#cloudfront-py" class="headerlink" title="cloudfront.py"></a>cloudfront.py</h4><p>请求hostname查看cname返回包中师傅存在cloudfront.net</p>
+<pre><code class="python">class CloudFront(FingerprintPlugin):
+    level = Risk.NO_DANGER
+
+    def process(self, headers, content):
+        request = Services.get(&#39;request_factory&#39;)
+        hostname = urlparse(request.url).hostname
+        _ = False
+        try:
+            resolver = Resolver(configure=False)
+            resolver.nameservers = [settings.dns_resolver]
+            resolver.timeout = 2
+            resolver.lifetime = 2
+            #
+            dns_query = resolver.query(hostname, &#39;CNAME&#39;)
+
+            if len(dns_query) &gt; 0:
+                #扫描answer字符串中cloudfront.net
+                for answer in dns_query:
+                    _ |= re.search(r&#39;cloudfront\.net&#39;, str(answer), re.I) is not None
+            if _:
+                return &quot;CloudFront CDN (Amazon)&quot;
+</code></pre>
+<h4 id="fastly-py"><a href="#fastly-py" class="headerlink" title="fastly.py"></a>fastly.py</h4><p>请求hostname查看cname返回包中师傅存在fastly.net</p>
+<pre><code class="python">def process(self, headers, content):
+        request = Services.get(&#39;request_factory&#39;)
+        hostname = urlparse(request.url).hostname
+        _ = False
+        try:
+            resolver = Resolver(configure=False)
+            resolver.nameservers = [settings.dns_resolver]
+            resolver.timeout = 2
+            resolver.lifetime = 2
+
+            dns_query = resolver.query(hostname, &#39;CNAME&#39;)
+            if len(dns_query) &gt; 0:
+                for answer in dns_query:
+                    _ |= re.search(r&#39;fastly\.net&#39;, str(answer), re.I) is not None
+            if _:
+                return &quot;Fastly CDN&quot;
+</code></pre>
+<h3 id="cms指纹识别"><a href="#cms指纹识别" class="headerlink" title="cms指纹识别"></a>cms指纹识别</h3><p>CMS识别原理就是得到一些CMS的一些固有特征，通过得到这个特征来判断CMS的类别。</p>
+<h4 id="Drupal"><a href="#Drupal" class="headerlink" title="Drupal"></a>Drupal</h4><p>三个search任意一个结果为1 _就是true，然后返回时drupal cms</p>
+<p>但是这里问题很大：有部分开发者会除自带的Drupal.settings</p>
+<p><a href="https://www.yangshengliang.com/jianzhanxitong/drupal/1407.html" target="_blank" rel="external">drupal 7 移除自带的 css 和 javascript 及jQuery.extend(Drupal.settings,</a></p>
+<p>drupal7后第二条匹配规则就算是失效了。</p>
+<p>三条匹配规则还需要添加</p>
+<pre><code class="python">class Drupal(FingerprintPlugin):
+    def process(self, headers, content):
+        _ = False
+        try:
+            #使用 Python 的原始字符串，只需加一个 r 前缀
+            # | 指明两项之间的一个选择
+            #在url中寻找/misc/drupal.js或者content中是否有power by Drupal这样去检测drupal
+            _ = re.search(r&#39;src=&quot;\S*/misc/drupal.js*|Powered by Drupal, an open source content management system&#39;,
+                          content) is not None
+            #\S匹配任何非空白字符 jQuery中Drupal.extend
+            #扫描content中匹配存在/misc/drupal.css或jQuery中的Drupal.settings或Drupal.extend
+            _ |= re.search(r&#39;\S*/misc/drupal.css&quot;|jQuery.extend\WDrupal.settings|Drupal.extend\W&#39;, content) is not None
+            #匹配meta标签存在name=&quot;Generator&quot; content=&quot;Drupal&#39;
+            _ |= re.search(r&#39;&lt;meta name=&quot;Generator&quot; content=&quot;Drupal&#39;, content) is not None
+            if _:
+                return &quot;Drupal&quot;
+        except Exception as e:
+            print(e)
+</code></pre>
+<h4 id="joomla"><a href="#joomla" class="headerlink" title="joomla"></a>joomla</h4><p>两重判断</p>
+<pre><code class="python">class Joomla(FingerprintPlugin):
+    def process(self, headers, content):
+        _ = False
+        try:
+            #匹配url中的/index.php?option= 或 meta标签name=&quot;generator&quot; content=&quot;Joomla 或匹配 源码存在Powered by &lt;a href=&quot;http://www.joomla.org&quot;&gt;Joomla!&lt;/a&gt;
+            _ = re.search(
+                r&#39;/index.php?option=(\S*)|&lt;meta name=&quot;generator&quot; content=&quot;Joomla*|Powered by &lt;a href=&quot;http://www.joomla.org&quot;&gt;Joomla!&lt;/a&gt;*&#39;,
+                content) is not None
+            if _:
+                #二次判断是否存在/templates/目录，re.I忽略大小写
+                if re.search(&#39;/templates/*&#39;, content, re.I):
+                    return &quot;Joomla&quot;
+        except Exception as e:
+            print(e)
+</code></pre>
+<h4 id="magento"><a href="#magento" class="headerlink" title="magento"></a>magento</h4><pre><code class="python">class Magento(FingerprintPlugin):
+    def process(self, headers, content):
+        _ = False
+        try:
+          #页面特征较多，做一个循环判断，主要原理是网页中发现关键字
+            for x in (&#39;x-magento-init&#39;, &#39;Magento_*&#39;, &#39;images/logo.gif&quot; alt=&quot;Magento Commerce&quot; /&gt;&lt;/a&gt;&lt;/h1&gt;&#39;,
+                      &#39;&lt;a href=&quot;http://www.magentocommerce.com/bug-tracking&quot; id=&quot;bug_tracking_link&quot;&gt;&lt;strong&gt;Report All Bugs&lt;/strong&gt;&lt;/a&gt;&#39;,
+                      &#39;&lt;meta name=&quot;keywords&quot; content=&quot;Magento, Varien, E-commerce&quot; /&gt;&#39;, &#39;mage/cookies.js&quot; &gt;&lt;/script&gt;&#39;,
+                      &#39;&lt;div id=&quot;noscript-notice&quot; class=&quot;magento-notice&quot;&gt;&#39;):
+                #判断_是true
+                _ = re.search(x, content) is not None
+                if _:
+                    return &quot;Magento&quot;
+        except Exception as e:
+            print(e)
+</code></pre>
+<h4 id="wordpress"><a href="#wordpress" class="headerlink" title="wordpress"></a>wordpress</h4><p>结构特征. Web应用的类型可由其特殊的结构设计准确识别, 该指纹只需从HTML数据的头部获取. 例如, 如果Web应用的文件路径包含/wp-includes/, 则该Web应用是Wordpress.</p>
+<pre><code class="python">class Wordpress(FingerprintPlugin):
+    def process(self, headers, content):
+        _ = False
+        try:
+            #循环寻找指定URL的关键字来判断是否存在各个Wordpress的url文件夹
+            for x in (&#39;/wp-admin/&#39;, &#39;/wp-content/&#39;, &#39;/wp-includes/&#39;, &#39;&lt;meta name=&quot;generator&quot; content=&quot;WordPress&#39;):
+                _ = re.search(x, content) is not None
+            if _:
+                return &quot;Wordpress&quot;
+        except Exception as e:
+            print(e)
+</code></pre>
+<h3 id="framework指纹识别"><a href="#framework指纹识别" class="headerlink" title="framework指纹识别"></a>framework指纹识别</h3><p>在framework下面对更多种类的框架进行了识别。这里倒是可以自己增加一些额外的框架识别代码，进行扩充。</p>
+<pre><code>│   │   │   ├── framework
+│   │   │   │   ├── cakephp.py
+│   │   │   │   ├── cherrypy.py
+│   │   │   │   ├── dancer.py
+│   │   │   │   ├── django.py
+│   │   │   │   ├── flask.py
+│   │   │   │   ├── fuelphp.py
+│   │   │   │   ├── grails.py
+│   │   │   │   ├──` __init__.py`
+│   │   │   │   ├── laravel.py
+│   │   │   │   ├── mvc.py
+│   │   │   │   ├── nette.py
+│   │   │   │   ├── phalcon.py
+│   │   │   │   ├── rails.py
+│   │   │   │   ├── symfony.py
+│   │   │   │   ├── yii.py
+│   │   │   │   └── zend.py
+</code></pre><h4 id="cakephp"><a href="#cakephp" class="headerlink" title="cakephp"></a>cakephp</h4><p> 原理： header特别字段cakephp=的正则匹配</p>
+<pre><code class="python">class Cakephp(FingerprintPlugin):
+    def process(self, headers, content):
+        _ = False
+        for item in headers.items():
+            #匹配headers中的value值是否有cakephp=
+            _ = re.search(r&#39;cakephp=&#39;, item[1], re.I) is not None
+            if _:
+                return &quot;CakePHP (PHP)&quot;
+</code></pre>
+<h4 id="cherrypy"><a href="#cherrypy" class="headerlink" title="cherrypy"></a>cherrypy</h4><p> 原理： header特别字段CherryPy的正则匹配</p>
+<pre><code class="python">class Cherrypy(FingerprintPlugin):
+    def process(self, headers, content):
+        _ = False
+        #匹配headers中value值是否有CherryPy
+        for item in headers.items():
+            _ = re.search(r&#39;CherryPy&#39;, item[1], re.I) is not None
+            if _:
+                return &quot;CherryPy (Python)&quot;
+</code></pre>
+<h4 id="dancer"><a href="#dancer" class="headerlink" title="dancer"></a>dancer</h4><p> 原理：header特别字段Dancer和dancer.session的正则匹配</p>
+<pre><code class="python">class Dancer(FingerprintPlugin):
+    def process(self, headers, content):
+        _ = False
+        for item in headers.items():
+            #匹配headers中value值是否有Dancer或存在dancer.session
+            _ |= re.search(r&#39;Dancer|dancer\.session=.*&#39;, item[1], re.I) is not None
+        if _:
+            return &quot;Dancer (Perl)&quot;
+</code></pre>
+<h4 id="django"><a href="#django" class="headerlink" title="django"></a>django</h4><p> 原理：header特别字段csrftoken的正则匹配</p>
+<pre><code class="python">class Django(FingerprintPlugin):
+    def process(self, headers, content):
+        _ = False
+        #csrftoken是django中防止csrf的机制
+        for item in headers.items():
+            _ = re.search(r&#39;csrftoken=&#39;, item[1], re.I) is not None
+            if _:
+                return &quot;Django (Python)&quot;
+</code></pre>
+<h4 id="flask"><a href="#flask" class="headerlink" title="flask"></a>flask</h4><p> 原理： header特别字段flask的正则匹配</p>
+<pre><code class="python">class Flask(FingerprintPlugin):
+    def process(self, headers, content):
+        _ = False
+        for item in headers.items():
+            #匹配header头value值是否有flask
+            _ = re.search(r&#39;flask&#39;, item[1], re.I) is not None
+            if _:
+                return &quot;Flask (Python)&quot;
+</code></pre>
+<h4 id="fuelphp"><a href="#fuelphp" class="headerlink" title="fuelphp"></a>fuelphp</h4><p> 原理： header特别字段fuelcid= 或者 content特别字段Powered by <code>&lt;a href=&quot;http://fuelphp.com&quot;&gt;FuelPHP&lt;/a&gt;</code>的正则匹配</p>
+<pre><code class="python">class Fuelphp(FingerprintPlugin):
+    def process(self, headers, content):
+        _ = False
+        for item in headers.items():
+            ##header头value值匹配fuelcid=
+            _ = re.search(r&#39;fuelcid=&#39;, item[1], re.I) is not None
+            #两个匹配规则 按位或运算符,如果content中匹配存在Powered by &lt;a href=&quot;http://fuelphp.com&quot;&gt;FuelPHP&lt;/a&gt; 那么_判定为true
+            _ |= re.search(r&#39;Powered by &lt;a href=&quot;http://fuelphp.com&quot;&gt;FuelPHP&lt;/a&gt;&#39;, content) is not None
+            if _:
+                return &quot;FuelPHP (PHP)&quot;
+</code></pre>
+<h4 id="grails"><a href="#grails" class="headerlink" title="grails"></a>grails</h4><p> 原理：header key值和value值的正则匹配</p>
+<p><img src="https://blog-1254419664.cos.ap-chengdu.myqcloud.com/backup/20190225142058.png" alt=""></p>
+<p>headers的代码形式{‘k1’:’v1’, ‘k2’:’v2’}</p>
+<p>item是个list,遍历出来的item是个二元数组 (‘k1’, ‘v1’)</p>
+<p>item[0]是key值，item[1]是value值 </p>
+<pre><code class="python">class Grails(FingerprintPlugin):
+    def process(self, headers, content):
+        _ = False
+        for item in headers.items():
+            #遍历header头匹配value值是Grails
+            _ = re.search(r&#39;Grails&#39;, item[1], re.I) is not None
+            #遍历header头匹配key值是X-Grails或X-Grails-Cached
+            _ |= re.search(r&#39;X-Grails|X-Grails-Cached&#39;, item[0], re.I) is not None
+            if _:
+                return &quot;Grails (Java)&quot;
+</code></pre>
+<h4 id="laravel"><a href="#laravel" class="headerlink" title="laravel"></a>laravel</h4><p> 原理： header字段的value值特别为laravel_session=的正则匹配</p>
+<pre><code class="python">class Laravel(FingerprintPlugin):
+    def process(self, headers, content):
+        _ = False
+        for item in headers.items():
+            #header头value值匹配laravel_session=
+            _ = re.search(r&#39;laravel_session=&#39;, item[1], re.I) is not None
+            if _:
+                return &quot;Laravel (PHP)&quot;
+</code></pre>
+<h4 id="mvc"><a href="#mvc" class="headerlink" title="mvc"></a>mvc</h4><p> 原理：header特别字段的正则匹配</p>
+<pre><code class="python">class Mvc(FingerprintPlugin):
+    def process(self, headers, content):
+        _ = False
+        for item in headers.items():
+            #匹配response headers中是否有x-aspnetmvc-version或__requestverificationtoken
+            _ = re.search(r&#39;x-aspnetmvc-version|__requestverificationtoken&#39;, str(item), re.I) is not None
+            if _:
+                return &quot;ASP.NET MVC&quot;
+</code></pre>
+<h4 id="nette"><a href="#nette" class="headerlink" title="nette"></a>nette</h4><p> 原理： header特别字段<code>nette*或nette-browser=*</code>的正则匹配</p>
+<pre><code class="python">class Nette(FingerprintPlugin):
+    def process(self, headers, content):
+        _ = False
+        for item in headers.items():
+            #匹配headers头中value值是否有nette*或nette-browser=*
+            _ = re.search(r&#39;nette*|nette-browser=*&#39;, item[1], re.I) is not None
+            if _:
+                return &quot;Nette (PHP)&quot;
+</code></pre>
+<h4 id="phalcon"><a href="#phalcon" class="headerlink" title="phalcon"></a>phalcon</h4><p> 原理：header特别字段<code>phalcon-auth-*或Phalcon [(https://phalconphp.com/)]*</code>的正则匹配</p>
+<pre><code class="python">class Phalcon(FingerprintPlugin):
+    def process(self, headers, content):
+        _ = False
+        for item in headers.items():
+            #匹配headers头中value值是否有phalcon-auth-*或Phalcon [(https://phalconphp.com/)]*
+            _ = re.search(r&#39;phalcon-auth-*&#39;, item[1], re.I) is not None
+            _ |= re.search(r&#39;Phalcon [(https://phalconphp.com/)]*&#39;, item[1]) is not None
+            if _:
+                return &quot;Phalcon (C and PHP)&quot;
+</code></pre>
+<h4 id="rails"><a href="#rails" class="headerlink" title="rails"></a>rails</h4><p> 原理：header key值和value值的正则匹配</p>
+<pre><code class="python">class Rails(FingerprintPlugin):
+    def process(self, headers, content):
+        _ = False
+        for item in headers.items():
+            #遍历header头匹配value值是Grails
+            _ = re.search(r&#39;rails*|_rails_admin_session=*|x-rails&#39;, item[1], re.I) is not None
+            #遍历header头匹配key值是rails*或x-rails
+            _ |= re.search(r&#39;rails*|x-rails&#39;, item[0], re.I) is not None
+            if _:
+                return &quot;Rails (Ruby)&quot;
+</code></pre>
+<h4 id="symfony"><a href="#symfony" class="headerlink" title="symfony"></a>symfony</h4><p> 原理： header特别字段symfony=*的正则匹配</p>
+<pre><code class="python">class Symfony(FingerprintPlugin):
+    def process(self, headers, content):
+        _ = False
+        for item in headers.items():
+            #匹配headers中的value值是否有symfony=*
+            _ = re.search(r&#39;symfony=*&#39;, item[1], re.I) is not None
+            if _:
+                return &quot;Symfony PHP&quot;
+</code></pre>
+<h4 id="yii"><a href="#yii" class="headerlink" title="yii"></a>yii</h4><p> 原理： header特别字段_csrf=* 或者 匹配content特别字段Powered by <code>&lt;a href=&quot;http://fuelphp.com&quot;&gt;FuelPHP&lt;/a&gt;</code>的正则匹配</p>
+<pre><code class="python">class Yii(FingerprintPlugin):
+    def process(self, headers, content):
+        _ = False
+        for item in headers.items():
+            #匹配headers中的value值是否有_csrf=*
+            _ = re.search(r&#39;_csrf=*&#39;, item[1], re.I) is not None
+            #或者匹配content中存在Powered by &lt;a href=&quot;http://www.yiiframework.com/&quot; rel=&quot;external&quot;&gt;Yii Framework&lt;/a&gt;
+            _ |= re.search(r&#39;Powered by &lt;a href=&quot;http://www.yiiframework.com/&quot; rel=&quot;external&quot;&gt;Yii Framework&lt;/a&gt;&#39;,
+                           content) is not None
+            if _:
+                return &quot;Yiiframework (PHP)&quot;
+</code></pre>
+<h4 id="zend"><a href="#zend" class="headerlink" title="zend"></a>zend</h4><p>原理： header特别字段<code>Zend</code>的正则匹配</p>
+<pre><code class="python">class Zend(FingerprintPlugin):
+    def process(self, headers, content):
+        _ = False
+        for item in headers.items():
+            #匹配headers中的value值是否有Zend
+            _ = re.search(r&#39;Zend&#39;, item[1], re.I) is not None
+            if _:
+                return &quot;Zend (PHP)&quot;
+</code></pre>
+<h3 id="fronted指纹识别"><a href="#fronted指纹识别" class="headerlink" title="fronted指纹识别"></a>fronted指纹识别</h3><p>前端框架指纹识别</p>
+<pre><code>│   │   │   ├── frontend
+│   │   │   │   ├── angularjs.py
+│   │   │   │   ├── emberjs.py
+│   │   │   │   ├── __init__.py
+│   │   │   │   ├── jquery.py
+│   │   │   │   ├── knockout.py
+│   │   │   │   ├── meteorjs.py
+│   │   │   │   ├── mootools.py
+│   │   │   │   ├── prototype.py
+│   │   │   │   ├── reactjs.py
+│   │   │   │   └── vuejs.py
+</code></pre><h4 id="angularjs"><a href="#angularjs" class="headerlink" title="angularjs"></a>angularjs</h4><p>原理：三条匹配规则 有一则规则触发就是AngularJS，主要依靠content特别字段的正则匹配</p>
+<pre><code class="python">class Angularjs(FingerprintPlugin):
+    def process(self, headers, content):
+        _ = False
+        #re.I:忽略大小写 匹配content中是否有ng-app
+        _ = re.search(r&#39;ng-app&#39;, content, re.I) is not None
+        #或者匹配content中是否有ng-version
+        _ |= re.search(r&#39;ng-version&#39;, content, re.I) is not None
+        #或者匹配content中是否有app-root
+        _ |= re.search(r&#39;app-root&#39;, content, re.I) is not None
+        if _:
+            return &quot;AngularJS (Google)&quot;
+</code></pre>
+<h4 id="emberjs"><a href="#emberjs" class="headerlink" title="emberjs"></a>emberjs</h4><p>原理：主要依靠原理： header特别字段的正则匹配</p>
+<pre><code class="python">class Emberjs(FingerprintPlugin):
+    def process(self, headers, content):
+        _ = False
+        for item in headers.items():
+            #匹配headers中的value值是否有ember-view
+            _ = re.search(r&#39;ember-view&#39;, item[1], re.I) is not None
+            if _:
+                return &quot;EmberJs (Javascript)&quot;
+</code></pre>
+<h4 id="jquery"><a href="#jquery" class="headerlink" title="jquery"></a>jquery</h4><p>原理：主要依靠content特别字段的正则匹配</p>
+<pre><code class="python">class Jquery(FingerprintPlugin):
+    def process(self, headers, content):
+        _ = False
+        #匹配content中是否有jquery-[0-9\-\.]+.js或者存在jquery
+        #举例子:jquery-5.js
+        _ = re.search(r&#39;jquery-[0-9\-\.]+.js|jquery&#39;, content, re.I) is not None
+        if _:
+            return &quot;JQuery (Javascript)&quot;
+</code></pre>
+<h4 id="knockout"><a href="#knockout" class="headerlink" title="knockout"></a>knockout</h4><p>原理：主要依靠content特别字段的正则匹配</p>
+<pre><code class="python">class Knockout(FingerprintPlugin):
+    def process(self, headers, content):
+        _ = False
+        #举例子knockout-5-..js
+        #匹配content中是否有knockout-[0-9\-\.]+.js
+        _ = re.search(r&#39;knockout-[0-9\-\.]+.js&#39;, content, re.I) is not None
+        if _:
+            return &quot;Knockout (Javascript)&quot;
+</code></pre>
+<h4 id="meteorjs"><a href="#meteorjs" class="headerlink" title="meteorjs"></a>meteorjs</h4><p>原理：主要依靠content特别字段的正则匹配</p>
+<pre><code>class Meteorjs(FingerprintPlugin):
+    def process(self, headers, content):
+        _ = False
+        #匹配content中是否有__meteor_runtime_config__
+        _ = re.search(r&#39;__meteor_runtime_config__&#39;, content, re.I) is not None
+        if _:
+            return &quot;MeteorJS (Javascript)&quot;
+</code></pre><h4 id="mootools"><a href="#mootools" class="headerlink" title="mootools"></a>mootools</h4><p>原理：主要依靠content特别字段的正则匹配</p>
+<pre><code class="python">class Mootools(FingerprintPlugin):
+    def process(self, headers, content):
+        _ = False
+        #匹配content中是否有MooTools-[0-9\-\.]+.js
+        _ = re.search(r&#39;MooTools-[0-9\-\.]+.js&#39;, content, re.I) is not None
+        if _:
+            return &quot;MooTools (Javascript)&quot;
+</code></pre>
+<h4 id="prototype"><a href="#prototype" class="headerlink" title="prototype"></a>prototype</h4><p>原理：主要依靠content特别字段的正则匹配</p>
+<pre><code class="python">class Prototype(FingerprintPlugin):
+    def process(self, headers, content):
+        _ = False
+        #匹配content中是否有prototype-[0-9\-\.]+.js或者prototype.js
+        _ = re.search(r&#39;prototype.js&#39;, content, re.I) is not None
+        _ |= re.search(r&#39;prototype-[0-9\-\.]+.js&#39;, content, re.I) is not None
+        if _:
+            return &quot;Prototype (Javascript)&quot;
+</code></pre>
+<h4 id="reactjs"><a href="#reactjs" class="headerlink" title="reactjs"></a>reactjs</h4><p>原理：主要依靠content特别字段的正则匹配</p>
+<pre><code class="python">class Reactjs(FingerprintPlugin):
+    def process(self, headers, content):
+        _ = False
+        #匹配content中是否有react-[0-9\-\.]+.js或者reactroot或者reactid
+        _ = re.search(r&#39;react-[0-9\-\.]+.js&#39;, content, re.I) is not None
+        _ = re.search(r&#39;reactroot|reactid&#39;, content, re.I) is not None
+        if _:
+            return &quot;ReactJS (Javascript)&quot;
+</code></pre>
+<h4 id="vuejs"><a href="#vuejs" class="headerlink" title="vuejs"></a>vuejs</h4><p>原理：主要依靠content特别字段的正则匹配</p>
+<pre><code class="python">class Vuejs(FingerprintPlugin):
+    def process(self, headers, content):
+        _ = False
+        #匹配content中是否有v-bind或者v-for或者v-if
+        _ |= re.search(r&#39;v-bind|v-for|v-if&#39;, content, re.I) is not None
+        if _:
+            return &quot;VueJS (Javascript)&quot;
+</code></pre>
+<h3 id="lang指纹识别"><a href="#lang指纹识别" class="headerlink" title="lang指纹识别"></a>lang指纹识别</h3><p> 对采用何种编程语言的识别</p>
+<pre><code>│   │   │   ├── lang
+│   │   │   │   ├── asp.py
+│   │   │   │   ├── __init__.py
+│   │   │   │   ├── java.py
+│   │   │   │   ├── perl.py
+│   │   │   │   ├── php.py
+│   │   │   │   ├── python.py
+│   │   │   │   └── ruby.py
+</code></pre><p> 对采用何种编程语言的识别有点意思，也是response header和content部分特别字段的正则匹配。</p>
+<p>看下python语言的识别。lang/python.py:</p>
+<h4 id="asp"><a href="#asp" class="headerlink" title="asp"></a>asp</h4><p>原理：主要依靠header和content特别字段的正则匹配</p>
+<pre><code class="python">class Asp(FingerprintPlugin):
+    def process(self, headers, content):
+        _ = False
+        for item in headers.items():
+            ##匹配header中是否有ASP.NET或X-AspNet-Version或x-aspnetmvc-version
+            _ = re.search(r&#39;ASP.NET|X-AspNet-Version|x-aspnetmvc-version&#39;, str(item), re.I) is not None
+            #\W匹配非字母字符，即匹配特殊字符。匹配content是否有__VIEWSTATE， \W匹配非字母字符，即匹配特殊字符
+            if not _:
+                _ |= re.search(r&#39;(__VIEWSTATE\W*)&#39;, content) is not None
+            #$：匹配字符串末尾 匹配content是否有.asp或者aspx
+            if not _:
+                _ |= re.search(r&#39;\.asp$|\.aspx$&#39;, content) is not None
+            if _:
+                return &quot;ASP.NET&quot;
+</code></pre>
+<h4 id="java"><a href="#java" class="headerlink" title="java"></a>java</h4><p>原理：主要依靠header和content特别字段的正则匹配</p>
+<pre><code class="python">class Java(FingerprintPlugin):
+    def process(self, headers, content):
+        _ = False
+        for item in headers.items():
+            ##匹配headers中的是否有Java或Servlet或JSP或JBoss或Glassfish或Oracle或JRE或JDK|或SESSIONID
+            _ = re.search(r&#39;Java|Servlet|JSP|JBoss|Glassfish|Oracle|JRE|JDK|JSESSIONID&#39;, str(item)) is not None
+            if not _:
+                #匹配content中字符串的末尾存在.jsp或.jspx或.do或.wss或.action
+                _ |= re.search(r&#39;\.jsp$|\.jspx$|.do$|\.wss$|\.action$&#39;, content) is not None
+            if _:
+                return &quot;Java&quot;
+</code></pre>
+<h4 id="perl"><a href="#perl" class="headerlink" title="perl"></a>perl</h4><p>原理：主要依靠content特别字段的正则匹配</p>
+<pre><code class="python">class Perl(FingerprintPlugin):
+    def process(self, headers, content):
+        _ = False
+        #匹配content中字符串的末尾存在.pl或.cgi
+        _ = re.search(r&#39;\.pl$|\.cgi$&#39;, content) is not None
+        if _:
+            return &quot;Perl&quot;
+</code></pre>
+<h4 id="php"><a href="#php" class="headerlink" title="php"></a>php</h4><p>原理：主要依靠header和content特别字段的正则匹配</p>
+<pre><code class="python">class Php(FingerprintPlugin):
+    def process(self, headers, content):
+        _ = False
+        for item in headers.items():
+            #匹配headers中的是否有X-PHP-PID或PHP2、php3、php4等 或 PHPSESSID
+            _ = re.search(r&#39;X-PHP-PID|PHP\S*|PHPSESSID&#39;, str(item)) is not None
+            #匹配content中字符串的末尾存在.php或.phtml
+        _ |= re.search(r&#39;\.php$|\.phtml$&#39;, content) is not None
+        if _:
+            return &quot;PHP&quot;
+</code></pre>
+<h4 id="python"><a href="#python" class="headerlink" title="python"></a>python</h4><p>原理：主要依靠 header和content特别字段的正则匹配</p>
+<pre><code class="python">class Python(FingerprintPlugin):
+    def process(self, headers, content):
+        _ = False
+        for item in headers.items():
+            #匹配headers中的是否有python或zope或zserver或wsgi或plone或_ZopeId
+            _ = re.search(r&#39;python|zope|zserver|wsgi|plone|_ZopeId&#39;, item[1], re.I) is not None
+        #匹配content中字符串的末尾存在.py
+        _ |= re.search(r&#39;\.py$&#39;, content) is not None
+        if _:
+            return &quot;Python&quot;
+</code></pre>
+<h4 id="ruby"><a href="#ruby" class="headerlink" title="ruby"></a>ruby</h4><p>原理：主要依靠response header和content特别字段的正则匹配</p>
+<pre><code class="python">class Ruby(FingerprintPlugin):
+    def process(self, headers, content):
+        _ = False
+        for item in headers.items():
+            #匹配headers中的是否有mod_rack或phusion或passenger
+            _ = re.search(r&quot;mod_rack|phusion|passenger&quot;, item[1], re.I) is not None
+        #匹配content中字符串的末尾存在.rb或.rhtml
+        _ |= re.search(r&#39;\.rb$|\.rhtml$&#39;, content) is not None
+        if _:
+            return &quot;Ruby&quot;
+</code></pre>
+<h3 id="system指纹识别"><a href="#system指纹识别" class="headerlink" title="system指纹识别"></a>system指纹识别</h3><p>这个识别还是很粗糙的，因为很多时候http response里面server部分有时候没内容，然后os部分有时候也没有内容。</p>
+<h4 id="bsd"><a href="#bsd" class="headerlink" title="bsd"></a>bsd</h4><p>原理：主要依靠header特别字段的正则匹配</p>
+<pre><code class="python">class Bsd(FingerprintPlugin):
+    def process(self, headers, content):
+        _ = False
+        #匹配headers中的是否有任何非空白字符+BSD
+        for item in headers.items():
+            _ = re.search(r&#39;\S*BSD&#39;, str(item), re.I) is not None
+            if _:
+                return &quot;BSD&quot;
+</code></pre>
+<h4 id="linux"><a href="#linux" class="headerlink" title="linux"></a>linux</h4><p>原理：主要依靠header特别字段的正则匹配</p>
+<pre><code class="python">class Linux(FingerprintPlugin):
+    def process(self, headers, content):
+        for item in headers.items():
+            #re.findall匹配的全部字串，返回形式为数组
+            _ = re.findall(          r&#39;linux|ubuntu|gentoo|debian|dotdeb|centos|redhat|sarge|etch|lenny|squeeze|wheezy|jessie|red hat|scientific linux&#39;,
+                str(item), re.I)
+            #如果匹配到两个则返回第一个匹配到的，如果匹配一个或者两个以上也返回第一个匹配到的
+            if _:
+                if len(_) == 2:
+                    return _[0]
+                else:
+                    return _[0]
+</code></pre>
+<h4 id="mac"><a href="#mac" class="headerlink" title="mac"></a>mac</h4><p>原理：主要依靠header特别字段的正则匹配</p>
+<pre><code class="python">class Mac(FingerprintPlugin):
+    def process(self, headers, content):
+        _ = False
+        for item in headers.items():
+            #匹配headers中的是否有Mac或MacOS或非空白字符MacOS*
+            _ = re.search(r&#39;Mac|MacOS|MacOS\S*&#39;, str(item)) is not None
+            if _:
+                return &quot;MacOS&quot;
+</code></pre>
+<h4 id="solaris"><a href="#solaris" class="headerlink" title="solaris"></a>solaris</h4><p>原理：主要依靠header特别字段的正则匹配</p>
+<pre><code class="python">class Solaris(FingerprintPlugin):
+    def process(self, headers, content):
+        _ = False
+        for item in headers.items():
+            #匹配headers中的是否有solaris或sunos或opensolaris或sparc64或sparc
+            _ = re.search(r&#39;solaris|sunos|opensolaris|sparc64|sparc&#39;, str(item), re.I) is not None
+            if _:
+                return &quot;Solaris&quot;
+</code></pre>
+<h4 id="unix"><a href="#unix" class="headerlink" title="unix"></a>unix</h4><p>原理：主要依靠header特别字段的正则匹配</p>
+<pre><code class="python">class Unix(FingerprintPlugin):
+    def process(self, headers, content):
+        _ = False
+        for item in headers.items():
+            #匹配headers中的是否有unix
+            _ = re.search(r&#39;unix&#39;, str(item), re.I) is not None
+            if _:
+                return &quot;Unix&quot;
+</code></pre>
+<h4 id="windows"><a href="#windows" class="headerlink" title="windows"></a>windows</h4><p>原理：主要依靠header特别字段的正则匹配</p>
+<pre><code class="python">class Windows(FingerprintPlugin):
+    def process(self, headers, content):
+        _ = False
+        for item in headers.items():
+            #匹配headers中的是否有windows或win32
+            _ = re.search(r&#39;windows|win32&#39;, str(item), re.I) is not None
+            if _:
+                return &quot;Windows&quot;
+</code></pre>
+<h3 id="waf指纹识别"><a href="#waf指纹识别" class="headerlink" title="waf指纹识别"></a>waf指纹识别</h3><pre><code>│   │   │   └── waf
+│   │   │       ├── airlock.py
+│   │   │       ├── anquanboa.py
+│   │   │       ├── aws.py
+│   │   │       ├── baidu.py
+│   │   │       ├── barracuda.py
+│   │   │       ├── bigip.py
+│   │   │       ├── binarysec.py
+│   │   │       ├── blockdos.py
+│   │   │       ├── chinacache.py
+│   │   │       ├── ciscoacexml.py
+│   │   │       ├── cloudflare.py
+│   │   │       ├── cloudfront.py
+│   │   │       ├── dotdefender.py
+│   │   │       ├── edgecast.py
+│   │   │       ├── fortiweb.py
+│   │   │       ├── hyperguard.py
+│   │   │       ├── incapsula.py
+│   │   │       ├── __init__.py
+│   │   │       ├── isaserver.py
+│   │   │       ├── kona.py
+│   │   │       ├── modsecurity.py
+│   │   │       ├── netcontinuum.py
+│   │   │       ├── paloalto.py
+│   │   │       ├── profense.py
+│   │   │       ├── radware.py
+│   │   │       ├── requestvalidationmode.py
+│   │   │       ├── safedog.py
+│   │   │       ├── secureiis.py
+│   │   │       ├── sengnix.py
+│   │   │       ├── sitelock.py
+│   │   │       ├── sonicwall.py
+│   │   │       ├── sucuri.py
+│   │   │       ├── trafficshield.py
+│   │   │       ├── varnish.py
+│   │   │       ├── wallarm.py
+│   │   │       └── webknight.py
+</code></pre><h4 id="airlock"><a href="#airlock" class="headerlink" title="airlock"></a>airlock</h4><p>原理：主要依靠header特别字段的正则匹配</p>
+<p><img src="https://blog-1254419664.cos.ap-chengdu.myqcloud.com/backup/20190226094050.png" alt=""></p>
+<pre><code class="python">class Airlock(FingerprintPlugin):
+    def process(self, headers, content):
+        _ = False
+        for item in headers.items():
+            #匹配headers中value值是否有^AL[_-]SESS[_-]S=\S*
+            _ = re.search(r&#39;^AL[_-]SESS[_-]S=\S*&#39;, item[1], re.I) is not None
+            #匹配headers中key值的是否有X-Airlock-Test
+            _ |= re.search(r&#39;X-Airlock-Test&#39;, item[0], re.I) is not None
+            if _:
+                return &quot;InfoGuard Airlock (Phion/Ergon)&quot;
+</code></pre>
+<h4 id="anquanboa"><a href="#anquanboa" class="headerlink" title="anquanboa"></a>anquanboa</h4><p>原理：主要依靠header特别字段的正则匹配</p>
+<pre><code class="python">class Anquanboa(FingerprintPlugin):
+    def process(self, headers, content):
+        _ = False
+        for item in headers.items():
+            #匹配headers中key值是否有X-Powered-By-Anquanbao
+            _ = re.search(r&#39;X-Powered-By-Anquanbao&#39;, item[0], re.I) is not None
+            if _:
+                return &quot;Anquanbao Firewall&quot;
+</code></pre>
+<h4 id="aws"><a href="#aws" class="headerlink" title="aws"></a>aws</h4><p>原理：三条匹配规则，主要依靠header特别字段的正则匹配</p>
+<pre><code class="python">class Aws(FingerprintPlugin):
+    def process(self, headers, content):
+        _ = False
+        for item in headers.items():
+            #匹配headers中value值是否有aws*
+            _ = re.search(r&#39;aws*&#39;, item[1], re.I) is not None
+            #匹配headers中key值是否有x-amz-id-0、x-amz-id-1、x-amz-id-2
+            _ |= re.search(r&#39;x-amz-id-[0-2]&#39;, item[0], re.I) is not None
+            #匹配headers中key值是否有x-amz-request-id
+            _ |= re.search(r&#39;x-amz-request-id&#39;, item[0], re.I) is not None
+            if _:
+                return &#39;Amazon Web Services Web Application Firewall (Amazon)&#39;
+</code></pre>
+<h4 id="baidu"><a href="#baidu" class="headerlink" title="baidu"></a>baidu</h4><p>原理：主要依靠header特别字段的正则匹配</p>
+<pre><code class="python">class Baidu(FingerprintPlugin):
+    def process(self, headers, content):
+        _ = False
+        for item in headers.items():
+            #匹配headers中value值是否有yunjiasu-nginx
+            _ = re.search(r&#39;yunjiasu-nginx&#39;, item[1], re.I) is not None
+            #匹配headers中value值是否有YJS-ID
+            _ |= re.search(r&#39;YJS-ID&#39;, item[1], re.I) is not None
+            #匹配headers中value值是否有fhl
+            _ |= re.search(r&#39;fhl&#39;, item[1], re.I) is not None
+            if _:
+                return &quot;Yunjiasu Web Application Firewall (Baidu)&quot;
+</code></pre>
+<h4 id="barracuda"><a href="#barracuda" class="headerlink" title="barracuda"></a>barracuda</h4><p>原理：主要依靠header特别字段的正则匹配</p>
+<pre><code class="python">class Barracuda(FingerprintPlugin):
+    def process(self, headers, content):
+        _ = False
+        for item in headers.items():
+            #匹配headers中value值是否有barracuda*
+            _ = re.search(r&#39;barracuda*&#39;, item[1], re.I) is not None
+            #匹配headers中value值是否有barra_counter_session=
+            _ |= re.search(r&#39;barra_counter_session=&#39;, item[1], re.I) is not None
+            #匹配headers中value值是否有barracuda_
+            _ |= re.search(r&#39;barracuda_&#39;, item[1], re.I) is not None
+            if _:
+                return &quot;Barracuda Web Application Firewall (Barracuda Networks)&quot;
+</code></pre>
+<h4 id="bigip"><a href="#bigip" class="headerlink" title="bigip"></a>bigip</h4><p>原理：主要依靠header特别字段的正则匹配</p>
+<p><img src="https://blog-1254419664.cos.ap-chengdu.myqcloud.com/backup/20190226100504.png" alt=""></p>
+<pre><code class="python">class Bigip(FingerprintPlugin):
+    def process(self, headers, content):
+        _ = False
+        for item in headers.items():
+            #匹配headers中value值是否有BigIP或BIGipServer
+            _ = re.search(r&#39;BigIP|BIGipServer&#39;, item[1], re.I) is not None
+            #匹配headers中value值是否有TS+至少匹配4次+=
+            _ |= re.search(r&#39;TS\w{4,}=&#39;, item[1], re.I) is not None
+            #匹配headers中value值是否有F5
+            _ |= re.search(r&#39;F5&#39;, item[1], re.I) is not None
+            if _:
+                return &quot;BIG-IP Application Security Manager (F5 Networks)&quot;
+</code></pre>
+<h4 id="binarysec"><a href="#binarysec" class="headerlink" title="binarysec"></a>binarysec</h4><p>原理：主要依靠header特别字段的正则匹配</p>
+<pre><code class="python">class Binarysec(FingerprintPlugin):
+    def process(self, headers, content):
+        _ = False
+        for item in headers.items():
+            #匹配headers中value值是否有BinarySec
+            _ = re.search(r&#39;BinarySec&#39;, item[1], re.I) is not None
+            #匹配headers中key值是否有x-binarysec-via或x-binarysec-nocahe
+            _ |= re.search(r&#39;x-binarysec-[via|nocahe]&#39;, item[0], re.I) is not None
+            if _:
+                return &quot;BinarySEC Web Application Firewall (BinarySEC)&quot;
+</code></pre>
+<h4 id="blockdos"><a href="#blockdos" class="headerlink" title="blockdos"></a>blockdos</h4><p>原理：主要依靠header特别字段的正则匹配</p>
+<p><img src="https://blog-1254419664.cos.ap-chengdu.myqcloud.com/backup/20190226101853.png" alt=""></p>
+<pre><code class="python">class Blockdos(FingerprintPlugin):
+    def process(self, headers, content):
+        _ = False
+        for item in headers.items():
+            #匹配headers中value值是否有BlockDos[\.net]*
+            _ = re.search(r&#39;BlockDos[\.net]*&#39;, item[1], re.I) is not None
+            if _:
+                return &quot;BlockDoS&quot;
+</code></pre>
+<h4 id="chinacache"><a href="#chinacache" class="headerlink" title="chinacache"></a>chinacache</h4><p>原理：主要依靠header特别字段的正则匹配</p>
+<pre><code class="python">class Chinacache(FingerprintPlugin):
+    def process(self, headers, content):
+        _ = False
+        for item in headers.items():
+            #匹配headers中key值是否有Powered-By-ChinaCache
+            _ = re.search(r&#39;Powered-By-ChinaCache&#39;, item[0], re.I) is not None
+            if _:
+                return &quot;ChinaCache-CDN&quot;
+</code></pre>
+<h4 id="ciscoacexml"><a href="#ciscoacexml" class="headerlink" title="ciscoacexml"></a>ciscoacexml</h4><p>原理：主要依靠header特别字段的正则匹配</p>
+<pre><code class="python">class Ciscoacexml(FingerprintPlugin):
+    def process(self, headers, content):
+        _ = False
+        for item in headers.items():
+            #匹配headers中value值是否有ACE XML Gateway
+            _ = re.search(r&#39;ACE XML Gateway&#39;, item[1], re.I) is not None
+            if _:
+                return &quot;Cisco ACE XML Gateway (Cisco Systems)&quot;
+</code></pre>
+<h4 id="cloudflare"><a href="#cloudflare" class="headerlink" title="cloudflare"></a>cloudflare</h4><p>原理：主要依靠header特别字段的正则匹配</p>
+<pre><code class="python">class Cloudflare(FingerprintPlugin):
+    def process(self, headers, content):
+        _ = False
+        for item in headers.items():
+            #匹配headers中value值是否有cloudflare[-nginx]
+            _ = re.search(r&#39;cloudflare[-nginx]&#39;, item[1], re.I) is not None
+            #匹配headers中value值是否有__cfduid=
+            _ |= re.search(r&#39;__cfduid=&#39;, item[1], re.I) is not None
+            #匹配headers中key值是否有cf-ray
+            _ |= re.search(r&#39;cf-ray&#39;, item[0], re.I) is not None
+            if _:
+                return &quot;CloudFlare Web Application Firewall (CloudFlare)&quot;
+</code></pre>
+<h4 id="cloudfront"><a href="#cloudfront" class="headerlink" title="cloudfront"></a>cloudfront</h4><p>原理：主要依靠header特别字段的正则匹配</p>
+<pre><code class="python">class Cloudfront(FingerprintPlugin):
+    def process(self, headers, content):
+        _ = False
+        for item in headers.items():
+            #匹配headers中value值是否有(cloudfront)
+            _ = re.search(r&#39;(cloudfront)&#39;, item[1], re.I) is not None
+            #匹配headers中key值是否有x-amz-cf-id
+            _ |= re.search(&#39;x-amz-cf-id&#39;, item[0], re.I) is not None
+            if _:
+                return &quot;CloudFront Web Application Firewall (Amazon)&quot;
+</code></pre>
+<h4 id="dotdefender"><a href="#dotdefender" class="headerlink" title="dotdefender"></a>dotdefender</h4><p>原理：主要依靠header特别字段的正则匹配</p>
+<pre><code class="python">class Dotdefender(FingerprintPlugin):
+    def process(self, headers, content):
+        _ = False
+        for item in headers.items():
+            #匹配headers中key值是否有X-dotDefender-denied
+            _ = re.search(r&#39;X-dotDefender-denied&#39;, item[0], re.I) is not None
+            if _:
+                return &quot;dotDefender Web Application Firewall (Applicure Technologies)&quot;
+</code></pre>
+<h4 id="edgecast"><a href="#edgecast" class="headerlink" title="edgecast"></a>edgecast</h4><p>原理：主要依靠header特别字段的正则匹配</p>
+<pre><code class="python">class Edgecast(FingerprintPlugin):
+    def process(self, headers, content):
+        _ = False
+        for item in headers.items():
+            #匹配headers中value值是否有ECDF
+            _ = re.search(r&#39;ECDF&#39;, item[1], re.I) is not None
+            if _:
+                return &quot;EdgeCast Web Application Firewall (Verizon)&quot;
+</code></pre>
+<h4 id="fortiweb"><a href="#fortiweb" class="headerlink" title="fortiweb"></a>fortiweb</h4><p>原理：主要依靠header特别字段的正则匹配</p>
+<pre><code class="python">class Fortiweb(FingerprintPlugin):
+    def process(self, headers, content):
+        _ = False
+        for item in headers.items():
+            #匹配headers中value值是否有FORTIWAFSID=
+            _ = re.search(r&#39;FORTIWAFSID=&#39;, item[1], re.I) is not None
+            if _:
+                return &quot;FortiWeb Web Application Firewall (Fortinet)&quot;
+</code></pre>
+<h4 id="hyperguard"><a href="#hyperguard" class="headerlink" title="hyperguard"></a>hyperguard</h4><p>原理：主要依靠header特别字段的正则匹配</p>
+<pre><code class="python">class Hyperguard(FingerprintPlugin):
+    def process(self, headers, content):
+        _ = False
+        for item in headers.items():
+            #匹配headers中value值是否有 开始位置+WODSESSION=
+            _ = re.search(r&#39;^WODSESSION=&#39;, item[1], re.I) is not None
+            if _:
+                return &quot;Hyperguard Web Application Firewall (art of defence)&quot;
+</code></pre>
+<h4 id="incapsula"><a href="#incapsula" class="headerlink" title="incapsula"></a>incapsula</h4><p>原理：主要依靠header特别字段的正则匹配</p>
+<pre><code class="python">class Incapsula(FingerprintPlugin):
+    def process(self, headers, content):
+        _ = False
+        for item in headers.items():
+            #匹配headers中value值是否有 incap_ses或visid_incap或Incapsula
+            _ = re.search(r&#39;incap_ses|visid_incap|Incapsula&#39;, item[1], re.I) is not None
+            if _:
+                return &quot;Incapsula Web Application Firewall (Incapsula/Imperva)&quot;
+</code></pre>
+<h4 id="isaserver"><a href="#isaserver" class="headerlink" title="isaserver"></a>isaserver</h4><p>原理：主要依靠content特别字段的正则匹配</p>
+<pre><code class="python">class Isaserver(FingerprintPlugin):
+    def process(self, headers, content):
+        try:
+            _ = False
+            #匹配content中是否有The server denied the specified Uniform Resource Locator (URL). Contact the server administrator.
+            _ = re.search(
+                r&#39;The server denied the specified Uniform Resource Locator (URL). Contact the server administrator.&#39;,
+                content, re.I) is not None
+            #匹配content中是否有The ISA Server denied the specified Uniform Resource Locator (URL)
+            _ |= re.search(r&#39;The ISA Server denied the specified Uniform Resource Locator (URL)&#39;, content,
+                           re.I) is not None
+            if _:
+                return &quot;ISA Server (Microsoft)&quot;
+        #若未检测到则抛出异常
+        except Exception as e:
+            print(&quot;IsaServer Problem &quot;, e)
+</code></pre>
+<h4 id="kona"><a href="#kona" class="headerlink" title="kona"></a>kona</h4><p>原理：主要依靠header特别字段的正则匹配</p>
+<pre><code class="python">class Kona(FingerprintPlugin):
+    def process(self, headers, content):
+        _ = False
+       for item in headers.items():
+            #匹配headers中value值是否有AkamaiGHost或Kona
+            _ = re.search(r&#39;AkamaiGHost|Kona&#39;, item[1], re.I) is not None
+            if _:
+                return &quot;Kona Web Application Firewall (Akamai)&quot;
+</code></pre>
+<h4 id="modsecurity"><a href="#modsecurity" class="headerlink" title="modsecurity"></a>modsecurity</h4><p>原理：主要依靠header特别字段的正则匹配</p>
+<pre><code class="python">class Modsecurity(FingerprintPlugin):
+    def process(self, headers, content):
+        _ = False
+        for item in headers.items():
+            #匹配headers中value值是否有d_Security或NOYB
+            _ = re.search(r&#39;Mod_Security|NOYB&#39;, item[1], re.I) is not None
+            if _:
+                return &quot;ModSecurity Web Application Firewall (Trustwave)&quot;
+</code></pre>
+<h4 id="netcontinuum"><a href="#netcontinuum" class="headerlink" title="netcontinuum"></a>netcontinuum</h4><p>原理：主要依靠header特别字段的正则匹配</p>
+<pre><code class="python">class Netcontinuum(FingerprintPlugin):
+    def process(self, headers, content):
+        _ = False
+        for item in headers.items():
+            #匹配headers中value值是否有NCI__SessionId=
+            _ = re.search(r&#39;NCI__SessionId=&#39;, item[1], re.I) is not None
+            if _:
+                return &quot;NetContinuum Web Application Firewall (NetContinuum/Barracuda Networks)&quot;
+</code></pre>
+<h4 id="paloalt"><a href="#paloalt" class="headerlink" title="paloalt"></a>paloalt</h4><p>原理：主要依靠header特别字段的正则匹配</p>
+<pre><code class="python">class Paloalto(FingerprintPlugin):
+    def process(self, headers, content):
+        _ = False
+        for item in headers.items():
+            #匹配headers中value值是否有MISS from PaloAlto
+            _ = re.search(r&#39;MISS from PaloAlto&#39;, item[1], re.I) is not None
+            if _:
+                return &quot;Palo Alto Firewall (Palo Alto Networks)&quot;
+</code></pre>
+<h4 id="profense"><a href="#profense" class="headerlink" title="profense"></a>profense</h4><p>原理：主要依靠header特别字段的正则匹配</p>
+<pre><code class="python">class Profense(FingerprintPlugin):
+    def process(self, headers, content):
+        _ = False
+        for item in headers.items():
+            #匹配headers中value值是否有PLBSID=
+            _ = re.search(r&#39;PLBSID=&#39;, item[1], re.I) is not None
+            #匹配headers中value值是否有Profense
+            _ = re.search(r&#39;Profense&#39;, item[1], re.I) is not None
+            if _:
+                return &quot;Profense Web Application Firewall (Armorlogic)&quot;
+</code></pre>
+<h4 id="radware"><a href="#radware" class="headerlink" title="radware"></a>radware</h4><p>原理：主要依靠header特别字段的正则匹配</p>
+<pre><code class="python">class Radware(FingerprintPlugin):
+    def process(self, headers, content):
+        _ = False
+        for item in headers.items():
+            #匹配headers中value值是否有X-SL-CompState
+            _ = re.search(r&#39;X-SL-CompState&#39;, item[0], re.I) is not None
+            if _:
+                return &quot;AppWall Web Application Firewall (Radware)&quot;
+</code></pre>
+<h4 id="requestvalidationmode"><a href="#requestvalidationmode" class="headerlink" title="requestvalidationmode"></a>requestvalidationmode</h4><p>原理：主要依靠content特别字段的正则匹配</p>
+<pre><code class="python">class Requestvalidationmode(FingerprintPlugin):
+    def process(self, headers, content):
+        _ = False
+        #匹配content中是否有ASP.NET has detected data in the request that is potentially dangerous
+        _ = re.search(r&#39;ASP.NET has detected data in the request that is potentially dangerous&#39;, content,
+                      re.I) is not NoneRequest Validation has detected a potentially dangerous client input value
+        #匹配content中是否有Request Validation has detected a potentially dangerous client input value
+        _ |= re.search(r&#39;Request Validation has detected a potentially dangerous client input value&#39;, content,
+                       re.I) is not None
+        if _:
+            return &quot;ASP.NET RequestValidationMode (Microsoft)&quot;
+</code></pre>
+<h4 id="safedog"><a href="#safedog" class="headerlink" title="safedog"></a>safedog</h4><p>原理：主要依靠header特别字段的正则匹配</p>
+<pre><code class="python">class Safedog(FingerprintPlugin):
+    def process(self, headers, content):
+        _ = False
+        for item in headers.items():
+            #匹配headers中value值是否有WAF/2.0
+            _ = re.search(r&#39;WAF/2\.0&#39;, item[1], re.I) is not None
+            #匹配headers中value值是否有Safedog
+            _ |= re.search(r&#39;Safedog&#39;, item[1], re.I) is not None
+            if _:
+                return &quot;Safedog Web Application Firewall (Safedog)&quot;
+</code></pre>
+<h4 id="secureiis"><a href="#secureiis" class="headerlink" title="secureiis"></a>secureiis</h4><p>原理：主要依靠content特别字段的正则匹配</p>
+<pre><code class="python">class Secureiis(FingerprintPlugin):
+    def process(self, headers, content):
+        _ = False
+        #匹配content中是否有SecureIIS+开始字符&lt;+Web Server Protection
+        _ = re.search(r&#39;SecureIIS[^&lt;]+Web Server Protection&#39;, content, re.I) is not None
+        #匹配content中是否有http://www.eeye.com/SecureIIS/
+        _ |= re.search(r&#39;http://www.eeye.com/SecureIIS/&#39;, content, re.I) is not None
+        #匹配content中是否有?subject=[^&gt;]*SecureIIS Error
+        _ |= re.search(r&#39;\?subject=[^&gt;]*SecureIIS Error&#39;, content, re.I) is not None
+        if _:
+            return &quot;SecureIIS Web Server Security (BeyondTrust&quot;
+</code></pre>
+<h4 id="sengnix"><a href="#sengnix" class="headerlink" title="sengnix"></a>sengnix</h4><p>原理：主要依靠content特别字段的正则匹配</p>
+<pre><code class="python">class Senginx(FingerprintPlugin):
+    def process(self, headers, content):
+        _ = False
+        #匹配content中是否有SENGINX-ROBOT-MITIGATION
+        _ = re.search(r&#39;SENGINX-ROBOT-MITIGATION&#39;, content, re.I) is not None
+        if _:
+            return &quot;SEnginx (Neusoft Corporation)&quot;
+</code></pre>
+<h4 id="sitelock"><a href="#sitelock" class="headerlink" title="sitelock"></a>sitelock</h4><p>原理：主要依靠content特别字段的正则匹配</p>
+<pre><code class="python">class Sitelock(FingerprintPlugin):
+    def process(self, headers, content):
+        _ = False
+        #匹配content中是否有SiteLock Incident ID
+        _ = re.search(r&#39;SiteLock Incident ID&#39;, content, re.I) is not None
+        if _:
+            return &quot;TrueShield Web Application Firewall (SiteLock)&quot;
+</code></pre>
+<h4 id="sonicwall"><a href="#sonicwall" class="headerlink" title="sonicwall"></a>sonicwall</h4><p>原理：主要依靠header特别字段的正则匹配</p>
+<pre><code class="python">class Sonicwall(FingerprintPlugin):
+    def process(self, headers, content):
+        _ = False
+        #匹配content中是否有This request is blocked by the SonicWALL
+        _ = re.search(r&#39;This request is blocked by the SonicWALL&#39;, content, re.I) is not None
+        #匹配content中是否有Web Site Blocked.+\bnsa_banner      \b匹配一个单词边界
+        _ |= re.search(r&#39;Web Site Blocked.+\bnsa_banner&#39;, content, re.I) is not None
+        if _:
+            return &quot;SonicWALL (Dell)&quot;
+</code></pre>
+<h4 id="sucuri"><a href="#sucuri" class="headerlink" title="sucuri"></a>sucuri</h4><p> 原理：主要依靠header特别字段的正则匹配</p>
+<pre><code class="python">class Sucuri(FingerprintPlugin):
+    def process(self, headers, content):
+        _ = False
+        for item in headers.items():
+            #匹配headers中value值是否有Sucuri或Cloudproxy
+            _ = re.search(r&#39;Sucuri|Cloudproxy&#39;, item[1], re.I) is not None
+            #匹配headers中key值是否有X-Sucuri-ID
+            _ |= re.search(r&#39;X-Sucuri-ID&#39;, item[0], re.I) is not None
+            if _:
+                return &quot;CloudProxy WebSite Firewall (Sucuri)&quot;
+</code></pre>
+<h4 id="trafficshield"><a href="#trafficshield" class="headerlink" title="trafficshield"></a>trafficshield</h4><p>原理：主要依靠header特别字段的正则匹配</p>
+<pre><code class="python">class Trafficshield(FingerprintPlugin):
+    def process(self, headers, content):
+        _ = False
+        for item in headers.items():
+            #匹配headers中value值是否有F5-TrafficShield
+            _ = re.search(r&#39;F5-TrafficShield&#39;, item[1], re.I) is not None
+            #或匹配到headers中value值是否有ASINFO=
+            _ |= re.search(r&#39;ASINFO=&#39;, item[1], re.I) is not None
+            if _:
+                return &quot;TrafficShield (F5 Networks)&quot;
+</code></pre>
+<h4 id="varnish"><a href="#varnish" class="headerlink" title="varnish"></a>varnish</h4><p>原理：主要依靠header特别字段的正则匹配</p>
+<pre><code class="python">class Varnish(FingerprintPlugin):
+
+    def process(self, headers, content):
+        _ = False
+        for item in headers.items():
+            #匹配headers中key值是否有X-Varnish
+            _ = re.search(r&#39;X-Varnish&#39;, item[0], re.I) is not None
+            #匹配headers中value值是否有varnish*
+            _ |= re.search(r&#39;varnish*&#39;, item[1], re.I) is not None
+            if _:
+                return &quot;Varnish FireWall (OWASP)&quot;
+</code></pre>
+<h4 id="wallarm"><a href="#wallarm" class="headerlink" title="wallarm"></a>wallarm</h4><p>原理：主要依靠header特别字段的正则匹配</p>
+<pre><code class="python">class Wallarm(FingerprintPlugin):
+    def process(self, headers, content):
+        _ = False
+        for item in headers.items():
+            #匹配headers中value值是否有nginx-wallarm
+            _ = re.search(r&#39;nginx-wallarm&#39;, item[1], re.I) is not None
+            if _:
+                return &quot;Wallarm Web Application Firewall (Wallarm)&quot;
+</code></pre>
+<h4 id="webknight"><a href="#webknight" class="headerlink" title="webknight"></a>webknight</h4><p>原理：主要依靠header特别字段的正则匹配</p>
+<pre><code class="python">class Webknight(FingerprintPlugin):
+    def process(self, headers, content):
+        _ = False
+        for item in headers.items():
+            #匹配headers中value值是否有Webknight
+            _ = re.search(r&#39;Webknight&#39;, item[1], re.I) is not None
+            if _:
+                return &quot;WebKnight Application Firewall (AQTRONIX)&quot;
+</code></pre>
+<h2 id="0x08-lib-modules-attacks"><a href="#0x08-lib-modules-attacks" class="headerlink" title="0x08  lib/modules/attacks"></a>0x08  lib/modules/attacks</h2><p>主要的攻击模块</p>
+<pre><code>│   │   ├── attacks
+│   │   │   ├── bruteforce
+│   │   │   │   ├── admin.py
+│   │   │   │   ├── backdoor.py
+│   │   │   │   ├── bdir.py
+│   │   │   │   ├── bfile.py
+│   │   │   │   ├── dir.py
+│   │   │   │   ├── file.py
+│   │   │   │   ├── __init__.py
+│   │   │   │   └── log.py
+│   │   │   ├── __init__.py
+│   │   │   ├── injection
+│   │   │   │   ├── html.py
+│   │   │   │   ├── __init__.py
+│   │   │   │   ├── ldap.py
+│   │   │   │   ├── php.py
+│   │   │   │   ├── rfi.py
+│   │   │   │   ├── sql.py
+│   │   │   │   ├── xpath.py
+│   │   │   │   └── xss.py
+│   │   │   ├── other
+│   │   │   │   ├── allow_method.py
+│   │   │   │   ├── dav.py
+│   │   │   │   ├── htmlobject.py
+│   │   │   │   ├── __init__.py
+│   │   │   │   ├── listing.py
+│   │   │   │   ├── multipleindex.py
+│   │   │   │   ├── phpinfo.py
+│   │   │   │   ├── robots.py
+│   │   │   │   └── xst.py
+│   │   │   └── vulns
+│   │   │       ├── anonymous.py
+│   │   │       ├── crime.py
+│   │   │       ├── __init__.py
+│   │   │       ├── shellshock.py
+│   │   │       └── strutsshock.py
+</code></pre><h3 id="bruteforce"><a href="#bruteforce" class="headerlink" title="bruteforce"></a>bruteforce</h3><h4 id="admin-py"><a href="#admin-py" class="headerlink" title="admin.py"></a>admin.py</h4><p>代更</p>
+<h4 id="backdoor-py"><a href="#backdoor-py" class="headerlink" title="backdoor.py"></a>backdoor.py</h4><h4 id="bdir-py"><a href="#bdir-py" class="headerlink" title="bdir.py"></a>bdir.py</h4><h4 id="bfile-py"><a href="#bfile-py" class="headerlink" title="bfile.py"></a>bfile.py</h4><h4 id="dir-py"><a href="#dir-py" class="headerlink" title="dir.py"></a>dir.py</h4><h4 id="file-py"><a href="#file-py" class="headerlink" title="file.py"></a>file.py</h4><h4 id="init-py-2"><a href="#init-py-2" class="headerlink" title="init.py"></a><strong>init</strong>.py</h4><h4 id="log-py"><a href="#log-py" class="headerlink" title="log.py"></a>log.py</h4><h4 id="init-py-3"><a href="#init-py-3" class="headerlink" title="init.py"></a><strong>init</strong>.py</h4><h3 id="injection"><a href="#injection" class="headerlink" title="injection"></a>injection</h3><p>注入类的漏洞检测</p>
+<h4 id="html-py"><a href="#html-py" class="headerlink" title="html.py"></a>html.py</h4><p>检查HTML代码注入。思路即：在参数值中添加进html代码，然后检查返回的响应，直接用<code>search(payload,resq.text)</code> 来看能否检测到相应的模式，。若存在则保存<code>URL</code>、<code>DATA</code>、<code>PAYLOAD</code>,然后输出。</p>
+<h4 id="init-py-4"><a href="#init-py-4" class="headerlink" title="init.py"></a><strong>init</strong>.py</h4><h4 id="ldap-py"><a href="#ldap-py" class="headerlink" title="ldap.py"></a>ldap.py</h4><h4 id="php-py"><a href="#php-py" class="headerlink" title="php.py"></a>php.py</h4><h4 id="rfi-py"><a href="#rfi-py" class="headerlink" title="rfi.py"></a>rfi.py</h4><h4 id="sql-py"><a href="#sql-py" class="headerlink" title="sql.py"></a>sql.py</h4><h4 id="xpath-py"><a href="#xpath-py" class="headerlink" title="xpath.py"></a>xpath.py</h4><h4 id="xss-py"><a href="#xss-py" class="headerlink" title="xss.py"></a>xss.py</h4><h3 id="other"><a href="#other" class="headerlink" title="other"></a>other</h3><h4 id="allow-method-py"><a href="#allow-method-py" class="headerlink" title="allow_method.py"></a>allow_method.py</h4><h4 id="dav-py"><a href="#dav-py" class="headerlink" title="dav.py"></a>dav.py</h4><h4 id="htmlobject-py"><a href="#htmlobject-py" class="headerlink" title="htmlobject.py"></a>htmlobject.py</h4><h4 id="init-py-5"><a href="#init-py-5" class="headerlink" title="init.py"></a><strong>init</strong>.py</h4><h4 id="listing-py"><a href="#listing-py" class="headerlink" title="listing.py"></a>listing.py</h4><h4 id="multipleindex-py"><a href="#multipleindex-py" class="headerlink" title="multipleindex.py"></a>multipleindex.py</h4><h4 id="phpinfo-py"><a href="#phpinfo-py" class="headerlink" title="phpinfo.py"></a>phpinfo.py</h4><h4 id="robots-py"><a href="#robots-py" class="headerlink" title="robots.py"></a>robots.py</h4><h4 id="xst-py"><a href="#xst-py" class="headerlink" title="xst.py"></a>xst.py</h4><h3 id="vulns"><a href="#vulns" class="headerlink" title="vulns"></a>vulns</h3><h4 id="anonymous-py"><a href="#anonymous-py" class="headerlink" title="anonymous.py"></a>anonymous.py</h4><h4 id="crime-py"><a href="#crime-py" class="headerlink" title="crime.py"></a>crime.py</h4><h4 id="init-py-6"><a href="#init-py-6" class="headerlink" title="init.py"></a><strong>init</strong>.py</h4><h4 id="shellshock-py"><a href="#shellshock-py" class="headerlink" title="shellshock.py"></a>shellshock.py</h4><h4 id="strutsshock-py"><a href="#strutsshock-py" class="headerlink" title="strutsshock.py"></a>strutsshock.py</h4>
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 72382781@qq.com </span>
+    </div>
+</article>
+
+
+<p>
+    <a href="javascript:void(0)" class="dashang" onclick="dashangToggle()">赏</a>
+</p>
+
+
+<div class="article_copyright">
+    <p><span>文章标题:</span>Read-Sitadel-Source</p>
+    <p><span>文章字数:</span><span class="post-count">12,538</span></p>
+    <p><span>本文作者:</span><a href="javascript:void(0)" title="Bigbroke">Bigbroke</a></p>
+    <p><span>发布时间:</span>2019-03-15, 00:00:08</p>
+    <p><span>最后更新:</span>2019-03-15, 00:02:58</p>
+    <span>原始链接:</span><a class="post-url" href="/archis/f4173bf8/" title="Read-Sitadel-Source">http://Bigbroke.com/archis/f4173bf8/</a>
+    <p>
+        <span>版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+    </p>
+</div>
+
+
+    <div id="comments"></div>
+<link rel="stylesheet" href="/css/gitalk.css">
+
+<script type="text/javascript">
+    $.getScript('/js/gitalk.js', function () {
+        var gitalk = new Gitalk({
+            clientID: 'eb679ffbe3e667bef087',
+            clientSecret: '803d24db3cf86013b1c74778931b9e6670081459',
+            repo: 'bigbroke.github.io',
+            owner: 'bigbroke',
+            admin: ['bigbroke'],
+            id: location.pathname,
+            distractionFreeMode: 'true',
+            language: 'zh-CN',
+            perPage: parseInt('10',10)
+        })
+        gitalk.render('comments')
+    })
+</script>
+
+
+
+    
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">©2018 Bigbroke</p>
+<p class="footer-entry">Buit with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full"><span class="min "></span></button>
+<button class="post-toc-menu"><span class="post-toc-menu-icons"></span></button>
+<div class="post-toc"><span class="post-toc-title">目录</span>
+    <div class="post-toc-content">
+
+    </div>
+</div>
+<a class="" id="rocket" href="javascript:void(0)"></a>
+    </div>
+</div>
+<div class="acParent"></div>
+
+<div class="hide_box" onclick="dashangToggle()"></div>
+<div class="shang_box">
+    <a class="shang_close" href="javascript:void(0)" onclick="dashangToggle()">×</a>
+    <div class="shang_tit">
+        <p>喜欢就点赞,疼爱就打赏</p>
+    </div>
+    <div class="shang_payimg">
+        <div class="pay_img">
+            <img src="/img/alipay.jpg" class="alipay" title="扫码支持">
+            <img src="/img/weixin.jpg" class="weixin" title="扫码支持">
+        </div>
+    </div>
+    <div class="shang_payselect">
+        <span><label><input type="radio" name="pay" checked value="alipay">支付宝</label></span><span><label><input type="radio" name="pay" value="weixin">微信</label></span>
+    </div>
+</div>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/assets/koharu.model.json"},"display":{"position":"right","width":90,"height":150},"mobile":{"show":true},"log":false});</script></body>
+<script src="//cdn.bootcss.com/jquery.pjax/2.0.1/jquery.pjax.min.js"></script>
+
+<script src="//cdn.bootcss.com/photoswipe/4.1.2/photoswipe.min.js"></script>
+<script src="//cdn.bootcss.com/photoswipe/4.1.2/photoswipe-ui-default.min.js"></script>
+
+<script src="/js/script.js"></script>
+<script>
+    var img_resize = 'photoSwipe';
+    /*作者、标签的自动补全*/
+    $(function () {
+        $('.search').AutoComplete({
+            'data': ['#思考','#life','#正则','#WP','#first-blog','#ctf','#代码审计','#sqlilabs','#sqlmap','#cve','#VIM','#Nmap','#密码学','#hexo','#Nikto','#TCPDUMP','#QWASP_ZAP','#NETCAT','#docker','#Skipfish','#Vega','#复现','#文件包含','#读书摘要','#信息收集','#Web漏洞','#内网','#CTF','#文件上传','#渗透','#web','#黑客攻防web安全实战详解','#入侵','#Dvwa',],
+            'itemHeight': 20,
+            'width': 418
+        }).AutoComplete('show');
+    })
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $(".post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+        $("input[name=pay]").on("click", function () {
+            if($("input[name=pay]:checked").val()=="weixin"){
+                $(".shang_box .shang_payimg .pay_img").addClass("weixin_img");
+            } else {
+                $(".shang_box .shang_payimg .pay_img").removeClass("weixin_img");
+            }
+        })
+        
+
+        /*高亮代码块行号*/
+        
+        $('pre code').each(function(){
+            var lines = $(this).text().split('\n').length - 1;
+            var $numbering = $('<ul/>').addClass('pre-numbering').attr("unselectable","on");
+            $(this).addClass('has-numbering')
+                    .parent()
+                    .append($numbering);
+            for(i=1;i<=lines;i++){
+                $numbering.append($('<li/>').text(i));
+            }
+        });
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info//busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+
+        // PhotoSwipe
+        $('article').each(function(i){
+            $(this).find('img').each(function(){
+                if ($(this).closest('figure').hasClass('article-gallery-img')) {
+                    return;
+                }
+                var alt = this.alt;
+                $(this)
+                    .wrap('<figure class="article-gallery-img" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject"></figure>')
+                    .wrap('<a href="' + this.src + '" title="' + alt + '"></a>');
+                $(this).after('<div class="img_alt"><span>' + (alt || '') + '</span></div>');
+            });
+        });
+
+        var pswpElement = document.querySelectorAll('.pswp')[0];
+        if (pswpElement) {
+            var gallerySelector = '.article-gallery, article';
+
+            var initPhotoSwipeFromDOM = function(gallerySelector) {
+
+                // parse slide data (url, title, size ...) from DOM elements
+                // (children of gallerySelector)
+                var parseThumbnailElements = function(el) {
+                    var thumbElements = $(el).find('figure.article-gallery-img').toArray(),
+                        numNodes = thumbElements.length,
+                        items = [],
+                        figureEl,
+                        linkEl,
+                        size,
+                        imgEl,
+                        item;
+
+                    for (var i = 0; i < numNodes; i++) {
+
+                        figureEl = thumbElements[i]; // <figure> element
+
+                        // include only element nodes
+                        if (figureEl.nodeType !== 1) {
+                            continue;
+                        }
+
+                        linkEl = figureEl.children[0]; // <a> element
+                        imgEl = linkEl.children[0]; // <img>
+
+                        size = linkEl.getAttribute('data-size');
+                        size = size && size.split('x');
+
+                        // create slide object
+                        item = {
+                            src: linkEl.getAttribute('href'),
+                            w: size && parseInt(size[0], 10) || imgEl.width,
+                            h: size && parseInt(size[1], 10) || imgEl.height
+                        };
+
+                        if (figureEl.children.length > 1) {
+                            // <figcaption> content
+                            item.title = figureEl.children[1].innerHTML;
+                        }
+
+                        if (linkEl.children.length > 0) {
+                            // <img> thumbnail element, retrieving thumbnail url
+                            item.msrc = linkEl.children[0].getAttribute('src');
+                        }
+
+                        item.el = figureEl; // save link to element for getThumbBoundsFn
+                        items.push(item);
+                    }
+
+                    return items;
+                };
+
+                // find nearest parent element
+                var closest = function closest(el, fn) {
+                    return el && (fn(el) ? el : closest(el.parentNode, fn));
+                };
+
+                // triggers when user clicks on thumbnail
+                var onThumbnailsClick = function(e) {
+                    e = e || window.event;
+
+                    var eTarget = e.target || e.srcElement;
+
+                    // find root element of slide
+                    var clickedListItem = closest(eTarget, function(el) {
+                        return (el.tagName && el.tagName.toUpperCase() === 'FIGURE');
+                    });
+
+                    if (!clickedListItem) {
+                        return;
+                    }
+
+                    if (e.preventDefault) {
+                        e.preventDefault();
+                    } else {
+                        e.returnValue = false;
+                    }
+
+                    // find index of clicked item by looping through all child nodes
+                    // alternatively, you may define index via data- attribute
+                    var clickedGallery = $(clickedListItem).closest(gallerySelector)[0],
+                        childNodes = $(clickedGallery).find('figure.article-gallery-img').toArray(),
+                        numChildNodes = childNodes.length,
+                        nodeIndex = 0,
+                        index;
+
+                    for (var i = 0; i < numChildNodes; i++) {
+                        if (childNodes[i].nodeType !== 1) {
+                            continue;
+                        }
+
+                        if (childNodes[i] === clickedListItem) {
+                            index = nodeIndex;
+                            break;
+                        }
+                        nodeIndex++;
+                    }
+
+
+
+                    if (index >= 0) {
+                        // open PhotoSwipe if valid index found
+                        openPhotoSwipe(index, clickedGallery);
+                    }
+                    return false;
+                };
+
+                // parse picture index and gallery index from URL (#&pid=1&gid=2)
+                var photoswipeParseHash = function() {
+                    var hash = window.location.hash.substring(1),
+                        params = {};
+
+                    if (hash.length < 5) {
+                        return params;
+                    }
+
+                    var vars = hash.split('&');
+                    for (var i = 0; i < vars.length; i++) {
+                        if (!vars[i]) {
+                            continue;
+                        }
+                        var pair = vars[i].split('=');
+                        if (pair.length < 2) {
+                            continue;
+                        }
+                        params[pair[0]] = pair[1];
+                    }
+
+                    if (params.gid) {
+                        params.gid = parseInt(params.gid, 10);
+                    }
+
+                    return params;
+                };
+
+                var openPhotoSwipe = function(index, galleryElement, disableAnimation, fromURL) {
+                    var pswpElement = document.querySelectorAll('.pswp')[0],
+                        gallery,
+                        options,
+                        items;
+
+                    items = parseThumbnailElements(galleryElement);
+
+                    // define options (if needed)
+                    options = {
+
+                        // define gallery index (for URL)
+                        galleryUID: galleryElement.getAttribute('data-pswp-uid'),
+
+                        getThumbBoundsFn: function(index) {
+                            // See Options -> getThumbBoundsFn section of documentation for more info
+                            var thumbnail = items[index].el.getElementsByTagName('img')[0], // find thumbnail
+                                pageYScroll = window.pageYOffset || document.documentElement.scrollTop,
+                                rect = thumbnail.getBoundingClientRect();
+
+                            return {
+                                x: rect.left,
+                                y: rect.top + pageYScroll,
+                                w: rect.width
+                            };
+                        }
+                    };
+
+                    // PhotoSwipe opened from URL
+                    if (fromURL) {
+                        if (options.galleryPIDs) {
+                            // parse real index when custom PIDs are used
+                            // http://photoswipe.com/documentation/faq.html#custom-pid-in-url
+                            for (var j = 0; j < items.length; j++) {
+                                if (items[j].pid == index) {
+                                    options.index = j;
+                                    break;
+                                }
+                            }
+                        } else {
+                            // in URL indexes start from 1
+                            options.index = parseInt(index, 10) - 1;
+                        }
+                    } else {
+                        options.index = parseInt(index, 10);
+                    }
+
+                    // exit if index not found
+                    if (isNaN(options.index)) {
+                        return;
+                    }
+
+                    if (disableAnimation) {
+                        options.showAnimationDuration = 0;
+                    }
+
+                    // Pass data to PhotoSwipe and initialize it
+                    gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
+
+                    gallery.listen('imageLoadComplete', function(index, item) {
+                        var linkEl = item.el.children[0];
+                        var img = item.container.children[0];
+                        if (!linkEl.getAttribute('data-size')) {
+                            linkEl.setAttribute('data-size', img.naturalWidth + 'x' + img.naturalHeight);
+                            item.w = img.naturalWidth;
+                            item.h = img.naturalHeight;
+                            gallery.invalidateCurrItems();
+                            gallery.updateSize(true);
+                        }
+                    });
+
+                    gallery.init();
+                };
+
+                // loop through all gallery elements and bind events
+                var galleryElements = document.querySelectorAll(gallerySelector);
+
+                for (var i = 0, l = galleryElements.length; i < l; i++) {
+                    galleryElements[i].setAttribute('data-pswp-uid', i + 1);
+                    galleryElements[i].onclick = onThumbnailsClick;
+                }
+
+                // Parse URL and open gallery if it contains #&pid=3&gid=1
+                var hashData = photoswipeParseHash();
+                if (hashData.pid && hashData.gid) {
+                    openPhotoSwipe(hashData.pid, galleryElements[hashData.gid - 1], true, true);
+                }
+            };
+
+            // execute above function
+            initPhotoSwipeFromDOM(gallerySelector);
+        }
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+    function dashangToggle() {
+        $(".shang_box").fadeToggle();
+        $(".hide_box").fadeToggle();
+    }
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<style>
+    pre{
+        position: relative;
+        margin-bottom: 24px;
+        border-radius: 10px;
+        border: 2px solid #e2dede;
+        background: #FFF;
+        overflow: hidden;
+    }
+    code.has-numbering{
+        margin-left: 30px;
+    }
+    .pre-numbering{
+        margin: 0px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 20px;
+        padding: 0.5em 3px 0.7em 5px;
+        border-right: 1px solid #C3CCD0;
+        text-align: right;
+        color: #AAA;
+        background-color: ;
+    }
+</style>
+
+<!--自定义样式设置-->
+<style>
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+    .post .pjax article .article-entry>ol, .post .pjax article .article-entry>ul, .post .pjax article>ol, .post .pjax article>ul{
+        border: #e2dede solid 2px;
+        border-radius: 10px;
+        padding: 10px 32px 10px 56px;
+    }
+    .post .pjax article .article-entry li>ol, .post .pjax article .article-entry li>ul,.post .pjax article li>ol, .post .pjax article li>ul{
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    .post .pjax article .article-entry>ol>li, .post .pjax article .article-entry>ul>li,.post .pjax article>ol>li, .post .pjax article>ul>li{
+        margin-bottom: auto;
+        margin-left: auto;
+    }
+    .post .pjax article .article-entry li>ol>li, .post .pjax article .article-entry li>ul>li,.post .pjax article li>ol>li, .post .pjax article li>ul>li{
+        margin-bottom: auto;
+        margin-left: auto;
+    }
+    
+
+    /*引用块样式*/
+    
+    .post .pjax article blockquote {
+        padding: 10px 20px;
+        background-color: white;
+        border: none;
+        border-left: 4px solid #42b983;
+        border-right: 4px solid #42b983;
+        border-radius: 10px;
+    }
+    
+
+    /*文章列表背景图*/
+    
+    .nav-right:before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.1;
+        background: url("http://oy0tigw51.bkt.clouddn.com/201711210136_683.png");
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        -ms-background-size: cover;
+        -o-background-size: cover;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+        background-size: cover;
+    }
+    
+</style>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe.
+         It's a separate element, as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. PhotoSwipe keeps only 3 slides in DOM to save memory. -->
+        <!-- don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+
+
+</html>

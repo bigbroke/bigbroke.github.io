@@ -1,0 +1,1545 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>内网渗透基础知识 | Bigbroke 的成长之路 | Bigbroke | 网络安全 | 安全技术 | CTF|WEB 安全 | 数据科学安全</title>
+  <meta name="keywords" content=" 内网 ">
+  <meta name="description" content="内网渗透基础知识 | Bigbroke 的成长之路 | Bigbroke | 网络安全 | 安全技术 | CTF|WEB 安全 | 数据科学安全">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="L2Dwidget.init({&quot;pluginRootPath&quot;:&quot;live2dw/&quot;,&quot;pluginJsPath&quot;:&quot;lib/&quot;,&quot;pluginModelPath&quot;:&quot;assets/&quot;,&quot;tagMode&quot;:false,&quot;debug&quot;:false,&quot;model&quot;:{&quot;jsonPath&quot;:&quot;/live2dw/assets/assets/koharu.mode">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Bigbroke 的成长之路 | Bigbroke | 网络安全 | 安全技术 | CTF|WEB 安全 | 数据科学安全">
+<meta property="og:url" content="http://Bigbroke.com/404.html">
+<meta property="og:site_name" content="Bigbroke 的成长之路 | Bigbroke | 网络安全 | 安全技术 | CTF|WEB 安全 | 数据科学安全">
+<meta property="og:description" content="L2Dwidget.init({&quot;pluginRootPath&quot;:&quot;live2dw/&quot;,&quot;pluginJsPath&quot;:&quot;lib/&quot;,&quot;pluginModelPath&quot;:&quot;assets/&quot;,&quot;tagMode&quot;:false,&quot;debug&quot;:false,&quot;model&quot;:{&quot;jsonPath&quot;:&quot;/live2dw/assets/assets/koharu.mode">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-10-07T10:21:52.994Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Bigbroke 的成长之路 | Bigbroke | 网络安全 | 安全技术 | CTF|WEB 安全 | 数据科学安全">
+<meta name="twitter:description" content="L2Dwidget.init({&quot;pluginRootPath&quot;:&quot;live2dw/&quot;,&quot;pluginJsPath&quot;:&quot;lib/&quot;,&quot;pluginModelPath&quot;:&quot;assets/&quot;,&quot;tagMode&quot;:false,&quot;debug&quot;:false,&quot;model&quot;:{&quot;jsonPath&quot;:&quot;/live2dw/assets/assets/koharu.mode">
+
+
+<link rel="icon" href="/img/head.jpg">
+
+<link rel="stylesheet" href="/css/style.css">
+
+<link rel="stylesheet" href="/css/hl_theme/sublime.css">
+
+<link href="//cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
+<link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+<link href="//cdn.bootcss.com/photoswipe/4.1.2/photoswipe.min.css" rel="stylesheet">
+<link href="//cdn.bootcss.com/photoswipe/4.1.2/default-skin/default-skin.min.css" rel="stylesheet">
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="/js/jquery.autocomplete.min.js"></script>
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.min.js" ></script>
+
+</head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="true">
+</div>
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/" class="avatar_target">
+    <img class="avatar" src="/img/head.jpg" />
+</a>
+<div class="author">
+    <span>Bigbroke</span>
+</div>
+
+<div class="icon">
+    
+    <a class="rss" title="rss" href="/atom.xml" target="_blank"></a>
+    
+    
+    <a class="github" title="github" href="https://github.com/bigbroke" target="_blank"></a>
+    
+    
+    
+    
+    
+    <a class="instagram" title="instagram" href="https://www.instagram.com/1_be_winner/" target="_blank"></a>
+    
+    
+    
+    <a class="weibo" title="weibo" href="http://weibo.com/u/xxx/" target="_blank"></a>
+    
+    
+    <a class="email" title="email" href="mailto:72382781@qq.com"></a>
+    
+</div>
+
+
+
+<ul>
+    <li class="all active">全部文章</li>
+    
+    <li data-rel="思考"> 思考 </li>
+    
+    <li data-rel="Language"> Language </li>
+    
+    <li data-rel="CTF"> CTF </li>
+    
+    <li data-rel="AiSecurity"> AiSecurity </li>
+    
+    <li data-rel="代码审计"> 代码审计 </li>
+    
+    <li data-rel="Kali"> Kali </li>
+    
+    <li data-rel="工具"> 工具 </li>
+    
+    <li data-rel="WebSecurity"> WebSecurity </li>
+    
+    <li data-rel="读书摘要"> 读书摘要 </li>
+    
+    <li data-rel="渗透测试"> 渗透测试 </li>
+    
+    <li data-rel="内网"> 内网 </li>
+    
+    <li data-rel="源码阅读"> 源码阅读 </li>
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+    
+    
+    
+    
+    </div>
+    <div><a style="border-right: 1px solid #fff; width: 49%"  class="about site_url"  href="/about">关于</a><a style="width: 50%"  class="friends">友链</a></div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="56">
+<input type="hidden" id="yelog_site_word_count" value="115.2k">
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        友情链接
+        <i class="back-title-list"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="/https/www.baidu.com">faBaidu</a></li>
+            
+            <li><a target="_blank" href="/https/www.google.com">fbGoogle</a></li>
+            
+            <li><a target="_blank" href="http://www.cnblogs.com/iamstudy/">I3m0n</a></li>
+            
+            <li><a target="_blank" href="http://ph0rse.me/">Ph0rse</a></li>
+            
+            <li><a target="_blank" href="http://03i0.com/">Sn00py</a></li>
+            
+            <li><a target="_blank" href="http://jlkl.github.io/">Str3am</a></li>
+            
+            <li><a target="_blank" href="http://marblue.me/">Marbule</a></li>
+            
+            <li><a target="_blank" href="http://twosmi1e.com/">2Smile</a></li>
+            
+            <li><a target="_blank" href="http://zo1ro.tk/">ZO1RO</a></li>
+            
+            <li><a target="_blank" href="https://blog.ruozhi.xyz/">ru0zhI</a></li>
+            
+            <li><a target="_blank" href="http://wulidecade.cn/">Decade</a></li>
+            
+            <li><a target="_blank" href="https://www.cnblogs.com/sn1per/">Sn1per</a></li>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <form onkeydown="if(event.keyCode==13){return false;}">
+        <input class="search" type="text" placeholder="以 in: 开头进行全文搜索" autocomplete="off"id="local-search-input" >
+        <i class="cross"></i>
+        <span>
+        <label for="tagswitch">Tags:</label>
+        <input id="tagswitch" type="checkbox">
+    </span>
+    </form>
+    <div class="tags-list">
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">思考</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">life</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">正则</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">WP</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">first-blog</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">ctf</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">代码审计</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">sqlilabs</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">sqlmap</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">cve</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">VIM</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">Nmap</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">密码学</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">hexo</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">Nikto</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">TCPDUMP</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">QWASP_ZAP</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">NETCAT</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">docker</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">Skipfish</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">Vega</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">复现</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">文件包含</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">读书摘要</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">信息收集</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">Web漏洞</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">内网</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">CTF</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">文件上传</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">渗透</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">web</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">黑客攻防web安全实战详解</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">入侵</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">Dvwa</a>
+    </li>
+    
+    <div class="clearfix"></div>
+</div>
+
+    
+    <div id="local-search-result">
+
+    </div>
+    
+    <nav id="title-list-nav">
+        
+        <a  class="读书摘要 "
+           href="/archis/a7cdea15/"
+           data-tag="读书摘要"
+           data-author="" >
+            <span class="post-title" title="《互联网企业安全高级指南》读书笔记">《互联网企业安全高级指南》读书笔记</span>
+            <span class="post-date" title="2020-03-04 18:17:30">2020/03/04</span>
+        </a>
+        
+        <a  class="源码阅读 "
+           href="/archis/f4173bf8/"
+           data-tag="ctf"
+           data-author="" >
+            <span class="post-title" title="Read-Sitadel-Source">Read-Sitadel-Source</span>
+            <span class="post-date" title="2019-03-15 00:00:08">2019/03/15</span>
+        </a>
+        
+        <a  class="AiSecurity "
+           href="/archis/eed6fa1/"
+           data-tag="ctf"
+           data-author="" >
+            <span class="post-title" title="AI-Security-Learning">AI-Security-Learning</span>
+            <span class="post-date" title="2019-02-17 21:15:30">2019/02/17</span>
+        </a>
+        
+        <a  class="思考 "
+           href="/archis/f7c9beed/"
+           data-tag="life"
+           data-author="" >
+            <span class="post-title" title="2018反思总结">2018反思总结</span>
+            <span class="post-date" title="2018-12-31 01:14:45">2018/12/31</span>
+        </a>
+        
+        <a  class="CTF "
+           href="/archis/49b464e6/"
+           data-tag="ctf"
+           data-author="" >
+            <span class="post-title" title="初探线下CTF-AWD模式">初探线下CTF-AWD模式</span>
+            <span class="post-date" title="2018-12-02 17:13:50">2018/12/02</span>
+        </a>
+        
+        <a  class="内网 "
+           href="/archis/7db24e65/"
+           data-tag="内网"
+           data-author="" >
+            <span class="post-title" title="内网渗透基础知识">内网渗透基础知识</span>
+            <span class="post-date" title="2018-12-02 17:07:15">2018/12/02</span>
+        </a>
+        
+        <a  class="CTF "
+           href="/archis/6bd5dfde/"
+           data-tag="ctf"
+           data-author="" >
+            <span class="post-title" title="第一届安洵杯writeup">第一届安洵杯writeup</span>
+            <span class="post-date" title="2018-11-26 21:23:57">2018/11/26</span>
+        </a>
+        
+        <a  class="CTF "
+           href="/archis/4341f801/"
+           data-tag="ctf"
+           data-author="" >
+            <span class="post-title" title="HCTF2018-web writeup">HCTF2018-web writeup</span>
+            <span class="post-date" title="2018-11-13 13:26:20">2018/11/13</span>
+        </a>
+        
+        <a  class="工具 "
+           href="/archis/47a94ec3/"
+           data-tag="docker"
+           data-author="" >
+            <span class="post-title" title="docker复现ctf&amp;dockerfile编写ctf环境">docker复现ctf&amp;dockerfile编写ctf环境</span>
+            <span class="post-date" title="2018-10-29 21:57:39">2018/10/29</span>
+        </a>
+        
+        <a  class="代码审计 "
+           href="/archis/441c37c9/"
+           data-tag="代码审计"
+           data-author="" >
+            <span class="post-title" title="墨者学院审计类通关指南">墨者学院审计类通关指南</span>
+            <span class="post-date" title="2018-10-28 22:02:08">2018/10/28</span>
+        </a>
+        
+        <a  class="WebSecurity "
+           href="/archis/767136e1/"
+           data-tag="复现"
+           data-author="" >
+            <span class="post-title" title="phpMyAdmin 4.8.x 本地文件包含">phpMyAdmin 4.8.x 本地文件包含</span>
+            <span class="post-date" title="2018-10-27 12:19:37">2018/10/27</span>
+        </a>
+        
+        <a  class="读书摘要 "
+           href="/archis/924987ad/"
+           data-tag="读书摘要"
+           data-author="" >
+            <span class="post-title" title="《Web安全攻防-渗透测试实战指南》读书笔记">《Web安全攻防-渗透测试实战指南》读书笔记</span>
+            <span class="post-date" title="2018-10-26 22:05:27">2018/10/26</span>
+        </a>
+        
+        <a  class="WebSecurity "
+           href="/archis/b46a6d47/"
+           data-tag="web"
+           data-author="" >
+            <span class="post-title" title="验证码相关安全问题">验证码相关安全问题</span>
+            <span class="post-date" title="2018-10-23 23:05:15">2018/10/23</span>
+        </a>
+        
+        <a  class="代码审计 "
+           href="/archis/a5c61176/"
+           data-tag="cve"
+           data-author="" >
+            <span class="post-title" title="Xss in MetInfo V6.1.2">Xss in MetInfo V6.1.2</span>
+            <span class="post-date" title="2018-10-16 02:16:08">2018/10/16</span>
+        </a>
+        
+        <a  class="CTF "
+           href="/archis/173905c2/"
+           data-tag="ctf"
+           data-author="" >
+            <span class="post-title" title="护网杯wp">护网杯wp</span>
+            <span class="post-date" title="2018-10-13 23:53:02">2018/10/13</span>
+        </a>
+        
+        <a  class="WebSecurity "
+           href="/archis/95d370e7/"
+           data-tag="Web漏洞"
+           data-author="" >
+            <span class="post-title" title="web漏洞挖掘之点击劫持漏洞">web漏洞挖掘之点击劫持漏洞</span>
+            <span class="post-date" title="2018-10-11 14:13:02">2018/10/11</span>
+        </a>
+        
+        <a  class="Language "
+           href="/archis/7fe4b50e/"
+           data-tag="正则"
+           data-author="" >
+            <span class="post-title" title="20个常用的正则表达式">20个常用的正则表达式</span>
+            <span class="post-date" title="2018-10-09 16:29:34">2018/10/09</span>
+        </a>
+        
+        <a  class="AiSecurity "
+           href="/archis/d4eed376/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="机器学习概念">机器学习概念</span>
+            <span class="post-date" title="2018-10-09 16:29:01">2018/10/09</span>
+        </a>
+        
+        <a  class="内网 "
+           href="/archis/17ef10d7/"
+           data-tag="内网"
+           data-author="" >
+            <span class="post-title" title="浅谈内网渗透流程">浅谈内网渗透流程</span>
+            <span class="post-date" title="2018-10-09 10:50:44">2018/10/09</span>
+        </a>
+        
+        <a  class="CTF "
+           href="/archis/18042369/"
+           data-tag="CTF"
+           data-author="" >
+            <span class="post-title" title="安恒5月">安恒5月</span>
+            <span class="post-date" title="2018-08-25 20:40:51">2018/08/25</span>
+        </a>
+        
+        <a  class="CTF "
+           href="/archis/b20debe2/"
+           data-tag="CTF"
+           data-author="" >
+            <span class="post-title" title="安恒7月">安恒7月</span>
+            <span class="post-date" title="2018-08-25 20:39:36">2018/08/25</span>
+        </a>
+        
+        <a  class="代码审计 "
+           href="/archis/8395d5c7/"
+           data-tag="代码审计"
+           data-author="" >
+            <span class="post-title" title="墨者学院php代码审计1">墨者学院php代码审计1</span>
+            <span class="post-date" title="2018-08-25 20:32:48">2018/08/25</span>
+        </a>
+        
+        <a  class="代码审计 "
+           href="/archis/d8be4236/"
+           data-tag="代码审计"
+           data-author="" >
+            <span class="post-title" title="PHP字符串&#39;和“区别">PHP字符串&#39;和“区别</span>
+            <span class="post-date" title="2018-08-25 20:22:01">2018/08/25</span>
+        </a>
+        
+        <a  class="渗透测试 "
+           href="/archis/35d3b1d4/"
+           data-tag="渗透"
+           data-author="" >
+            <span class="post-title" title="渗透测试基础">渗透测试基础</span>
+            <span class="post-date" title="2018-08-01 23:43:32">2018/08/01</span>
+        </a>
+        
+        <a  class="思考 "
+           href="/archis/80e1beed/"
+           data-tag="思考"
+           data-author="" >
+            <span class="post-title" title="八月展望">八月展望</span>
+            <span class="post-date" title="2018-08-01 23:41:26">2018/08/01</span>
+        </a>
+        
+        <a  class="CTF "
+           href="/archis/f4e3f3ec/"
+           data-tag="WP"
+           data-author="" >
+            <span class="post-title" title="2018SCTF-wp">2018SCTF-wp</span>
+            <span class="post-date" title="2018-06-20 22:40:40">2018/06/20</span>
+        </a>
+        
+        <a  class="WebSecurity "
+           href="/archis/2947d8f2/"
+           data-tag="密码学"
+           data-author="" >
+            <span class="post-title" title="cbc字节翻转攻击">cbc字节翻转攻击</span>
+            <span class="post-date" title="2018-06-01 00:47:50">2018/06/01</span>
+        </a>
+        
+        <a  class="CTF "
+           href="/archis/4e1d9865/"
+           data-tag="WP"
+           data-author="" >
+            <span class="post-title" title="ISCC2018-writeup">ISCC2018-writeup</span>
+            <span class="post-date" title="2018-05-28 00:54:05">2018/05/28</span>
+        </a>
+        
+        <a  class="CTF "
+           href="/archis/ceb4048b/"
+           data-tag="WP"
+           data-author="" >
+            <span class="post-title" title="全国网络空间安全技术大赛2018三道wp">全国网络空间安全技术大赛2018三道wp</span>
+            <span class="post-date" title="2018-05-15 19:04:17">2018/05/15</span>
+        </a>
+        
+        <a  class="CTF "
+           href="/archis/e36e397d/"
+           data-tag="WP"
+           data-author="" >
+            <span class="post-title" title="bugku-misc">bugku-misc</span>
+            <span class="post-date" title="2018-05-01 19:02:14">2018/05/01</span>
+        </a>
+        
+        <a  class="Kali "
+           href="/archis/40a439a4/"
+           data-tag="Nmap"
+           data-author="" >
+            <span class="post-title" title="Nmap 使用技巧汇总">Nmap 使用技巧汇总</span>
+            <span class="post-date" title="2018-04-23 22:07:46">2018/04/23</span>
+        </a>
+        
+        <a  class="WebSecurity "
+           href="/archis/844a29d4/"
+           data-tag="文件包含"
+           data-author="" >
+            <span class="post-title" title="php文件包含漏洞">php文件包含漏洞</span>
+            <span class="post-date" title="2018-04-23 21:39:49">2018/04/23</span>
+        </a>
+        
+        <a  class="WebSecurity "
+           href="/archis/ea42f6a6/"
+           data-tag="文件上传"
+           data-author="" >
+            <span class="post-title" title="文件上传总结">文件上传总结</span>
+            <span class="post-date" title="2018-04-23 21:39:03">2018/04/23</span>
+        </a>
+        
+        <a  class="CTF "
+           href="/archis/a7a61e20/"
+           data-tag="WP"
+           data-author="" >
+            <span class="post-title" title="DDCTF三道小结">DDCTF三道小结</span>
+            <span class="post-date" title="2018-04-23 21:35:39">2018/04/23</span>
+        </a>
+        
+        <a  class="渗透测试 "
+           href="/archis/1f382107/"
+           data-tag="入侵"
+           data-author="" >
+            <span class="post-title" title="高级入侵">高级入侵</span>
+            <span class="post-date" title="2018-04-23 21:33:14">2018/04/23</span>
+        </a>
+        
+        <a  class="渗透测试 "
+           href="/archis/312e3d12/"
+           data-tag="信息收集"
+           data-author="" >
+            <span class="post-title" title="信息收集">信息收集</span>
+            <span class="post-date" title="2018-04-02 16:15:51">2018/04/02</span>
+        </a>
+        
+        <a  class="CTF "
+           href="/archis/ced895c1/"
+           data-tag="sqlilabs"
+           data-author="" >
+            <span class="post-title" title="sqli-labs less11-15">sqli-labs less11-15</span>
+            <span class="post-date" title="2018-04-02 16:15:38">2018/04/02</span>
+        </a>
+        
+        <a  class="CTF "
+           href="/archis/9a0d7777/"
+           data-tag="sqlilabs"
+           data-author="" >
+            <span class="post-title" title="sqli-labs  less7-10">sqli-labs  less7-10</span>
+            <span class="post-date" title="2018-04-02 16:15:23">2018/04/02</span>
+        </a>
+        
+        <a  class="CTF "
+           href="/archis/4303333d/"
+           data-tag="sqlilabs"
+           data-author="" >
+            <span class="post-title" title="sqli-labs5-6(盲注)">sqli-labs5-6(盲注)</span>
+            <span class="post-date" title="2018-04-02 16:14:58">2018/04/02</span>
+        </a>
+        
+        <a  class="CTF "
+           href="/archis/239c6225/"
+           data-tag="sqlilabs"
+           data-author="" >
+            <span class="post-title" title="Sqli-labs  1-4">Sqli-labs  1-4</span>
+            <span class="post-date" title="2018-04-02 16:13:07">2018/04/02</span>
+        </a>
+        
+        <a  class="CTF "
+           href="/archis/79216fa/"
+           data-tag="WP"
+           data-author="" >
+            <span class="post-title" title="实验吧web—writeup">实验吧web—writeup</span>
+            <span class="post-date" title="2018-04-02 16:10:18">2018/04/02</span>
+        </a>
+        
+        <a  class="CTF "
+           href="/archis/2ccf6cb2/"
+           data-tag="WP"
+           data-author="" >
+            <span class="post-title" title="第二届强网杯-部分wp">第二届强网杯-部分wp</span>
+            <span class="post-date" title="2018-04-02 16:08:51">2018/04/02</span>
+        </a>
+        
+        <a  class="读书摘要 "
+           href="/archis/2ab3b8ea/"
+           data-tag="黑客攻防web安全实战详解"
+           data-author="" >
+            <span class="post-title" title="黑客攻防web安全实战详解">黑客攻防web安全实战详解</span>
+            <span class="post-date" title="2018-02-27 19:57:12">2018/02/27</span>
+        </a>
+        
+        <a  class="Kali "
+           href="/archis/b248361f/"
+           data-tag="QWASP_ZAP"
+           data-author="" >
+            <span class="post-title" title="kali渗透测试之Web渗透-扫描工具-QWASP_ZAP">kali渗透测试之Web渗透-扫描工具-QWASP_ZAP</span>
+            <span class="post-date" title="2018-02-27 19:54:20">2018/02/27</span>
+        </a>
+        
+        <a  class="Kali "
+           href="/archis/136af25a/"
+           data-tag="Vega"
+           data-author="" >
+            <span class="post-title" title="kali渗透测试之Web渗透-扫描工具-Vega">kali渗透测试之Web渗透-扫描工具-Vega</span>
+            <span class="post-date" title="2018-02-27 19:51:36">2018/02/27</span>
+        </a>
+        
+        <a  class="Kali "
+           href="/archis/497d64c3/"
+           data-tag="Skipfish"
+           data-author="" >
+            <span class="post-title" title="kali渗透测试之Web渗透-扫描工具-Skipfish">kali渗透测试之Web渗透-扫描工具-Skipfish</span>
+            <span class="post-date" title="2018-02-27 19:49:37">2018/02/27</span>
+        </a>
+        
+        <a  class="Kali "
+           href="/archis/a04b3dd7/"
+           data-tag="Nikto"
+           data-author="" >
+            <span class="post-title" title="kali渗透测试之Web渗透-扫描工具-Nikto">kali渗透测试之Web渗透-扫描工具-Nikto</span>
+            <span class="post-date" title="2018-02-27 19:47:03">2018/02/27</span>
+        </a>
+        
+        <a  class="Kali "
+           href="/archis/2b646ba1/"
+           data-tag="TCPDUMP"
+           data-author="" >
+            <span class="post-title" title="kali渗透测试之Web渗透-工具-TCPDUMP">kali渗透测试之Web渗透-工具-TCPDUMP</span>
+            <span class="post-date" title="2018-02-27 19:42:43">2018/02/27</span>
+        </a>
+        
+        <a  class="Kali "
+           href="/archis/32be69d6/"
+           data-tag="NETCAT"
+           data-author="" >
+            <span class="post-title" title="kali渗透测试之Web渗透-工具-NETCAT">kali渗透测试之Web渗透-工具-NETCAT</span>
+            <span class="post-date" title="2018-02-27 19:38:09">2018/02/27</span>
+        </a>
+        
+        <a  class="工具 "
+           href="/archis/2e6b5387/"
+           data-tag="VIM"
+           data-author="" >
+            <span class="post-title" title="Vim简单入门笔记">Vim简单入门笔记</span>
+            <span class="post-date" title="2017-12-15 19:07:45">2017/12/15</span>
+        </a>
+        
+        <a  class="思考 "
+           href="/archis/fb4597d6/"
+           data-tag="思考"
+           data-author="" >
+            <span class="post-title" title="17-11反思与进取">17-11反思与进取</span>
+            <span class="post-date" title="2017-11-22 17:10:55">2017/11/22</span>
+        </a>
+        
+        <a  class="CTF "
+           href="/archis/18acffef/"
+           data-tag="Dvwa"
+           data-author="" >
+            <span class="post-title" title="DVWA笔记">DVWA笔记</span>
+            <span class="post-date" title="2017-11-22 17:06:26">2017/11/22</span>
+        </a>
+        
+        <a  class="思考 "
+           href="/archis/undefined/"
+           data-tag="hexo"
+           data-author="" >
+            <span class="post-title" title="hexo博客搭建">hexo博客搭建</span>
+            <span class="post-date" title="2017-11-22 16:57:45">2017/11/22</span>
+        </a>
+        
+        <a  class="Kali "
+           href="/archis/18bbc00d/"
+           data-tag="sqlmap"
+           data-author="" >
+            <span class="post-title" title="SQLMAP注入教程-11种常见SQLMAP使用方法详解">SQLMAP注入教程-11种常见SQLMAP使用方法详解</span>
+            <span class="post-date" title="2017-11-21 04:27:10">2017/11/21</span>
+        </a>
+        
+        <a  class="CTF "
+           href="/archis/83955867/"
+           data-tag="WP"
+           data-author="" >
+            <span class="post-title" title="第八届Geek部分web">第八届Geek部分web</span>
+            <span class="post-date" title="2017-10-20 16:07:05">2017/10/20</span>
+        </a>
+        
+        <a  class="思考 "
+           href="/archis/e53fb0b9/"
+           data-tag="first-blog"
+           data-author="" >
+            <span class="post-title" title="my-first-blog">my-first-blog</span>
+            <span class="post-date" title="2017-09-27 16:56:58">2017/09/27</span>
+        </a>
+        
+    </nav>
+</div>
+    </div>
+    <div class="hide-list">
+        <div class="semicircle">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div class="post">
+    <div class="pjax">
+        <article id="post-内网渗透基础知识" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">内网渗透基础知识</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            
+            <a href="javascript:" data-rel="内网">内网</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="javascript:" class="color3">内网</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+        创建时间:<time class="date" title='更新时间: 2019-03-14 23:53:27'>2018-12-02 17:07</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        <span>字数:5,077</span>
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读:<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+        <span class="top-comment" title="跳转至评论区">
+            <a href="#comments">
+                评论:<span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </a>
+        </span>
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#内网渗透基础知识"><span class="toc-text">内网渗透基础知识</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#0x00-内网概述"><span class="toc-text">0x00 内网概述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#0x01-内网名词"><span class="toc-text">0x01 内网名词</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#0x02-工作组"><span class="toc-text">0x02 工作组</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#加入-创建工作组"><span class="toc-text">加入/创建工作组</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#退出工作组"><span class="toc-text">退出工作组</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#0x02-域"><span class="toc-text">0x02 域</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#域的分类"><span class="toc-text">域的分类</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#单域"><span class="toc-text">单域</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#父域与子域"><span class="toc-text">父域与子域</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#域树（tree）"><span class="toc-text">域树（tree）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#域森林（forest）"><span class="toc-text">域森林（forest）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#DNS域名服务器"><span class="toc-text">DNS域名服务器</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#0x03-活动目录（AD）"><span class="toc-text">0x03 活动目录（AD）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#逻辑结构"><span class="toc-text">逻辑结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#活动目录的主要功能"><span class="toc-text">活动目录的主要功能</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#AD和DC的区别"><span class="toc-text">AD和DC的区别</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#例子"><span class="toc-text">例子</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#0x04-域相关概念"><span class="toc-text">0x04 域相关概念</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#安全域划分"><span class="toc-text">安全域划分</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#DMZ"><span class="toc-text">DMZ</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#DMZ的屏障功能"><span class="toc-text">DMZ的屏障功能</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#域中计算机分类"><span class="toc-text">域中计算机分类</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#0x05-域内权限解读"><span class="toc-text">0x05 域内权限解读</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#内权限解读"><span class="toc-text">内权限解读</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#域本地组"><span class="toc-text">域本地组</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#全局组"><span class="toc-text">全局组</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#全局组与域本地组区别"><span class="toc-text">全局组与域本地组区别</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#通用组"><span class="toc-text">通用组</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#AGDLP"><span class="toc-text">AGDLP</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#熟悉各个组"><span class="toc-text">熟悉各个组</span></a></li></ol></li></ol></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="内网渗透基础知识"><a href="#内网渗透基础知识" class="headerlink" title="内网渗透基础知识"></a>内网渗透基础知识</h1><p>[TOC]</p>
+<h2 id="0x00-内网概述"><a href="#0x00-内网概述" class="headerlink" title="0x00 内网概述"></a>0x00 内网概述</h2><p>内网也指局域网（Local Area Network，LAN）是指在某一区域内由多台计算机互联成的计算机组。一般是方圆几千米以内。局域网可以实现文件管理、应用软件共享、打印机共享、工作组内的历程安排、电子邮件和传真通信服务等功能。<br>内网是封闭型的，它可以由办公室内的两台计算机组成，也可以由一个公司内的上千台计算机组成。列如银行、学校、企业工厂、政府机关、网吧、单位办公网等都属于此类。</p>
+<h2 id="0x01-内网名词"><a href="#0x01-内网名词" class="headerlink" title="0x01 内网名词"></a>0x01 内网名词</h2><p>我们在研究内网的时候，经常会听说一些列如“工作组”、“域”、<br>“域控制器（DC）”、“父域”、“了域”、“域树”、“域森林’和“活动目录（AD）”“DMZ”、“域内权限”等专有名词。那么它们到底指的是什么？又有何区别呢？</p>
+<h2 id="0x02-工作组"><a href="#0x02-工作组" class="headerlink" title="0x02 工作组"></a>0x02 工作组</h2><p>工作组（Work Group），在一个大的单位内，可能有成百上千台电脑互相连接组成局域网，它们都会列在“网络（网上邻居）”内，如果这些电脑不分组，可想而知有多么混乱，要找一台电脑很困难。为了解决这一问题，就有了“工作组”这个概念，将不同的电脑一般按功能（或部门）分别列入不同的工作组中，如技术部的电脑都列入“技术部”工作组中，行政部的电脑都列入“行政部”工作组中。你要访问某个部门的资源，就在“网络”里找到那个部门的工作组名，双击就可以看到那个部门的所有电脑了。相比不分组的情况就有序的多了，尤其是对于大型局域网络来说。</p>
+<p><img src="https://blog-1254419664.coscd.myqcloud.com/201811/1542981146.7729611.jpg" alt=""></p>
+<h4 id="加入-创建工作组"><a href="#加入-创建工作组" class="headerlink" title="加入/创建工作组"></a>加入/创建工作组</h4><p>右击桌面上的“计算机”，在弹出的菜单出选择“属性”，点击“更改设置”，“更改”，在“计算机名”一栏中键入你想好的名称，在“工作组”一栏中键入你想加入的工作组名称。<br>如果你输入的工作组名称网络中没有，那么相当于新建了一个工作组，当然暂时只有你的电脑在组内。单击“确定”按钮后，Windows提示需要重新启动，重新启动之后，再进入“网络”就可以看到你所加入的工作组成员了。</p>
+<p><img src="https://blog-1254419664.coscd.myqcloud.com/201811/1542981817.9860647.jpg" alt=""></p>
+<p>可以更改进入行政部</p>
+<p><img src="https://blog-1254419664.coscd.myqcloud.com/201811/1542981914.547977.jpg" alt=""></p>
+<h4 id="退出工作组"><a href="#退出工作组" class="headerlink" title="退出工作组"></a>退出工作组</h4><ul>
+<li>只要将工作组名称改动即可。不过在网上别人照样可以访问你的共享资源。你也可以随便加入同一网络上的任何其它工作组。“工作组”就像一个可以自由进入和退出的“社团”，方便同一组的计算机互相访问。</li>
+<li>所以工作组并不存在真正的集中管理作用，工作组里的所有计算机都是对等的，也就是没有服务器和客户机之分的。</li>
+</ul>
+<h2 id="0x02-域"><a href="#0x02-域" class="headerlink" title="0x02 域"></a>0x02 域</h2><ul>
+<li>域（Domain）是一个有安全边界的计算机集合（安全边界意思是在两个域中，一个域中的用户无法访问另一个域中的资源），可以简单的把域理解成升级版的“工作组”，相比工作组而言，它有一个更加严格的安全管理控制机制，如果你想访问域内的资源，必须拥有一个合法的身份登陆到该域中，而你对该域内的资源拥有什么样的权限，还需要取决于你在该域中的用户身份。</li>
+<li>域控制器（Domain Controller，简写为DC）是一个域中的一台类似管理服务器的计算机，相当于一个单位的门卫一样，它负责每一台联入的电脑和用户的验证工作，域内电脑如果想互相访问首先都是经过它的审核。</li>
+</ul>
+<p>内网渗透的目的就是为了获得域控制器</p>
+<p>安全域划分</p>
+<p><img src="https://blog-1254419664.coscd.myqcloud.com/201811/1542982192.3827906.jpg" alt=""></p>
+<h3 id="域的分类"><a href="#域的分类" class="headerlink" title="域的分类"></a>域的分类</h3><p>单域<br>父域，子域<br>域树（tree）<br>域森林（forest）<br>DNS域名服务器</p>
+<h4 id="单域"><a href="#单域" class="headerlink" title="单域"></a>单域</h4><p>在一般的具有固定地理位置的小公司里，建立一个域就可以满足所需。</p>
+<p>一般在一个域内要建立至少两个域服务器，一个作为DC，一个是备份DC。如果没有第二个备份DC，那么一旦DC瘫痪了，则域内的其他用户就不能登陆该域了，因为活动目录的数据库（包括用户的帐号信息）是存储在DC中的。而有一台备份域控制器（BDC），则至少该域还能正常使用，期间把瘫痪的DC恢复了就行了。</p>
+<h4 id="父域与子域"><a href="#父域与子域" class="headerlink" title="父域与子域"></a>父域与子域</h4><ul>
+<li>出于管理及其他一些需求，需要在网络中划分多个域，第一个域称为父域，各分部的域称为该域的子域。</li>
+<li>比如一个大公司，它的不同分公司在不同的地理位置，则需父域及子域这样的结构。</li>
+<li>如果把不同地理位置的分公司放在同一个域内，那么他们之间信息交互（包括同步，复制等）所花费的时间会比较长，而且占用的带宽也比较大。（因为在同一个域内，信息交互的条目是很多的，而且不压缩；而在域和域之间，信息交互的条目相对较少，而且压缩。）</li>
+<li>还有一个好处，就是子公司可以通过自己的域来管理自己的资源。</li>
+<li>还有一种情况，就是出于安全策略的考虑，因为每个域都有自己独有的安全策略。比如一个公司的财务部门希望能使用特定的安全策略（包括帐号密码策略等），那么可以将财务部门做成一个子域来单独管理。</li>
+</ul>
+<h4 id="域树（tree）"><a href="#域树（tree）" class="headerlink" title="域树（tree）"></a>域树（tree）</h4><ul>
+<li>域树指若干个域通过建立信任关系组成的集合。一个域管理员只能管理本域的内部，不能访问或者管理其他的域，二个域之间相互访问则需要建立信任关系（Trust Relation）。比如asia.abc.com与Europe.abc.com访问需要建立信任关系</li>
+<li>信任关系是连接在域与域之间的桥梁。域树内的父域与子域之间不但可以按需要相互进行管理，还可以跨网分配文件和打印机等设备资源，使不同的域之间实现网络资源的共享与管理，以及相互通信和数据传输。</li>
+<li>在一个域树中，父域可以包含很多子域，子域是相对父域来说的，指域名中的每一个段。子域只能使用父域作为域名的后缀，也就是说在一个域树中，域的名字是连续的。</li>
+</ul>
+<p>abc.com 是一级域</p>
+<p>asia是二级域</p>
+<p><img src="https://blog-1254419664.cos.ap-chengdu.myqcloud.com/backup/20181228202615.png" alt=""></p>
+<h4 id="域森林（forest）"><a href="#域森林（forest）" class="headerlink" title="域森林（forest）"></a>域森林（forest）</h4><p>域森林指若干个域树通过建立信任关系组成的集合。可以通过域树之间建立的信任关系来管理和使用整个森林中的资源，从而又保持了原有域自身原有的特性。</p>
+<p><img src="https://blog-1254419664.cos.ap-chengdu.myqcloud.com/backup/20181228202717.png" alt=""></p>
+<h4 id="DNS域名服务器"><a href="#DNS域名服务器" class="headerlink" title="DNS域名服务器"></a>DNS域名服务器</h4><ul>
+<li>DNS域名服务器是进行域名（domain name）和与之相对应的IP地址（IP address）转换的服务器。</li>
+<li>在域树的介绍中，可以看到域树中的域的名字和DNS域的名字非常相似，实际上域的名字就是DNS域的名字，因为域中的计算机使用DNS来定位域控制器和服务器以及其他计算机、网络服务等。</li>
+<li>一般情况下，我们在内网渗透时就通过寻找DNS服务器来定位域控制器，因为<strong>通常DNS服务器和域控制器会处在同一台机器上</strong>。</li>
+</ul>
+<h2 id="0x03-活动目录（AD）"><a href="#0x03-活动目录（AD）" class="headerlink" title="0x03 活动目录（AD）"></a>0x03 活动目录（AD）</h2><ul>
+<li>活动目录（Active Directory）是域环境中提供目录服务的组件。</li>
+<li>目录是什么？目录就是存储有关网络对象（如用户、组、计算机、共享资源、打印机和联系人等）的信息。目录服务是帮助用户快速准确的从目录中查找到他所需要的信息的服务。</li>
+<li>如果将企业的内网看成是一本字典，那么内网里的资源就是字典的内容，活动目录就相当于字典的索引。即活动目录存储的是网络中所有资源的快捷方式，用户通过寻找快捷方式而定位资源。</li>
+</ul>
+<h3 id="逻辑结构"><a href="#逻辑结构" class="headerlink" title="逻辑结构"></a>逻辑结构</h3><ul>
+<li>在活动口录中，管理员可以完全忽略被管理对象的具体地理位置，而将这些对象按照一定的方式放置在不同的容器中。由于这种组织对象的做法不考虑被管理对象的具体地理位置，这种组织框架称为“<strong>逻辑结构</strong>“。</li>
+<li>活动目录的逻辑结构就包括上面讲到的组织单元（OU）、域（domain）、域树（tree）、域森林（forest）。在域树内的所有域共享一个活动目录，这个活动目录内的数据分散地存储在各个域内，且每一个域只存储该域内的数据。</li>
+</ul>
+<p>a集团旗下有甲乙两个公司</p>
+<p><img src="https://blog-1254419664.cos.ap-chengdu.myqcloud.com/backup/20181228202828.png" alt=""></p>
+<h3 id="活动目录的主要功能"><a href="#活动目录的主要功能" class="headerlink" title="活动目录的主要功能"></a>活动目录的主要功能</h3><ol>
+<li>帐号集中管理，所有帐号均存在服务器上，方便对帐号的重命令/重置密码。</li>
+<li>软件集中管理，统一推送软件，统一安装网络打印机等。利用软件发布策略分发软件，可以让用户自由选择安装软件。</li>
+<li>环境集中管理，利用AD可以统一客户端桌面，IE，TCP/IP等设置。</li>
+<li>增强安全性，统一部署杀毒软件和扫毒任务，集中化管理用户的计算机权限、统一制订用户密码策略等，可监控网络，资料统一管理。</li>
+<li>更可靠，更少的宕机时间。如：利用AD控制用户访问权限，利用群集、负载均衡等技术对文件服务器进行容灾设定，更可靠，岩机时间更少。</li>
+<li>活动目录为Microsoft统一管理的基础平台，其它isa，exchange，sms等服务都依赖于这个基础平台。</li>
+</ol>
+<h3 id="AD和DC的区别"><a href="#AD和DC的区别" class="headerlink" title="AD和DC的区别"></a>AD和DC的区别</h3><ul>
+<li>如果网络规模较大，我们就会考虑把网络中的众多对象：计算机、用户、用户组、打印机、共享文件等，分门别类、井然有序地放在一个大仓库中，并做好检索信息，以利于查找、管理和使用这些对象（资源）。这个有层次结构的数据库，就是活动目录数据库，简称AD库。</li>
+<li>那么我们应该把这个数据库放在哪台计算机上呢？规定是这样的，我们把存放有活动目录数据库的计算机就称为DC。所以说我们要实现域环境，其实就是要安装AD，当内网中的一台计算机安装了AD后，它就变成了DC。</li>
+<li>DC的本质是一台计算机，AD的本质是提供目录服务的组件</li>
+</ul>
+<h3 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h3><p><strong>问题</strong>：</p>
+<p>假如一个公司有200台电脑，我们希望某台电脑上的账户Alan可以访问每台电脑内的资源或者可以在每台电脑上登录。那么在“工作组”环境中，我们必须要在这200台电脑的各个SAM数据库中创建Alan这个账户。一旦Alan想要更换密码，必须要更改200次！现在只是200台电脑的公司，如果是有5000台电脑或者上万台电脑的公司呢？估计管理员会抓狂。</p>
+<p><strong>答案:</strong></p>
+<p>因此产生了域。在域环境中，只需要在活动目录中创建一次Alan账户，那么就可以在任意200台电脑中的一台上登录Alan，如果要为Alan账户更改密码，只需要在活动目录中更改一次就可以了。</p>
+<h2 id="0x04-域相关概念"><a href="#0x04-域相关概念" class="headerlink" title="0x04 域相关概念"></a>0x04 域相关概念</h2><h3 id="安全域划分"><a href="#安全域划分" class="headerlink" title="安全域划分"></a>安全域划分</h3><p>安全域划分的目的是将一组安全等级相同的计算机划入同一个网段内，这一网段内的计算机拥有相同的网络边界，在网络边界上采用防火墙部署来实现对其他安全域的NACL（网络访问控制策略），允许哪些IP访问此域、不允许哪些访问此域；允许此域访问哪些IP/网段、不允许访问哪些IP/网段。使得其风险最小化，当发生攻击时可以将威胁最大化的隔离，减少对域内计算机的影响。</p>
+<p><img src="https://blog-1254419664.cos.ap-chengdu.myqcloud.com/backup/20181228202914.png" alt=""></p>
+<h3 id="DMZ"><a href="#DMZ" class="headerlink" title="DMZ"></a>DMZ</h3><ul>
+<li>两个防火墙之间的空间被称为DMZ。</li>
+<li>DMZ是英文“demilitarized zone”的缩写，中文名称为“隔离区”，也称“非军事化区”。</li>
+<li>为了解决安装防火墙后外部网络的访问用户不能访问内部网络服务器的问题，而设立的一个非安全系统与安全系统之间的缓冲区。</li>
+<li>该缓冲区位于企业内部网络和外部网络之间的小网络区域内。在这个小网络区域内可以放置一些必须公开的服务器设施，如企业Web服务器、FTP服务器和论坛等。</li>
+<li>另一方面，通过这样一个DMZ区域，更加有效地保护了内部网络。因为这种网络部署，比起一般的防火墙方案，对来自外网的攻击者来说又多了一道关卡。</li>
+</ul>
+<h4 id="DMZ的屏障功能"><a href="#DMZ的屏障功能" class="headerlink" title="DMZ的屏障功能"></a>DMZ的屏障功能</h4><p>（1）内网可以访问外网<br>内网的用户需要白面地访间外网。在这一策略中，防火墙需要执行NAT。<br>（2）内网可以访间DMZ</p>
+<p>此策略使内网用户可以使用或者管理DMZ中的服务器。<br>（3）外网不能访间内网<br>这是防火墙的基本等略了，内网中存放的是公司内部数据，显然这些数据是不允许外网的用户进行访问的。如栗要访问，就要通过vPN方式来进行。<br>（4）外网可以访问DMZ </p>
+<p>DMZ中的服务器需要为外界提供服务，所以外网必须可以访问DMZ。同时，外网访问DMz需要由防火墙完成对外地址到服务器实际地址的转换。<br>（5）DMZ不能访间内网<br>如不执行此策略，则当入侵者攻陷DMz时，内部网络将不会受保护。<br>（6）DMZ不能访何外网<br>此条策略也有例外，比如我们的例子中，在DMZ中放置邮件服务器时，就需要访问外网，否则将不能正常工作.</p>
+<h3 id="域中计算机分类"><a href="#域中计算机分类" class="headerlink" title="域中计算机分类"></a>域中计算机分类</h3><p>域控制器</p>
+<p>成员服务器</p>
+<p>客户机</p>
+<p>独立服务器</p>
+<ul>
+<li>域控制器是存放活动目录数据库的，是域中必须要有的，而其他三种则不是必须的，也就是说最简单的域可以只包含一台计算机，这台计算机就是该域的域控制器。</li>
+<li>域中各个服务器的角色也是可以改变的，例如域服务器在删除活动目录时，如果是域中最后一个域控制器，则该域服务器会成为独立服务器，如果不是域中唯一的域控制器，则将使该服务器成为成员服务器。同时独立服务器既可以转换为域控制器，也可以加入到某个域成为成员服务器。</li>
+</ul>
+<h2 id="0x05-域内权限解读"><a href="#0x05-域内权限解读" class="headerlink" title="0x05 域内权限解读"></a>0x05 域内权限解读</h2><h3 id="内权限解读"><a href="#内权限解读" class="headerlink" title="内权限解读"></a>内权限解读</h3><h4 id="域本地组"><a href="#域本地组" class="headerlink" title="域本地组"></a>域本地组</h4><p>域本地组，多域用户访问单域资源（访问同一个域）。可以从任何域添加用户账户、通用组和全局组，只能在其所在域内指派权限。域本地组不能嵌套于其他组中。它主要是用于授予位于本域资源的访问权限。</p>
+<p>举例子说就是其他域都可以访问 asis.abc.com</p>
+<p><img src="https://blog-1254419664.cos.ap-chengdu.myqcloud.com/backup/20181228202615.png" alt=""></p>
+<h4 id="全局组"><a href="#全局组" class="headerlink" title="全局组"></a>全局组</h4><p>全局组，单域用户访问多域资源（必须是同一个域里面的用户）。只能在创建该全局组的域上进行添加用户和全局组，可以在域林中的任何域中指派权限，全局组可以嵌套在其他组中。</p>
+<p>很多的全局组，可以把Domain Computers加入Domain Admins全局组中</p>
+<p><img src="https://blog-1254419664.cos.ap-chengdu.myqcloud.com/backup/20181228203015.png" alt=""></p>
+<h5 id="全局组与域本地组区别"><a href="#全局组与域本地组区别" class="headerlink" title="全局组与域本地组区别"></a>全局组与域本地组区别</h5><p>全局组相当于域账号，可以在全局使用，域本地组相当于本地账号，只能本机上使用。</p>
+<p>下面我来举两个例子来进一步说明（以混合模式下为例）：</p>
+<p>　　例1：将用户张三（域帐号Z3）加入到域本地组administrators中，并不能使Z3对非DC的域成员计算机有任何特权，但若加入到全局组Domain Admins中，张三就是域管理员了，可以在全局使用，对域成员计算机是有特权的。<br>　　例2：只有在域的DC上，对资源（如：文件/夹）设置权限，你可以指派域本地组administrators；但在非DC的域成员计算机上，你是无法设置域本地组administrators的权限的。因为它是域本地组，只能在DC上使用。</p>
+<h4 id="通用组"><a href="#通用组" class="headerlink" title="通用组"></a>通用组</h4><p>通用组，通用组成员来自域林中任何域中的用户账户、全局组和其他的通用组，可以在该域林中的任何域中指派权限，可以嵌套于其他域组中。非常适于域林中的跨域访问。</p>
+<h4 id="AGDLP"><a href="#AGDLP" class="headerlink" title="AGDLP"></a>AGDLP</h4><p>A (account):用户帐户<br>G (Global group):全局组<br>DL (Domain local group):域本地组<br>P (Permission):许可，资源权限<br>按照AGDLP的原则对用户进行组织和管理起来更容易<br>在AGDLP形成以后当给一个用户某一个权限的时候,只要把这个用户加入到某一个本地域组就可以了。</p>
+<p>举个例子比如： 有两个域，A和B，A中的5个财务人员和B中的3个财务人员都需要访问B中的“FINA”文件夹。这时，可以在B中建一个DL(域本地组)，因为DL的成员可以来自所有的域，然后把这8个人都加入这个DL，并把FINA的访问权赋给DL。这样做的坏处是什么呢？因为DL是在B域中，所以管理权也在B域，如果A域中的5 个人变成6个人，那只能A域管理员通知B域管理员，将DL的成员做一下修改，B域的管理员太累了。这时候，我们改变一下，在A和B域中都各建立一个全局组（G），然后在B域中建立一个DL，把这两个G都加入B域中的DL中，然后把FINA的访问权赋给 DL。哈哈，这下两个G组都有权访问FINA文件夹了，是吗？组嵌套造成权限继承嘛！这时候，两个G分布在A和B域中，也就是A和B的管理员都可以自己管理自己的G啦，只要把那5个人和3个人加入G中，就可以了！以后有任何修改，都可以自己做了，不用麻烦B域的管理员！这就是A-G-DL-P。</p>
+<p>A-G-DL-P策略是将用户账号添加到全局组中，将全局组添加到域本地组中，然后为域本地组分配资源权限。</p>
+<p>可以简单这样记忆：<br>域本地组：来自全林用于本域</p>
+<p>全局组：来自本域作用于全林</p>
+<p>通用组：来自全林用于全林</p>
+<h3 id="熟悉各个组"><a href="#熟悉各个组" class="headerlink" title="熟悉各个组"></a>熟悉各个组</h3><p>本地域组的权限</p>
+<ul>
+<li>Administrators（管理员组） ————最重要的权限</li>
+<li>Remote Desktop Users（远程登录组）</li>
+<li>Print Operators（打印机操作员组）</li>
+<li>Account Operators（帐号操作员组）</li>
+<li>Server Operaters（服务器操作员组）</li>
+<li>Backup Operators（备份操作员组）</li>
+</ul>
+<p>全局组、通用组的权限</p>
+<ul>
+<li>Domain Admins（域管理员组）————最最最重要的权限，一般来说域渗透是看重这个</li>
+<li>Enterprise Admins（企业系统管理员组）————最重要的权限，其次是去看重这个权限</li>
+<li>Schema Admins（架构管理员组）————最重要的权限</li>
+<li>Domain Users（域用户组）</li>
+</ul>
+<p><img src="https://blog-1254419664.cos.ap-chengdu.myqcloud.com/backup/20181228203102.png" alt=""></p>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 72382781@qq.com </span>
+    </div>
+</article>
+
+
+<p>
+    <a href="javascript:void(0)" class="dashang" onclick="dashangToggle()">赏</a>
+</p>
+
+
+<div class="article_copyright">
+    <p><span>文章标题:</span>内网渗透基础知识</p>
+    <p><span>文章字数:</span><span class="post-count">5,077</span></p>
+    <p><span>本文作者:</span><a href="javascript:void(0)" title="Bigbroke">Bigbroke</a></p>
+    <p><span>发布时间:</span>2018-12-02, 17:07:15</p>
+    <p><span>最后更新:</span>2019-03-14, 23:53:27</p>
+    <span>原始链接:</span><a class="post-url" href="/archis/7db24e65/" title="内网渗透基础知识">http://Bigbroke.com/archis/7db24e65/</a>
+    <p>
+        <span>版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+    </p>
+</div>
+
+
+    <div id="comments"></div>
+<link rel="stylesheet" href="/css/gitalk.css">
+
+<script type="text/javascript">
+    $.getScript('/js/gitalk.js', function () {
+        var gitalk = new Gitalk({
+            clientID: 'eb679ffbe3e667bef087',
+            clientSecret: '803d24db3cf86013b1c74778931b9e6670081459',
+            repo: 'bigbroke.github.io',
+            owner: 'bigbroke',
+            admin: ['bigbroke'],
+            id: location.pathname,
+            distractionFreeMode: 'true',
+            language: 'zh-CN',
+            perPage: parseInt('10',10)
+        })
+        gitalk.render('comments')
+    })
+</script>
+
+
+
+    
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">©2018 Bigbroke</p>
+<p class="footer-entry">Buit with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full"><span class="min "></span></button>
+<button class="post-toc-menu"><span class="post-toc-menu-icons"></span></button>
+<div class="post-toc"><span class="post-toc-title">目录</span>
+    <div class="post-toc-content">
+
+    </div>
+</div>
+<a class="" id="rocket" href="javascript:void(0)"></a>
+    </div>
+</div>
+<div class="acParent"></div>
+
+<div class="hide_box" onclick="dashangToggle()"></div>
+<div class="shang_box">
+    <a class="shang_close" href="javascript:void(0)" onclick="dashangToggle()">×</a>
+    <div class="shang_tit">
+        <p>喜欢就点赞,疼爱就打赏</p>
+    </div>
+    <div class="shang_payimg">
+        <div class="pay_img">
+            <img src="/img/alipay.jpg" class="alipay" title="扫码支持">
+            <img src="/img/weixin.jpg" class="weixin" title="扫码支持">
+        </div>
+    </div>
+    <div class="shang_payselect">
+        <span><label><input type="radio" name="pay" checked value="alipay">支付宝</label></span><span><label><input type="radio" name="pay" value="weixin">微信</label></span>
+    </div>
+</div>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/assets/koharu.model.json"},"display":{"position":"right","width":90,"height":150},"mobile":{"show":true},"log":false});</script></body>
+<script src="//cdn.bootcss.com/jquery.pjax/2.0.1/jquery.pjax.min.js"></script>
+
+<script src="//cdn.bootcss.com/photoswipe/4.1.2/photoswipe.min.js"></script>
+<script src="//cdn.bootcss.com/photoswipe/4.1.2/photoswipe-ui-default.min.js"></script>
+
+<script src="/js/script.js"></script>
+<script>
+    var img_resize = 'photoSwipe';
+    /*作者、标签的自动补全*/
+    $(function () {
+        $('.search').AutoComplete({
+            'data': ['#思考','#life','#正则','#WP','#first-blog','#ctf','#代码审计','#sqlilabs','#sqlmap','#cve','#VIM','#Nmap','#密码学','#hexo','#Nikto','#TCPDUMP','#QWASP_ZAP','#NETCAT','#docker','#Skipfish','#Vega','#复现','#文件包含','#读书摘要','#信息收集','#Web漏洞','#内网','#CTF','#文件上传','#渗透','#web','#黑客攻防web安全实战详解','#入侵','#Dvwa',],
+            'itemHeight': 20,
+            'width': 418
+        }).AutoComplete('show');
+    })
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $(".post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+        $("input[name=pay]").on("click", function () {
+            if($("input[name=pay]:checked").val()=="weixin"){
+                $(".shang_box .shang_payimg .pay_img").addClass("weixin_img");
+            } else {
+                $(".shang_box .shang_payimg .pay_img").removeClass("weixin_img");
+            }
+        })
+        
+
+        /*高亮代码块行号*/
+        
+        $('pre code').each(function(){
+            var lines = $(this).text().split('\n').length - 1;
+            var $numbering = $('<ul/>').addClass('pre-numbering').attr("unselectable","on");
+            $(this).addClass('has-numbering')
+                    .parent()
+                    .append($numbering);
+            for(i=1;i<=lines;i++){
+                $numbering.append($('<li/>').text(i));
+            }
+        });
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info//busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+
+        // PhotoSwipe
+        $('article').each(function(i){
+            $(this).find('img').each(function(){
+                if ($(this).closest('figure').hasClass('article-gallery-img')) {
+                    return;
+                }
+                var alt = this.alt;
+                $(this)
+                    .wrap('<figure class="article-gallery-img" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject"></figure>')
+                    .wrap('<a href="' + this.src + '" title="' + alt + '"></a>');
+                $(this).after('<div class="img_alt"><span>' + (alt || '') + '</span></div>');
+            });
+        });
+
+        var pswpElement = document.querySelectorAll('.pswp')[0];
+        if (pswpElement) {
+            var gallerySelector = '.article-gallery, article';
+
+            var initPhotoSwipeFromDOM = function(gallerySelector) {
+
+                // parse slide data (url, title, size ...) from DOM elements
+                // (children of gallerySelector)
+                var parseThumbnailElements = function(el) {
+                    var thumbElements = $(el).find('figure.article-gallery-img').toArray(),
+                        numNodes = thumbElements.length,
+                        items = [],
+                        figureEl,
+                        linkEl,
+                        size,
+                        imgEl,
+                        item;
+
+                    for (var i = 0; i < numNodes; i++) {
+
+                        figureEl = thumbElements[i]; // <figure> element
+
+                        // include only element nodes
+                        if (figureEl.nodeType !== 1) {
+                            continue;
+                        }
+
+                        linkEl = figureEl.children[0]; // <a> element
+                        imgEl = linkEl.children[0]; // <img>
+
+                        size = linkEl.getAttribute('data-size');
+                        size = size && size.split('x');
+
+                        // create slide object
+                        item = {
+                            src: linkEl.getAttribute('href'),
+                            w: size && parseInt(size[0], 10) || imgEl.width,
+                            h: size && parseInt(size[1], 10) || imgEl.height
+                        };
+
+                        if (figureEl.children.length > 1) {
+                            // <figcaption> content
+                            item.title = figureEl.children[1].innerHTML;
+                        }
+
+                        if (linkEl.children.length > 0) {
+                            // <img> thumbnail element, retrieving thumbnail url
+                            item.msrc = linkEl.children[0].getAttribute('src');
+                        }
+
+                        item.el = figureEl; // save link to element for getThumbBoundsFn
+                        items.push(item);
+                    }
+
+                    return items;
+                };
+
+                // find nearest parent element
+                var closest = function closest(el, fn) {
+                    return el && (fn(el) ? el : closest(el.parentNode, fn));
+                };
+
+                // triggers when user clicks on thumbnail
+                var onThumbnailsClick = function(e) {
+                    e = e || window.event;
+
+                    var eTarget = e.target || e.srcElement;
+
+                    // find root element of slide
+                    var clickedListItem = closest(eTarget, function(el) {
+                        return (el.tagName && el.tagName.toUpperCase() === 'FIGURE');
+                    });
+
+                    if (!clickedListItem) {
+                        return;
+                    }
+
+                    if (e.preventDefault) {
+                        e.preventDefault();
+                    } else {
+                        e.returnValue = false;
+                    }
+
+                    // find index of clicked item by looping through all child nodes
+                    // alternatively, you may define index via data- attribute
+                    var clickedGallery = $(clickedListItem).closest(gallerySelector)[0],
+                        childNodes = $(clickedGallery).find('figure.article-gallery-img').toArray(),
+                        numChildNodes = childNodes.length,
+                        nodeIndex = 0,
+                        index;
+
+                    for (var i = 0; i < numChildNodes; i++) {
+                        if (childNodes[i].nodeType !== 1) {
+                            continue;
+                        }
+
+                        if (childNodes[i] === clickedListItem) {
+                            index = nodeIndex;
+                            break;
+                        }
+                        nodeIndex++;
+                    }
+
+
+
+                    if (index >= 0) {
+                        // open PhotoSwipe if valid index found
+                        openPhotoSwipe(index, clickedGallery);
+                    }
+                    return false;
+                };
+
+                // parse picture index and gallery index from URL (#&pid=1&gid=2)
+                var photoswipeParseHash = function() {
+                    var hash = window.location.hash.substring(1),
+                        params = {};
+
+                    if (hash.length < 5) {
+                        return params;
+                    }
+
+                    var vars = hash.split('&');
+                    for (var i = 0; i < vars.length; i++) {
+                        if (!vars[i]) {
+                            continue;
+                        }
+                        var pair = vars[i].split('=');
+                        if (pair.length < 2) {
+                            continue;
+                        }
+                        params[pair[0]] = pair[1];
+                    }
+
+                    if (params.gid) {
+                        params.gid = parseInt(params.gid, 10);
+                    }
+
+                    return params;
+                };
+
+                var openPhotoSwipe = function(index, galleryElement, disableAnimation, fromURL) {
+                    var pswpElement = document.querySelectorAll('.pswp')[0],
+                        gallery,
+                        options,
+                        items;
+
+                    items = parseThumbnailElements(galleryElement);
+
+                    // define options (if needed)
+                    options = {
+
+                        // define gallery index (for URL)
+                        galleryUID: galleryElement.getAttribute('data-pswp-uid'),
+
+                        getThumbBoundsFn: function(index) {
+                            // See Options -> getThumbBoundsFn section of documentation for more info
+                            var thumbnail = items[index].el.getElementsByTagName('img')[0], // find thumbnail
+                                pageYScroll = window.pageYOffset || document.documentElement.scrollTop,
+                                rect = thumbnail.getBoundingClientRect();
+
+                            return {
+                                x: rect.left,
+                                y: rect.top + pageYScroll,
+                                w: rect.width
+                            };
+                        }
+                    };
+
+                    // PhotoSwipe opened from URL
+                    if (fromURL) {
+                        if (options.galleryPIDs) {
+                            // parse real index when custom PIDs are used
+                            // http://photoswipe.com/documentation/faq.html#custom-pid-in-url
+                            for (var j = 0; j < items.length; j++) {
+                                if (items[j].pid == index) {
+                                    options.index = j;
+                                    break;
+                                }
+                            }
+                        } else {
+                            // in URL indexes start from 1
+                            options.index = parseInt(index, 10) - 1;
+                        }
+                    } else {
+                        options.index = parseInt(index, 10);
+                    }
+
+                    // exit if index not found
+                    if (isNaN(options.index)) {
+                        return;
+                    }
+
+                    if (disableAnimation) {
+                        options.showAnimationDuration = 0;
+                    }
+
+                    // Pass data to PhotoSwipe and initialize it
+                    gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
+
+                    gallery.listen('imageLoadComplete', function(index, item) {
+                        var linkEl = item.el.children[0];
+                        var img = item.container.children[0];
+                        if (!linkEl.getAttribute('data-size')) {
+                            linkEl.setAttribute('data-size', img.naturalWidth + 'x' + img.naturalHeight);
+                            item.w = img.naturalWidth;
+                            item.h = img.naturalHeight;
+                            gallery.invalidateCurrItems();
+                            gallery.updateSize(true);
+                        }
+                    });
+
+                    gallery.init();
+                };
+
+                // loop through all gallery elements and bind events
+                var galleryElements = document.querySelectorAll(gallerySelector);
+
+                for (var i = 0, l = galleryElements.length; i < l; i++) {
+                    galleryElements[i].setAttribute('data-pswp-uid', i + 1);
+                    galleryElements[i].onclick = onThumbnailsClick;
+                }
+
+                // Parse URL and open gallery if it contains #&pid=3&gid=1
+                var hashData = photoswipeParseHash();
+                if (hashData.pid && hashData.gid) {
+                    openPhotoSwipe(hashData.pid, galleryElements[hashData.gid - 1], true, true);
+                }
+            };
+
+            // execute above function
+            initPhotoSwipeFromDOM(gallerySelector);
+        }
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+    function dashangToggle() {
+        $(".shang_box").fadeToggle();
+        $(".hide_box").fadeToggle();
+    }
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<style>
+    pre{
+        position: relative;
+        margin-bottom: 24px;
+        border-radius: 10px;
+        border: 2px solid #e2dede;
+        background: #FFF;
+        overflow: hidden;
+    }
+    code.has-numbering{
+        margin-left: 30px;
+    }
+    .pre-numbering{
+        margin: 0px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 20px;
+        padding: 0.5em 3px 0.7em 5px;
+        border-right: 1px solid #C3CCD0;
+        text-align: right;
+        color: #AAA;
+        background-color: ;
+    }
+</style>
+
+<!--自定义样式设置-->
+<style>
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+    .post .pjax article .article-entry>ol, .post .pjax article .article-entry>ul, .post .pjax article>ol, .post .pjax article>ul{
+        border: #e2dede solid 2px;
+        border-radius: 10px;
+        padding: 10px 32px 10px 56px;
+    }
+    .post .pjax article .article-entry li>ol, .post .pjax article .article-entry li>ul,.post .pjax article li>ol, .post .pjax article li>ul{
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    .post .pjax article .article-entry>ol>li, .post .pjax article .article-entry>ul>li,.post .pjax article>ol>li, .post .pjax article>ul>li{
+        margin-bottom: auto;
+        margin-left: auto;
+    }
+    .post .pjax article .article-entry li>ol>li, .post .pjax article .article-entry li>ul>li,.post .pjax article li>ol>li, .post .pjax article li>ul>li{
+        margin-bottom: auto;
+        margin-left: auto;
+    }
+    
+
+    /*引用块样式*/
+    
+    .post .pjax article blockquote {
+        padding: 10px 20px;
+        background-color: white;
+        border: none;
+        border-left: 4px solid #42b983;
+        border-right: 4px solid #42b983;
+        border-radius: 10px;
+    }
+    
+
+    /*文章列表背景图*/
+    
+    .nav-right:before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.1;
+        background: url("http://oy0tigw51.bkt.clouddn.com/201711210136_683.png");
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        -ms-background-size: cover;
+        -o-background-size: cover;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+        background-size: cover;
+    }
+    
+</style>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe.
+         It's a separate element, as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. PhotoSwipe keeps only 3 slides in DOM to save memory. -->
+        <!-- don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+
+
+</html>

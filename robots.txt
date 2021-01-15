@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+Allow: /about
+Allow: /archives/
+Allow: /categories/
+Allow: /page/
+Allow: /tags/ 
+Allow: /img/ 
+Disallow: /js/
+Disallow: /css/
+Disallow: /fonts/
+
+Sitemap: http://Bigbroke.com/sitemap.xml
+Sitemap: http://Bigbroke.com/baidusitemap.xml
